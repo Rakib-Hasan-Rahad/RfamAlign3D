@@ -7,6 +7,6 @@ authors:
     given-names: Rakib Hasan
 repository-code: "https://github.com/Rakib-Hasan-Rahad/RfamAlign3D"
 license: MIT
-version: "0.9.0"
+version: "1.0.0"
 date-released: "2026-11-25"
 keywords: [Rfam, RNA, multiple sequence alignment, RNA 3D structure, STAR3D, noncanonical base pairs]
