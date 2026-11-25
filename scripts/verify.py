@@ -47,8 +47,13 @@ def check_manifest(name, base, entries):
     if len(missing) == len(entries):
         return report(name, None, "files not present (unpack the release archive)")
     bad = [p for p, h in entries if os.path.exists(os.path.join(base, p)) and sha(os.path.join(base, p)) != h]
-    report(name, not bad and not missing, f"{len(entries) - len(missing) - len(bad)}/{len(entries)} files match"
-           + (f"; {len(missing)} missing" if missing else "") + (f"; mismatch e.g. {bad[:3]}" if bad else ""))
+    present = len(entries) - len(missing)
+    if bad:
+        return report(name, False, f"{len(bad)} of {present} present files do not match, e.g. {bad[:3]}")
+    if missing:
+        return report(name, None, f"{present} present files match; {len(missing)} not present "
+                                  "(unpack the release archive to check them)")
+    report(name, True, f"{present}/{len(entries)} files match")
 
 
 def sha_list(path):
