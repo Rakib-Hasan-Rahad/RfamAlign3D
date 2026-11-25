@@ -4,7 +4,7 @@
   python3 -m http.server 8765 --directory "outputs/05_results/step2_interim_440/site"   # then http://localhost:8765/
 
 Reads only frozen/derived files (snapshot, Step 3 returned results, Step 4 tables); never writes to them.
-Every number on the site and in the report comes from a SQL query on sqarma_interim.sqlite.
+Every number on the site and in the report comes from a SQL query on rfamalign3d.sqlite.
 """
 import collections
 import csv
@@ -72,7 +72,7 @@ def build_db(cohort, out):
         "motif_baseline": os.path.join(s4, "motif", "motif_baseline.tsv"),
         "region_motif": os.path.join(s4, "motif", "region_motif_overlap.tsv"),
     }
-    dbp = os.path.join(out, "sqarma_interim.sqlite")
+    dbp = os.path.join(out, "rfamalign3d.sqlite")
     if os.path.exists(dbp):
         os.remove(dbp)
     db = sqlite3.connect(dbp)
@@ -254,9 +254,9 @@ samples. Neither method is treated as ground truth: a disagreement says the two 
 Equal-opportunity baseline (query endpoint only, identical coverage rules): Atlas group {H['baseline']['bgsu_atlas_group'][0]} disagreements vs
 {H['baseline']['bgsu_atlas_group'][1]} agreements (Atlas covers few of these structures); Rfam motif {H['baseline']['rfam_motif'][0]} vs
 {H['baseline']['rfam_motif'][1]}; BGSU loop {H['baseline']['bgsu_loop'][0]} vs {H['baseline']['bgsu_loop'][1]}. Descriptive only — not an enrichment test.</p>
-<h2>Downloads</h2><p><a href="data/sqarma_interim.sqlite">sqarma_interim.sqlite</a> (all tables; provenance table lists source files and SHA-256).</p>"""
-    open(os.path.join(site, "index.html"), "w").write(page(f"SQARMA {LABEL['v'].lower()} results", body))
-    shutil.copy2(os.path.join(out, "sqarma_interim.sqlite"), os.path.join(site, "data", "sqarma_interim.sqlite"))
+<h2>Downloads</h2><p><a href="data/rfamalign3d.sqlite">rfamalign3d.sqlite</a> (all tables; provenance table lists source files and SHA-256).</p>"""
+    open(os.path.join(site, "index.html"), "w").write(page(f"RfamAlign3D {LABEL['v'].lower()} results", body))
+    shutil.copy2(os.path.join(out, "rfamalign3d.sqlite"), os.path.join(site, "data", "rfamalign3d.sqlite"))
     # ---------- family pages
     for f, fid, n, v, ns in H["fam"]:
         rs = []
@@ -359,7 +359,7 @@ This shows a <b>correspondence disagreement within the same motif</b>; it does <
 <h2>Original Rfam seed columns 63–69 (both rows)</h2><p class=sm>Seed rows: A <code>{E(p[2])}</code>, B <code>{E(p[3])}</code> (Rfam 15.1 RF01852).</p>
 <table><tr><th>Column</th><th>A char</th><th>B char</th><th>A residue</th><th>B residue</th><th>Rfam correspondence</th></tr>{ref_t}</table>
 <h2>Source record (BGSU RNA 3D Hub, loops/download/3W3S, model 1)</h2><p><code>{E(loop_line)}</code></p>
-<p class=sm>Source unit IDs (<code>PDB|model|chain|nt|number|||insertion</code>) are used unchanged as SQARMA residue IDs; the Step 2 crosswalk
+<p class=sm>Source unit IDs (<code>PDB|model|chain|nt|number|||insertion</code>) are used unchanged as residue IDs; the Step 2 crosswalk
 maps <code>3W3S|1|B|G|47|||B</code> → author B:47B → staged B:47B → ungapped position 52 → Rfam column 66, and <code>3W3S|1|B|U|47|||C</code>
 → B:47C → position 53 → column 67.</p>
 <h2>All evidence for this observation</h2><table><tr><th>Endpoint</th><th>Residue</th><th>Evidence type</th><th>Record</th><th>Detail</th></tr>{ev_t}</table>
@@ -403,7 +403,7 @@ def report(db, H, out, site):
                           for r in sorted(fo, key=lambda r: -int(r["pairs"])))
         md = f"""# Where RNA sequence and structural alignments agree—and where they differ
 
-*SQARMA final results. Every number is a query on the study database. Prepared by an AI research agent; not yet reviewed by a person.*
+*RfamAlign3D results. Every number is a query on the study database. Prepared by an AI research agent; not yet reviewed by a person.*
 
 **Question.** We compared the nucleotide correspondences implied by two original Rfam 15.1 seed rows with those computed by original STAR3D v1.2 from the experimental structures, over the whole family interval, for verified natural RNAs from different species.
 
@@ -429,12 +429,12 @@ The percentages use different denominators and are not complements.
 
 **Limitations.** Constructs without sufficient independent natural-sequence evidence were not included in the verified comparison cohort; this includes chains whose sequence search did not complete, which are unresolved rather than shown to be engineered. Methods, selection counts and provenance (execution environments, checksums, policy history) are in the website's Methods & limitations page and the downloadable tables.
 """
-        open(os.path.join(out, "professor_report.md"), "w").write(md)
-        shutil.copy2(os.path.join(out, "professor_report.md"), os.path.join(site, "data", "professor_report.md"))
+        open(os.path.join(out, "results_report.md"), "w").write(md)
+        shutil.copy2(os.path.join(out, "results_report.md"), os.path.join(site, "data", "results_report.md"))
         return
-    md = f"""# SQARMA — {LABEL['v'].lower()} results (cohort `{os.path.basename(out)}`)
+    md = f"""# RfamAlign3D — {LABEL['v'].lower()} results (cohort `{os.path.basename(out)}`)
 
-**{LABEL['v']}.** Generated from `sqarma_interim.sqlite`. {LABEL.get('text', '')} Prepared by an AI agent; not yet reviewed by a person.
+**{LABEL['v']}.** Generated from `rfamalign3d.sqlite`. {LABEL.get('text', '')} Prepared by an AI agent; not yet reviewed by a person.
 
 **1 · Question and cohort.** Do two original Rfam 15.1 seed rows and one forward run of original STAR3D v1.2 assign the same residue partners across the whole family interval, for verified natural RNAs of different species?
 
@@ -452,7 +452,7 @@ The percentages use different denominators and are not complements.
 
 **5 · Inspectable example.** tRNA-Sec 3RG5 A U47C ↔ 3W3S B G47B (Rfam column 66) vs U47C (STAR3D `A:47C<->B:47C`); both targets are in BGSU loop IL_3W3S_003, Atlas group IL_10892.5 — a disagreement within the same motif that does not establish which partner is correct. Site page: `site/evidence/trna_sec_example.html`.
 """
-    open(os.path.join(out, "professor_report.md"), "w").write(md)
+    open(os.path.join(out, "results_report.md"), "w").write(md)
     import re
     body = md
     body = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", E(body).replace("&lt;-&gt;", "&lt;-&gt;"))
@@ -472,8 +472,8 @@ The percentages use different denominators and are not complements.
             lines.append(f"<h1>{l[2:]}</h1>")
         elif l.strip():
             lines.append(f"<p>{l}</p>")
-    open(os.path.join(site, "report.html"), "w").write(page("SQARMA interim professor report", "\n".join(lines)))
-    shutil.copy2(os.path.join(out, "professor_report.md"), os.path.join(site, "data", "professor_report.md"))
+    open(os.path.join(site, "report.html"), "w").write(page("RfamAlign3D report", "\n".join(lines)))
+    shutil.copy2(os.path.join(out, "results_report.md"), os.path.join(site, "data", "results_report.md"))
 
 
 def set_label(cohort):
@@ -499,7 +499,7 @@ def main():
     json.dump({k: v for k, v in H.items() if k not in ("fam", "fam_ad", "fam_cons")}, open(os.path.join(out, "headline.json"), "w"), indent=1, default=str)
     print(json.dumps({k: H[k] for k in ("families_screened", "pairs", "valid", "families_valid", "no_stacks", "failures", "assessable",
                                         "different", "rfam_consensus_reproduced", "rfam_insert_reproduced", "rf_pairs", "atlas_any", "rfam_any", "baseline")}, indent=1, default=str))
-    print("report:", os.path.relpath(os.path.join(out, "professor_report.md"), ROOT))
+    print("report:", os.path.relpath(os.path.join(out, "results_report.md"), ROOT))
     print("site:  ", os.path.relpath(site, ROOT))
 
 

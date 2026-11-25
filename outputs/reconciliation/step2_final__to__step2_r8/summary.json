@@ -1,0 +1,18 @@
+{
+ "old": "step2_final",
+ "new": "step2_r8",
+ "old_pairs": 535,
+ "new_pairs": 570,
+ "change": {
+  "added": 35,
+  "unchanged": 535
+ },
+ "star3d": {
+  "run_new": 35,
+  "reuse": 535
+ },
+ "reference_or_crosswalk_changed": 0,
+ "added_by_family": {
+  "RF00001": 35
+ }
+}

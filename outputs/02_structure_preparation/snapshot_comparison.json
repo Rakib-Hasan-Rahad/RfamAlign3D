@@ -1,0 +1,9 @@
+{
+ "counts": {
+  "added": 35,
+  "unchanged": 535
+ },
+ "frozen_pairs_changed": [],
+ "snapshot": "outputs/02_structure_preparation/snapshots/step2_final",
+ "unchanged_but_file_hash_changed": []
+}

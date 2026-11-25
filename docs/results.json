@@ -1,286 +1,286 @@
 {
- "cohort": "step2_final",
+ "cohort": "step2_r8",
  "note": "Generated from pipeline outputs; scripts/verify.py recounts the 'headline' block from raw tables.",
  "headline": {
-  "pairs_aligned": 503,
-  "same_partner": 35989,
-  "different_partner": 4281,
-  "rfam_only": 3164,
-  "star3d_only": 994,
-  "shared_edges": 35989,
-  "rfam_only_edges": 7445,
-  "star3d_only_edges": 5339
+  "pairs_aligned": 538,
+  "same_partner": 39403,
+  "different_partner": 4676,
+  "rfam_only": 3234,
+  "star3d_only": 1086,
+  "shared_edges": 39403,
+  "rfam_only_edges": 7910,
+  "star3d_only_edges": 5827
  },
  "rates": {
   "different_partner_rate": {
-   "n": 4281,
-   "N": 40270,
-   "rate": 0.1063,
+   "n": 4676,
+   "N": 44079,
+   "rate": 0.1061,
    "ci95_pair_bootstrap": [
-    0.0954,
-    0.119
+    0.0953,
+    0.1175
    ],
-   "family_balanced_rate": 0.2322,
-   "lofo_min": 0.1004,
+   "family_balanced_rate": 0.2323,
+   "lofo_min": 0.101,
    "lofo_max": 0.1126
   },
   "comprehensive_difference_rate": {
-   "n": 8439,
-   "N": 44428,
-   "rate": 0.1899,
+   "n": 8996,
+   "N": 48399,
+   "rate": 0.1859,
    "ci95_pair_bootstrap": [
-    0.1719,
-    0.2107
+    0.1681,
+    0.2046
    ],
    "family_balanced_rate": 0.2946,
-   "lofo_min": 0.1545,
+   "lofo_min": 0.1521,
    "lofo_max": 0.2154
   },
   "correspondence_set_difference": {
-   "n": 12784,
-   "N": 48773,
-   "rate": 0.2621,
+   "n": 13737,
+   "N": 53140,
+   "rate": 0.2585,
    "ci95_pair_bootstrap": [
-    0.2398,
-    0.2878
+    0.2366,
+    0.2815
    ],
    "family_balanced_rate": 0.3544,
-   "lofo_min": 0.2279,
+   "lofo_min": 0.2262,
    "lofo_max": 0.2878
   },
   "rfam_consensus_reproduced": {
-   "n": 35655,
-   "N": 42990,
-   "rate": 0.8294,
+   "n": 39059,
+   "N": 46857,
+   "rate": 0.8336,
    "ci95_pair_bootstrap": [
-    0.8097,
-    0.847
+    0.8162,
+    0.8507
    ],
    "family_balanced_rate": 0.7242,
    "lofo_min": 0.8009,
-   "lofo_max": 0.8701
+   "lofo_max": 0.8718
   },
   "one_position_offset_share": {
-   "n": 3528,
-   "N": 4281,
-   "rate": 0.8241,
+   "n": 3896,
+   "N": 4676,
+   "rate": 0.8332,
    "ci95_pair_bootstrap": [
-    0.7941,
-    0.8546
+    0.8039,
+    0.8613
    ],
-   "family_balanced_rate": 0.7304,
-   "lofo_min": 0.798,
-   "lofo_max": 0.8303
+   "family_balanced_rate": 0.733,
+   "lofo_min": 0.8217,
+   "lofo_max": 0.8389
   },
   "hairpin_loop_difference_rate": {
-   "n": 1629,
-   "N": 11167,
-   "rate": 0.1459,
+   "n": 1651,
+   "N": 11490,
+   "rate": 0.1437,
    "ci95_pair_bootstrap": [
-    0.1317,
-    0.1612
+    0.129,
+    0.1588
    ],
-   "family_balanced_rate": 0.3321,
-   "lofo_min": 0.1307,
+   "family_balanced_rate": 0.3315,
+   "lofo_min": 0.1247,
    "lofo_max": 0.1534
   },
   "outside_hairpin_difference_rate": {
-   "n": 2652,
-   "N": 29103,
-   "rate": 0.0911,
+   "n": 2908,
+   "N": 30796,
+   "rate": 0.0944,
    "ci95_pair_bootstrap": [
-    0.0797,
-    0.1046
+    0.0833,
+    0.1067
    ],
-   "family_balanced_rate": 0.199,
-   "lofo_min": 0.0881,
-   "lofo_max": 0.0943
+   "family_balanced_rate": 0.1997,
+   "lofo_min": 0.0911,
+   "lofo_max": 0.1
   },
   "internal_loop_difference_rate": {
-   "n": 930,
-   "N": 9138,
-   "rate": 0.1018,
+   "n": 1112,
+   "N": 10302,
+   "rate": 0.1079,
    "ci95_pair_bootstrap": [
-    0.0867,
-    0.1206
+    0.0932,
+    0.1254
    ],
-   "family_balanced_rate": 0.1952,
-   "lofo_min": 0.0976,
+   "family_balanced_rate": 0.1961,
+   "lofo_min": 0.1045,
    "lofo_max": 0.1261
   },
   "junction_difference_rate": {
-   "n": 660,
-   "N": 7264,
-   "rate": 0.0909,
+   "n": 690,
+   "N": 7458,
+   "rate": 0.0925,
    "ci95_pair_bootstrap": [
-    0.0756,
-    0.1076
+    0.0776,
+    0.1077
    ],
-   "family_balanced_rate": 0.0993,
-   "lofo_min": 0.0832,
-   "lofo_max": 0.0931
+   "family_balanced_rate": 0.1003,
+   "lofo_min": 0.0887,
+   "lofo_max": 0.0948
   },
   "any_bgsu_loop_difference_rate": {
-   "n": 3184,
-   "N": 25994,
-   "rate": 0.1225,
+   "n": 3405,
+   "N": 27471,
+   "rate": 0.1239,
    "ci95_pair_bootstrap": [
-    0.1099,
-    0.1366
+    0.1119,
+    0.1369
    ],
-   "family_balanced_rate": 0.2816,
-   "lofo_min": 0.1134,
+   "family_balanced_rate": 0.2821,
+   "lofo_min": 0.1173,
    "lofo_max": 0.1294
   },
   "no_bgsu_loop_difference_rate": {
-   "n": 1097,
-   "N": 14276,
-   "rate": 0.0768,
+   "n": 1154,
+   "N": 14815,
+   "rate": 0.0779,
    "ci95_pair_bootstrap": [
-    0.0657,
-    0.0898
+    0.0663,
+    0.0899
    ],
-   "family_balanced_rate": 0.1962,
-   "lofo_min": 0.0725,
+   "family_balanced_rate": 0.1967,
+   "lofo_min": 0.0753,
    "lofo_max": 0.0847
   }
  },
  "hairpin_vs_outside": {
-  "hairpin": "1629/11167",
-  "outside": "2652/29103",
-  "rate_difference": 0.0548,
+  "hairpin": "1651/11490",
+  "outside": "2908/30796",
+  "rate_difference": 0.0493,
   "ci95_pair_bootstrap": [
-   0.0419,
-   0.0676
+   0.0362,
+   0.0614
   ],
-  "cmh_common_odds_ratio_by_family": 1.725,
-  "cmh_chi2": 241.59,
-  "cmh_p": 1.7673659573156076e-54,
+  "cmh_common_odds_ratio_by_family": 1.644,
+  "cmh_chi2": 206.88,
+  "cmh_p": 6.575132768168753e-47,
   "cmh_strata": 10
  },
  "basepair_preservation": {
   "all": {
-   "assessable_under_both": 19315,
-   "rfam_same_class": "11860/19315",
-   "star3d_same_class": "11938/19315",
-   "difference_star3d_minus_rfam": 0.004,
+   "assessable_under_both": 21262,
+   "rfam_same_class": "13047/21262",
+   "star3d_same_class": "13142/21262",
+   "difference_star3d_minus_rfam": 0.0045,
    "ci95_pair_bootstrap": [
-    0.0008,
-    0.0074
+    0.0014,
+    0.0075
    ],
    "rfam_ci95": [
-    0.6034,
-    0.6242
+    0.6046,
+    0.6232
    ],
    "star3d_ci95": [
-    0.6077,
-    0.6282
+    0.6088,
+    0.6278
    ]
   },
   "touching_disagreement": {
-   "assessable_under_both": 2339,
-   "rfam_same_class": "669/2339",
-   "star3d_same_class": "747/2339",
-   "difference_star3d_minus_rfam": 0.0333,
+   "assessable_under_both": 2605,
+   "rfam_same_class": "762/2605",
+   "star3d_same_class": "857/2605",
+   "difference_star3d_minus_rfam": 0.0365,
    "ci95_pair_bootstrap": [
-    0.0067,
-    0.0606
+    0.011,
+    0.0619
    ],
    "rfam_ci95": [
-    0.2568,
-    0.3133
+    0.2657,
+    0.3186
    ],
    "star3d_ci95": [
-    0.2892,
-    0.3476
+    0.3008,
+    0.3566
    ]
   },
   "by_type": {
    "canonical_watson_crick": {
-    "n": 1153,
-    "rfam_same": 570,
-    "star3d_same": 563,
-    "rfam_rate": 0.4944,
-    "star3d_rate": 0.4883,
+    "n": 1290,
+    "rfam_same": 648,
+    "star3d_same": 636,
+    "rfam_rate": 0.5023,
+    "star3d_rate": 0.493,
     "rfam_ci95": [
-     0.4498,
-     0.5332
+     0.4625,
+     0.5385
     ],
     "star3d_ci95": [
-     0.4424,
-     0.5296
+     0.451,
+     0.5334
     ],
     "difference_ci95": [
-     -0.0492,
-     0.037
+     -0.0498,
+     0.0311
     ],
-    "pairs_contributing": 298
+    "pairs_contributing": 326
    },
    "cww_non_watson_crick": {
-    "n": 205,
-    "rfam_same": 56,
-    "star3d_same": 89,
-    "rfam_rate": 0.2732,
-    "star3d_rate": 0.4341,
+    "n": 237,
+    "rfam_same": 71,
+    "star3d_same": 108,
+    "rfam_rate": 0.2996,
+    "star3d_rate": 0.4557,
     "rfam_ci95": [
-     0.2077,
-     0.3402
+     0.2335,
+     0.3663
     ],
     "star3d_ci95": [
-     0.3641,
-     0.502
+     0.3917,
+     0.5217
     ],
     "difference_ci95": [
-     0.0784,
-     0.2423
+     0.0814,
+     0.2305
     ],
-    "pairs_contributing": 140
+    "pairs_contributing": 164
    },
    "noncanonical": {
-    "n": 444,
+    "n": 481,
     "rfam_same": 43,
-    "star3d_same": 95,
-    "rfam_rate": 0.0968,
-    "star3d_rate": 0.214,
+    "star3d_same": 113,
+    "rfam_rate": 0.0894,
+    "star3d_rate": 0.2349,
     "rfam_ci95": [
-     0.0675,
-     0.1291
+     0.0621,
+     0.1198
     ],
     "star3d_ci95": [
-     0.1671,
-     0.2657
+     0.1889,
+     0.2813
     ],
     "difference_ci95": [
-     0.0586,
-     0.1782
+     0.0871,
+     0.2018
     ],
-    "pairs_contributing": 217
+    "pairs_contributing": 240
    }
   }
  },
  "candidate_corrections": {
-  "cohort": "step2_final",
+  "cohort": "step2_r8",
   "margin_angstrom": 1.0,
-  "regions": 1074,
+  "regions": 1155,
   "verdicts": {
+   "distance_only_STAR3D": 428,
+   "conflicting": 211,
    "unresolved": 92,
-   "distance_only_STAR3D": 394,
-   "supports_STAR3D": 195,
-   "conflicting": 197,
-   "supports_Rfam": 107,
-   "distance_only_Rfam": 89
+   "supports_STAR3D": 221,
+   "supports_Rfam": 111,
+   "distance_only_Rfam": 92
   },
   "nucleotides_by_verdict": {
+   "distance_only_STAR3D": 1434,
+   "conflicting": 1017,
    "unresolved": 249,
-   "distance_only_STAR3D": 1319,
-   "supports_STAR3D": 1070,
-   "conflicting": 943,
-   "supports_Rfam": 477,
-   "distance_only_Rfam": 223
+   "supports_STAR3D": 1249,
+   "supports_Rfam": 500,
+   "distance_only_Rfam": 227
   },
   "supports_star3d": {
-   "regions": 195,
-   "pairs": 141,
+   "regions": 221,
+   "pairs": 163,
    "families": [
     "RF00001",
     "RF00002",
@@ -291,11 +291,11 @@
     "RF00522",
     "RF03087"
    ],
-   "with_noncanonical_gain": 56
+   "with_noncanonical_gain": 70
   },
   "supports_rfam": {
-   "regions": 107,
-   "pairs": 98
+   "regions": 111,
+   "pairs": 101
   }
  }
 }

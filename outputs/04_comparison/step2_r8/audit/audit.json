@@ -1,0 +1,205 @@
+{
+ "Q1": {
+  "source": "residue_comparisons.tsv.gz, side=A (411 compared pairs)",
+  "a_side_nucleotides": 49739,
+  "categories": {
+   "neither": 796,
+   "same_partner": 39403,
+   "rfam_only": 3713,
+   "different_partner": 4741,
+   "star3d_only": 1086
+  },
+  "mapped_by_both": 44144,
+  "same_partner": 39403,
+  "different_partner": 4741,
+  "jointly_assessable": 44079,
+  "assessable_same": 39403,
+  "assessable_different": 4676,
+  "different_not_assessable": 65,
+  "same_not_assessable": 0,
+  "disagreement_rate": "4676/44079",
+  "edges": {
+   "source": "alignment_edges.tsv.gz",
+   "rows": 93087,
+   "rfam_rows": 47857,
+   "star3d_rows": 45230,
+   "shared_pairs": 39403,
+   "union": 53684,
+   "definition": "65,919 = rows = Rfam edges + STAR3D edges (SUM; a shared residue pair appears once per method)"
+  },
+  "regions": {
+   "source": "regions.tsv",
+   "total": 2323,
+   "by_side": {
+    "A": 1155,
+    "B": 1168
+   }
+  }
+ },
+ "Q2": {
+  "source": "motif/overlap_evidence.tsv.gz grouped by observation_id; hit = ANY of the 3 endpoints",
+  "rfam_only": 1217,
+  "atlas_only": 15,
+  "both": 32,
+  "neither": 3412,
+  "total": 4676,
+  "any_rfam": 1249,
+  "any_atlas": 47,
+  "loop_only_breakdown": {
+   "mixed coverage across endpoints": 225,
+   "no endpoint in an Atlas-covered chain (Atlas did not cover)": 2794,
+   "all 3 endpoints in Atlas-covered chains (searched, no group)": 2
+  },
+  "classification": {
+   "structural_loop_only": 3021,
+   "rfam_computational_motif": 1217,
+   "consensus_loop_context_only": 54,
+   "incomplete": 51,
+   "no_documented_hit": 286,
+   "bgsu_group_and_rfam_motif": 32,
+   "bgsu_motif_group": 15
+  }
+ },
+ "Q3": {
+  "source": "motif/motif_baseline.tsv (pooled) + overlap_evidence.tsv.gz A_residue rows",
+  "rfam_query_only": {
+   "disagreement": "774/4661",
+   "agreement": "8345/39387",
+   "recomputed_disagreement": "774/4676"
+  },
+  "bgsu_loop_query_only": {
+   "disagreement": "3405/4559",
+   "agreement": "24066/37727"
+  },
+  "atlas_query_only_baseline": {
+   "disagreement": "11/128",
+   "agreement": "306/1465",
+   "meaning": "member = Atlas group at the query endpoint; assessable = query endpoint in an Atlas-covered chain (the earlier mixed Rfam-or-Atlas row was removed)"
+  },
+  "atlas_query_only_disagreement": "11/128",
+  "note_39_vs_81": "39 = observations with an Atlas group at ANY of 3 endpoints, no coverage filter; 81 = observations whose QUERY endpoint lies in an Atlas-covered chain. Different endpoint rules -> 39/81 is not a valid rate."
+ },
+ "Q4": {
+  "source": "snapshot pairs_to_run.tsv + run_outcomes.tsv + residue_comparisons + overlap_evidence",
+  "table": "audit/family_table.tsv",
+  "no_alignment_by_family": {
+   "RF00005": 31,
+   "RF00023": 1
+  },
+  "no_alignment_structures_top": [
+   [
+    "9HM0_t",
+    22
+   ],
+   [
+    "7PD3_B",
+    7
+   ],
+   [
+    "7CPU_S6",
+    2
+   ],
+   [
+    "8Z1G_T",
+    2
+   ],
+   [
+    "7OII_z",
+    2
+   ],
+   [
+    "8ASW_X",
+    2
+   ]
+  ],
+  "no_alignment_distinct_structures": 31
+ },
+ "Q6": {
+  "source": "returned/preprocess/*/preprocess.json, *.stdout, STAR3D_struct_info/*.mca, runs/*/result.json; snapshot inputs_star3d/*.conversion.tsv",
+  "preprocess_records": 138,
+  "preprocess_input_sha_equals_frozen": 138,
+  "download_messages_found": 0,
+  "mca_residue_list_equals_staged_file": "138/138",
+  "mca_mismatches": [],
+  "star3d_ids_all_lowercase": true,
+  "distinct_ids": 138,
+  "jobs_inputs_changed": 0,
+  "rf_track": {
+   "yes": 538
+  },
+  "rf_track_families": [
+   "RF00001",
+   "RF00002",
+   "RF00005",
+   "RF00015",
+   "RF00026",
+   "RF00169",
+   "RF00177",
+   "RF00522",
+   "RF01852",
+   "RF03087"
+  ]
+ },
+ "Q7": {
+  "source": "diagnostics/disagreement_diagnostics.tsv.gz + residue_comparisons.tsv.gz",
+  "offset_definition": "ungapped position (Step 2 crosswalk, insertion codes preserved) of STAR3D's B partner minus that of Rfam's B partner",
+  "offset_recomputed_matches": "300/300 (first 300 rows)",
+  "lead_example": {
+   "rfam_partner": "3W3S|1|B|G|47|||B",
+   "rfam_partner_pos": "52",
+   "star3d_partner": "3W3S|1|B|U|47|||C",
+   "star3d_partner_pos": "53",
+   "offset": "1",
+   "author_number_difference": 0,
+   "note": "47B and 47C share author number 47; ungapped positions differ by 1"
+  },
+  "patterns": {
+   "register_shift_at_gap": "3003/4676",
+   "isolated_shift_at_gap": "220/4676",
+   "other": "271/4676",
+   "loop_rearrangement": "295/4676",
+   "register_shift": "102/4676",
+   "global_misregistration": "785/4676"
+  },
+  "patterns_mutually_exclusive": "yes: first matching rule assigns exactly one pattern per observation",
+  "pairwide_pairs": 26,
+  "pairwide_modal_offset_share": "391/785",
+  "hairpin": {
+   "hairpin": "1262/7761",
+   "outside_hairpin": "3414/36318",
+   "rule": "disagreements / jointly assessable A-side observations whose Rfam column is in a consensus hairpin loop (SS_cons)"
+  },
+  "by_context": {
+   "bulge": "4/58",
+   "exterior": "80/1020",
+   "hairpin_loop": "1262/7761",
+   "internal_loop": "546/5595",
+   "multiloop": "276/3428",
+   "paired": "2502/26195",
+   "pseudoknot_paired": "6/22"
+  }
+ },
+ "Q8_website_reconciliation": {
+  "pairs": [
+   570,
+   null
+  ],
+  "valid": [
+   538,
+   null
+  ],
+  "no_stacks": [
+   32,
+   null
+  ],
+  "assessable": [
+   44079,
+   null
+  ],
+  "different": [
+   4676,
+   null
+  ],
+  "all_match": false
+ }
+}

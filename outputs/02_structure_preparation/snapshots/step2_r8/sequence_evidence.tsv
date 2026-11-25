@@ -1,0 +1,235 @@
+seq_sha256	species_taxid	species_name	deposited_length	outcome	families	n_candidates	whole_chain_evidence	interval_evidence	routes	note
+0220156db9de808ac264827acbcfdfc3e5f57740b7ea6ac6be5e513af0363b16	1267533	Acidobacteriaceae bacterium KBS 83	50	not_found	RF03013	2			blast_core_nt:1267533	
+02c8c948a6c9bb5f6ce7762fdefdec4016519193508974188646cacea8f66bac	39492	[Eubacterium] siraeum	101	not_found	RF01831	3			assembly:GCF_000210635.1;blast_core_nt:39492	
+051067cf205add45aba188eeb74d57f573ab2b697ae8aa71e7114ec1f994982d	3048274	Triatovirus plastali	196	whole_chain_found	RF00458	2	NC_003779.1:6000-6195+(blast_core_nt)	NC_003779.1:6005-6195+	blast_core_nt:3048274	
+05c5b0451dc5322a8519c662ab5233b76b41e2d1a2174ec1c3ede6f4c2591ea6	3039	Euglena gracilis	163	whole_chain_found	RF00002	1	X53361.2:1206-1368+(blast_core_nt)		blast_core_nt:3039	
+08adcd7cc73bb5217aa6f5469f010fc884a74e8c5eda05eee12c1dfff7fe2217	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+0c42b5e033599d470b1bf580d2c74f13541033ce31d43f5c35377d42229aba30	658062	Candidatus Korobacter versatilis	52	not_found	RF03013	9			assembly:GCF_000014005.1;blast_core_nt:658062	
+0f27c982356c09ceb860acfd8a8711fe1fcb368e8d53e781de1e92b3102b2ab7	562	Escherichia coli	77	whole_chain_found	RF00005	15	NC_017625.1:1590572-1590648-(assembly:GCF_000023365.1)		assembly:GCF_000023365.1	
+0f7467835a4eb605c3f3d4e9892621ed0569d1dddfb05fd48b73078e5882eaa2	9598	Pan troglodytes	69	not_found	RF00622	2			blast_core_nt:9598	
+0f76371768cc595c18ae03ed77c86e64be5daf861995e1389503433d69f27b0f	4932	Saccharomyces cerevisiae	76	whole_chain_found	RF00005	2	X00843.1:1-76+(blast_core_nt)	OX377590.1:57528-57600+	blast_core_nt:4932	
+0f9734aca91430ad61ad9829d10c43568fbfe3a93d78ceade993def36f34029e	9606	Homo sapiens	155	whole_chain_found	RF00002	1	MF164267.1:4491-4645+(blast_core_nt)	MF164267.1:4491-4643+	blast_core_nt:9606	
+107e785a842804ca69f86b3768f508267314ec0cb81d8f3c6cb42b8ffe1895ba	9606	Homo sapiens	5227	interval_found_flank_differs	RF00002	2		MF164267.1:4491-4643+	blast_core_nt:9606	
+10cc536e8f2e266ad28689dda2fdb74ae6b1536d61db99ba2abda48ec39ef741	1488	Clostridium acetobutylicum	592	interval_found_flank_differs	RF03072	1		NC_015687.1:2986857-2987060-;CP002118.1:2984487-2984690-	assembly:GCF_000218855.1;blast_core_nt:1488	
+152e3f0e9f16c58cc345c7a9e2b6a4c97578632249803f841a104b9ca1cfeee9	4932	Saccharomyces cerevisiae	77	unknown_residues_in_chain	RF00005	1				F
+156e66746676330db52f940d17f18768990ae93353bdf54ea68fb2ab1cc72695	1423	Bacillus subtilis	75	whole_chain_found	RF00005	1	NC_000964.3:95772-95846+(assembly:GCF_000009045.1);NC_000964.3:165959-166033+(assembly:GCF_000009045.1);NC_000964.3:952701-952775+(assembly:GCF_000009045.1);NC_000964.3:3173324-3173398-(assembly:GCF_000009045.1)		assembly:GCF_000009045.1	
+156e66746676330db52f940d17f18768990ae93353bdf54ea68fb2ab1cc72695	1462	Geobacillus kaustophilus	75	not_found	RF00005	1			assembly:GCF_000009785.1;blast_core_nt:1462	
+15d91f049c7db26558295eb81e324082eaf32a1fca3259192b3c50652711aee0	1299	Deinococcus radiodurans	106	whole_chain_found	RF00169	2	NZ_CP038663.1:2228702-2228807+(assembly:GCF_020546685.1)		assembly:GCF_020546685.1	
+18dd24d6c4b1fc8806cb4f93a4fa66e6315dc58e70aa6db00caa6b3f381576be	3428959	Gammaretrovirus murleu	65	not_found	RF00374	1			blast_core_nt:3428959	
+1a53087c5d64502ead3a4fef7f51b00aef25588afa54668c2bcd678f2e02fab7	1262775	Clostridium sp. CAG:138	224	not_found	RF03072	1			blast_core_nt:1262775	
+1b69ff7ce673472dad1b88626fc827babad79c0a00bde32d1d2588a19efa259a	4932	Saccharomyces cerevisiae	67	whole_chain_found	RF00015	1	L22204.1:4781-4847+(blast_core_nt)		blast_core_nt:4932	
+1cbaee28387f295ed3d3f56ea958967804176e0393509a2e79af1bff7f54f456	1423	Bacillus subtilis	77	whole_chain_found	RF00005	2	NC_000964.3:96060-96136+(assembly:GCF_000009045.1);NC_000964.3:166168-166244+(assembly:GCF_000009045.1);NC_000964.3:3173046-3173122-(assembly:GCF_000009045.1)		assembly:GCF_000009045.1	
+1eedfbc5839f67d67960cfbf476d30c0d11b617eb9ac5a242ab7cb02eedd30a7	287	Pseudomonas aeruginosa	118	not_found	RF00166	2			assembly:GCF_000006765.1;blast_core_nt:287	
+217fe1cdb907bc8b0d08f39765d5c45f35f44ef039bbe85d6afbb61a88d9480b	562	Escherichia coli	83	whole_chain_found	RF00005	2	M10878.1:1-83+(blast_core_nt)	M10878.1:1-82+	assembly:GCF_000005845.2;blast_core_nt:562	
+273725f07ff78e08f1ad159447923a8c04a5f21aa40620d7f7a78342c5d87bb8	9606	Homo sapiens	73	interval_found_flank_differs	RF00005	10		ON127816.1:1604-1672+	blast_core_nt:9606	
+27408d675e934c85f8717f3049764c0c80e1cf4522b89deef0a7631a195fc6e7	9606	Homo sapiens	76	whole_chain_found	RF00005	4	U00939.1:1-76+(blast_core_nt)	AC130329.8:64205-64277-	blast_core_nt:9606	
+27408d675e934c85f8717f3049764c0c80e1cf4522b89deef0a7631a195fc6e7	9913	Bos taurus	76	interval_found_flank_differs	RF00005	1		XR_001501985.3:157-229+	blast_core_nt:9913	
+28890de0dd2033379fabebc7165a219d6092ad9bbadc77f4c7528be78963ca0b	274	Thermus thermophilus	76	not_found	RF00005	2			assembly:GCF_000091545.1;blast_core_nt:274	
+28890de0dd2033379fabebc7165a219d6092ad9bbadc77f4c7528be78963ca0b	4932	Saccharomyces cerevisiae	76	not_found	RF00005	34			blast_core_nt:4932	
+28890de0dd2033379fabebc7165a219d6092ad9bbadc77f4c7528be78963ca0b	5541	Thermomyces lanuginosus	76	not_found	RF00005	1			blast_core_nt:5541	
+28890de0dd2033379fabebc7165a219d6092ad9bbadc77f4c7528be78963ca0b	562	Escherichia coli	76	not_found	RF00005	28			assembly:GCF_000005845.2;blast_core_nt:562	
+28890de0dd2033379fabebc7165a219d6092ad9bbadc77f4c7528be78963ca0b	9913	Bos taurus	76	not_found	RF00005	1			blast_core_nt:9913	
+2959e322384464469e46bdbd6e76fae34c8b9aa17a74d319b00454b90ce2c191	562	Escherichia coli	77	whole_chain_found	RF00005	4	NC_000913.3:225381-225457+(assembly:GCF_000005845.2);NC_000913.3:4037141-4037217+(assembly:GCF_000005845.2);NC_000913.3:3427076-3427152-(assembly:GCF_000005845.2)		assembly:GCF_000005845.2	
+2a56598e5142d87dc1efdb9481bbdbd2268a7f4e0b6e2443ef9cb0ccf5683070	9606	Homo sapiens	69	not_found	RF00622	1			blast_core_nt:9606	
+2a8b82ed164067e99febe15c9232ab139492c4edbec070172468e6b7f73e264c	1423	Bacillus subtilis	116	whole_chain_found	RF00001	1	NC_000964.3:14692-14807+(assembly:GCF_000009045.1);NC_000964.3:35237-35352+(assembly:GCF_000009045.1);NC_000964.3:95237-95352+(assembly:GCF_000009045.1);NC_000964.3:101093-101208+(assembly:GCF_000009045.1);NC_000964.3:165591-165706+(assembly:GCF_000009045.1);NC_000964.3:171197-171312+(assembly:GCF_000009045.1);NC_000964.3:176197-176312+(assembly:GCF_000009045.1);NC_000964.3:640138-640253+(assembly:GCF_000009045.1);NC_000964.3:3173820-3173935-(assembly:GCF_000009045.1)		assembly:GCF_000009045.1	
+2bcbcc4de5e57bbb971d9a9fd7759641862792169a13bfc9447eb5a0df5bb960	274	Thermus thermophilus	72	not_found	RF00005	1			assembly:GCF_000091545.1;blast_core_nt:274	
+305b03a9cec4400a09c73a28c0d73097761974fe0fab1aa16eac7e2b7b7f1f3d	274	Thermus thermophilus	76	not_found	RF00005	1			assembly:GCF_000091545.1;blast_core_nt:274	
+305b03a9cec4400a09c73a28c0d73097761974fe0fab1aa16eac7e2b7b7f1f3d	562	Escherichia coli	76	whole_chain_found	RF00005	12	NC_000913.3:780765-780840+(assembly:GCF_000005845.2);NC_000913.3:781068-781143+(assembly:GCF_000005845.2);NC_000913.3:2520931-2521006+(assembly:GCF_000005845.2);NC_000913.3:2521051-2521126+(assembly:GCF_000005845.2);NC_000913.3:2521173-2521248+(assembly:GCF_000005845.2)		assembly:GCF_000005845.2	
+335fc919daf1c01bb28f3d1730ab599de836d051c5a9c897b277352dfb611890	4097	Nicotiana tabacum	76	not_found	RF00005	2			blast_core_nt:4097	
+35b64ff13f358c707f3e48d4187499ca6a665dcaada6012e7e316d3b529fbdb4	1772	Mycolicibacterium smegmatis	118	whole_chain_found	RF00001	35	NZ_CP009494.1:5024246-5024363-(assembly:GCF_000767605.1)		assembly:GCF_000767605.1	
+35d163c865022ca3c8322306fe660be86ca299b115056fc771affd5210712004	9606	Homo sapiens	107	whole_chain_found	RF00026	26	AC009292.11:155615-155721-(blast_core_nt)		blast_core_nt:9606	
+36eb8406626d3d316274164b2e41c0ab1d7398634bf8a7d4b5bc0d13b7e5a4d0	562	Escherichia coli	77	whole_chain_found	RF00005	1	NC_000913.3:781576-781652+(assembly:GCF_000005845.2)		assembly:GCF_000005845.2	
+3748b8b80faf2c036fd33683ee60ceea57078bf54a8bf19c22f20de6c606f460	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+381b919b40b6f14ab01a88c95abbf2584c0c042fb37558de758e0137d6d39995	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+381df2f9c22730c736b4997fe9c70b7f6fd2cc6326e68e437265d2fae6e007ea	1423	Bacillus subtilis	123	whole_chain_found	RF00001	1	NC_000964.3:14688-14810+(assembly:GCF_000009045.1);NC_000964.3:35233-35355+(assembly:GCF_000009045.1);NC_000964.3:101089-101211+(assembly:GCF_000009045.1);NC_000964.3:176193-176315+(assembly:GCF_000009045.1)		assembly:GCF_000009045.1	
+398840600daef663abd1dc49bb025130ce44bccf93d1da4a2bc00b7c496ec4d6	1773	Mycobacterium tuberculosis	115	whole_chain_found	RF00001	13	NC_008769.1:1503413-1503527+(assembly:GCF_000009445.1)		assembly:GCF_000009445.1	
+39cabc31d2167b0a80f1a9f2c89dbbef6fe0370e4a2e0018aed0750400b8cfb1	9606	Homo sapiens	96	interval_found_flank_differs	RF00005	1		ON127816.1:4331-4402-	blast_core_nt:9606	
+3ad45f7bed06509243666efc1d024abcdd667571c8febcd440940b404741f822	1660	Schaalia odontolytica	64	not_found	RF01750	4			assembly:GCF_031191545.1;blast_core_nt:1660	
+3b77086a91b35d45144d237b56bcf49954cff6533510648ddf923b4269770692	9606	Homo sapiens	78	interval_found_flank_differs	RF00005	1		ON127816.1:4265-4333+	blast_core_nt:9606	
+3e0da67d446e18087c05878e8cddce097b0d7e8b953aa292ae9d41c18455e873	63363	Aquifex aeolicus	99	whole_chain_found	RF01852	1	NC_000918.1:727371-727469+(assembly:GCF_000008625.1)		assembly:GCF_000008625.1	
+4152728c15b0a55b88630db2416844c6ba0f763b0eb8515ccfdaa102556665e1	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+41b4a9ee8578c58cea60d048630650f2cea21179106f80345e09a0fe104c7fdd	3047774	Cripavirus grylli	190	not_found	RF00458	1			blast_core_nt:3047774	
+42383eb5e9e2af5c0d7d3299c9756be4c190ff8f307a4858ba7f4f1762cc1fbe	5833	Plasmodium falciparum	119	whole_chain_found	RF00001	5	XR_002273092.1:1-119+(blast_core_nt)		blast_core_nt:5833	
+45cd8b1cadabb8113120575785adf6337763ff842bfd2f22f66132d5880325cc	1423	Bacillus subtilis	119	whole_chain_found	RF00001	14	NC_000964.3:14692-14810+(assembly:GCF_000009045.1);NC_000964.3:35237-35355+(assembly:GCF_000009045.1);NC_000964.3:101093-101211+(assembly:GCF_000009045.1);NC_000964.3:176197-176315+(assembly:GCF_000009045.1)		assembly:GCF_000009045.1	
+46105a55e98c9c443f582b1de2d0a2a7f5efcb8fb6151ef92855bd7ddffe6479	8355	Xenopus laevis	120	whole_chain_found	RF00001	1	M10850.1:361-480+(blast_core_nt)	XR_005962128.1:1-119+	blast_core_nt:8355	
+46d8f5bd6e239dffcebdcd11baa1abebcd86563c65814ca553322524aace3856	9606	Homo sapiens	90	interval_found_flank_differs	RF00005	2		ON127816.1:5828-5893-	blast_core_nt:9606	
+47950b7cc56951a6b8eaa3d9a4c832d0e0c90adde53193d96ac15426b9a5f3a2	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+479d6450c9d4d3127e34b84d3cb98fdd6941b486ed0f9095c4e27632912f536b	562	Escherichia coli	93	whole_chain_found	RF00005	2	NC_000913.3:2818553-2818645-(assembly:GCF_000005845.2)		assembly:GCF_000005845.2	
+483832f172f40aff27c3b07fdfe12967fb5953485417402faf83081b5c7c80b5	562	Escherichia coli	74	not_found	RF00169	1			assembly:GCF_000005845.2;blast_core_nt:562	
+4b7e6e9bb5f31d7af6e789e70126dd1ace0737ec8738d3cde8f79526e6e9dd32	9606	Homo sapiens	77	interval_found_flank_differs	RF00005	4		AC130329.8:64205-64277-	blast_core_nt:9606	
+4b8ec25761389490bb2fb1dc3cc986c966016e043b1eef5556de8c407bdc83e0	4097	Nicotiana tabacum	119	not_found	RF00001	2			blast_core_nt:4097	
+4bd2ad4e73fe87b626bd080886f07870d9abba03c1e50e03ed0bc57b1f572742	911092	Caldanaerobacter subterraneus	95	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+4c7e85c270bbf5c8ef18345cfc51dc7a17df1e4dcce608aedd2492ac2d3c83f3	9606	Homo sapiens	75	interval_found_flank_differs	RF00005	1		AC234785.4:36636-36707+	blast_core_nt:9606	
+4d2620b5a067356fce892b330e551eeda9931f75fb7b6cd3956bb753c88ef810	987057	Burkholderia sp. TJI49	128	not_found	RF00442	1			blast_core_nt:987057	
+5134e58b450d3ade791eaf6d4094d2961e37bbb4b8633d85c2c8d9b9cafced6c	1624	Ligilactobacillus salivarius	550	whole_chain_found	RF03087	6	CP024068.1:174653-175202-(blast_core_nt)		assembly:GCF_035231985.1;blast_core_nt:1624	
+528398141a57c1fca2ca40dd88734e7e6efc5d7f63c7b63130eb5a2ba7fa374c	562	Escherichia coli	85	whole_chain_found	RF00005	3	NC_000913.3:696963-697047-(assembly:GCF_000005845.2)		assembly:GCF_000005845.2	
+5298d0b155ee6d4b338114e652a6752e0c411670cef2a5412a89e77f72b7c577	1423	Bacillus subtilis	148	not_found	RF00174	1			assembly:GCF_000009045.1;blast_core_nt:1423	
+54ab576a8bd4008b9e21e574e03d09dc7069cb7a387dc5a004a1d5627bc7948e	9606	Homo sapiens	75	interval_found_flank_differs	RF00005	7		AC114481.2:80693-80764-	blast_core_nt:9606	
+54ab576a8bd4008b9e21e574e03d09dc7069cb7a387dc5a004a1d5627bc7948e	9913	Bos taurus	75	whole_chain_found	RF00005	1	X56627.1:1-75+(blast_core_nt)	X56627.1:1-72+	blast_core_nt:9913	
+597a08c50c5055c99f032f4d8e55ab7de9d5e19420ee2dbfaf3080833167e4f1	10090	Mus musculus	156	whole_chain_found	RF00002	2	OQ858937.1:2692-2847+(blast_core_nt)	BK000964.3:6878-7030+	blast_core_nt:10090	
+597a08c50c5055c99f032f4d8e55ab7de9d5e19420ee2dbfaf3080833167e4f1	9606	Homo sapiens	156	whole_chain_found	RF00002	75	MF164267.1:4490-4645+(blast_core_nt)	MF164267.1:4491-4643+	blast_core_nt:9606	
+597a08c50c5055c99f032f4d8e55ab7de9d5e19420ee2dbfaf3080833167e4f1	9823	Sus scrofa	156	whole_chain_found	RF00002	4	AK236486.1:6-161+(blast_core_nt)	NR_046250.1:1-153+	blast_core_nt:9823	
+597a08c50c5055c99f032f4d8e55ab7de9d5e19420ee2dbfaf3080833167e4f1	9940	Ovis aries	156	interval_found_flank_differs	RF00002	1		XR_003587869.1:1-153+	blast_core_nt:9940	
+597a08c50c5055c99f032f4d8e55ab7de9d5e19420ee2dbfaf3080833167e4f1	9986	Oryctolagus cuniculus	156	not_found	RF00002	72			blast_core_nt:9986	
+5acf1284b83dbd871648fdc3d5c8eccae994143a4c0cae49df82d5c665b6dbfd	10090	Mus musculus	158	whole_chain_found	RF00002	2	OQ858937.1:2692-2849+(blast_core_nt)	BK000964.3:6878-7030+	blast_core_nt:10090	
+5acf1284b83dbd871648fdc3d5c8eccae994143a4c0cae49df82d5c665b6dbfd	9986	Oryctolagus cuniculus	158	not_found	RF00002	13			blast_core_nt:9986	
+5c75aee225e2a845d327e94bf67b43c27b4c214df2bfd57e7870893c2a418cde	4565	Triticum aestivum	75	not_found	RF00005	2			blast_core_nt:4565	
+5c75aee225e2a845d327e94bf67b43c27b4c214df2bfd57e7870893c2a418cde	4932	Saccharomyces cerevisiae	75	interval_found_flank_differs	RF00005	6		LN907790.1:427250-427321+	blast_core_nt:4932	
+5cd17fdf8292691cecd7d1f515c88d54af597ddb7ab34677453d507e1e5b3ac5	562	Escherichia coli	76	whole_chain_found	RF00005	6	NZ_CP009273.1:221987-222062+(assembly:GCF_000750555.1);NZ_CP009273.1:4030620-4030695+(assembly:GCF_000750555.1);NZ_CP009273.1:3420317-3420392-(assembly:GCF_000750555.1)		assembly:GCF_000750555.1	
+5e92b90eeaa3c2f3ef079bf6a8702d7f196a1992dbb17d92585b053a8c0c3ffd	2190	Methanocaldococcus jannaschii	97	whole_chain_found	RF00169	1	NC_000909.1:552676-552772+(assembly:GCF_000091665.1)		assembly:GCF_000091665.1	
+5ec6d24a4b324bf12c9fd0b4f6e514e15c3a34c2caadd7b5cc1ca0cfd0ba6665	1358	Lactococcus lactis	704	interval_found_flank_differs	RF00029	1		AF243383.1:10225-10322+	assembly:GCF_003176835.1;blast_core_nt:1358	
+5fe81c6fb85770489ca0ace0aaa93f9ba44c10cc103d86c6691e1c9989cd0e50	1488	Clostridium acetobutylicum	204	whole_chain_found	RF03072	1	NC_003030.1:2985230-2985433-(assembly:GCF_000008765.1)		assembly:GCF_000008765.1	
+5feb3c771c8dd0fd41661ce119695cfacb996aff2abd11c5faa03ad41918b555	562	Escherichia coli	76	whole_chain_found	RF00005	2	NZ_CP009273.1:3208957-3209032+(assembly:GCF_000750555.1)		assembly:GCF_000750555.1	
+6061c6e4c04f228daba22a1a4d0c02812e9127b7ef3be147409de310818d8c6f	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+6074cc50c2538c8c58e6810f3456ffe106189c09bb130c6f65c02ba4432f8563	1772	Mycolicibacterium smegmatis	369	whole_chain_found	RF00023	1	NZ_CP009494.1:2169298-2169666+(assembly:GCF_000767605.1)		assembly:GCF_000767605.1	
+60dd07ea59352e3c00bac68cd92fdd91a8a604f5d5a899011887e7b4e1f452da	9606	Homo sapiens	68	interval_found_flank_differs	RF00005	2		ON127816.1:10407-10471+	blast_core_nt:9606	
+6166f3c7310e9634a7daf92e8447d17de512c55e24005a52b020926eb404fa19	1423	Bacillus subtilis	119	not_found	RF00162	1			assembly:GCF_000321395.1;blast_core_nt:1423	
+61b81023667baf203263b6b1a2ef2105ec6e72d9e1ef09e269e29c94d5459e77	4932	Saccharomyces cerevisiae	76	interval_found_flank_differs	RF00005	2		LN907790.1:646280-646352+	blast_core_nt:4932	
+620e0162618efb0022488893b45a6aaf269c72a24d4127754738368943e5e21a	9606	Homo sapiens	194	whole_chain_found	RF00002	1	CR749662.1:1-194+(blast_core_nt)	MF164267.1:4491-4643+	blast_core_nt:9606	
+620e0162618efb0022488893b45a6aaf269c72a24d4127754738368943e5e21a	9986	Oryctolagus cuniculus	194	not_found	RF00002	5			blast_core_nt:9986	
+62fcf8397597fd400601f9e5699f6bac21bdf7b2579b9776f99caf4662e4f2c7	5664	Leishmania major	16181	interval_found_flank_differs	RF02546	2		EU140338.1:1-326+	blast_core_nt:5664	
+637ef1c96f6a3d51a2812ebd91e48e5b9a7569c78ef99c60ad2515ab8fce7ab9	562	Escherichia coli	75	whole_chain_found	RF00005	2	NC_000913.3:3946957-3947031+(assembly:GCF_000005845.2)		assembly:GCF_000005845.2	
+644f94f26842003b885d274d0246227a4fbae8ef0d6f7e1932aa728f2ceb189d	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+6495a9541f65d784236be9b6e90af69f0713c2aa8c14602a7eb59a25ff9e17cb	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+65c8f6ec239fa1804ab3891c3f43b421edfd7046ce6521cc8a644bba7fdaf489	9606	Homo sapiens	73	whole_chain_found	RF00005	1	AC130329.8:64205-64277-(blast_core_nt)		blast_core_nt:9606	
+68bec16e88d20ae74e1b1262da7f99a3af8494ffb9255dbf5cdd82341b6db0d3	3047774	Cripavirus grylli	192	not_found	RF00458	2			blast_core_nt:3047774	
+69cf45c34d21538dc70c4289bc8a8da478ef2f60a7171de5d4c83e6bfde48a9f	5691	Trypanosoma brucei	169	whole_chain_found	RF00002	1	AC159415.1:54375-54543+(blast_core_nt)		blast_core_nt:5691	
+6ad86f0af03c10a24d103087efd67d4e1cc7a65541569e2e49b1a352a9ae0b8e	7227	Drosophila melanogaster	123	whole_chain_found	RF00002	4	NR_133558.1:3583-3705+(blast_core_nt)		blast_core_nt:7227	
+6ba8c17b8fc9f7700f609f8cdc0dd36c807f0171ecf503be1da24efb00e2759e	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+6dc4922a7a56188b5d33a0cde6b3cea2c61c5957df5501e445c7f41b1efa1e96	93929	Thermotoga petrophila	52	not_found	RF01734	5			assembly:GCF_000016785.1;assembly:GCF_000025105.1;assembly:GCA_000016785.1;assembly:GCA_000025105.1;blast_core_nt:93929	
+6e2c4a48b3af580ee37ef337f914ef56b4ac14792b984c49cb10d6cb50871b38	9606	Homo sapiens	76	whole_chain_found	RF00005	1	K00350.1:1-76+(blast_core_nt)	AL133258.16:56433-56505-	blast_core_nt:9606	
+6e2c4a48b3af580ee37ef337f914ef56b4ac14792b984c49cb10d6cb50871b38	9913	Bos taurus	76	whole_chain_found	RF00005	2	K00353.1:1-76+(blast_core_nt)	K00353.1:1-73+	blast_core_nt:9913	
+6fa5e783504b059f5bfae7a61aa1087f457392a73a8aab1d9d6290be9611c880	4896	Schizosaccharomyces pombe	246	whole_chain_found	RF00001	3	NR_203316.1:156-401-(blast_core_nt)	NR_203318.1:323-441-	blast_core_nt:4896	
+7046cb662e64665cc21101f059a5c0e54080d6c942ec13a204dc82f826602bb6	1906	Streptomyces fradiae	117	whole_chain_found	RF00001	1	NZ_CP023696.1:3824842-3824958+(assembly:GCF_008704425.1);NZ_CP023696.1:5126956-5127072+(assembly:GCF_008704425.1);NZ_CP023696.1:786039-786155-(assembly:GCF_008704425.1);NZ_CP023696.1:2513389-2513505-(assembly:GCF_008704425.1)		assembly:GCF_008704425.1	
+70e42ab758cf4ec5e58036c9455bfcc1bdba69d5dfe8e0c7f92a31ff3aa8fd4a	10090	Mus musculus	75	whole_chain_found	RF00005	5	K00329.1:1-75+(blast_core_nt)	AF458249.1:2644-2715-	blast_core_nt:10090	
+70e42ab758cf4ec5e58036c9455bfcc1bdba69d5dfe8e0c7f92a31ff3aa8fd4a	5741	Giardia duodenalis	75	not_found	RF00005	6			blast_core_nt:5741	
+70e42ab758cf4ec5e58036c9455bfcc1bdba69d5dfe8e0c7f92a31ff3aa8fd4a	9606	Homo sapiens	75	whole_chain_found	RF00005	48	K00328.1:1-75+(blast_core_nt)	NG_077957.2:332-403-	blast_core_nt:9606	
+70e42ab758cf4ec5e58036c9455bfcc1bdba69d5dfe8e0c7f92a31ff3aa8fd4a	9986	Oryctolagus cuniculus	75	interval_found_flank_differs	RF00005	16		XM_070074864.2:604-675-	blast_core_nt:9986	
+7299e9d6f11b8261958a3953f9e096cdf6c5f12d4bbcedf41c25e84abfa59a85	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+73166ba4c70d7e36c1a11715256de4dfc7bdd51791c4b3303d3f64602bc41ff7	3418650	Lentivirus humimdef1	93	not_found	RF00480	3			blast_core_nt:3418650	
+73a3d8b1b0c14cd6bdb51e01058d4787df0763cd3a9b54daf9215ed44ebbae75	3047774	Cripavirus grylli	190	not_found	RF00458	1			blast_core_nt:3047774	
+73bb6931bf4ecede92b22c654e33980300d1f71cb888487004567cea272cae1d	911092	Caldanaerobacter subterraneus	126	not_found	RF00162	2			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+742d306400142a2408ad9d3a0bb8d1dee902c27b610c0f68ab3f235706cf0af5	1423	Bacillus subtilis	77	whole_chain_found	RF00005	1	NC_000964.3:640268-640344+(assembly:GCF_000009045.1);NC_000964.3:951954-952030+(assembly:GCF_000009045.1);NC_000964.3:3172600-3172676-(assembly:GCF_000009045.1)		assembly:GCF_000009045.1	
+74587d4e5f92cb8e93340faef67356fa1592fa31850000046a6554e92de644d8	911092	Caldanaerobacter subterraneus	33	whole_chain_found	RF00522	3	NC_003869.1:1523221-1523253-(assembly:GCF_000007085.1)		assembly:GCF_000007085.1	
+74be7de2952dafcd97b08fe8f6ffb77fe2929cac133135572a8e08562cb2d2bb	4932	Saccharomyces cerevisiae	80	interval_found_flank_differs	RF00005	1		K01553.1:1-73+	blast_core_nt:4932	
+7551fe3f019503ec22fd49b5e254ced824bffec50956ecfd8ef1496bead32d08	1773	Mycobacterium tuberculosis	1537	whole_chain_found	RF00177	11	NC_008769.1:1498360-1499896+(assembly:GCF_000009445.1)		assembly:GCF_000009445.1	
+76a7efb6eab5f9c02f735fe3ebcf64b230e7fdce6acda6df0d73a205fe533e68	5811	Toxoplasma gondii	124	whole_chain_found	RF00001	1	X75430.1:6572-6695+(blast_core_nt)	X75430.1:6572-6693+	blast_core_nt:5811	
+773f1c95d35a438e1698716cd890d73efcfa586a59a6298d3bf7b8d1fbb94877	10090	Mus musculus	120	whole_chain_found	RF00001	3	AC140552.3:3309-3428-(blast_core_nt)	AC140552.3:3310-3428-	blast_core_nt:10090	
+773f1c95d35a438e1698716cd890d73efcfa586a59a6298d3bf7b8d1fbb94877	9606	Homo sapiens	120	whole_chain_found	RF00001	74	X51545.1:274-393+(blast_core_nt)	X51545.1:274-392+	blast_core_nt:9606	
+773f1c95d35a438e1698716cd890d73efcfa586a59a6298d3bf7b8d1fbb94877	9823	Sus scrofa	120	whole_chain_found	RF00001	4	AK389382.1:1-120+(blast_core_nt)	AK389382.1:1-119+	blast_core_nt:9823	
+773f1c95d35a438e1698716cd890d73efcfa586a59a6298d3bf7b8d1fbb94877	9986	Oryctolagus cuniculus	120	not_found	RF00001	90			blast_core_nt:9986	
+77f8ea1eb4ada33af014d54b9491fa4122d02a2fa6fede4e17eb54b1e4a9832f	3047774	Cripavirus grylli	190	not_found	RF00458	1			blast_core_nt:3047774	
+7832c7efcdf4b8312403b92cfedcf96509a0afc22bbf20ae3c9beefca0ebceef	2320	Methanopyrus kandleri	92	interval_found_flank_differs	RF01852	6		NC_003551.1:188240-188326+;AE009439.1:188240-188326+;AE009439.1:188240-188326+	assembly:GCF_000007185.1;assembly:GCA_000007185.1;blast_core_nt:2320	
+79c905a1b6ff963461f8eb7593bf297034a7276839db4856b25cb66baa8a4a0b	6239	Caenorhabditis elegans	153	whole_chain_found	RF00002	2	Z92784.2:26044-26196+(blast_core_nt)	Z92784.2:26045-26194+	blast_core_nt:6239	
+79dc9078a98d9e05e7a644ce8cd19e5a54fe597adc0f6f83a7cd865a4dbfab21	562	Escherichia coli	83	not_found	RF00059	12			assembly:GCF_000005845.2;blast_core_nt:562	
+7a86a8d9fd5be65b733b9fa64c255add9dcdd076657ea452240df557ea9c8541	5691	Trypanosoma brucei	1176	unknown_residues_in_chain	RF02546	1				N
+7abbfecace83442f078fe260893d9b17cb41cb0df8f0859e5c31c530fbccc71d	9606	Homo sapiens	144	whole_chain_found	RF00015	18	NR_003925.2:1-144+(blast_core_nt)		blast_core_nt:9606	
+7bf31a6eba50f7774114596cee89e83adb23a84d1767a60d4e60a5e14ed2a34b	6239	Caenorhabditis elegans	119	whole_chain_found	RF00001	2	NR_070092.1:1-119-(blast_core_nt)		blast_core_nt:6239	
+7c900d4750ff4c0af4209a2816e678eb425f58fc1d8cf72a0fa4b2ce3a3803d5	3047774	Cripavirus grylli	163	not_found	RF00458	1			blast_core_nt:3047774	
+7d48180483ca28b9162a8b751e8fba115912a175b47f1ddafd4777f93607314a	562	Escherichia coli	76	whole_chain_found	RF00005	6	NC_000913.3:3946957-3947032+(assembly:GCF_000005845.2)		assembly:GCF_000005845.2	
+7dc632c9df6c76699896eeaf36e1fd6473283cdd0d9bad477cbbedc233692c52	5691	Trypanosoma brucei	1179	interval_found_flank_differs	RF02546	1		X02547.1:205-303+	blast_core_nt:5691	
+7fcabf4e0778e8e9d5501c0d332743cbe04d32585cc56cf137bb1e38f3e34b5f	911092	Caldanaerobacter subterraneus	210	not_found	RF00174	11			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+800d7447011941d9f289bd23c1f37df4e308bc3166066a29e7216c4db2c4d48f	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+80218b7057d95c2350d9f4d0454bfb865dc9c69c977f1ee7baad142153472524	562	Escherichia coli	76	unknown_residues_in_chain	RF00005	8				X
+811c32852c1b9d94889bbb69cb079f3e2a5814ee64cebb1b2ec2164db93204a3	562	Escherichia coli	74	whole_chain_found	RF00005	12	NC_000913.3:2998984-2999057-(assembly:GCF_000005845.2)		assembly:GCF_000005845.2	
+8617dcf7ab1ae177c67943449b2c06cc3c228c645bd741b3d82c5ba67607403f	4932	Saccharomyces cerevisiae	76	whole_chain_found	RF00005	4	K00287.1:1-76+(blast_core_nt)	K00287.1:1-73+	blast_core_nt:4932	
+87ca17862c63487980fabcc3cf2501f38c4c74d75c381fc4e4ba29683c0d026b	274	Thermus thermophilus	76	not_found	RF00005	3			assembly:GCF_000091545.1;blast_core_nt:274	
+87ca17862c63487980fabcc3cf2501f38c4c74d75c381fc4e4ba29683c0d026b	4932	Saccharomyces cerevisiae	76	not_found	RF00005	7			blast_core_nt:4932	
+87ca17862c63487980fabcc3cf2501f38c4c74d75c381fc4e4ba29683c0d026b	562	Escherichia coli	76	whole_chain_found	RF00005	44	NC_000913.3:780554-780629+(assembly:GCF_000005845.2);NC_000913.3:780843-780918+(assembly:GCF_000005845.2);NC_000913.3:781147-781222+(assembly:GCF_000005845.2);NC_000913.3:781369-781444+(assembly:GCF_000005845.2);NC_000913.3:781577-781652+(assembly:GCF_000005845.2);NC_000913.3:2521253-2521328+(assembly:GCF_000005845.2)		assembly:GCF_000005845.2	
+8dd836443066cc6d454363730ec16044338792bde0d589c0a3def466a4589f2c	4565	Triticum aestivum	75	whole_chain_found	RF00005	4	V01383.1:1-75+(blast_core_nt)	MT014523.1:484-555+	blast_core_nt:4565	
+8e5bbea4148dafb28cb01870ed4453dd1a1bb67c3e9358542d02e28376134d0c	10090	Mus musculus	68	whole_chain_found	RF00005	7	LC062066.1:1855-1922+(blast_core_nt)		blast_core_nt:10090	
+9067f2ee3ddebde606b987864952e72ef33a9c97079f6d64baa692bee72ba657	9606	Homo sapiens	86	whole_chain_found	RF00005	2	ON127816.1:5808-5893-(blast_core_nt)	ON127816.1:5828-5893-	blast_core_nt:9606	
+90ef6f97660ebc443351df3de5fab3b56c3320d06ff64d651afcd80e5fa17049	562	Escherichia coli	76	whole_chain_found	RF00005	1	NC_000913.3:3982735-3982810+(assembly:GCF_000005845.2)		assembly:GCF_000005845.2	
+913108987b0084dd25e879138b66c3f0aae09ca7e28b72a06efc2e7f58bb7101	911092	Caldanaerobacter subterraneus	93	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+917b9181f2ea18e4c648678f6d1c62b0a7c789dc4ba2dd7f45ade27946ac58fe	274	Thermus thermophilus	86	whole_chain_found	RF00005	1	NC_006461.1:240406-240491-(assembly:GCF_000091545.1)		assembly:GCF_000091545.1	
+94af805ff09def0add8f676457947011f3e4ecc6161354c269bca84a402acd99	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+94fa16d653b58e3cdea9022490c0feca7fb3cd65a84df72b117e998639a8cb70	562	Escherichia coli	78	unknown_residues_in_chain	RF00005	2				VX
+9644fdea85571a20ecb16c0ada1ec100416a98d791fcfade2ac6ab4132b95902	5693	Trypanosoma cruzi	8129	not_found	RF02546	4			blast_core_nt:5693	
+974f51da94729865209d77ea0328a5f6d9dcd2d165363cd1e56bbc9c795d2214	1309	Streptococcus mutans	89	not_found	RF01831	2			assembly:GCF_000007465.2;assembly:GCA_000007465.2;assembly:GCF_019048645.1;assembly:GCF_006739205.1;assembly:GCF_044360185.1;assembly:GCF_900475095.1;assembly:GCA_006739205.1;assembly:GCA_019048645.1;blast_core_nt:1309	
+99114a2c39cd014f5f2a901886a5c7a124e3ce12e0c87f88149b7a7ed3d9000a	3039	Euglena gracilis	120	whole_chain_found	RF00001	1	X01484.1:2-121+(blast_core_nt)	X01484.1:2-120+	blast_core_nt:3039	
+9b33908d46ed3cc4bd5d210c8722af715b9fca9e8161ec6e08238dfbef3a47e7	861	Fusobacterium ulcerans	75	whole_chain_found	RF01750	8	NZ_CP028105.1:1213076-1213150-(assembly:GCF_003019675.1)		assembly:GCA_984589905.1;assembly:GCF_003019675.1	
+9c5f96342ba05490ece255733c3750edc93d35bd6f68405b406cd0b6e66b4ff8	2190	Methanocaldococcus jannaschii	136	whole_chain_found	RF00169	1	NC_000909.1:552659-552794+(assembly:GCF_000091665.1)		assembly:GCF_000091665.1	
+9d5ace0102221c3ed1789195ece6427724416ee093e330912d1d0d04f527db2a	10090	Mus musculus	52	interval_found_flank_differs	RF00032	1		NM_178203.3:471-496+	blast_core_nt:10090	
+9e87a384722b74100f858bb3b691384616788e65686db2769bf200ae8dce5a6e	1423	Bacillus subtilis	77	whole_chain_found	RF00005	10	NC_000964.3:640405-640481+(assembly:GCF_000009045.1);NC_000964.3:952042-952118+(assembly:GCF_000009045.1);NC_000964.3:3172512-3172588-(assembly:GCF_000009045.1);NC_000964.3:4154895-4154971-(assembly:GCF_000009045.1)		assembly:GCF_000009045.1	
+a1a19553bce8244dd86d65a5549894de77e1c6daa9c8182a9eeae5267124239f	4565	Triticum aestivum	160	not_found	RF00002	4			blast_core_nt:4565	
+a1bc8caf0de37920e84ab5ed1c7477691746ca315c8badd250bd25fc50b8891f	4932	Saccharomyces cerevisiae	78	unknown_residues_in_chain	RF00005	3				F
+a35775d8dfc5430fec41c50279d7a6fa25ec08d43c02c6ed48750badaf333dc3	9986	Oryctolagus cuniculus	76	interval_found_flank_differs	RF00005	4		XM_070074864.2:604-675-	blast_core_nt:9986	
+a531778a4504c81807d91f033142f455069f36e92a5865a38bfd884f2f2e4a0f	10090	Mus musculus	119	whole_chain_found	RF00001	1	AC140552.3:3310-3428-(blast_core_nt)		blast_core_nt:10090	
+a531778a4504c81807d91f033142f455069f36e92a5865a38bfd884f2f2e4a0f	9606	Homo sapiens	119	whole_chain_found	RF00001	6	X51545.1:274-392+(blast_core_nt)		blast_core_nt:9606	
+a531778a4504c81807d91f033142f455069f36e92a5865a38bfd884f2f2e4a0f	9986	Oryctolagus cuniculus	119	not_found	RF00001	11			blast_core_nt:9986	
+a5b5212a4e07905d1cff4bd10140a383590d74edbd345ba2c74f266ecbcd3131	139	Borreliella burgdorferi	112	whole_chain_found	RF00001	2	NC_001318.1:435201-435312-(assembly:GCF_000008685.2);NC_001318.1:438446-438557-(assembly:GCF_000008685.2)		assembly:GCF_000008685.2	
+a5e922b5dc81b6d42329bb346cc70ba42c7d322e1f8e376e7b0591564dad3206	9606	Homo sapiens	79	unknown_residues_in_chain	RF00005	3				T
+aa3a7fd94c15224490e18845b7468593fb38d62d9cc470a7260332040ab85c16	3702	Arabidopsis thaliana	77	not_found	RF00059	8			blast_core_nt:3702	
+adcf89ff6700c50ca3e146e84d3c8e36970601f6f2342d85f31b3e97bd680e21	562	Escherichia coli	50	not_found	RF02679	4			assembly:GCF_000005845.2;blast_core_nt:562	
+afc2e3a1512629e2bc1e04829f2cb2329c7c7926578fe2574e517aa5f8ad4994	1280	Staphylococcus aureus	115	whole_chain_found	RF00001	25	NC_007793.1:517804-517918+(assembly:GCF_000013465.1);NC_007793.1:556197-556311+(assembly:GCF_000013465.1);NC_007793.1:561407-561521+(assembly:GCF_000013465.1);NC_007793.1:1997587-1997701-(assembly:GCF_000013465.1);NC_007793.1:2175811-2175925-(assembly:GCF_000013465.1);NC_007793.1:2292365-2292479-(assembly:GCF_000013465.1)		assembly:GCF_000013465.1	
+b0940d335d6f8bb65c7f20d797721bd28ae8dd6ad91b5195dd68dd36f68f8f82	1358	Lactococcus lactis	704	interval_found_flank_differs	RF00029	1		AF243383.1:10225-10322+	assembly:GCF_003176835.1;blast_core_nt:1358	
+b549ef087290a901736193d7c0890b915620a194008b6cffd8111c4bdb4d6403	9986	Oryctolagus cuniculus	7224	interval_found_flank_differs	RF00002	1		XR_011385890.1:1-153+	blast_core_nt:9986	
+b86b4265a36d73156e86a1571742a8bf5fab1d80f1fd719772ffd476797e6a94	1351	Enterococcus faecalis	580	whole_chain_found	RF03087	22	CP149539.1:1932109-1932688-(blast_core_nt)		assembly:GCF_000393015.1;assembly:GCF_021610105.1;assembly:GCF_022869705.1;assembly:GCF_029024925.1;assembly:GCF_050485625.1;assembly:GCA_021610105.1;assembly:GCA_022869705.1;assembly:GCA_029024925.1;blast_core_nt:1351	
+b8999b37ea980c9985d7f7974765f5ac75de3ea4165329960577838ca56e2498	10090	Mus musculus	157	whole_chain_found	RF00002	1	OQ858937.1:2692-2848+(blast_core_nt)	BK000964.3:6878-7030+	blast_core_nt:10090	
+b8999b37ea980c9985d7f7974765f5ac75de3ea4165329960577838ca56e2498	10116	Rattus norvegicus	157	whole_chain_found	RF00002	1	K01592.1:1-157+(blast_core_nt)	FQ232700.1:1-153+	blast_core_nt:10116	
+b8999b37ea980c9985d7f7974765f5ac75de3ea4165329960577838ca56e2498	9606	Homo sapiens	157	whole_chain_found	RF00002	76	MF164267.1:4490-4646+(blast_core_nt)	MF164267.1:4491-4643+	blast_core_nt:9606	
+b8999b37ea980c9985d7f7974765f5ac75de3ea4165329960577838ca56e2498	9986	Oryctolagus cuniculus	157	not_found	RF00002	3			blast_core_nt:9986	
+b8c2058a61024b26cfd19e103e7d4da414aa6839654ec7a5e103bc5f1072a15a	3052464	Orthoflavivirus denguei	70	not_found	RF02340	1			blast_core_nt:3052464	
+b91d2150475c671466a7ae2ad0ff224bab0abc54367e126009dbf8ff6059ad8c	53633	Sulfobacillus acidophilus	95	not_found	RF00442	1			assembly:GCF_000237975.1;assembly:GCA_000237975.1;assembly:GCF_000219855.1;assembly:GCA_000219855.1;blast_core_nt:53633	
+ba28506ba9f4d2abceef200f5ce5000f5df2c73cc703e47627cf3c6b2516665c	562	Escherichia coli	88	not_found	RF00169	1			assembly:GCF_000005845.2;blast_core_nt:562	
+ba58617d2de5ba4d413769d56bc1c7097a05fc88863d7f47436d69455187f404	1423	Bacillus subtilis	76	whole_chain_found	RF00005	1	NC_000964.3:640405-640480+(assembly:GCF_000009045.1);NC_000964.3:952042-952117+(assembly:GCF_000009045.1);NC_000964.3:3172513-3172588-(assembly:GCF_000009045.1);NC_000964.3:4154896-4154971-(assembly:GCF_000009045.1)		assembly:GCF_000009045.1	
+bbe6f7ca2333f9fb914a54f800b4add3f5843237fa79cfd3fac1ce34e317b854	1358	Lactococcus lactis	902	interval_found_flank_differs	RF00029	1		AF243383.1:10225-10322+	assembly:GCF_003176835.1;blast_core_nt:1358	
+bbe6f7ca2333f9fb914a54f800b4add3f5843237fa79cfd3fac1ce34e317b854	1359	Lactococcus cremoris	902	interval_found_flank_differs	RF00029	1		CM208270.1:1418178-1418275-;CP157379.1:1356411-1356508-	assembly:GCF_000468955.1;assembly:GCF_044358145.1;assembly:GCF_054457895.1;assembly:GCA_000468955.1;assembly:GCA_044358145.1;assembly:GCA_054457895.1;assembly:GCA_062094640.1;assembly:GCA_965286575.1;blast_core_nt:1359	
+bd8bfe5aa716b5db99aa0c8919fe9f0db0c8b56fddf395bbd802b45b69610317	562	Escherichia coli	77	unknown_residues_in_chain	RF00005	2				W
+bdae1aa1ff971e4f51aaf7cd153364a7827ade3221a5890c2d4339341bddbdf6	9606	Homo sapiens	145	unknown_residues_in_chain	RF00015	2				X
+c25b5f9d01f523503883471172a554e0ad7c252b3bc80d1c735365adda7f4b93	3048459	Orthoflavivirus zikaense	142	not_found	RF02340	1			blast_core_nt:3048459	
+c2a58c55c0f1195ae00e50bf13146da8427548448ec8bb1296005a3289de2634	2885	Pylaiella littoralis	625	interval_found_flank_differs	RF00029	1		NC_003055.1:6413-6487+	blast_core_nt:2885	
+c351febb3cf800b3790ff927ad3f6dee5ab69e6f41504e099bb25ab677ad6c1a	7227	Drosophila melanogaster	120	whole_chain_found	RF00001	4	M25016.1:1-120+(blast_core_nt)	M25016.1:1-119+	blast_core_nt:7227	
+c52e1c9c4f279275e3993e87926e2521301899986792046460f93777e4a32d9d	562	Escherichia coli	77	whole_chain_found	RF00005	18	NZ_CP009273.1:3976095-3976171+(assembly:GCF_000750555.1)		assembly:GCF_000750555.1	
+c6df548440aeb286fab8ff1a07e3c44acc43883d54e44fe2a5f78a02087798cf	5911	Tetrahymena thermophila	120	whole_chain_found	RF00001	4	J01893.1:1-120+(blast_core_nt)	BR002251.1:370075-370184-	blast_core_nt:5911	
+c7e4f73d7fb1fe8c5eab6a4a4f33533a8db5f0c0d49fd106886b9b11adb1fdcf	10090	Mus musculus	174	interval_found_flank_differs	RF00002	1		BK000964.3:6878-7030+	blast_core_nt:10090	
+c852e7fa9f65d9b4b8dac44d01855fd55982ec5dddd373f78110630b865e54fa	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+ca847a6a8e2aa4765dd48ce06162df88694a7f46c77d07685985d57f7b3906ff	381	Mesorhizobium loti	50	not_found	RF02977	5			assembly:GCF_003148495.1;assembly:GCF_013170705.1;assembly:GCF_013170845.1;assembly:GCF_013170865.1;assembly:GCF_014189435.1;assembly:GCA_013170705.1;assembly:GCA_013170845.1;assembly:GCA_013170865.1;blast_core_nt:381	
+cc802d0903becf7211bbda67e7295514308ebffc174ab05a4057ad67ad2be46f	204038	Dickeya dadantii	85	not_found	RF00442	1			assembly:GCF_003049785.1;assembly:GCF_018904205.1;assembly:GCF_025643375.1;assembly:GCF_030168535.1;assembly:GCA_003049785.1;assembly:GCA_018904205.1;assembly:GCA_025643375.1;assembly:GCA_030168535.1;blast_core_nt:204038	
+cd70ca90e441c1fbb85632f5980322e66903f2c92ca5eb06a98f1d502a0cde8a	9606	Homo sapiens	72	interval_found_flank_differs	RF00005	24		ON127816.1:1604-1672+	blast_core_nt:9606	
+cd7aad2812ecea32a9e475a0805365c29ef5f0855dfff3a049e209ee662e8f6f	274	Thermus thermophilus	349	whole_chain_found	RF00023	3	NC_006461.1:666084-666432+(assembly:GCF_000091545.1)		assembly:GCF_000091545.1	
+ce894a25215d0927d690893945d3cdc9ccb6e783fec35b77fd3c972b4af79450	274	Thermus thermophilus	77	not_found	RF00005	2			assembly:GCF_000091545.1;blast_core_nt:274	
+ce894a25215d0927d690893945d3cdc9ccb6e783fec35b77fd3c972b4af79450	562	Escherichia coli	77	whole_chain_found	RF00005	27	NC_000913.3:3708616-3708692-(assembly:GCF_000005845.2)		assembly:GCF_000005845.2	
+d28d3b2d1b5ec7e5bcfbc703370404db71b4e7920a567402e4e73f9a5f68990e	10090	Mus musculus	121	whole_chain_found	RF00001	2	AC140552.3:3308-3428-(blast_core_nt)	AC140552.3:3310-3428-	blast_core_nt:10090	
+d28d3b2d1b5ec7e5bcfbc703370404db71b4e7920a567402e4e73f9a5f68990e	10116	Rattus norvegicus	121	whole_chain_found	RF00001	1	X83746.1:347-467+(blast_core_nt)	X83746.1:347-465+	blast_core_nt:10116	
+d28d3b2d1b5ec7e5bcfbc703370404db71b4e7920a567402e4e73f9a5f68990e	9606	Homo sapiens	121	whole_chain_found	RF00001	58	X51545.1:274-394+(blast_core_nt)	X51545.1:274-392+	blast_core_nt:9606	
+d28d3b2d1b5ec7e5bcfbc703370404db71b4e7920a567402e4e73f9a5f68990e	9986	Oryctolagus cuniculus	121	not_found	RF00001	4			blast_core_nt:9986	
+d3110f590a2bc584594e96e65dfdd4c26396f061a3791e1d5ae7ef539ffc5d50	4932	Saccharomyces cerevisiae	76	unknown_residues_in_chain	RF00005	2				X
+d42eedf36298285cf3f13e3c482d6fbceeb4d4733de3670d2c7130b7c8e08b0c	2285	Sulfolobus acidocaldarius	122	whole_chain_found	RF00001	9	NC_007181.1:1293913-1294034+(assembly:GCF_000012285.1)		assembly:GCF_000012285.1	
+d61146e1d049797c442ce6e9c911bc272ee9b912bbcd734a233692a48ba6b452	145262	Methanothermobacter thermautotrophicus	122	not_found	RF00001	1			assembly:GCF_000008645.1;assembly:GCA_000008645.1;assembly:GCF_027554905.1;assembly:GCF_027555045.1;assembly:GCF_050908155.1;assembly:GCA_027554905.1;assembly:GCA_027555045.1;assembly:GCA_050908155.1;blast_core_nt:145262	
+d61146e1d049797c442ce6e9c911bc272ee9b912bbcd734a233692a48ba6b452	2238	Haloarcula marismortui	122	whole_chain_found	RF00001	28	NC_006396.1:2637272-2637393+(assembly:GCF_000011085.1)		assembly:GCF_000011085.1	
+d6200cfd8895e9e1f3f70039db1cd918e6ab2f98fa3f93f40ec81ca33da5471f	9606	Homo sapiens	128	interval_found_flank_differs	RF00005	1		ON127816.1:5828-5893-	blast_core_nt:9606	
+d6734b7729aee5c26073e9c3ab3386053dcefb1cb47bbb975e4097292adafc9f	3052464	Orthoflavivirus denguei	139	not_found	RF02340	1			blast_core_nt:3052464	
+d68ea1b372217c9909c2c8dc0681c7c2aaa842cb9f8e102c4a5efa86cfbb03bb	562	Escherichia coli	76	whole_chain_found	RF00005	1	NC_000913.3:262871-262946+(assembly:GCF_000005845.2)		assembly:GCF_000005845.2	
+d8ef19281939da238a7efc622772e6f39ebec37032f95bbb804696c8a765b425	10090	Mus musculus	86	whole_chain_found	RF01852	2	AC118017.15:153188-153273-(blast_core_nt)		blast_core_nt:10090	
+d93321467b1fd16b93d7ed0ac5cda864740e25ee45a00ec442ab9fbf06d87275	9606	Homo sapiens	77	interval_found_flank_differs	RF00005	2		AC130329.8:64205-64277-	blast_core_nt:9606	
+db3b3209bf15e26d7b64231ade25c3b61831c7fba6b37652e8c08dc71039ef4e	3047774	Cripavirus grylli	194	not_found	RF00458	1			blast_core_nt:3047774	
+db525a4ca5ba1661dd048c85f5ba003647e206c6145e1781763c93a17c4ed7df	1423	Bacillus subtilis	76	whole_chain_found	RF00005	10	NC_000964.3:11552-11627+(assembly:GCF_000009045.1);NC_000964.3:32020-32095+(assembly:GCF_000009045.1);NC_000964.3:96146-96221+(assembly:GCF_000009045.1);NC_000964.3:166253-166328+(assembly:GCF_000009045.1)		assembly:GCF_000009045.1	
+db7a0cd5beac0b81c2ea15e213d54c44ede69458970327d912e51b2c6db7ba38	4932	Saccharomyces cerevisiae	73	whole_chain_found	RF00005	1	LN907790.1:666699-666771+(blast_core_nt)		blast_core_nt:4932	
+dc9f9bdaecb7fb9dff56559d8fb88e088338b12bf81272aa0a056a521ff2f210	5664	Leishmania major	9070	interval_found_flank_differs	RF02546	1		EU140338.1:1-326+	blast_core_nt:5664	
+dd416030e29000f31cc3d6805671bee06be0c2f655e5daf1043692981588e719	209285	Thermochaetoides thermophila	101	not_found	RF00026	3			blast_core_nt:209285	
+dedb90787568cd1027e43cbf072d887628437f1419e94a635d22860c117699b3	4896	Schizosaccharomyces pombe	229	whole_chain_found	RF00001	2	NR_151395.1:1-229+(blast_core_nt)	NR_203318.1:323-441-	blast_core_nt:4896	
+e3736f7ea90243d253888ba3c3969b67bba69fd14a12adc60a7cc0092325c336	3047774	Cripavirus grylli	1072	not_found	RF00458	1			blast_core_nt:3047774	
+e82563784ff53386edee166fe91163b37b286286d9ac623dffb3a3815c982c62	9606	Homo sapiens	69	whole_chain_found	RF00005	34	ON127816.1:1604-1672+(blast_core_nt)		blast_core_nt:9606	
+e9d84bb6b77c956ba7d753c6398810078d7482ca82caa820b3eb36bfe637c168	2190	Methanocaldococcus jannaschii	96	whole_chain_found	RF00169	4	NC_000909.1:552678-552773+(assembly:GCF_000091665.1)		assembly:GCF_000091665.1	
+eb2c7a9898ac273c8a5afd68b7be4fe78b3cc77054731e61bd73a998de741edb	10245	Orthopoxvirus vaccinia	72	not_found	RF00005	3			blast_core_nt:10245	
+eb2c7a9898ac273c8a5afd68b7be4fe78b3cc77054731e61bd73a998de741edb	9606	Homo sapiens	72	whole_chain_found	RF00005	2	HG983741.1:1-72+(blast_core_nt)		blast_core_nt:9606	
+ec63672267c9017f3bb7584d0456b73700816dd641ebc5b6a557e1d1f7ba73f6	2885	Pylaiella littoralis	622	interval_found_flank_differs	RF00029	1		NC_003055.1:6413-6487+	blast_core_nt:2885	
+ece479b524f9463b6ee1e753cf3ec8aa50c27ce239fff6dc8bafcd8099a0c440	2126436	Carnobacterium antarcticum	34	whole_chain_found	RF00522	6	NZ_JBHSQC010000023.1:2567-2600-(assembly:GCF_042658365.1)		assembly:GCF_042658365.1	
+ece5a8bbe795476015fe3ba265f7ff17d2cbd49b0882f97e1ec9ce9985cf50b0	5691	Trypanosoma brucei	1178	interval_found_flank_differs	RF02546	1		X02547.1:205-303+	blast_core_nt:5691	
+eddb60d34affa0ef192a6e34e414f12fcc7f3e84b483b525859f683abe1ced45	3048274	Triatovirus plastali	142	not_found	RF00458	2			blast_core_nt:3048274	
+eeaff8e8021103680682580d496d41e94ce19a603ed2f1af62bef45223ec68de	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+ef65a5243b28abe5cd9baca491ddaf0c8bc25c4d3725cc9ea548b17392ca5e31	9606	Homo sapiens	146	unknown_residues_in_chain	RF00015	1				X
+f2bea7e5a5e0cc180d30cba55757b4fdacea5905027e62510838bf728dc02220	3047774	Cripavirus grylli	201	not_found	RF00458	2			blast_core_nt:3047774	
+f4d7e73ea2ea7690455566e1bdc377ee2212b8b4d218fa3a39b4cc6676202a59	562	Escherichia coli	80	not_found	RF00059	6			assembly:GCF_000005845.2;blast_core_nt:562	
+f6075f391d19420ed377dc54cccda8de45c8461a9c2a45530bbc1a7cc6d15538	5476	Candida albicans	121	whole_chain_found	RF00001	26	X16634.1:937-1057+(blast_core_nt)		blast_core_nt:5476	
+f645a90a8678b84bbd143fd296d64b8d51c7c080446556ddaeec9abcd9098436	666	Vibrio cholerae	92	not_found	RF03167	1			assembly:GCF_008369605.1;assembly:GCF_000969265.1;assembly:GCF_003574155.1;assembly:GCF_055389885.1;assembly:GCA_000969265.1;assembly:GCA_003574155.1;assembly:GCA_008369605.1;assembly:GCA_055389885.1;blast_core_nt:666	
+f9ceef20be9cdb7524078943f4b9381bd785f3c05916f5a36a59b175eb6d05c0	911092	Caldanaerobacter subterraneus	94	not_found	RF00162	1			assembly:GCF_000007085.1;assembly:GCA_000007085.1;blast_core_nt:911092	
+fa75e5ee6139c940c7892b18d52aeb77afd63dae3237e92037976b1a1439ddf1	9606	Homo sapiens	75	interval_found_flank_differs	RF00005	3		AC234785.4:37651-37722+	blast_core_nt:9606	
+fa9f4c63f11a4134b27bf1604e6368897ac071defd62fbbe6c928f2a909c4279	4932	Saccharomyces cerevisiae	76	interval_found_flank_differs	RF00005	3		X55338.1:30-102+	blast_core_nt:4932	
+fa9f4c63f11a4134b27bf1604e6368897ac071defd62fbbe6c928f2a909c4279	5141	Neurospora crassa	76	not_found	RF00005	2			blast_core_nt:5141	
+fd64d2528621eb4796c1072cac701b514a393b0dc287a1588e074fcf6adc034b	4081	Solanum lycopersicum	120	whole_chain_found	RF00001	2	X55697.1:1-120+(blast_core_nt)	X55697.1:1-119+	blast_core_nt:4081	
+fd69756163069170219734d289afe296c5d824d9e1b69155c53865f9e3d91ef2	5691	Trypanosoma brucei	209	whole_chain_found	RF00002	2	AC159415.1:54375-54583+(blast_core_nt)	AC159415.1:54375-54543+	blast_core_nt:5691	
+fd81226af3dc2758d616d4eaab236595e0b6916f4250ae3193bb69aae200cb16	33075	Acidobacterium capsulatum	57	not_found	RF03013	1			assembly:GCF_000022565.1;assembly:GCA_000022565.1;blast_core_nt:33075	
+fdb2050163e80ccb93ea0b8674c97f7bb3e9666e1bfb06148a3deda288c90fd1	1423	Bacillus subtilis	89	whole_chain_found	RF00005	1	NC_000964.3:952859-952947+(assembly:GCF_000009045.1)		assembly:GCF_000009045.1	
+ff367a761ad3f00ef6239980950e419e6a0bdce4abaa403bdce48645549c9264	287	Pseudomonas aeruginosa	1536	whole_chain_found	RF00177	5	NC_002516.2:722096-723631+(assembly:GCF_000006765.1);NC_002516.2:4792197-4793732-(assembly:GCF_000006765.1)		assembly:GCF_000006765.1	

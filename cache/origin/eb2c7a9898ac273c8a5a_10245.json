@@ -1,0 +1,44 @@
+{
+ "candidates": [
+  "RF00005__8C8H_U__1-72",
+  "RF00005__9FPY_U__1-72",
+  "RF00005__9FQ6_U__1-72"
+ ],
+ "deposited_length": 72,
+ "deposited_sequence": "GGUCCCAUGGUGUAAUGGUUAGCACUCUGGACUUUGAAUCCAGCGAUCCGAGUUCAAAUCUCGGUGGGACCU",
+ "evaluated_utc": "2026-11-25T22:26:17Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "10245",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/10245_068e01a9627fe741.megablast.xml"
+  }
+ ],
+ "seq_sha256": "eb2c7a9898ac273c8a5afd68b7be4fe78b3cc77054731e61bd73a998de741edb",
+ "species_name": "Orthopoxvirus vaccinia",
+ "species_taxid": "10245",
+ "strains": [
+  "10245",
+  "502057"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 72,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "8C8H_U",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain U, chr17.trna16-GlnTTG"
+  }
+ ]
+}

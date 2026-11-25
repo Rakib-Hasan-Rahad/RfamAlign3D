@@ -25,3 +25,188 @@ WATCHDOG: no completed check for 60 min at 2026-11-13T11:24:58Z; exiting so the 
 sequence-species keys: 234; cached 183; to evaluate 51
 phase 1: assembly search for 30 prokaryotic keys
 phase 2: 51 keys in 29 species need BLAST
+
+===== s04 2026-11-25T22:26:36Z
+prefetch: 946 entries (885 tied-best in 222 groups, 90 wildcard chains); already parsed 946
+[10/946 0.0 min] 1LS2 ok
+[20/946 0.0 min] 1ML5 ok
+[30/946 0.0 min] 1YIT ok
+[40/946 0.0 min] 2CKY ok
+[50/946 0.0 min] 2N7M ok
+[60/946 0.0 min] 3CC2 ok
+[70/946 0.0 min] 3CCU ok
+[80/946 0.0 min] 3GCA ok
+[90/946 0.0 min] 3IQP ok
+[100/946 0.0 min] 3J3V ok
+[110/946 0.0 min] 3JAI ok
+[120/946 0.0 min] 3SUY ok
+[130/946 0.0 min] 486D ok
+[140/946 0.0 min] 4ENB ok
+[150/946 0.0 min] 4LVW ok
+[160/946 0.0 min] 4R0D ok
+[170/946 0.0 min] 4UY8 ok
+[180/946 0.0 min] 4V4W ok
+[190/946 0.0 min] 4V6P ok
+[200/946 0.0 min] 4XCO ok
+[210/946 0.0 min] 5DI2 ok
+[220/946 0.0 min] 5EL5 ok
+[230/946 0.0 min] 5FKE ok
+[240/946 0.0 min] 5KH8 ok
+[250/946 0.0 min] 5LZX ok
+[260/946 0.0 min] 5O61 ok
+[270/946 0.0 min] 5ZEY ok
+[280/946 0.0 min] 6ENF ok
+[290/946 0.0 min] 6FXC ok
+[300/946 0.0 min] 6HMA ok
+[310/946 0.0 min] 6IP6 ok
+[320/946 0.0 min] 6NUO ok
+[330/946 0.0 min] 6P5I ok
+[340/946 0.0 min] 6QZP ok
+[350/946 0.0 min] 6SZS ok
+[360/946 0.0 min] 6TFE ok
+[370/946 0.0 min] 6TNU ok
+[380/946 0.0 min] 6WZR ok
+[390/946 0.0 min] 6Y2L ok
+[400/946 0.0 min] 6Z6L ok
+[410/946 0.0 min] 6ZVK ok
+[420/946 0.0 min] 7D7V ok
+[430/946 0.0 min] 7E9I ok
+[440/946 0.0 min] 7LJ3 ok
+[450/946 0.0 min] 7MDZ ok
+[460/946 0.0 min] 7NWG ok
+[470/946 0.0 min] 7O80 ok
+[480/946 0.0 min] 7PZY ok
+[490/946 0.0 min] 7QI5 ok
+[500/946 0.0 min] 7QV1 ok
+[510/946 0.0 min] 7SSD ok
+[520/946 0.0 min] 7SYT ok
+[530/946 0.0 min] 7TZR ok
+[540/946 0.0 min] 7UCK ok
+[550/946 0.0 min] 7Y41 ok
+[560/946 0.0 min] 8A3D ok
+[570/946 0.0 min] 8BHJ ok
+[580/946 0.0 min] 8CBO ok
+[590/946 0.0 min] 8CQ7 ok
+[600/946 0.0 min] 8FLA ok
+[610/946 0.0 min] 8G60 ok
+[620/946 0.0 min] 8HL2 ok
+[630/946 0.0 min] 8IDT ok
+[640/946 0.0 min] 8IPA ok
+[650/946 0.0 min] 8JDL ok
+[660/946 0.1 min] 8OJ0 ok
+[670/946 0.1 min] 8P2K ok
+[680/946 0.1 min] 8QOA ok
+[690/946 0.1 min] 8RJD ok
+[700/946 0.1 min] 8SA6 ok
+[710/946 0.1 min] 8V9J ok
+[720/946 0.1 min] 8VRL ok
+[730/946 0.1 min] 8VVR ok
+[740/946 0.1 min] 8WIC ok
+[750/946 0.1 min] 8XZM ok
+[760/946 0.1 min] 8Y0X ok
+[770/946 0.1 min] 9AXT ok
+[780/946 0.1 min] 9BDP ok
+[790/946 0.1 min] 9DOW ok
+[800/946 0.1 min] 9FQ6 ok
+[810/946 0.1 min] 9H0L ok
+[820/946 0.1 min] 9J3T ok
+[830/946 0.1 min] 9N5T ok
+[840/946 0.1 min] 9P7C ok
+[850/946 0.1 min] 9P7L ok
+[860/946 0.1 min] 9P9J ok
+[870/946 0.1 min] 9QQA ok
+[880/946 0.1 min] 9YPV ok
+[890/946 0.1 min] 4V70 ok
+[900/946 0.1 min] 4V79 ok
+[910/946 0.1 min] 6ND6 ok
+[920/946 0.1 min] 7N2U ok
+[930/946 0.1 min] 8ITY ok
+[940/946 0.1 min] 9GM9 ok
+wildcard re-screen: new intervals 14 Counter({'exact_unique': 14})
+validation sample: [('RF00025__7UY5_B__1-159', True), ('RF00075__7ELD_B__18-118', True), ('RF00177__7MSZ_a__4-1535', True), ('RF00174__8SA4_B__1-210', True), ('RF01854__4UE4_A__136-188', True), ('RF03054__8Q6N_A__2-46', True), ('RF00618__8Y6O_J__3-129', True), ('RF00024__8OUE_B__1-451', True), ('RF00002__5JUT_C__2-155', True), ('RF00005__8VTV_1y', True)]
+
+===== s05 2026-11-25T22:26:47Z
+RF00001: groups=19 selected=171 pending=0 reviewed=351/437
+RF00002: groups=6 selected=10 pending=0 reviewed=275/275
+RF00005: groups=44 selected=381 pending=0 reviewed=549/549
+RF00008: groups=2 selected=0 pending=0 reviewed=7/7
+RF00015: groups=3 selected=1 pending=0 reviewed=23/23
+RF00023: groups=2 selected=1 pending=0 reviewed=3/4
+RF00026: groups=2 selected=1 pending=0 reviewed=2/29
+RF00029: groups=2 selected=0 pending=0 reviewed=6/6
+RF00032: groups=2 selected=0 pending=0 reviewed=9/9
+RF00059: groups=4 selected=0 pending=0 reviewed=36/36
+RF00162: groups=24 selected=0 pending=0 reviewed=29/29
+RF00166: groups=2 selected=0 pending=0 reviewed=4/4
+RF00169: groups=3 selected=1 pending=0 reviewed=11/11
+  RF00174: screening facts differ from mmCIF for 1 structures -> exhaustive re-walk
+RF00174: groups=3 selected=0 pending=0 reviewed=14/14
+RF00177: groups=2 selected=1 pending=0 reviewed=2/16
+RF00374: groups=2 selected=0 pending=0 reviewed=3/3
+RF00442: groups=3 selected=0 pending=0 reviewed=3/3
+RF00458: groups=11 selected=0 pending=0 reviewed=15/15
+RF00480: groups=2 selected=0 pending=0 reviewed=5/5
+RF00522: groups=5 selected=1 pending=0 reviewed=16/16
+RF00622: groups=2 selected=0 pending=0 reviewed=3/3
+RF01725: groups=2 selected=0 pending=0 reviewed=2/2
+RF01734: groups=2 selected=0 pending=0 reviewed=6/6
+RF01750: groups=3 selected=0 pending=0 reviewed=14/14
+RF01831: groups=3 selected=0 pending=0 reviewed=12/12
+RF01852: groups=3 selected=1 pending=0 reviewed=9/9
+RF02340: groups=3 selected=0 pending=0 reviewed=3/3
+RF02546: groups=3 selected=0 pending=0 reviewed=10/10
+RF02678: groups=2 selected=0 pending=0 reviewed=3/3
+RF02679: groups=2 selected=0 pending=0 reviewed=8/8
+  RF02977: screening facts differ from mmCIF for 10 structures -> exhaustive re-walk
+RF02977: groups=2 selected=0 pending=0 reviewed=15/15
+RF03013: groups=4 selected=0 pending=0 reviewed=16/16
+RF03072: groups=2 selected=0 pending=0 reviewed=3/3
+RF03087: groups=2 selected=1 pending=0 reviewed=14/28
+RF03167: groups=2 selected=0 pending=0 reviewed=6/6
+selected pairs 570 | staged 138 | pending evidence keys 0 | reviewed 1487
+
+===== s06 2026-11-25T22:27:09Z
+# Step 2 validation report (FINAL)
+
+Generated 2026-11-25T22:27:41Z (automated).
+
+| Gate | Result |
+|---|---|
+| g1_all_families_one_status | PASS |
+| g2_primary_jobs_meet_all_rules | PASS |
+| g3_staged_files_valid | PASS |
+| g4_reference_endpoints_round_trip | PASS |
+| g4_unobserved_distinct_from_gap | PASS |
+| g5_selected_outranks_all_alternatives_and_bounds | PASS |
+| g6_tests_pass | PASS |
+| g8_step1_unchanged | PASS |
+| g8_earlier_study_files_unchanged | PASS |
+| g7_workbook_reconciles_with_tsvs | PASS |
+
+## Details
+```
+{
+ "g1_outcome_counts": {
+  "eligible_pairs_selected": 11,
+  "exact_match_single_sequence_no_pair_possible": 64,
+  "no_candidate_in_searched_sources": 4058,
+  "pair_possible_no_eligible_pair": 24,
+  "candidate_found_no_exact_seed_match": 64,
+  "no_different_species_pair_possible": 6
+ },
+ "g2_violations": [],
+ "g3_violations": [],
+ "g6_tests_summary": "29 passed in 5.14s",
+ "g8_earlier_files_modified": [],
+ "g7_end_to_end_trace": "Pair RF00522__rf00522_6vuh_Au_1_33__vs__rf00522_7rex_Au_1_34 (RF00522 PreQ1): query 6VUH_A [Caldanaerobacter subterraneus (911092)] seed row URS000080E32E_119072/1-33; target 7REX_A [Carnobacterium antarcticum (2126436)] seed row URS00023119CB_2126436/1-34.\nRfam column 6 (consensus): query C = A:1 (staged rf00522_6vuh_Au_1_33 A:1), target U = A:1 (staged rf00522_7rex_Au_1_34 A:1).\n  crosswalk RF00522__6VUH_A__1-33: col 6 -> ungapped 1 -> A/1 -> auth A:1 (C) -> inputs_star3d/rf00522_6vuh_Au_1_33.pdb A:1\n  crosswalk RF00522__7REX_A__1-34: col 6 -> ungapped 1 -> A/1 -> auth A:1 (U) -> inputs_star3d/rf00522_7rex_Au_1_34.pdb A:1\nOrigin: query verified_natural (NC_003869.1:1523221-1523253- [assembly:GCF_000007085.1; genome_assembly]); target verified_natural (NZ_JBHSQC010000023.1:2567-2600- [assembly:GCF_042658365.1; genome_assembly])."
+}
+```
+{
+ "snapshot": "outputs/02_structure_preparation/snapshots/step2_final",
+ "counts": {
+  "added": 35,
+  "unchanged": 535
+ },
+ "frozen_pairs_changed": [],
+ "unchanged_but_file_hash_changed": []
+}

@@ -1,0 +1,160 @@
+{
+ "cohort": "step2_r8",
+ "population": "A-side query residues: scored different_partner + same_partner with both endpoints observed",
+ "observations": 44079,
+ "disagreements": 4676,
+ "agreements": 39403,
+ "membership_rate": {
+  "HL": "1651/11490",
+  "IL": "1112/10302",
+  "junction": "690/7458",
+  "any_bgsu_loop": "3405/27471",
+  "no_bgsu_loop": "1154/14815"
+ },
+ "hairpin_vs_outside": {
+  "hairpin": "1651/11490",
+  "outside_hairpin": "2908/30796"
+ },
+ "exclusive_rate": {
+  "hairpin_loop_only": "1633/9959",
+  "internal_loop_only": "1069/8530",
+  "junction_only": "655/7203",
+  "several_loop_types": "48/1779",
+  "no_bgsu_loop": "1154/14815",
+  "coverage_unknown": "117/1793"
+ },
+ "exclusive_share": {
+  "hairpin_loop_only": {
+   "disagreements": "1633/4676",
+   "agreements": "8326/39403"
+  },
+  "internal_loop_only": {
+   "disagreements": "1069/4676",
+   "agreements": "7461/39403"
+  },
+  "junction_only": {
+   "disagreements": "655/4676",
+   "agreements": "6548/39403"
+  },
+  "several_loop_types": {
+   "disagreements": "48/4676",
+   "agreements": "1731/39403"
+  },
+  "no_bgsu_loop": {
+   "disagreements": "1154/4676",
+   "agreements": "13661/39403"
+  },
+  "coverage_unknown": {
+   "disagreements": "117/4676",
+   "agreements": "1676/39403"
+  }
+ },
+ "by_family": [
+  {
+   "family": "RF00001",
+   "name": "5S_rRNA",
+   "hairpin": "307/2729",
+   "internal": "905/8660",
+   "junction": "157/1707",
+   "no_loop": "348/5301",
+   "unknown": 1793,
+   "total": "1821/18734"
+  },
+  {
+   "family": "RF00002",
+   "name": "5_8S_rRNA",
+   "hairpin": "59/358",
+   "internal": "22/310",
+   "junction": "31/413",
+   "no_loop": "47/275",
+   "unknown": 0,
+   "total": "152/1244"
+  },
+  {
+   "family": "RF00005",
+   "name": "tRNA",
+   "hairpin": "1228/8098",
+   "internal": "99/622",
+   "junction": "467/4943",
+   "no_loop": "676/8469",
+   "unknown": 0,
+   "total": "2444/21980"
+  },
+  {
+   "family": "RF00015",
+   "name": "U4",
+   "hairpin": "0/4",
+   "internal": "0/19",
+   "junction": "0/9",
+   "no_loop": "0/27",
+   "unknown": 0,
+   "total": "0/59"
+  },
+  {
+   "family": "RF00026",
+   "name": "U6",
+   "hairpin": "3/7",
+   "internal": "0/21",
+   "junction": "0/13",
+   "no_loop": "0/45",
+   "unknown": 0,
+   "total": "3/86"
+  },
+  {
+   "family": "RF00169",
+   "name": "Bacteria_small_SRP",
+   "hairpin": "6/6",
+   "internal": "22/22",
+   "junction": "0/0",
+   "no_loop": "4/4",
+   "unknown": 0,
+   "total": "32/32"
+  },
+  {
+   "family": "RF00177",
+   "name": "SSU_rRNA_bacteria",
+   "hairpin": "23/217",
+   "internal": "16/522",
+   "junction": "13/315",
+   "no_loop": "28/482",
+   "unknown": 0,
+   "total": "78/1480"
+  },
+  {
+   "family": "RF00522",
+   "name": "PreQ1",
+   "hairpin": "9/11",
+   "internal": "0/0",
+   "junction": "0/0",
+   "no_loop": "6/20",
+   "unknown": 0,
+   "total": "15/31"
+  },
+  {
+   "family": "RF01852",
+   "name": "tRNA-Sec",
+   "hairpin": "5/30",
+   "internal": "0/6",
+   "junction": "0/14",
+   "no_loop": "0/38",
+   "unknown": 0,
+   "total": "5/86"
+  },
+  {
+   "family": "RF03087",
+   "name": "ROOL",
+   "hairpin": "11/30",
+   "internal": "48/120",
+   "junction": "22/44",
+   "no_loop": "45/154",
+   "unknown": 0,
+   "total": "126/347"
+  }
+ ],
+ "rules": {
+  "membership": "non-exclusive: a residue in several loops counts in each loop type",
+  "exclusive": "each observation in exactly one category; shares sum to 100%",
+  "coverage_unknown": "chain absent from every loop of the structure's BGSU loop file; excluded from no-loop",
+  "source": "BGSU RNA 3D Hub loops/download/<PDB>, model 1, exact unit IDs (retrieved 2026-11-13)"
+ }
+}

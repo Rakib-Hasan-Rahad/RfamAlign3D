@@ -73,7 +73,7 @@ def tsv(p):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--cohort", default="step2_final")
+    ap.add_argument("--cohort", default="step2_r8")
     c = ap.parse_args().cohort
     snap = os.path.join(ROOT, "outputs", "02_structure_preparation", "snapshots", c)
     man = [(r["file"], r["sha256"]) for r in tsv(os.path.join(snap, "snapshot_manifest.tsv"))]

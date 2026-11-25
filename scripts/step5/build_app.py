@@ -1,4 +1,4 @@
-"""Step 5 interactive results app (single page + per-pair JSON), generated from sqarma_interim.sqlite and Step 4 diagnostics.
+"""Step 5 interactive results app (single page + per-pair JSON), generated from rfamalign3d.sqlite and Step 4 diagnostics.
 
   python scripts/step5/build_app.py <cohort>
   python3 -m http.server 8766 --bind 127.0.0.1 --directory "outputs/05_results/step2_interim_440/app"   # http://127.0.0.1:8766/
@@ -166,7 +166,7 @@ def q(db, sql, *a):
 
 def build(cohort):
     out = os.path.join(ROOT, "outputs", "05_results", cohort)
-    db = sqlite3.connect(os.path.join(out, "sqarma_interim.sqlite"))
+    db = sqlite3.connect(os.path.join(out, "rfamalign3d.sqlite"))
     H = B.headline(db)
     app = os.path.join(out, "app")
     if os.path.exists(app):
@@ -312,7 +312,7 @@ def build(cohort):
     prov = os.path.join(ROOT, "outputs", "03_star3d", cohort, "returned", "run_provenance.tsv")
     if os.path.exists(prov):
         shutil.copy2(prov, os.path.join(tdir, "star3d_run_provenance.tsv"))
-    shutil.make_archive(os.path.join(app, "data", "sqarma_tables"), "zip", tdir)
+    shutil.make_archive(os.path.join(app, "data", "rfamalign3d_tables"), "zip", tdir)
     summary = dict(overall=overall, fam_overall=fam_overall, selection=dict(reviewed=sel, other=sel_other,
                    search_incomplete_checks=len(closed["unresolved_checks"]) if closed else None), build=__import__("datetime").datetime.now().strftime("%Y%m%d%H%M%S"), bgsu_ctx=json.load(open(bctx_p)) if os.path.exists(bctx_p) else None,cohort=cohort, label=B.LABEL["v"], label_text=B.LABEL["text"], audit_q7=aud.get("Q7", {}), audit_batch=None, families_screened=H["families_screened"], families_with_pairs=H["families_with_pairs"],
                    pairs=H["pairs"], valid=H["valid"], families_valid=H["families_valid"], no_stacks=H["no_stacks"],
@@ -324,8 +324,8 @@ def build(cohort):
                    trna_5s=sum(f["pairs"] for f in fams if f["id"] in ("RF00005", "RF00001")))
     json.dump(summary, open(os.path.join(app, "data", "summary.json"), "w"), separators=(",", ":"))
     json.dump(index, open(os.path.join(app, "data", "pairs_index.json"), "w"), separators=(",", ":"))
-    shutil.copy2(os.path.join(out, "sqarma_interim.sqlite"), os.path.join(app, "data", "sqarma.sqlite"))
-    shutil.copy2(os.path.join(out, "professor_report.md"), os.path.join(app, "data", "professor_report.md"))
+    shutil.copy2(os.path.join(out, "rfamalign3d.sqlite"), os.path.join(app, "data", "rfamalign3d.sqlite"))
+    shutil.copy2(os.path.join(out, "results_report.md"), os.path.join(app, "data", "results_report.md"))
     shutil.copy2(os.path.join(os.path.dirname(os.path.abspath(__file__)), "app_index.html"), os.path.join(app, "index.html"))
     os.makedirs(os.path.join(app, "lib"), exist_ok=True)
     shutil.copy2(os.path.join(os.path.dirname(os.path.abspath(__file__)), "lib", "3Dmol-min.js"), os.path.join(app, "lib", "3Dmol-min.js"))

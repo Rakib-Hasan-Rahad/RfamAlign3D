@@ -1,0 +1,51 @@
+{
+ "all_match": true,
+ "expected": {
+  "families": 4227,
+  "families_ge2_linked_seqs": 31,
+  "leads": 195,
+  "link_chains": 381,
+  "link_entries": 306,
+  "linked_rows": 172,
+  "links": 383,
+  "possible_unordered_sequence_pairs": 440,
+  "seed_rows": 109390
+ },
+ "observed": {
+  "families": 4227,
+  "families_ge2_linked_seqs": 31,
+  "leads": 195,
+  "link_chains": 381,
+  "link_entries": 306,
+  "linked_rows": 172,
+  "links": 383,
+  "possible_unordered_sequence_pairs": 440,
+  "seed_rows": 109390
+ },
+ "step1_file_sha256": {
+  "families.tsv": "f65d3cb99247060b4986197d6d79739c646fa74bdfaf8cf23f1e4bab951ad805",
+  "family_tracks.jsonl.gz": "eaac7e07ed96d599b4d5287ee2a5956f22905932ab2d36b270b6e19bb701b28b",
+  "pdb_leads.tsv": "01a960c3324605a476db65751c67d8f40038d825fe2429881c7ecb1ec74fb4df",
+  "provenance.json": "5d05802ed36ecf935da65b60089f97ea389fe6d3a78f43f5f04dcf8171931c90",
+  "row_pdb_links.tsv": "cdfa07708b3b9faa8de06925322c13d5fbdbd58cafa031295395b85f839fb2db",
+  "seed_rows.jsonl.gz": "1ba496a7cc7f90272610a179af24633c8d5a2df1fbefebabed5f48cd3e41e838"
+ },
+ "step1_provenance": {
+  "decompressed_bytes": 38143095,
+  "decompressed_sha256": "a6fc52d98766fa2b8d479763a819f4edbc288fe63fcdb754ff01e2af95a241b9",
+  "link_rule": "^([0-9][A-Za-z0-9]{3})_([A-Za-z0-9]{1,4})_SS$",
+  "local_path": "inputs/rfam/15.1/Rfam.seed.gz",
+  "openpyxl": "3.1.5",
+  "parser_script_sha256": "e853d9d5016ec59ae63e129098417f5a06cae0eeaa1301aa865c7da9f5f34512",
+  "parser_version": "step1-inventory 1.0.0",
+  "python": "3.13.7",
+  "rfam_release": "15.1",
+  "run_utc": "2026-11-13T06:52:58Z",
+  "seed_gz_bytes": 5928432,
+  "seed_gz_sha256": "41f014f4ab5628620935f089b1bb77987ebc162fda7c72bff368a32c9cccabac",
+  "sequence_hash_rule": "sha256(ascii(uppercase(ungapped))); no T->U",
+  "source_url": "https://ftp.ebi.ac.uk/pub/databases/Rfam/15.1/Rfam.seed.gz",
+  "step": "Step 1 - master inventory of explicit seed-row to PDB-chain links",
+  "ungap_rule": "remove '-' and '.' only"
+ }
+}

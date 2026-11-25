@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>SQARMA Results Explorer</title>
+<title>RfamAlign3D Results Explorer</title>
 <style>
 :root{--bg:#f6f7f4;--surface:#ffffff;--surface2:#f0f2ee;--fg:#1b2125;--mut:#5f6b73;--line:#dfe3df;--acc:#1f6f8b;--acc2:#e0eef2;
 --same:#009E73;--diff:#E69F00;--rfo:#56B4E9;--sto:#CC79A7;--none:#CFD3D6;--lshared:#5c636a;--warnbg:#fff3e2;--warnfg:#8a4b0f;--shadow:0 1px 2px rgba(0,0,0,.05),0 4px 14px rgba(0,0,0,.05)}
@@ -73,12 +73,12 @@ footer{color:var(--mut);font-size:.8rem;text-align:center;padding:30px}
 </head>
 <body>
 <header><div class="bar">
-<div class="brand">SQARMA <small>Rfam seed vs original STAR3D</small></div><span class="pill" id="pill">Final dataset</span>
+<div class="brand">RfamAlign3D <small>Rfam seed vs original STAR3D</small></div><span class="pill" id="pill">Final dataset</span>
 <nav id="nav"><a href="#/overview">Overview</a><a href="#/why">Difference patterns</a><a href="#/families">Families</a><a href="#/pairs">Pair explorer</a><a href="#/example">Lead example</a><a href="#/method">Methods &amp; limitations</a></nav>
 <button id="theme" title="toggle theme">◐</button>
 </div></header>
 <main id="app"><p class="mut">Loading…</p></main>
-<footer><span id="cohortline">Results from cohort step2_final.</span> Every number on this site is a query on the <a href="data/sqarma.sqlite">SQLite database</a>. Prepared by an AI research agent, not yet reviewed by a person.</footer>
+<footer><span id="cohortline">Results from cohort step2_r8.</span> Every number on this site is a query on the <a href="data/rfamalign3d.sqlite">SQLite database</a>. Prepared by an AI research agent, not yet reviewed by a person.</footer>
 <script src="lib/3Dmol-min.js"></script>
 <script>
 const $=s=>document.querySelector(s), E=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -123,7 +123,7 @@ function overview(){
    <details onclick="event.stopPropagation()"><summary>What does this mean?</summary><p class="sm">Only for nucleotides both methods map, to different residues: how far apart the two proposed counterparts are along RNA B. One-sided mappings have no offset.</p></details></a>
  </div>
  <p class="sm mut">The four percentages use different denominators; they are not complements of one another.</p>
- <div class="actions"><a class="btn" href="#/families">Explore families →</a><a class="btn" href="#/example">Inspect an example →</a><a class="btn" href="data/sqarma_tables.zip">Download report and tables ↓</a></div>
+ <div class="actions"><a class="btn" href="#/families">Explore families →</a><a class="btn" href="#/example">Inspect an example →</a><a class="btn" href="data/rfamalign3d_tables.zip">Download report and tables ↓</a></div>
  <h2>From all Rfam families to compared pairs</h2>
  <div class="steps">${[[fmt(d.families_screened),"families screened"],[d.families_with_pairs,"families with selected pairs"],[d.pairs,"pairs attempted"],[d.valid,"usable alignments"],[d.families_valid,"families compared"]].map((s,i)=>`${i?'<span class="arrow">→</span>':''}<div class="step"><b>${s[0]}</b><span class="mut sm">${s[1]}</span></div>`).join("")}</div>
  <p class="sm mut">Most families had no pair of verified natural structures from different species; see <a href="#/method">Methods &amp; limitations</a>.</p>
@@ -516,7 +516,7 @@ function method(){
  <li>Neither alignment is ground truth; a difference identifies a candidate for investigation, not an error.</li>
  <li>Difference patterns are descriptive. Motif evidence is what the sources document: BGSU structural loops and Motif Atlas 4.16 groups by exact residue identifiers, and Rfam 15.1 computational motif hits as seed-row spans. Rfam scan coverage is established per family, not per row; a missing record is not a confirmed absence.</li>
  <li>3D overlays use STAR3D's superposition and are shown for inspection only.</li></ul></div></div>
- <h2>Downloads and provenance</h2><div class="card sm"><a href="data/sqarma_tables.zip">All result tables (zip)</a> · <a href="data/professor_report.md">One-page report</a> · <a href="data/sqarma.sqlite">SQLite database</a> (every table, with a provenance table of source files and SHA-256 checksums) · <a href="data/tables/star3d_run_provenance.tsv">STAR3D run provenance</a> (execution environment per run)</div>`}
+ <h2>Downloads and provenance</h2><div class="card sm"><a href="data/rfamalign3d_tables.zip">All result tables (zip)</a> · <a href="data/results_report.md">One-page report</a> · <a href="data/rfamalign3d.sqlite">SQLite database</a> (every table, with a provenance table of source files and SHA-256 checksums) · <a href="data/tables/star3d_run_provenance.tsv">STAR3D run provenance</a> (execution environment per run)</div>`}
 
 /* ---------------- router */
 async function route(){
@@ -528,7 +528,7 @@ async function route(){
  else if(v==="pair"){app.innerHTML='<p class="mut">Loading pair…</p>';await pairView(decodeURIComponent(arg))} else if(v==="example"){app.innerHTML='<p class="mut">Loading…</p>';await example();if(location.hash.includes("selftest"))await selftest()}
  else if(v==="method")app.innerHTML=method(); else if(v==="breakdown")app.innerHTML=breakdown(); else app.innerHTML=overview();
 }
-(async()=>{S=await (await fetch("data/summary.json?t="+Date.now(),{cache:"no-store"})).json();BUILD=S.build||"";IDX=await (await fetch("data/pairs_index.json?b="+BUILD,{cache:"no-store"})).json();$("#cohortline").textContent="Results from cohort "+S.cohort+".";$("#pill").textContent=S.label==="FINAL"?"Final dataset":(S.label||"INTERIM");document.title="SQARMA Results Explorer ("+(S.label||"INTERIM")+")";window.addEventListener("hashchange",route);route()})();
+(async()=>{S=await (await fetch("data/summary.json?t="+Date.now(),{cache:"no-store"})).json();BUILD=S.build||"";IDX=await (await fetch("data/pairs_index.json?b="+BUILD,{cache:"no-store"})).json();$("#cohortline").textContent="Results from cohort "+S.cohort+".";$("#pill").textContent=S.label==="FINAL"?"Final dataset":(S.label||"INTERIM");document.title="RfamAlign3D Results Explorer ("+(S.label||"INTERIM")+")";window.addEventListener("hashchange",route);route()})();
 </script>
 </body>
 </html>

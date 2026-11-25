@@ -1,0 +1,4 @@
+s04: rc=0 (12 s)
+s05: rc=0 (22 s)
+s06: rc=0 (32 s)
+snapshot comparison -> outputs/02_structure_preparation/snapshot_comparison.{tsv,json}

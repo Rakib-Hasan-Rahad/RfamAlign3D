@@ -1,0 +1,47 @@
+{
+ "families_complete": 4227,
+ "families_incomplete": [],
+ "gates": {
+  "g1_all_families_one_status": true,
+  "g2_primary_jobs_meet_all_rules": true,
+  "g3_staged_files_valid": true,
+  "g4_reference_endpoints_round_trip": true,
+  "g4_unobserved_distinct_from_gap": true,
+  "g5_selected_outranks_all_alternatives_and_bounds": true,
+  "g6_tests_pass": true,
+  "g7_workbook_reconciles_with_tsvs": true,
+  "g8_earlier_study_files_unchanged": true,
+  "g8_step1_unchanged": true
+ },
+ "groups": {
+  "eligible_family_incomplete": {
+   "families": [],
+   "pairs": 0,
+   "staged_files": 0
+  },
+  "frozen_family_complete": {
+   "families": [
+    "RF00001",
+    "RF00002",
+    "RF00005",
+    "RF00015",
+    "RF00023",
+    "RF00026",
+    "RF00169",
+    "RF00177",
+    "RF00522",
+    "RF01852",
+    "RF03087"
+   ],
+   "pairs": 570,
+   "staged_files": 138
+  }
+ },
+ "pairs_total": 570,
+ "snapshot_utc": "2026-11-25T22:28:22Z",
+ "source_export_utc": "2026-11-25T22:27:41Z",
+ "staged_files_total": 138,
+ "staged_hash_mismatches": [],
+ "star3d_run": false,
+ "validation_passed": true
+}

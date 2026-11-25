@@ -1,0 +1,11 @@
+family	family_id	pairs	total_observations	same_partner	different_partner	rfam_only	star3d_only	differences	denominator	rate	different_partner_rate	neither	unassessable_total	unassessable_same_partner	unassessable_different_partner	unassessable_rfam_only	unassessable_star3d_only
+RF00001	5S_rRNA	171	20003	16913	1821	481	520	2822	19735	0.143	1821/18734	171	97	0	5	92	0
+RF00002	5_8S_rRNA	10	1528	1092	152	114	46	312	1404	0.2222	152/1244	88	36	0	9	27	0
+RF00005	tRNA	350	25766	19536	2444	2525	464	5433	24969	0.2176	2444/21980	466	331	0	51	280	0
+RF00015	U4	1	67	59	0	4	1	5	64	0.0781	0/59	0	3	0	0	3	0
+RF00026	U6	1	107	83	3	4	3	10	93	0.1075	3/86	4	10	0	0	10	0
+RF00169	Bacteria_small_SRP	1	33	0	32	1	0	33	33	1.0	32/32	0	0	0	0	0	0
+RF00177	SSU_rRNA_bacteria	1	1536	1402	78	18	10	106	1508	0.0703	78/1480	15	13	0	0	13	0
+RF00522	PreQ1	1	33	16	15	1	1	17	33	0.5152	15/31	0	0	0	0	0	0
+RF01852	tRNA-Sec	1	86	81	5	0	0	5	86	0.0581	5/86	0	0	0	0	0	0
+RF03087	ROOL	1	580	221	126	86	41	253	474	0.5338	126/347	52	54	0	0	54	0

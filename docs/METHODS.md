@@ -26,8 +26,9 @@ before it was used.
 ## Step 3 — STAR3D (`scripts/step3/`)
 `build_jobs.py` writes one job per pair; `step3_runner.py` runs STAR3D v1.2 (`Preprocess`, then
 `STAR3D.jar -o -p` at default parameters) in a fresh copy of the STAR3D folder per run, either natively on Linux x86_64 or in the
-`star3d-runtime:1` Docker image (`env/Dockerfile.star3d`, Ubuntu 22.04 + OpenJDK 8, linux/amd64). 505 runs ran natively and 30 in Docker; `run_provenance.tsv`
-records which. A QC rerun of one pair (RF00522) in Docker reproduced the native result: the same 32 mappings and RMSD, with byte-identical preprocessing files. Every returned file is listed in `RETURN.sha256`.
+`star3d-runtime:1` Docker image (`env/Dockerfile.star3d`, Ubuntu 22.04 + OpenJDK 8, linux/amd64). 540 runs ran natively and 30 in Docker; `run_provenance.tsv`
+records which. When the cohort was extended (R8), only new pairs were run; earlier runs were reused only if their
+recorded identity (direction, input checksums, STAR3D jar, parameters, command) equalled the new job's (`assemble_returned.py`). A QC rerun of one pair (RF00522) in Docker reproduced the native result: the same 32 mappings and RMSD, with byte-identical preprocessing files. Every returned file is listed in `RETURN.sha256`.
 
 ## Step 4 — Comparison (`scripts/step4/`)
 - `s41_compare.py`: correspondences, outcome per nucleotide (both sides), pair scores, disagreement regions.

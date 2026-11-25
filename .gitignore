@@ -23,3 +23,4 @@ outputs/verification_archive/step3/
 work/
 # manuscript drafts are kept private until submission
 paper/
+outputs/05_results/*/site/

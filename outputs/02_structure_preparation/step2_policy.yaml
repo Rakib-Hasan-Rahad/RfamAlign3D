@@ -148,6 +148,15 @@ revisions:
   - id: R7
     date: "2026-11-13"
     stage_rerun_from: s05 (decisions only; no evidence changed)
-    what: "Step 2 CLOSED by the researcher's decision. Any (deposited sequence, species) check still lacking whole-chain evidence after (a) NCBI BLAST (7 jobs stalled in NCBI's queue since 2026-11-13T08:50Z, abandoned) and (b) exact local search of versioned assemblies/transcripts becomes provisional_origin SEARCH_INCOMPLETE. This is NOT a biological exclusion and NOT evidence of engineering; exact local search outcomes (not_found / interval_found_flank_differs) are recorded as context only. Pairs are then selected from verified structures exactly as before."
+    what: "Step 2 CLOSED by the researcher's decision. Any (deposited sequence, species) check still lacking whole-chain evidence after (a) NCBI BLAST (7 jobs stalled in NCBI's queue since 2026-11-13T08:50Z, abandoned) and (b) exact local search of versioned assemblies/transcripts becomes provisional_origin SEARCH_INCOMPLETE. This is NOT a biological exclusion and NOT evidence of engineering; batch server outcomes (not_found / interval_found_flank_differs) are recorded as context only. Pairs are then selected from verified structures exactly as before."
     why: "NCBI BLAST completed no search for several hours; the researcher chose to finalize rather than wait"
     record: outputs/02_structure_preparation/STEP2_CLOSED.json
+  - id: R8
+    date: "2026-11-25"
+    stage_rerun_from: s03 (evidence for the checks left open by R7), then s04-s06; new cohort snapshot step2_r8
+    what:
+      - "The checks left open at closure (R7) were re-queried at NCBI with the unchanged query, database and decision rules. BLAST jobs still queued keep their job ID instead of being resubmitted (poll_blast.py)."
+      - "Five species whose blastn jobs stayed queued for more than 2 h were searched with megablast (word size 28) on the same database and taxon filter (megablast_fallback.py). Every whole-chain query is >= 28 nt, so every full-length identical hit is found; each hit is still confirmed by exact string search of the fetched record. Short interval queries (< 28 nt), used only to label flank differences, may be missed."
+      - "Selection rerun with the completed evidence: all 234 (sequence, species) checks have an outcome; 535 pairs of step2_final unchanged; 35 pairs added (RF00001; 4V8P_B3 Tetrahymena thermophila and 6XU8_A7 Drosophila melanogaster newly verified). Only the 35 new pairs were run with STAR3D (identical settings); the 535 earlier runs are reused after an identity check (assemble_returned.py)."
+    why: "R7 closed Step 2 because NCBI's queue stalled; the open checks could change the cohort and are now resolved"
+    record: outputs/reconciliation/step2_final__to__step2_r8/

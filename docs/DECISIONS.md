@@ -27,8 +27,8 @@ Full text: `outputs/02_structure_preparation/step2_policy.yaml`. Key points:
   PDB entries. One pair per unordered pair of distinct sequences, chosen by a fixed ranking (observed coverage,
   backbone completeness, reported resolution, then stable ID).
 - **Coverage**: no hard cutoff (`coverage_cutoff: none`); coverage ranks candidates. This supersedes the
-  `min_observed_fraction_of_row: 0.90` value in config v1. In the final cohort 130 of 131 chains have ≥90% of the
-  seed row observed (minimum 89.5%).
+  `min_observed_fraction_of_row: 0.90` value in config v1. In the final cohort (`step2_r8`) 137 of 138 chains have
+  ≥90% of the seed row observed (minimum 89.5%).
 
 ## Revisions R1–R8
 
@@ -41,7 +41,7 @@ Full text: `outputs/02_structure_preparation/step2_policy.yaml`. Key points:
 | R5 | 11-13 | Placeholder taxa (metagenome, unidentified, synthetic) never resolve species | They carry species rank in NCBI | Such chains stay unresolved |
 | R6 | 11-13 | Prokaryotic keys searched locally first; BLAST only for misses; stall watchdog | Workers idle behind NCBI queue | None (execution) |
 | R7 | 11-13 | Step 2 closed by the researcher; checks still lacking evidence become `SEARCH_INCOMPLETE` (not exclusion, not engineering) | NCBI BLAST stalled for hours | 39 checks left open; cohort frozen as `step2_final` |
-| R8 | 11-25 | The 39 open checks re-queried at NCBI after closure; BLAST jobs still waiting keep their job ID instead of being resubmitted (`scripts/step2/poll_blast.py`) | The 90-min resubmission loop caused the R7 stall | **In progress.** Any newly verified chain is evaluated with the unchanged rules; new pairs, if any, are run with the same STAR3D settings and reported as a cohort update |
+| R8 | 11-25 | The 39 checks left open by R7 re-queried at NCBI with the unchanged rules; still-queued BLAST jobs keep their job ID (`poll_blast.py`); five species queued for >2 h searched with megablast on the same database and taxon filter (`megablast_fallback.py`; every whole-chain query ≥28 nt, every hit still confirmed by exact string search) | R7 left checks open that could change the cohort | All 234 checks resolved. 535 pairs unchanged; 35 RF00001 pairs added (4V8P_B3 *T. thermophila*, 6XU8_A7 *D. melanogaster* newly verified); only those 35 run with STAR3D, the 535 earlier runs reused after an identity check (`assemble_returned.py`). Cohort `step2_r8` |
 
 ## Analysis decisions (Steps 4–5)
 

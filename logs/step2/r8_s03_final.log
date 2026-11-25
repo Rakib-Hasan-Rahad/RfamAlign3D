@@ -1,0 +1,9 @@
+sequence-species keys: 234; cached 229; to evaluate 5
+phase 1: assembly search for 1 prokaryotic keys
+phase 2: 5 keys in 5 species need BLAST
+[1/5 0.0 min] Vibrio cholerae f645a90a -> not_found
+[2/5 0.1 min] Orthopoxvirus vaccinia eb2c7a98 -> not_found
+[3/5 0.1 min] Candida albicans f6075f39 -> whole_chain_found
+[4/5 0.2 min] Trypanosoma cruzi 9644fdea -> not_found
+[5/5 0.2 min] Tetrahymena thermophila c6df5484 -> whole_chain_found
+Counter({'whole_chain_found': 103, 'not_found': 85, 'interval_found_flank_differs': 36, 'unknown_residues_in_chain': 10})

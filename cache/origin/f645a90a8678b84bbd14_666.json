@@ -1,0 +1,92 @@
+{
+ "candidates": [
+  "RF03167__3IRW_R__1-92"
+ ],
+ "deposited_length": 92,
+ "deposited_sequence": "GGUCACGCACAGGGCAAACCAUUCGAAAGAGUGGGACGCAAAGCCUCCGGCCUAAACCAUUGCACUCCGGUAGGUAGCGGGGUUACCGAUGG",
+ "evaluated_utc": "2026-11-25T22:26:17Z",
+ "families": [
+  "RF03167"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_008369605.1",
+   "assembly_taxid": 666,
+   "fasta_sha256": "ecf7c61f186ee0cbb0e24ccb769e90a4af91544e72ac4fa34376bc40ef6b742c",
+   "filter": "taxon 666 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_000969265.1",
+   "assembly_taxid": 666,
+   "fasta_sha256": "66b55218ff1151c5b1e01ec8fb6bba161c74316b8f20e92b8b0d41609be9ec8f",
+   "filter": "taxon 666 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_003574155.1",
+   "assembly_taxid": 666,
+   "fasta_sha256": "f8ca9c80eae174a740c2a0e90ccb542f5a01fe74999127b30e470ffb6ccb845a",
+   "filter": "taxon 666 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_055389885.1",
+   "assembly_taxid": 666,
+   "fasta_sha256": "e1c63337176a6e97f6921a04d4fc69f876453e4c76122c6fa5938de2ea1d515f",
+   "filter": "taxon 666 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_000969265.1",
+   "assembly_taxid": 666,
+   "fasta_sha256": "fe44e4397a7707a0af25769de73cad1af71b0a6ecfdbe6b54344ca759841dd77",
+   "filter": "taxon 666 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_003574155.1",
+   "assembly_taxid": 666,
+   "fasta_sha256": "62c1fafc534f2e3035a4e1161204afb5fa64264a88de2d8331dc791493f560bd",
+   "filter": "taxon 666 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_008369605.1",
+   "assembly_taxid": 666,
+   "fasta_sha256": "91071c824cb483086e227893042b070bb82382f823d512088491f4d54b3f8eb1",
+   "filter": "taxon 666 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_055389885.1",
+   "assembly_taxid": 666,
+   "fasta_sha256": "3e228932668380cb9394fafc81ae25504d0817209df6baf41a536fa0f9c54a89",
+   "filter": "taxon 666 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "666",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/666_4839e14b1cb05bec.megablast.xml"
+  }
+ ],
+ "seq_sha256": "f645a90a8678b84bbd143fd296d64b8d51c7c080446556ddaeec9abcd9098436",
+ "species_name": "Vibrio cholerae",
+ "species_taxid": "666",
+ "strains": [
+  "666"
+ ],
+ "whole_chain_hits": []
+}

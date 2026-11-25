@@ -1,0 +1,67 @@
+{
+ "candidates": [
+  "RF00001__7PZY_3__1-121",
+  "RF00001__7Q08_3__1-121",
+  "RF00001__7Q0F_3__1-121",
+  "RF00001__7Q0P_3__1-121",
+  "RF00001__7Q0R_3__1-121",
+  "RF00001__8C3A_3__1-121",
+  "RF00001__8C3A_AT__1-121",
+  "RF00001__8CQ7_3__1-121",
+  "RF00001__8CQ7_AT__1-121",
+  "RF00001__8CQW_3__1-121",
+  "RF00001__8CQW_AT__1-121",
+  "RF00001__8CRE_3__1-121",
+  "RF00001__8CRE_AT__1-121",
+  "RF00001__8OEQ_3__1-121",
+  "RF00001__8OEQ_AT__1-121",
+  "RF00001__8OGJ_3__1-121",
+  "RF00001__8OH6_3__1-121",
+  "RF00001__8OH6_AT__1-121",
+  "RF00001__8OI5_3__1-121",
+  "RF00001__8OI5_AT__1-121",
+  "RF00001__8OJ3_3__1-121",
+  "RF00001__8OJ3_AT__1-121",
+  "RF00001__8Q5I_3__1-121",
+  "RF00001__9G1Z_3__1-121",
+  "RF00001__9G30_3__1-121",
+  "RF00001__9G6J_3__1-121"
+ ],
+ "deposited_length": 121,
+ "deposited_sequence": "GGUUGCGGCCAUAUCUAGCAGAAAGCACCGUUCCCCGUUCGAUCAACCGUAGUUAAGCUGCUAAGAGCAAUACCGAGUAGUGUAGUGGGAGACCAUACGCGAAACUAUUGUGCUGCAAUCU",
+ "evaluated_utc": "2026-11-25T22:26:17Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "5476",
+   "whole_chain_candidates": 2,
+   "xml": "cache/blast/5476_84aa8496542afd2d.megablast.xml"
+  }
+ ],
+ "seq_sha256": "f6075f391d19420ed377dc54cccda8de45c8461a9c2a45530bbc1a7cc6d15538",
+ "species_name": "Candida albicans",
+ "species_taxid": "5476",
+ "strains": [
+  "237561",
+  "5476"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 1057,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "X16634.1",
+   "source": "blast_core_nt",
+   "start": 937,
+   "strand": "+",
+   "title": "Candida albicans DNA of an autonomously replicating sequence (ARS) and 5S rRNA"
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+16:22:22 Trypanosoma cruzi (5693): 3 queries -> megablast RID GERWY1UH014
+16:22:33 Tetrahymena thermophila (5911): 2 queries -> megablast RID GERX8N6J016
+16:22:43 Orthopoxvirus vaccinia (10245): 1 queries -> megablast RID GERXK4W0014
+16:22:55 Candida albicans (5476): 1 queries -> megablast RID GERXYYX8016
+16:23:06 Vibrio cholerae (666): 1 queries -> megablast RID GERY9MKV016
+16:24:18 GERWY1UH014 READY -> 5693_21062014f7cae49e.megablast.xml
+16:24:40 GERX8N6J016 READY -> 5911_ba38579834c51cd9.megablast.xml
+16:25:01 GERXK4W0014 READY -> 10245_068e01a9627fe741.megablast.xml
+16:25:23 GERXYYX8016 READY -> 5476_84aa8496542afd2d.megablast.xml
+16:25:46 GERY9MKV016 READY -> 666_4839e14b1cb05bec.megablast.xml
+remaining: none

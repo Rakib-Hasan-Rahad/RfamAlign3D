@@ -154,6 +154,9 @@ def blast(species, queries):
     """queries: {qid: seq}. Returns parsed hits {qid: [(acc, start, end, strand)]} (full-length identical only)."""
     tag = C.hashlib.sha256(json.dumps(sorted(queries.items())).encode()).hexdigest()[:16]
     path = C.CP("blast", f"{species}_{tag}.xml")
+    mpath = path[:-4] + ".megablast.xml"            # R8 fallback (megablast_fallback.py) when blastn stays queued
+    if not os.path.exists(path) and os.path.exists(mpath):
+        path = mpath
     if not os.path.exists(path):
         fasta = "".join(f">{k}\n{v.replace('U', 'T')}\n" for k, v in sorted(queries.items()))
         short = min(len(v) for v in queries.values()) < 30

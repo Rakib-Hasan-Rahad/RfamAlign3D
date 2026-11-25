@@ -1,0 +1,11 @@
+{
+ "total": 570,
+ "by_status": {
+  "valid_alignment": 538,
+  "no_alignment": 32
+ },
+ "by_source": {
+  "new": 35,
+  "reused": 535
+ }
+}
