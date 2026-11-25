@@ -1,0 +1,57 @@
+{
+ "candidates": [
+  "RF01750__5BTP_A__1-75",
+  "RF01750__5BTP_B__1-75",
+  "RF01750__6OD9_A__1-75",
+  "RF01750__6OD9_B__1-75",
+  "RF01750__6WZR_A__1-75",
+  "RF01750__6WZR_B__1-75",
+  "RF01750__6WZS_A__1-75",
+  "RF01750__6WZS_B__1-75"
+ ],
+ "deposited_length": 75,
+ "deposited_sequence": "UAUCAGUUAUAUGACUGACGGAACGUGGAAUUAACCACAUGAAGUAUAACGAUGACAAUGCCGACCGUCUGGGCG",
+ "evaluated_utc": "2026-11-13T09:22:58Z",
+ "families": [
+  "RF01750"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCA_984589905.1",
+   "assembly_taxid": 32630,
+   "fasta_sha256": "c18e854415321e2ca2fd5a5f88ecaec2a10b0b61b871c22b055a88d52350be0f",
+   "filter": "taxon 32630 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_003019675.1",
+   "assembly_taxid": 861,
+   "fasta_sha256": "386b97a5e8188172e3b67b92c149d9f67342d0e4a8857253389b466e9040b9e1",
+   "filter": "taxon 861 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "9b33908d46ed3cc4bd5d210c8722af715b9fca9e8161ec6e08238dfbef3a47e7",
+ "species_name": "Fusobacterium ulcerans",
+ "species_taxid": "861",
+ "strains": [
+  "32630",
+  "861"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 1213150,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NZ_CP028105.1",
+   "source": "assembly:GCF_003019675.1",
+   "start": 1213076,
+   "strand": "-"
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "check_id": "c25b5f9d01f523503883_3048459",
+ "deposited_length": 142,
+ "deposited_sequence": "GCCCGGAUAGCUCAGUCGGUAGAGCAGCGGUAGCUGUUGAUCUGUGUGAAUCAGACUGCGACAGUUCGAGUUUGAAGCGAAAGCUAGCAACAGUAUCAACAGCUACCGCGGGUCCAGGGUUCAAGUCCCUGUUCGGGCGCCA",
+ "evaluated_utc": "2026-11-13T10:48:01Z",
+ "families": [
+  "RF02340"
+ ],
+ "host": "<batch-host>",
+ "import_problems": [],
+ "imported_utc": "2026-11-13T11:45:54Z",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "exact_local_resolves": false,
+ "routes_tried": [
+  {
+   "archive": "virus_3048459_GENOME.zip",
+   "archive_bytes": 6317159,
+   "reference": "ncbi_virus_taxon:3048459",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "c25b5f9d01f523503883471172a554e0ad7c252b3bc80d1c735365adda7f4b93",
+ "source": "exact_local",
+ "species_name": "Orthoflavivirus zikaense",
+ "species_taxid": "3048459",
+ "whole_chain_hits": [],
+ "whole_chain_hits_confirmed": []
+}

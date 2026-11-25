@@ -1,0 +1,77 @@
+{
+ "candidates": [
+  "RF00005__1MJ1_C__1-73",
+  "RF00005__1MJ1_D__1-73",
+  "RF00005__1ML5_B__1-73",
+  "RF00005__1ZO1_F__1-73",
+  "RF00005__1ZO3_A__1-73",
+  "RF00005__1ZO3_B__1-73",
+  "RF00005__3DEG_A__1-73",
+  "RF00005__4V48_A6__1-73",
+  "RF00005__4V49_AV__1-73",
+  "RF00005__4V49_AW__1-73",
+  "RF00005__4V4R_AV__1-73",
+  "RF00005__4V4R_AW__1-73",
+  "RF00005__4V4S_AV__1-73",
+  "RF00005__4V4S_AW__1-73",
+  "RF00005__4V4T_AV__1-73",
+  "RF00005__4V4T_AW__1-73",
+  "RF00005__4V4V_AU__1-73",
+  "RF00005__4V4V_AV__1-73",
+  "RF00005__4V4V_AW__1-73",
+  "RF00005__4V4W_AU__1-73",
+  "RF00005__4V4W_AV__1-73",
+  "RF00005__4V4W_AW__1-73",
+  "RF00005__4V65_AA__1-73",
+  "RF00005__4V65_AE__1-73",
+  "RF00005__4V65_AP__1-73",
+  "RF00005__4V66_AA__1-73",
+  "RF00005__4V66_AE__1-73",
+  "RF00005__4V66_AP__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GCGGAUUUAGCUCAGUUGGGAGAGCGCCAGACUGAAGAUCUGGAGGUCCUGUGUUCGAUCCACAGAAUUCGCACCA",
+ "evaluated_utc": "2026-11-13T08:22:27Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000005845.2",
+   "assembly_taxid": 511145,
+   "fasta_sha256": "daaa4d8b0eecbb01f8aee80314c6a59c5cb67a4178de0b2783527839fde57a15",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "562",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "562",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/562_3ac9dd43826e6cb3.xml"
+  }
+ ],
+ "seq_sha256": "28890de0dd2033379fabebc7165a219d6092ad9bbadc77f4c7528be78963ca0b",
+ "species_name": "Escherichia coli",
+ "species_taxid": "562",
+ "strains": [
+  "562"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 76,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "1ZO1_F",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain F, P/I-site tRNA"
+  }
+ ]
+}

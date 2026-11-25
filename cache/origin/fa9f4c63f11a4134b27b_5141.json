@@ -1,0 +1,29 @@
+{
+ "candidates": [
+  "RF00005__7R81_t1__1-73",
+  "RF00005__7R81_u1__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "UUCCUCGUGGCCCAAUGGUCACGGCGUCUGGCUACGAACCAGAAGAUUCCAGGUUCAAGUCCUGGCGGGGAAGCCA",
+ "evaluated_utc": "2026-11-25T20:11:31Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "5141",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/5141_b6b32894dd1883c6.xml"
+  }
+ ],
+ "seq_sha256": "fa9f4c63f11a4134b27bf1604e6368897ac071defd62fbbe6c928f2a909c4279",
+ "species_name": "Neurospora crassa",
+ "species_taxid": "5141",
+ "strains": [
+  "5141"
+ ],
+ "whole_chain_hits": []
+}

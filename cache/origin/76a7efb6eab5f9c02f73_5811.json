@@ -1,0 +1,55 @@
+{
+ "candidates": [
+  "RF00001__5XXB_3__1-122"
+ ],
+ "deposited_length": 124,
+ "deposited_sequence": "GCUGUCGGUCAUACUGCGUCGAAUACACCGGAUCCCUUCAGACCUCCGAAGUUAAGCGGCGCAAGGCCCGGUUAGUACUUGGGUGGGGGACUCCCAGGGAAUACCCUCGGGUGCUGACAGCUUU",
+ "evaluated_utc": "2026-11-25T20:06:57Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 6693,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GCUGUCGGUCAUACUGCGUCGAAUACACCGGAUCCCUUCAGACCUCCGAAGUUAAGCGGCGCAAGGCCCGGUUAGUACUUGGGUGGGGGACUCCCAGGGAAUACCCUCGGGUGCUGACAGCU",
+   "record": "X75430.1",
+   "source": "blast_core_nt",
+   "start": 6572,
+   "strand": "+",
+   "title": "T.gondii (Sailie) 17S, 5.8S, 26S and 5S rRNA genes"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "5811",
+   "whole_chain_candidates": 8,
+   "xml": "cache/blast/5811_7214df8bddbde291.xml"
+  }
+ ],
+ "seq_sha256": "76a7efb6eab5f9c02f735fe3ebcf64b230e7fdce6acda6df0d73a205fe533e68",
+ "species_name": "Toxoplasma gondii",
+ "species_taxid": "5811",
+ "strains": [
+  "5811"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 6695,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "X75430.1",
+   "source": "blast_core_nt",
+   "start": 6572,
+   "strand": "+",
+   "title": "T.gondii (Sailie) 17S, 5.8S, 26S and 5S rRNA genes"
+  }
+ ]
+}

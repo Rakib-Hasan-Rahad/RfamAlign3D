@@ -1,0 +1,57 @@
+{
+ "candidates": [
+  "RF00001__5V7Q_B__2-114",
+  "RF00001__5V93_B__2-114",
+  "RF00001__7F0D_B__2-114",
+  "RF00001__7KGB_B__2-114",
+  "RF00001__7MSC_B__2-114",
+  "RF00001__7MSH_B__2-114",
+  "RF00001__7MSM_B__2-114",
+  "RF00001__7MSZ_B__2-114",
+  "RF00001__7MT2_B__2-114",
+  "RF00001__7MT3_B__2-114",
+  "RF00001__7MT7_B__2-114",
+  "RF00001__7SFR_B__2-114",
+  "RF00001__9J1M_B__2-114"
+ ],
+ "deposited_length": 115,
+ "deposited_sequence": "UUACGGCGGCCACAGCGGCAGGGAAACGCCCGGUCCCAUUCCGAACCCGGAAGCUAAGCCUGCCAGCGCCGAUGAUACUGCCCCUCCGGGUGGAAAAGUAGGACACCGCCGAACA",
+ "evaluated_utc": "2026-11-13T08:26:37Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000009445.1",
+   "assembly_taxid": 410289,
+   "fasta_sha256": "0ddf79c6f1b89cea642228b332487b6ae92b300081cb337a76e994eb0e65b220",
+   "filter": "filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "taxon_queried": "410289",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "398840600daef663abd1dc49bb025130ce44bccf93d1da4a2bc00b7c496ec4d6",
+ "species_name": "Mycobacterium tuberculosis",
+ "species_taxid": "1773",
+ "strains": [
+  "1773",
+  "410289",
+  "419947",
+  "83332"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 1503527,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_008769.1",
+   "source": "assembly:GCF_000009445.1",
+   "start": 1503413,
+   "strand": "+"
+  }
+ ]
+}

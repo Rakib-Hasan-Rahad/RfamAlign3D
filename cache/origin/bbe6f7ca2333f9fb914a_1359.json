@@ -1,0 +1,140 @@
+{
+ "candidates": [
+  "RF00029__7D1A_A__805-902"
+ ],
+ "deposited_length": 902,
+ "deposited_sequence": "GUGCGCCCAGAUAGGGUGUUAAGUCAAGUAGUUUAAGGUACUACUCUGUAAGAUAACACAGAAAACAGCCAACCUAACCGAAAAGCGAAAGCUGAUACGGGAACAGAGCACGGUUGGAAAGCGAUGAGUUACCUAAAGACAAUCGGGUACGACUGAGUCGCAAUGUUAAUCAGAUAUAAGGUAUAAGUUGUGUUUACUGAACGCAAGUUUCUAAUUUCGGUUAUGUGUCGAUAGAGGAAAGUGUCUGAAACCUCUAGUACAAAGAAAGGUAAGUUAUGGUUGUGGACUUAUCUGUUAUCACCACAUUUGUACAAUCUGUAGGAGAACCUAUGGGAACGAAACGAAAGCGAUGCCGAGAAUCUGAAUUUACCAAGACUUAACACUAACUGGGGAUACCCUAAACAAGAAUGCCUAAUAGAAAGGAGGAAAAAGGCUAUAGCACUAGAGCUUGAAAAUCUUGCAAGGGUACGGAGUACUCGUAGUAGUCUGAGAAGGGUAACGCCCUUUACAUGGCAAAGGGGUACAGUUAUUGUGUACUAAAAUUAAAAAUUGAUUAGGGAGGAAAACCUCAAAAUGAAACCAACAAUGGCAAUUUUAGAAAGAAUCAGUAAAAAUUCACAAGAAAAUAUAGACGAAGUUUUUACAAGACUUUAUCGUUAUCUUUUACGUCCAGAUAUUUAUUACGUGGCGACGCGUUGGGAAAUGGCAAUGAUAGCGAAACAACGUAAAACUCUUGUUGUAUGCUUUCAUUGUCAUCGUCACGUGAUUCAUAAACACAAGUGAAUUUUUACGAACGAACAAUAACAGAGCCGUAUACUCCGAGAGGGGUACGUACGGUUCCCGAAGAGGGUGGUGCAAACCAGUCACAGUAAUGUGAACAAGGCGGUACCUCCCUACUUCAC",
+ "evaluated_utc": "2026-11-25T20:08:20Z",
+ "families": [
+  "RF00029"
+ ],
+ "interval_hits": [
+  {
+   "end": 1418275,
+   "exact_confirmed": "yes",
+   "interval": "CAGAGCCGUAUACUCCGAGAGGGGUACGUACGGUUCCCGAAGAGGGUGGUGCAAACCAGUCACAGUAAUGUGAACAAGGCGGUACCUCCCUACUUCAC",
+   "record": "CM208270.1",
+   "source": "assembly:GCA_062094640.1",
+   "start": 1418178,
+   "strand": "-"
+  },
+  {
+   "biomol": "genomic",
+   "end": 1356508,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "CAGAGCCGUAUACUCCGAGAGGGGUACGUACGGUUCCCGAAGAGGGUGGUGCAAACCAGUCACAGUAAUGUGAACAAGGCGGUACCUCCCUACUUCAC",
+   "record": "CP157379.1",
+   "source": "blast_core_nt",
+   "start": 1356411,
+   "strand": "-",
+   "title": "Lactococcus cremoris strain NZ3900 chromosome, complete genome"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000468955.1",
+   "assembly_taxid": 1295826,
+   "fasta_sha256": "e9cbe24c7f6b611121e2b17156844bd71a60f2d58adc9685463bc4efa66b7757",
+   "filter": "taxon 1359 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_044358145.1",
+   "assembly_taxid": 1295827,
+   "fasta_sha256": "0ef2794af2b07796b7270d78c42737da6d1730cf2b8fc9c9a9fe95035417675e",
+   "filter": "taxon 1359 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_054457895.1",
+   "assembly_taxid": 1359,
+   "fasta_sha256": "4c295b7362d830a4687bcb75854fcb9018909adb81aaa35e3b0c265d62e17d07",
+   "filter": "taxon 1359 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_000468955.1",
+   "assembly_taxid": 1295826,
+   "fasta_sha256": "430a4270b6964912678cd959e4ffdd7a061cec13dc9f775628ba17b293dfea96",
+   "filter": "taxon 1359 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_044358145.1",
+   "assembly_taxid": 1295827,
+   "fasta_sha256": "7d8b9af5dbca20c639f0553cc4add21b88989a9eaf6259cb27dfb66be8115a42",
+   "filter": "taxon 1359 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_054457895.1",
+   "assembly_taxid": 1359,
+   "fasta_sha256": "8d7e8e1f1c4f2a5d3881db9f8680df8c48f39db77ca6824362dd7edbc537d832",
+   "filter": "taxon 1359 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_062094640.1",
+   "assembly_taxid": 1359,
+   "fasta_sha256": "a4cfc226a6d3dc4203ee415569e3d190bffc97017b7372fc31645e0fe944e63f",
+   "filter": "taxon 1359 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_965286575.1",
+   "assembly_taxid": 1359,
+   "fasta_sha256": "48f5edcb0c2fcb8a14535f85bb23f3704377227372ea8ca752a77f696658581a",
+   "filter": "taxon 1359 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "1359",
+   "whole_chain_candidates": 2,
+   "xml": "cache/blast/1359_f7eb0cc88ff0df6b.xml"
+  }
+ ],
+ "seq_sha256": "bbe6f7ca2333f9fb914a54f800b4add3f5843237fa79cfd3fac1ce34e317b854",
+ "species_name": "Lactococcus cremoris",
+ "species_taxid": "1359",
+ "strains": [
+  "1359"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 902,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "7D1A_A",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain A, RNA (692-MER)"
+  },
+  {
+   "biomol": "other",
+   "end": 932,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "26HH_A",
+   "source": "blast_core_nt",
+   "start": 31,
+   "strand": "+",
+   "title": "Chain A, RNA (932-MER)"
+  }
+ ]
+}

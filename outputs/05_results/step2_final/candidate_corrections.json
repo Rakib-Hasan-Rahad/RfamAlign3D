@@ -1,0 +1,40 @@
+{
+ "cohort": "step2_final",
+ "margin_angstrom": 1.0,
+ "regions": 1074,
+ "verdicts": {
+  "unresolved": 92,
+  "distance_only_STAR3D": 394,
+  "supports_STAR3D": 195,
+  "conflicting": 197,
+  "supports_Rfam": 107,
+  "distance_only_Rfam": 89
+ },
+ "nucleotides_by_verdict": {
+  "unresolved": 249,
+  "distance_only_STAR3D": 1319,
+  "supports_STAR3D": 1070,
+  "conflicting": 943,
+  "supports_Rfam": 477,
+  "distance_only_Rfam": 223
+ },
+ "supports_star3d": {
+  "regions": 195,
+  "pairs": 141,
+  "families": [
+   "RF00001",
+   "RF00002",
+   "RF00005",
+   "RF00026",
+   "RF00169",
+   "RF00177",
+   "RF00522",
+   "RF03087"
+  ],
+  "with_noncanonical_gain": 56
+ },
+ "supports_rfam": {
+  "regions": 107,
+  "pairs": 98
+ }
+}

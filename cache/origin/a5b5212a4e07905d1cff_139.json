@@ -1,0 +1,52 @@
+{
+ "candidates": [
+  "RF00001__8FMW_AB__2-111",
+  "RF00001__8FN2_B__2-111"
+ ],
+ "deposited_length": 112,
+ "deposited_sequence": "CCCUGGUGGUUAAAGAAAAGAGGAAACACCUGUUAUCAUUCCGAACACAGAAGUUAAGCUCUUAUUCGCUGAUGGUACUGCGAGUUCGCGGGAGAGUAGGUUAUUGCCAGGG",
+ "evaluated_utc": "2026-11-13T09:23:00Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000008685.2",
+   "assembly_taxid": 224326,
+   "fasta_sha256": "c1f96de187f945b26e62598615f7c7bd1798d3e95034765ba6b9f36d95350793",
+   "filter": "taxon 224326 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 2
+  }
+ ],
+ "seq_sha256": "a5b5212a4e07905d1cff4bd10140a383590d74edbd345ba2c74f266ecbcd3131",
+ "species_name": "Borreliella burgdorferi",
+ "species_taxid": "139",
+ "strains": [
+  "224326"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 435312,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_001318.1",
+   "source": "assembly:GCF_000008685.2",
+   "start": 435201,
+   "strand": "-"
+  },
+  {
+   "end": 438557,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_001318.1",
+   "source": "assembly:GCF_000008685.2",
+   "start": 438446,
+   "strand": "-"
+  }
+ ]
+}

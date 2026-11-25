@@ -1,0 +1,47 @@
+{
+ "candidates": [
+  "RF00005__9E9C_B__1-68",
+  "RF00005__9HCC_B__1-68",
+  "RF00005__9HCD_B__1-68",
+  "RF00005__9HCE_B__1-68",
+  "RF00005__9HCF_B__1-68",
+  "RF00005__9HCG_B__1-68",
+  "RF00005__9HCH_B__1-68"
+ ],
+ "deposited_length": 68,
+ "deposited_sequence": "GUUAAUGUAGCUUAAUAACAAAGCAAAGCACUGAAAAUGCUUAGAUGGAUAAUUGUAUCCCAUAAACA",
+ "evaluated_utc": "2026-11-13T08:17:33Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "10090",
+   "whole_chain_candidates": 50,
+   "xml": "cache/blast/10090_99b60ab084302c88.xml"
+  }
+ ],
+ "seq_sha256": "8e5bbea4148dafb28cb01870ed4453dd1a1bb67c3e9358542d02e28376134d0c",
+ "species_name": "Mus musculus",
+ "species_taxid": "10090",
+ "strains": [
+  "10090"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 1922,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "LC062066.1",
+   "source": "blast_core_nt",
+   "start": 1855,
+   "strand": "+",
+   "title": "Mus musculus mitochondrion DNA, including Cytb, tRNA-Tyr, tRNA-Pro, tRNA-Phe, 12S rRNA genes and D-loop, complete sequen"
+  }
+ ]
+}

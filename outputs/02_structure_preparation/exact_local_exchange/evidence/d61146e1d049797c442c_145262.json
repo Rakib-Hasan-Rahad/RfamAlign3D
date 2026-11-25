@@ -1,0 +1,27 @@
+{
+ "check_id": "d61146e1d049797c442c_145262",
+ "deposited_length": 122,
+ "deposited_sequence": "UUAGGCGGCCACAGCGGUGGGGUUGCCUCCCGUACCCAUCCCGAACACGGAAGAUAAGCCCACCAGCGUUCCAGGGAGUACUGGAGUGCGCGAGCCUCUGGGAAAUCCGGUUCGCCGCCACC",
+ "evaluated_utc": "2026-11-13T10:42:16Z",
+ "families": [
+  "RF00001"
+ ],
+ "host": "<batch-host>",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000008645.1,GCF_027554905.1,GCF_027555045.1,GCF_050908155.1,GCA_000008645.1,GCA_027554905.1,GCA_027555045.1,GCA_050908155.1_GENOME_FASTA.zip",
+   "archive_bytes": 4132641,
+   "reference": "assemblies:GCF_000008645.1,GCF_027554905.1,GCF_027555045.1,GCF_050908155.1,GCA_000008645.1,GCA_027554905.1,GCA_027555045.1,GCA_050908155.1",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "d61146e1d049797c442ce6e9c911bc272ee9b912bbcd734a233692a48ba6b452",
+ "source": "exact_local",
+ "species_name": "Methanothermobacter thermautotrophicus",
+ "species_taxid": "145262",
+ "whole_chain_hits": []
+}

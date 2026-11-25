@@ -1,0 +1,41 @@
+{
+ "candidates": [
+  "RF00622__7QR4_B__1-69"
+ ],
+ "deposited_length": 69,
+ "deposited_sequence": "GGGGGCCACAGCAGAAGCGUUCACGUCGCAGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00622"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "2a56598e5142d87dc1efdb9481bbdbd2268a7f4e0b6e2443ef9cb0ccf5683070",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 69,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "7QR4_B",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain B, RNA CPEB3 ribozyme"
+  }
+ ]
+}

@@ -1,0 +1,55 @@
+{
+ "candidates": [
+  "RF00005__8Y2O_C__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GCCGAAAUAGCUCAGUUGGGAGAGCGUUAGACUGAAGAUCUAAAGGUCCCUGGUUCGAUCCCGGGUUUCGGCACCA",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 56505,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GCCGAAAUAGCUCAGUUGGGAGAGCGUUAGACUGAAGAUCUAAAGGUCCCUGGUUCGAUCCCGGGUUUCGGCA",
+   "record": "AL133258.16",
+   "source": "blast_core_nt",
+   "start": 56433,
+   "strand": "-",
+   "title": "Human DNA sequence from clone RP1-207F6 on chromosome 6 Contains the 3' end of the gene for a novel nucleolar protein NO"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "6e2c4a48b3af580ee37ef337f914ef56b4ac14792b984c49cb10d6cb50871b38",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "tRNA",
+   "end": 76,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "K00350.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Human Phe-tRNA"
+  }
+ ]
+}

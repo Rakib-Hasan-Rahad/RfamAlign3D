@@ -1,0 +1,29 @@
+{
+ "candidates": [
+  "RF00005__9O3H_1w__1-73",
+  "RF00005__9O3H_2w__1-73",
+  "RF00005__9O3I_1w__1-73",
+  "RF00005__9O3I_2w__1-73",
+  "RF00005__9O3J_1w__1-73",
+  "RF00005__9O3J_2w__1-73",
+  "RF00005__9O3K_1w__1-73",
+  "RF00005__9O3K_2w__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCACCX",
+ "evaluated_utc": "2026-11-13T08:07:17Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "note": "X",
+ "outcome": "unknown_residues_in_chain",
+ "routes_tried": [],
+ "seq_sha256": "80218b7057d95c2350d9f4d0454bfb865dc9c69c977f1ee7baad142153472524",
+ "species_name": "Escherichia coli",
+ "species_taxid": "562",
+ "strains": [
+  "562"
+ ],
+ "whole_chain_hits": []
+}

@@ -1,0 +1,136 @@
+{
+ "candidates": [
+  "RF00005__5E7K_1L__1-73",
+  "RF00005__5E7K_3K__1-73",
+  "RF00005__5E7K_3L__1-73",
+  "RF00005__5E81_1K__1-73",
+  "RF00005__5E81_1L__1-73",
+  "RF00005__5EL4_1K__1-73",
+  "RF00005__5EL4_1L__1-73",
+  "RF00005__5EL4_3K__1-73",
+  "RF00005__5EL4_3L__1-73",
+  "RF00005__5EL5_1K__1-73",
+  "RF00005__5EL5_1L__1-73",
+  "RF00005__5EL5_3K__1-73",
+  "RF00005__5EL5_3L__1-73",
+  "RF00005__5EL6_1K__1-73",
+  "RF00005__5EL6_1L__1-73",
+  "RF00005__5EL6_3K__1-73",
+  "RF00005__5EL6_3L__1-73",
+  "RF00005__5EL7_1K__1-73",
+  "RF00005__5EL7_1L__1-73",
+  "RF00005__5EL7_3K__1-73",
+  "RF00005__5EL7_3L__1-73",
+  "RF00005__5IB7_1K__1-73",
+  "RF00005__5IB7_1L__1-73",
+  "RF00005__5IB7_3K__1-73",
+  "RF00005__5IB7_3L__1-73",
+  "RF00005__5IB8_1K__1-73",
+  "RF00005__5IB8_3K__1-73",
+  "RF00005__5IB8_3L__1-73",
+  "RF00005__5UYN_Y__1-73",
+  "RF00005__5UYP_Y__1-73",
+  "RF00005__5UYQ_Y__1-73",
+  "RF00005__7ZTA_PTR1__1-73",
+  "RF00005__8BF7_5__1-73",
+  "RF00005__8BH4_5__1-73",
+  "RF00005__8BHJ_5__1-73",
+  "RF00005__8BHN_5__1-73",
+  "RF00005__9O3H_1y__1-73",
+  "RF00005__9O3H_2y__1-73",
+  "RF00005__9O3I_1y__1-73",
+  "RF00005__9O3I_2y__1-73",
+  "RF00005__9O3J_1y__1-73",
+  "RF00005__9O3J_2y__1-73",
+  "RF00005__9O3K_1y__1-73",
+  "RF00005__9O3K_2y__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCACCA",
+ "evaluated_utc": "2026-11-13T08:07:17Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000005845.2",
+   "assembly_taxid": 511145,
+   "fasta_sha256": "daaa4d8b0eecbb01f8aee80314c6a59c5cb67a4178de0b2783527839fde57a15",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "83333",
+   "whole_chain_hits": 6
+  }
+ ],
+ "seq_sha256": "87ca17862c63487980fabcc3cf2501f38c4c74d75c381fc4e4ba29683c0d026b",
+ "species_name": "Escherichia coli",
+ "species_taxid": "562",
+ "strains": [
+  "562",
+  "83333"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 780629,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 780554,
+   "strand": "+"
+  },
+  {
+   "end": 780918,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 780843,
+   "strand": "+"
+  },
+  {
+   "end": 781222,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 781147,
+   "strand": "+"
+  },
+  {
+   "end": 781444,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 781369,
+   "strand": "+"
+  },
+  {
+   "end": 781652,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 781577,
+   "strand": "+"
+  },
+  {
+   "end": 2521328,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 2521253,
+   "strand": "+"
+  }
+ ]
+}

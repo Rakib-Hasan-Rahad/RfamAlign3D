@@ -1,0 +1,56 @@
+{
+ "candidates": [
+  "RF00005__8Z1F_T__1-66",
+  "RF00005__8Z1G_T__1-66"
+ ],
+ "deposited_length": 86,
+ "deposited_sequence": "GGUAAAAUGGCUGAGUGAAGCAUUGGACUGUAAAUCUAAAGACAGGGGUUAGGCCUCUUUUUACCAGCUCCGAGGUGAUUUUCAUA",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 5893,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GGUAAAAUGGCUGAGUGAAGCAUUGGACUGUAAAUCUAAAGACAGGGGUUAGGCCUCUUUUUACCA",
+   "record": "ON127816.1",
+   "source": "blast_core_nt",
+   "start": 5828,
+   "strand": "-",
+   "title": "Homo sapiens isolate Daur mitochondrion sequence"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 50,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "9067f2ee3ddebde606b987864952e72ef33a9c97079f6d64baa692bee72ba657",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 5893,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "ON127816.1",
+   "source": "blast_core_nt",
+   "start": 5808,
+   "strand": "-",
+   "title": "Homo sapiens isolate Daur mitochondrion sequence"
+  }
+ ]
+}

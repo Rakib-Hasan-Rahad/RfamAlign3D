@@ -1,0 +1,43 @@
+{
+ "check_id": "cc802d0903becf7211bb_204038",
+ "deposited_length": 85,
+ "deposited_sequence": "GGUGACUAGGGUUCCGGCGAAAGCCGGUCCGAGAGUUACCGACCGCCGAAAGGCGGUUACACGGCGGGAAAAAAGCCCGGGAGGA",
+ "evaluated_utc": "2026-11-13T10:45:39Z",
+ "families": [
+  "RF00442"
+ ],
+ "host": "<batch-host>",
+ "import_problems": [],
+ "imported_utc": "2026-11-13T11:45:54Z",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "exact_local_resolves": false,
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000147055.1,GCF_000406145.1,GCF_000406185.1,GCF_000406265.1,GCF_003049785.1,GCF_018904205.1,GCF_020047155.1,GCF_025643375.1,GCF_030168535.1,GCF_060310185.1_GENOME_FASTA.zip",
+   "archive_bytes": 14600040,
+   "reference": "assemblies:GCF_000147055.1,GCF_000406145.1,GCF_000406185.1,GCF_000406265.1,GCF_003049785.1,GCF_018904205.1,GCF_020047155.1,GCF_025643375.1,GCF_030168535.1,GCF_060310185.1",
+   "route": "exact_local"
+  },
+  {
+   "archive": "genome_GCF_060310465.1,GCF_060310555.1,GCF_062065131.1,GCA_000147055.1,GCA_000406145.1,GCA_000406185.1,GCA_000406265.1,GCA_003049785.1,GCA_018904205.1,GCA_020047155.1_GENOME_FASTA.zip",
+   "archive_bytes": 14496629,
+   "reference": "assemblies:GCF_060310465.1,GCF_060310555.1,GCF_062065131.1,GCA_000147055.1,GCA_000406145.1,GCA_000406185.1,GCA_000406265.1,GCA_003049785.1,GCA_018904205.1,GCA_020047155.1",
+   "route": "exact_local"
+  },
+  {
+   "archive": "genome_GCA_025643375.1,GCA_030168535.1,GCA_060310185.1,GCA_060310465.1,GCA_060310555.1,GCA_062065131.1_GENOME_FASTA.zip",
+   "archive_bytes": 8776992,
+   "reference": "assemblies:GCA_025643375.1,GCA_030168535.1,GCA_060310185.1,GCA_060310465.1,GCA_060310555.1,GCA_062065131.1",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "cc802d0903becf7211bbda67e7295514308ebffc174ab05a4057ad67ad2be46f",
+ "source": "exact_local",
+ "species_name": "Dickeya dadantii",
+ "species_taxid": "204038",
+ "whole_chain_hits": [],
+ "whole_chain_hits_confirmed": []
+}

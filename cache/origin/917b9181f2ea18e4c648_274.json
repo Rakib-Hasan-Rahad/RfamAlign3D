@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00005__9SFQ_T__1-83"
+ ],
+ "deposited_length": 86,
+ "deposited_sequence": "GGGCAGGUGCCCGAGCGGCCAAAGGGGACGGUCUGUAAAACCGUUGGCGUAUGCCUUCGCUGGUUCGAAUCCAGCCCUGCCCACCA",
+ "evaluated_utc": "2026-11-13T08:22:03Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000091545.1",
+   "assembly_taxid": 300852,
+   "fasta_sha256": "968eebc96d32e14d57c5a0981c4168a4ec73b481245048f8c02c374bbfbc3fdb",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "274",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "917b9181f2ea18e4c648678f6d1c62b0a7c789dc4ba2dd7f45ade27946ac58fe",
+ "species_name": "Thermus thermophilus",
+ "species_taxid": "274",
+ "strains": [
+  "274"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 240491,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_006461.1",
+   "source": "assembly:GCF_000091545.1",
+   "start": 240406,
+   "strand": "-"
+  }
+ ]
+}

@@ -1,0 +1,190 @@
+{
+ "check_id": "6ad86f0af03c10a24d10_7227",
+ "deposited_length": 123,
+ "deposited_sequence": "AACUCUAAGCGGUGGAUCACUCGGCUCAUGGGUCGAUGAAGAACGCAGCAAACUGUGCGUCAUCGUGUGAACUGCAGGACACAUGAACAUCGACAUUUUGAACGCAUAUCGCAGUCCAUGCUG",
+ "evaluated_utc": "2026-11-13T10:42:14Z",
+ "families": [
+  "RF00002"
+ ],
+ "host": "<batch-host>",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000001215.4_GENOME_FASTA.zip",
+   "archive_bytes": 44239833,
+   "reference": "assembly:GCF_000001215.4",
+   "route": "exact_local"
+  },
+  {
+   "archive": "genome_GCF_000001215.4_RNA_FASTA.zip",
+   "archive_bytes": 23533716,
+   "reference": "refseq_rna:GCF_000001215.4",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "6ad86f0af03c10a24d103087efd67d4e1cc7a65541569e2e49b1a352a9ae0b8e",
+ "source": "exact_local",
+ "species_name": "Drosophila melanogaster",
+ "species_taxid": "7227",
+ "whole_chain_hits": [
+  {
+   "end": 1718,
+   "exact_confirmed": "yes",
+   "file": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NW_001845390.1",
+   "source": "assembly:GCF_000001215.4",
+   "start": 1596,
+   "strand": "+",
+   "title": "NW_001845390.1 Drosophila melanogaster chromosome X 211000022278724 sequence"
+  },
+  {
+   "end": 793,
+   "exact_confirmed": "yes",
+   "file": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NW_001847115.1",
+   "source": "assembly:GCF_000001215.4",
+   "start": 671,
+   "strand": "-",
+   "title": "NW_001847115.1 Drosophila melanogaster chromosome X; Y 211000022278985 sequence"
+  },
+  {
+   "end": 305,
+   "exact_confirmed": "yes",
+   "file": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NW_001847280.1",
+   "source": "assembly:GCF_000001215.4",
+   "start": 183,
+   "strand": "+",
+   "title": "NW_001847280.1 Drosophila melanogaster 211000022279132 sequence"
+  },
+  {
+   "end": 348,
+   "exact_confirmed": "yes",
+   "file": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NW_001847257.1",
+   "source": "assembly:GCF_000001215.4",
+   "start": 226,
+   "strand": "+",
+   "title": "NW_001847257.1 Drosophila melanogaster chromosome X; Y 211000022279342 sequence"
+  },
+  {
+   "end": 46327,
+   "exact_confirmed": "yes",
+   "file": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NW_007931121.1",
+   "source": "assembly:GCF_000001215.4",
+   "start": 46205,
+   "strand": "+",
+   "title": "NW_007931121.1 Drosophila melanogaster chromosome X; Y rDNA sequence"
+  },
+  {
+   "end": 58776,
+   "exact_confirmed": "yes",
+   "file": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NW_007931121.1",
+   "source": "assembly:GCF_000001215.4",
+   "start": 58654,
+   "strand": "+",
+   "title": "NW_007931121.1 Drosophila melanogaster chromosome X; Y rDNA sequence"
+  },
+  {
+   "end": 70511,
+   "exact_confirmed": "yes",
+   "file": "GCF_000001215.4_Release_6_plus_ISO1_MT_genomic.fna",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NW_007931121.1",
+   "source": "assembly:GCF_000001215.4",
+   "start": 70389,
+   "strand": "+",
+   "title": "NW_007931121.1 Drosophila melanogaster chromosome X; Y rDNA sequence"
+  },
+  {
+   "end": 3705,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "independence_basis": "refseq_transcript",
+   "independent": "yes",
+   "record": "NR_133549.1",
+   "source": "refseq_rna:GCF_000001215.4",
+   "start": 3583,
+   "strand": "+",
+   "title": "NR_133549.1 Drosophila melanogaster pre-ribosomal RNA (pre-rRNA:CR45845), preRNA"
+  },
+  {
+   "end": 123,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "independence_basis": "refseq_transcript",
+   "independent": "yes",
+   "record": "NR_133551.1",
+   "source": "refseq_rna:GCF_000001215.4",
+   "start": 1,
+   "strand": "+",
+   "title": "NR_133551.1 Drosophila melanogaster 5.8S ribosomal RNA (5.8SrRNA:CR45852), partial rRNA"
+  },
+  {
+   "end": 3673,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "independence_basis": "refseq_transcript",
+   "independent": "yes",
+   "record": "NR_133554.1",
+   "source": "refseq_rna:GCF_000001215.4",
+   "start": 3551,
+   "strand": "+",
+   "title": "NR_133554.1 Drosophila melanogaster pre-ribosomal RNA (pre-rRNA:CR45846), preRNA"
+  },
+  {
+   "end": 123,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "independence_basis": "refseq_transcript",
+   "independent": "yes",
+   "record": "NR_133556.1",
+   "source": "refseq_rna:GCF_000001215.4",
+   "start": 1,
+   "strand": "+",
+   "title": "NR_133556.1 Drosophila melanogaster 5.8S ribosomal RNA (5.8SrRNA:CR45839), partial rRNA"
+  },
+  {
+   "end": 3705,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "independence_basis": "refseq_transcript",
+   "independent": "yes",
+   "record": "NR_133558.1",
+   "source": "refseq_rna:GCF_000001215.4",
+   "start": 3583,
+   "strand": "+",
+   "title": "NR_133558.1 Drosophila melanogaster pre-ribosomal RNA (pre-rRNA:CR45847), preRNA"
+  },
+  {
+   "end": 123,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "independence_basis": "refseq_transcript",
+   "independent": "yes",
+   "record": "NR_133560.1",
+   "source": "refseq_rna:GCF_000001215.4",
+   "start": 1,
+   "strand": "+",
+   "title": "NR_133560.1 Drosophila melanogaster 5.8S ribosomal RNA (5.8SrRNA:CR45842), partial rRNA"
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "observations": 4281,
+ "pattern": {
+  "register_shift_at_gap": 2663,
+  "isolated_shift_at_gap": 209,
+  "other": 240,
+  "loop_rearrangement": 282,
+  "register_shift": 102,
+  "global_misregistration": 785
+ },
+ "abs_offset": {
+  "1": 3528,
+  "2": 416,
+  "3": 126,
+  "4": 47,
+  "5": 18,
+  "6": 11,
+  "7": 28,
+  "8": 46,
+  "9": 1,
+  "10": 60
+ },
+ "near_seed_gap": {
+  "yes": 3327,
+  "no": 954
+ },
+ "near_seed_gap_baseline": {
+  "disagreements": "3327/4281",
+  "agreements": "25193/35989"
+ },
+ "ss_context": {
+  "internal_loop": 438,
+  "paired": 2252,
+  "hairpin_loop": 1226,
+  "multiloop": 275,
+  "exterior": 80,
+  "pseudoknot_paired": 6,
+  "bulge": 4
+ },
+ "rf_class": {
+  "consensus": 4196,
+  "insert": 85
+ },
+ "by_family_pattern": {
+  "RF00001": {
+   "register_shift_at_gap": 1110,
+   "isolated_shift_at_gap": 83,
+   "other": 113,
+   "loop_rearrangement": 114,
+   "register_shift": 6
+  },
+  "RF00002": {
+   "global_misregistration": 50,
+   "register_shift_at_gap": 61,
+   "isolated_shift_at_gap": 9,
+   "register_shift": 11,
+   "other": 3,
+   "loop_rearrangement": 18
+  },
+  "RF00005": {
+   "register_shift_at_gap": 1322,
+   "isolated_shift_at_gap": 105,
+   "global_misregistration": 703,
+   "other": 111,
+   "register_shift": 77,
+   "loop_rearrangement": 126
+  },
+  "RF00026": {
+   "register_shift_at_gap": 3
+  },
+  "RF00169": {
+   "global_misregistration": 32
+  },
+  "RF00177": {
+   "register_shift_at_gap": 60,
+   "isolated_shift_at_gap": 2,
+   "loop_rearrangement": 9,
+   "other": 3,
+   "register_shift": 4
+  },
+  "RF00522": {
+   "loop_rearrangement": 4,
+   "other": 2,
+   "register_shift_at_gap": 9
+  },
+  "RF01852": {
+   "other": 1,
+   "loop_rearrangement": 4
+  },
+  "RF03087": {
+   "register_shift_at_gap": 98,
+   "isolated_shift_at_gap": 10,
+   "loop_rearrangement": 7,
+   "other": 7,
+   "register_shift": 4
+  }
+ }
+}

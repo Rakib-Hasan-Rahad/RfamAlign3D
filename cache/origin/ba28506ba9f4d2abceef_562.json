@@ -1,0 +1,50 @@
+{
+ "candidates": [
+  "RF00169__3ZN8_G__26-57"
+ ],
+ "deposited_length": 88,
+ "deposited_sequence": "UGGUGCAGCGCAGCGCGGACGCCCGAACCUGGUCAGAGCCGGAAGGCAGCAGCCAUAAGGGAUGCUUUGCGGGUGCCGUUGCCUUCCG",
+ "evaluated_utc": "2026-11-13T08:22:34Z",
+ "families": [
+  "RF00169"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000005845.2",
+   "assembly_taxid": 511145,
+   "fasta_sha256": "daaa4d8b0eecbb01f8aee80314c6a59c5cb67a4178de0b2783527839fde57a15",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "562",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "562",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/562_3ac9dd43826e6cb3.xml"
+  }
+ ],
+ "seq_sha256": "ba28506ba9f4d2abceef200f5ce5000f5df2c73cc703e47627cf3c6b2516665c",
+ "species_name": "Escherichia coli",
+ "species_taxid": "562",
+ "strains": [
+  "562"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 88,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "3ZN8_G",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain G, 4.5 S RNA"
+  }
+ ]
+}

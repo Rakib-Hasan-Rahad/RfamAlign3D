@@ -1,0 +1,41 @@
+{
+ "candidates": [
+  "RF00002__4V8M_BC__1-169"
+ ],
+ "deposited_length": 169,
+ "deposited_sequence": "AACGUGUCGCGAUGGAUGACUUGGCUUCCUAUUUCGUUGAAGAACGCAGCAAAGUGCGAUAAGUGGUAUCAAUUGCAGAAUCAUUUCAUUGCCCAAUCUUUGAACGCAAACGGCGCAUGGGAGAAGCUCUCUCGAGCCAUCCCCGUGCAUGCCACAUUUCUCAGUGUCG",
+ "evaluated_utc": "2026-11-13T08:22:27Z",
+ "families": [
+  "RF00002"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "5691",
+   "whole_chain_candidates": 25,
+   "xml": "cache/blast/5691_d100a42cd9a550df.xml"
+  }
+ ],
+ "seq_sha256": "69cf45c34d21538dc70c4289bc8a8da478ef2f60a7171de5d4c83e6bfde48a9f",
+ "species_name": "Trypanosoma brucei",
+ "species_taxid": "5691",
+ "strains": [
+  "5691"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 54543,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "AC159415.1",
+   "source": "blast_core_nt",
+   "start": 54375,
+   "strand": "+",
+   "title": "Trypanosoma brucei isolate GUTat10.1 chromosome 7 clone RPCI93-25D22, complete sequence"
+  }
+ ]
+}

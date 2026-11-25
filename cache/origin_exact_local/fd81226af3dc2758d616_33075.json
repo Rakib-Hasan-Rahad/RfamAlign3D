@@ -1,0 +1,31 @@
+{
+ "check_id": "fd81226af3dc2758d616_33075",
+ "deposited_length": 57,
+ "deposited_sequence": "GCGCAACAUCCCCGCCGGUUGGGCGCAUUGCACUCCGCGCAGUGAACCGGCUGCGCC",
+ "evaluated_utc": "2026-11-13T10:48:23Z",
+ "families": [
+  "RF03013"
+ ],
+ "host": "<batch-host>",
+ "import_problems": [],
+ "imported_utc": "2026-11-13T11:45:54Z",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "exact_local_resolves": false,
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000022565.1,GCA_000022565.1_GENOME_FASTA.zip",
+   "archive_bytes": 2434716,
+   "reference": "assemblies:GCF_000022565.1,GCA_000022565.1",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "fd81226af3dc2758d616d4eaab236595e0b6916f4250ae3193bb69aae200cb16",
+ "source": "exact_local",
+ "species_name": "Acidobacterium capsulatum",
+ "species_taxid": "33075",
+ "whole_chain_hits": [],
+ "whole_chain_hits_confirmed": []
+}

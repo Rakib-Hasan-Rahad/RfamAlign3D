@@ -1,0 +1,51 @@
+{
+ "candidates": [
+  "RF00029__5G2Y_A__595-692"
+ ],
+ "deposited_length": 704,
+ "deposited_sequence": "AUGCGCCCAGAUAGGGUGUUAAGUCAAGUAGUUUAAGGUACUACUCUGUAAGAUAACACAGAAAACAGCCAACCUAACCGAAAAGCGAAAGCUGAUACGGGAACAGAGCACGGUUGGAAAGCGAUGAGUUACCUAAAGACAAUCGGGUACGACUGAGUCGCAAUGUUAAUCAGAUAUAAGGUAUAAGUUGUGUUUACUGAACGCAAGUUUCUAAUUUCGGUUAUGUGUCGAUAGAGGAAAGUGUCUGAAACCUCUAGUACAAAGAAAGGUAAGUUAUGGUUGUGGACUUAUCUGUUAUCACCACAUUUGUACAAUCUGUAGGAGAACCUAUGGGAACGAAACGAAAGCGAUGCCGAGAAUCUGAAUUUACCAAGACUUAACACUAACUGGGGAUACCCUAAACAAGAAUGCCUAAAGGAGGAAAAAGGCUAUAGCACUAGAGCUUGAAAAUCUUGCAAGGGUACGGAGUACUCGUAGUAGUCUGAGAAGGGUAACGCCCUUUACAUGGCAAAGGGGUACAGUUAUUGUGUACUAAAAUUAAAAAUUGAUUAGGGAGGAAAACCUCAAACCAACAAUGGCAAUUUUAGACAAUAACAGAGCCGUAUACUCCGAGAGGGGUACGUACGGUUCCCGAAGAGGGUGGUGCAAACCAGUCACAGUAAUGUGAACAAGGCGGUACCUCCCUACUUCACCACAUCCAUAAC",
+ "evaluated_utc": "2026-11-13T08:24:18Z",
+ "families": [
+  "RF00029"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 10322,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "CAGAGCCGUAUACUCCGAGAGGGGUACGUACGGUUCCCGAAGAGGGUGGUGCAAACCAGUCACAGUAAUGUGAACAAGGCGGUACCUCCCUACUUCAC",
+   "record": "AF243383.1",
+   "source": "blast_core_nt",
+   "start": 10225,
+   "strand": "+",
+   "title": "Lactococcus lactis subsp. lactis plasmid pAH82, complete sequence"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "assembly": "GCF_003176835.1",
+   "assembly_taxid": 1360,
+   "fasta_sha256": "f4f5e9c96b00e46bb2c25007c7ebb55362495520ffe60f92ecfba8dc48d373c5",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "1358",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "1358",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/1358_ff249010e57e13b7.xml"
+  }
+ ],
+ "seq_sha256": "b0940d335d6f8bb65c7f20d797721bd28ae8dd6ad91b5195dd68dd36f68f8f82",
+ "species_name": "Lactococcus lactis",
+ "species_taxid": "1358",
+ "strains": [
+  "1358"
+ ],
+ "whole_chain_hits": []
+}

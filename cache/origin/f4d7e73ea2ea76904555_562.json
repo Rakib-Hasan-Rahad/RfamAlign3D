@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00059__4NYA_A__1-80",
+  "RF00059__4NYA_B__1-80",
+  "RF00059__7TZR_X__1-80",
+  "RF00059__7TZR_Y__1-80",
+  "RF00059__7TZS_X__1-80",
+  "RF00059__7TZS_Y__1-80"
+ ],
+ "deposited_length": 80,
+ "deposited_sequence": "GGACUCGGGGUGCCCUUCUGCGUGAAGGCUGAGAAAUACCCGUAUCACCUGAUCUGGAUAAUGCCAGCGUAGGGAAGUUC",
+ "evaluated_utc": "2026-11-13T08:22:35Z",
+ "families": [
+  "RF00059"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000005845.2",
+   "assembly_taxid": 511145,
+   "fasta_sha256": "daaa4d8b0eecbb01f8aee80314c6a59c5cb67a4178de0b2783527839fde57a15",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "562",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "562",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/562_3ac9dd43826e6cb3.xml"
+  }
+ ],
+ "seq_sha256": "f4d7e73ea2ea7690455566e1bdc377ee2212b8b4d218fa3a39b4cc6676202a59",
+ "species_name": "Escherichia coli",
+ "species_taxid": "562",
+ "strains": [
+  "562"
+ ],
+ "whole_chain_hits": []
+}

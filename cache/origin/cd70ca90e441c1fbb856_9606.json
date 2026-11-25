@@ -1,0 +1,102 @@
+{
+ "candidates": [
+  "RF00005__6ZM5_B__1-69",
+  "RF00005__6ZM6_B__1-69",
+  "RF00005__6ZSA_XB__1-69",
+  "RF00005__6ZSB_XB__1-69",
+  "RF00005__6ZSC_XB__1-69",
+  "RF00005__6ZSD_XB__1-69",
+  "RF00005__6ZSE_XB__1-69",
+  "RF00005__6ZSG_XB__1-69",
+  "RF00005__7ODR_B__1-69",
+  "RF00005__7ODS_B__1-69",
+  "RF00005__7ODT_B__1-69",
+  "RF00005__7OG4_XB__1-69",
+  "RF00005__7PO4_B__1-69",
+  "RF00005__7QI4_B__1-69",
+  "RF00005__7QI5_B__1-69",
+  "RF00005__7QI6_B__1-69",
+  "RF00005__8ANY_B__1-69",
+  "RF00005__8OIR_B9__1-69",
+  "RF00005__8OIT_B9__1-69",
+  "RF00005__8PK0_B__1-69",
+  "RF00005__8QSJ_B__1-69",
+  "RF00005__8RRI_B__1-69",
+  "RF00005__9CN3_B__1-69",
+  "RF00005__9UWH_B__1-69"
+ ],
+ "deposited_length": 72,
+ "deposited_sequence": "CAGAGUGUAGCUUAACACAAAGCACCCAACUUACACUUAGGAGAUUUCAACUUAACUUGACCGCUCUGACCA",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 1672,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "CAGAGUGUAGCUUAACACAAAGCACCCAACUUACACUUAGGAGAUUUCAACUUAACUUGACCGCUCUGA",
+   "record": "ON127816.1",
+   "source": "blast_core_nt",
+   "start": 1604,
+   "strand": "+",
+   "title": "Homo sapiens isolate Daur mitochondrion sequence"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 3,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "cd70ca90e441c1fbb85632f5980322e66903f2c92ca5eb06a98f1d502a0cde8a",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 73,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "3J7Y_B",
+   "source": "blast_core_nt",
+   "start": 2,
+   "strand": "+",
+   "title": "Chain B, mt-tRNAVal"
+  },
+  {
+   "biomol": "other",
+   "end": 73,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "7A5H_B",
+   "source": "blast_core_nt",
+   "start": 2,
+   "strand": "+",
+   "title": "Chain B, mt-tRNAVal"
+  },
+  {
+   "biomol": "tRNA",
+   "end": 72,
+   "exact_confirmed": "yes",
+   "independence_basis": "short_record_not_older_than_structure",
+   "independent": "no",
+   "record": "LC530724.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Homo sapiens mitochondrial tRNA-Val, complete sequence"
+  }
+ ]
+}

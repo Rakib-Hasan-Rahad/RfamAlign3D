@@ -1,0 +1,57 @@
+{
+ "candidates": [
+  "RF00005__7LJ3_A__1-72",
+  "RF00005__7LJ3_B__1-72",
+  "RF00005__7LJ3_C__1-72"
+ ],
+ "deposited_length": 75,
+ "deposited_sequence": "UCCCUGGUGGUCUAGUGGUUAGGAUUCGGCGCUCUCACCGCCGCGGCCCGGGUUCGAUUCCCGGUCAGGGAACCA",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 37722,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "UCCCUGGUGGUCUAGUGGUUAGGAUUCGGCGCUCUCACCGCCGCGGCCCGGGUUCGAUUCCCGGUCAGGGAA",
+   "record": "AC234785.4",
+   "source": "blast_core_nt",
+   "start": 37651,
+   "strand": "+",
+   "title": "Homo sapiens FOSMID clone ABC9-41270100I10 from chromosome unknown, complete sequence"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "fa75e5ee6139c940c7892b18d52aeb77afd63dae3237e92037976b1a1439ddf1",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 75,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "7LJ3_A",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain A, RNA (75-MER)"
+  }
+ ]
+}

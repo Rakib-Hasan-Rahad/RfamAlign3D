@@ -1,0 +1,55 @@
+{
+ "candidates": [
+  "RF00001__7OYC_71__1-119"
+ ],
+ "deposited_length": 120,
+ "deposited_sequence": "GCCUACGGCCACACCACCCUGAAAGUGCCUGAUCUCGUCUGAUCUCAGAAGCGAUACAGGGUCGGGCCUGGUUAGUACCUGGAUGGGAGACCGCCUGGGAAUACCAGGUGUCGUAGGCUU",
+ "evaluated_utc": "2026-11-13T08:46:22Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "rRNA",
+   "end": 119,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "interval": "GCCUACGGCCACACCACCCUGAAAGUGCCUGAUCUCGUCUGAUCUCAGAAGCGAUACAGGGUCGGGCCUGGUUAGUACCUGGAUGGGAGACCGCCUGGGAAUACCAGGUGUCGUAGGCU",
+   "record": "XR_005962128.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "PREDICTED: Xenopus laevis 5S ribosomal RNA (LOC121394957), rRNA"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "8355",
+   "whole_chain_candidates": 3,
+   "xml": "cache/blast/8355_7b28517020a2d8e4.xml"
+  }
+ ],
+ "seq_sha256": "46105a55e98c9c443f582b1de2d0a2a7f5efcb8fb6151ef92855bd7ddffe6479",
+ "species_name": "Xenopus laevis",
+ "species_taxid": "8355",
+ "strains": [
+  "8355"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 480,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "M10850.1",
+   "source": "blast_core_nt",
+   "start": 361,
+   "strand": "+",
+   "title": "X.laevis 5S rRNA gene and spacer region"
+  }
+ ]
+}

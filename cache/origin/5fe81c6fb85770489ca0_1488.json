@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF03072__9E73_A__1-204"
+ ],
+ "deposited_length": 204,
+ "deposited_sequence": "UUAAGUUAGGUUUGUGGUUGAAAGUCGAUGCCAGUCGCAGGCAAAACGAUCCACGUAAGUUAAACAAAGUUUUAAUGAGCAUGGUGCGGCUUAGAAGUAAGUCCUGCCGCUUUAGGCGAGAGUAUUAGUAGUGAGAGGGUAAUUCCGGGUAGCGAAACUUCCAGCAGGCGAGUGUGGGGUCAAAGACCAGGUCAACUAACUUAA",
+ "evaluated_utc": "2026-11-13T08:25:28Z",
+ "families": [
+  "RF03072"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000008765.1",
+   "assembly_taxid": 272562,
+   "fasta_sha256": "20149fb8ac5f97117681930633b9aa4706b8c713484f1c53c267c94448305bd1",
+   "filter": "filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "taxon_queried": "272562",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "5fe81c6fb85770489ca0ace0aaa93f9ba44c10cc103d86c6691e1c9989cd0e50",
+ "species_name": "Clostridium acetobutylicum",
+ "species_taxid": "1488",
+ "strains": [
+  "272562"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 2985433,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_003030.1",
+   "source": "assembly:GCF_000008765.1",
+   "start": 2985230,
+   "strand": "-"
+  }
+ ]
+}

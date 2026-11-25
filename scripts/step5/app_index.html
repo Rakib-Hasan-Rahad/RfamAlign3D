@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SQARMA Results Explorer</title>
+<style>
+:root{--bg:#f6f7f4;--surface:#ffffff;--surface2:#f0f2ee;--fg:#1b2125;--mut:#5f6b73;--line:#dfe3df;--acc:#1f6f8b;--acc2:#e0eef2;
+--same:#009E73;--diff:#E69F00;--rfo:#56B4E9;--sto:#CC79A7;--none:#CFD3D6;--lshared:#5c636a;--warnbg:#fff3e2;--warnfg:#8a4b0f;--shadow:0 1px 2px rgba(0,0,0,.05),0 4px 14px rgba(0,0,0,.05)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121619;--surface:#1a2024;--surface2:#222a2f;--fg:#e8ecee;--mut:#9aa7ae;--line:#2e383e;
+--acc:#6fc0dc;--acc2:#1d3640;--same:#1fb98a;--diff:#F0A81A;--rfo:#6cc3f2;--sto:#d98cba;--none:#5a6469;--lshared:#a6adb3;--warnbg:#3a2c18;--warnfg:#f3c48a;--shadow:none}}
+:root[data-theme="dark"]{--bg:#121619;--surface:#1a2024;--surface2:#222a2f;--fg:#e8ecee;--mut:#9aa7ae;--line:#2e383e;--acc:#6fc0dc;--acc2:#1d3640;
+--same:#1fb98a;--diff:#F0A81A;--rfo:#6cc3f2;--sto:#d98cba;--none:#5a6469;--lshared:#a6adb3;--warnbg:#3a2c18;--warnfg:#f3c48a;--shadow:none}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
+a{color:var(--acc);text-decoration:none}a:hover{text-decoration:underline}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{max-width:1240px;margin:0 auto;display:flex;align-items:center;gap:14px;padding:10px 16px;flex-wrap:wrap}
+.brand{font-weight:700;letter-spacing:.2px}.brand small{font-weight:500;color:var(--mut);margin-left:6px}
+.pill{font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;background:var(--warnbg);color:var(--warnfg);border:1px solid color-mix(in srgb,var(--warnfg) 35%,transparent)}
+nav{display:flex;gap:4px;flex-wrap:wrap;margin-left:auto}nav a{padding:6px 10px;border-radius:8px;color:var(--mut);font-size:.9rem}
+nav a.on,nav a:hover{background:var(--acc2);color:var(--acc);text-decoration:none}
+main{max-width:1240px;margin:0 auto;padding:22px 16px 80px}
+h1{font-size:1.75rem;line-height:1.25;margin:.1em 0 .35em}h2{font-size:1.2rem;margin:1.8em 0 .6em}h3{font-size:1rem;margin:1.2em 0 .4em}
+.lede{color:var(--mut);max-width:860px;font-size:1.02rem}
+.grid{display:grid;gap:14px}.g4{grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr))}.g3{grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr))}
+@media(max-width:520px){.g2,.g3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow)}
+.kpi .v{font-size:2rem;font-weight:750;letter-spacing:-.5px;line-height:1.1}.kpi .l{color:var(--mut);font-size:.86rem;margin-top:4px}.kpi .s{font-size:.8rem;color:var(--mut);margin-top:6px;font-variant-numeric:tabular-nums}
+.note{background:var(--warnbg);color:var(--warnfg);border-radius:12px;padding:10px 14px;font-size:.88rem;margin:14px 0}
+.mut{color:var(--mut)}.sm{font-size:.84rem}.num{font-variant-numeric:tabular-nums}
+table{border-collapse:collapse;width:100%;font-size:.88rem}th,td{padding:7px 9px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{color:var(--mut);font-weight:600;font-size:.8rem}
+td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}tr.click{cursor:pointer}tr.click:hover{background:var(--surface2)}
+.stack{display:flex;height:12px;border-radius:6px;overflow:hidden;background:var(--surface2)}.stack i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:.82rem;color:var(--mut)}.legend span{display:inline-flex;align-items:center;gap:6px}.sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+.same{background:var(--same)}.different_partner{background:var(--diff)}.same_partner{background:var(--same)}.rfam_only{background:var(--rfo)}.star3d_only{background:var(--sto)}.neither{background:var(--none)}
+.hbar{display:grid;grid-template-columns:minmax(150px,240px) 1fr 70px;gap:10px;align-items:center;margin:7px 0;font-size:.9rem}
+.hbar .t{height:14px;background:var(--surface2);border-radius:7px;overflow:hidden}.hbar .t i{display:block;height:100%;border-radius:7px}
+.chip{display:inline-flex;gap:6px;align-items:baseline;background:var(--surface2);border-radius:10px;padding:6px 10px;margin:3px 4px 3px 0;font-size:.85rem}.chip b{font-size:1rem}
+input,select,button{font:inherit;color:var(--fg);background:var(--surface);border:1px solid var(--line);border-radius:9px;padding:7px 10px}
+button{cursor:pointer}button.on{background:var(--acc2);color:var(--acc);border-color:var(--acc)}
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 12px}
+.ribwrap{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface);padding:6px 0}
+.res{cursor:pointer}.res:hover rect{stroke:var(--fg);stroke-width:1.5}
+.panel{position:sticky;top:70px;max-height:calc(100vh - 90px);overflow:auto}
+.seg{display:inline-flex;gap:0}.seg button{border-radius:0}.seg button:first-child{border-radius:9px 0 0 9px}.seg button:last-child{border-radius:0 9px 9px 0}
+.dl{display:inline-flex;gap:4px;white-space:nowrap}.lgdcard{padding:8px 14px;margin:6px 0 10px}.lgdcard summary{cursor:pointer}button:disabled{opacity:.45;cursor:not-allowed}
+.finding{font-size:1.12rem;max-width:900px;border-left:4px solid var(--acc);padding:4px 12px;margin:14px 0}
+.scope{background:var(--surface2);border-radius:12px;padding:10px 14px;font-size:.9rem;margin:12px 0}
+.explain table.mini{width:auto;min-width:420px}.cards .kpi{color:var(--fg);text-decoration:none;display:block}.cards .kpi:hover{border-color:var(--acc);text-decoration:none}
+.cards details{margin-top:8px}.cards summary{cursor:pointer;font-size:.8rem;color:var(--acc)}.go{font-size:.82rem;color:var(--acc);margin-top:6px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.btn{background:var(--acc);color:var(--bg);padding:8px 14px;border-radius:10px;font-weight:600}.btn:hover{text-decoration:none;filter:brightness(1.1)}
+.unassessable{background:repeating-linear-gradient(45deg,var(--none),var(--none) 3px,transparent 3px,transparent 6px);border:1px solid var(--none)}
+.hbar.fam{cursor:pointer}.hbar.fam:hover{background:var(--surface2);border-radius:8px}
+@media(max-width:520px){.explain table.mini{min-width:0;width:100%}.steps .step{min-width:0;flex:1 1 40%}main{padding:16px 16px 60px}h1{font-size:1.35rem}}
+.ribframe{display:flex;align-items:stretch;border:1px solid var(--line);border-radius:12px;background:var(--surface);overflow:hidden}
+.ribframe .ribwrap{border:0;border-radius:0;flex:1;min-width:0}.riblabels{flex:0 0 74px;display:flex;flex-direction:column;justify-content:space-between;padding:26px 6px 22px;font-size:.78rem;line-height:1.15;border-right:1px solid var(--line);background:var(--surface2)}
+table.cmp{margin:8px 0}table.cmp th{font-size:.8rem}table.cmp td{vertical-align:top}.evg{margin:6px 0;background:var(--surface2);border-radius:8px;padding:6px 10px}.evg summary{cursor:pointer}.evg ul{margin:4px 0 4px 18px;padding:0}
+.pres-same{color:var(--same);font-weight:600}.pres-diff{color:var(--diff);font-weight:600}.pres-none{color:var(--mut)}.pres-nc{color:var(--mut)}.pres-unassessable{color:var(--mut);font-style:italic}
+@media(min-width:900px){.viewcol{position:sticky;top:70px}}
+.lgd3d{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;margin-top:8px;padding:8px 10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-size:.85rem}.lgd3d span{display:inline-flex;gap:6px;align-items:center}
+.lgd{display:grid;gap:4px;font-size:.8rem;color:var(--mut);margin:4px 0 8px}.lgd div{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.lgd b{color:var(--fg);min-width:150px}.lgd span{display:inline-flex;align-items:center;gap:5px}
+.cl{cursor:pointer}g.res:focus,g.cl:focus{outline:none}g.res:focus rect{stroke:var(--fg);stroke-width:2.5}g.cl:focus line{stroke-width:5}.ev.click{cursor:pointer}.ev.click:hover{background:var(--acc2)}td.present{color:var(--same);font-weight:600}td.absent{color:var(--diff);font-weight:600}td.unmapped{color:var(--mut)}.kv{display:grid;grid-template-columns:120px 1fr;gap:4px 10px;font-size:.88rem}.kv div:nth-child(odd){color:var(--mut)}
+code{font:12.5px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--surface2);padding:1px 5px;border-radius:5px}
+.tag{display:inline-block;font-size:.75rem;padding:1px 8px;border-radius:999px;background:var(--surface2);color:var(--mut);margin:0 4px 4px 0}
+.ev{border-left:3px solid var(--acc);padding:4px 10px;margin:6px 0;font-size:.86rem;background:var(--surface2);border-radius:0 8px 8px 0}
+#viewer{width:100%;height:470px;position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);background:var(--surface)}
+.why{display:grid;grid-template-columns:1fr;gap:10px}.whyrow{display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:16px;align-items:start;padding:12px 0;border-bottom:1px solid var(--line)}
+@media(max-width:640px){.whyrow,.hbar{grid-template-columns:1fr}.panel{position:static}}
+.big{font-size:1.15rem}.steps{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;min-width:150px}
+.step b{display:block;font-size:1.35rem}.arrow{color:var(--mut)}
+footer{color:var(--mut);font-size:.8rem;text-align:center;padding:30px}
+</style>
+</head>
+<body>
+<header><div class="bar">
+<div class="brand">SQARMA <small>Rfam seed vs original STAR3D</small></div><span class="pill" id="pill">Final dataset</span>
+<nav id="nav"><a href="#/overview">Overview</a><a href="#/why">Difference patterns</a><a href="#/families">Families</a><a href="#/pairs">Pair explorer</a><a href="#/example">Lead example</a><a href="#/method">Methods &amp; limitations</a></nav>
+<button id="theme" title="toggle theme">◐</button>
+</div></header>
+<main id="app"><p class="mut">Loading…</p></main>
+<footer><span id="cohortline">Results from cohort step2_final.</span> Every number on this site is a query on the <a href="data/sqarma.sqlite">SQLite database</a>. Prepared by an AI research agent, not yet reviewed by a person.</footer>
+<script src="lib/3Dmol-min.js"></script>
+<script>
+const $=s=>document.querySelector(s), E=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt=n=>(n??0).toLocaleString("en-US"), pct=(a,b)=>b?(100*a/b).toFixed(1)+"%":"NA";
+const CAT=[["same_partner","same partner"],["different_partner","different partner"],["rfam_only","Rfam only"],["star3d_only","STAR3D only"],["neither","neither"]];
+let S=null,IDX=null,BUILD=""; const PAIRS={};
+window.addEventListener("error",e=>showErr(e.message+" ("+(e.filename||"").split("/").pop()+":"+e.lineno+")"));
+window.addEventListener("unhandledrejection",e=>showErr(String(e.reason)));
+function showErr(m){let t=document.getElementById("errbox");if(!t){t=document.createElement("div");t.id="errbox";t.style.cssText="position:fixed;bottom:12px;right:12px;max-width:520px;z-index:99;background:#b00020;color:#fff;padding:10px 14px;border-radius:10px;font-size:13px";document.body.appendChild(t)}t.textContent="Page error: "+m+" — try reloading; if it persists, please report it."}
+try{const t=localStorage.getItem("theme");if(t)document.documentElement.dataset.theme=t}catch(e){}
+$("#theme").onclick=()=>{const r=document.documentElement,n=(r.dataset.theme||(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"))==="dark"?"light":"dark";r.dataset.theme=n;try{localStorage.setItem("theme",n)}catch(e){}};
+const css=v=>getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+function stack(c,total){total=total||CAT.reduce((s,[k])=>s+(c[k]||0),0);return `<div class="stack" title="${CAT.map(([k,l])=>l+": "+fmt(c[k]||0)).join(" · ")}">${CAT.map(([k])=>`<i class="${k}" style="width:${100*(c[k]||0)/(total||1)}%"></i>`).join("")}</div>`}
+function legend(){return `<div class="legend">${CAT.map(([k,l])=>`<span><i class="sw ${k}"></i>${l}</span>`).join("")}</div>`}
+async function getPair(id){if(!PAIRS[id]){const r=await fetch(`data/pairs/${encodeURIComponent(id)}/pair.json?b=${BUILD}`,{cache:"no-store"});if(!r.ok)throw new Error("pair data "+r.status);const d=await r.json();d.inter=d.inter||{A:[],B:[],compare:[]};d.cols=d.cols||[];d.files=d.files||{};PAIRS[id]=d}return PAIRS[id]}
+
+/* ---------------- overview */
+const nf=(n,d)=>`${fmt(n)} / ${fmt(d)}`;
+function scopeNote(d){return `<div class="scope"><b>Study scope.</b> The study screened ${fmt(d.families_screened)} Rfam families and obtained usable structural comparisons in ${d.families_valid} families. Comparisons reuse RNAs, and tRNA and 5S rRNA dominate the dataset (${d.trna_5s} of ${d.pairs} pairs). Alignment differences identify candidates for investigation; they do not establish which method is correct.</div>`}
+function overview(){
+ const d=S, o=d.overall.overall, off=d.overall.offsets, cons=d.cons;
+ const cr=(100*cons[0]/cons[1]).toFixed(1), rate=(100*o.rate).toFixed(1), offr=pct(off.one_position,off.different_partner_observations);
+ return `<h1>Where RNA sequence and structural alignments agree—and where they differ</h1>
+ <p class="lede">We compared nucleotide correspondences from original Rfam seed alignments and original STAR3D structural alignments, then examined the locations and motif evidence associated with their differences.</p>
+ <p class="finding">STAR3D reproduces <b>${cr}%</b> of assessable Rfam consensus correspondences. Among positions assigned different partners, <b>${offr}</b> of the alternatives are one nucleotide apart.</p>
+ ${scopeNote(d)}
+ <div class="card explain"><h3 style="margin-top:0">What are we comparing?</h3>
+ <p>Rfam and STAR3D each propose which nucleotide in one RNA corresponds to which nucleotide in another. We compare those correspondences for the same RNA pair.</p>
+ <table class="mini"><tr><th>RNA A position</th><th>Rfam counterpart</th><th>STAR3D counterpart</th><th>Result</th></tr>
+ <tr><td>A10</td><td>B20</td><td>B20</td><td><span class="sw same_partner"></span> Same partner</td></tr>
+ <tr><td>A11</td><td>B21</td><td>B22</td><td><span class="sw different_partner"></span> Different partner</td></tr>
+ <tr><td>A12</td><td>B23</td><td>Unmapped</td><td><span class="sw rfam_only"></span> Rfam only</td></tr></table>
+ <p class="sm mut">Correspondence between RNAs is different from a physical base-pair interaction within an RNA.</p></div>
+ <div class="grid g4 cards">
+  <a class="card kpi" href="#/pairs"><div class="v">${fmt(d.valid)}</div><div class="l">usable structural alignments</div><div class="s">${d.pairs} attempted · ${d.no_stacks} “No similar stacks” · ${d.families_valid} compared families</div>
+   <details onclick="event.stopPropagation()"><summary>What does this mean?</summary><p class="sm">Each selected RNA pair was aligned once with STAR3D. “No similar stacks” means STAR3D found no shared helices to anchor an alignment; those pairs have no scores (NA, not zero).</p></details></a>
+  <a class="card kpi" href="#/families"><div class="v">${cr}%</div><div class="l">consensus correspondence recovery</div><div class="s">${nf(cons[0],cons[1])} assessable Rfam consensus correspondences</div>
+   <details onclick="event.stopPropagation()"><summary>What does this mean?</summary><p class="sm">Of the residue pairs Rfam places in the same consensus (non-insert) column, with both residues observed in 3D, this share is also proposed by STAR3D.</p></details></a>
+  <a class="card kpi" href="#/breakdown"><div class="v">${rate}%</div><div class="l">All assessable alignment differences</div><div class="s"><b>${nf(o.differences,o.denominator)}</b> RNA A observations<br>Different partner ${fmt(o.different_partner)} · Rfam only ${fmt(o.rfam_only)} · STAR3D only ${fmt(o.star3d_only)}</div><div class="go">View breakdown →</div>
+   <details onclick="event.stopPropagation()"><summary>What does this mean?</summary><p class="sm">For every nucleotide of RNA A with assessable coordinates, the two methods either agree on its counterpart or differ in one of three ways. Neither-mapped and unassessable nucleotides are excluded and listed in the breakdown.</p></details></a>
+  <a class="card kpi" href="#/why"><div class="v">${offr}</div><div class="l">Of different-partner cases, the alternatives are one nucleotide apart</div><div class="s">${nf(off.one_position,off.different_partner_observations)}</div>
+   <details onclick="event.stopPropagation()"><summary>What does this mean?</summary><p class="sm">Only for nucleotides both methods map, to different residues: how far apart the two proposed counterparts are along RNA B. One-sided mappings have no offset.</p></details></a>
+ </div>
+ <p class="sm mut">The four percentages use different denominators; they are not complements of one another.</p>
+ <div class="actions"><a class="btn" href="#/families">Explore families →</a><a class="btn" href="#/example">Inspect an example →</a><a class="btn" href="data/sqarma_tables.zip">Download report and tables ↓</a></div>
+ <h2>From all Rfam families to compared pairs</h2>
+ <div class="steps">${[[fmt(d.families_screened),"families screened"],[d.families_with_pairs,"families with selected pairs"],[d.pairs,"pairs attempted"],[d.valid,"usable alignments"],[d.families_valid,"families compared"]].map((s,i)=>`${i?'<span class="arrow">→</span>':''}<div class="step"><b>${s[0]}</b><span class="mut sm">${s[1]}</span></div>`).join("")}</div>
+ <p class="sm mut">Most families had no pair of verified natural structures from different species; see <a href="#/method">Methods &amp; limitations</a>.</p>
+ ${famChart()}`;
+}
+function famChart(){
+ const F=S.fam_overall.map(f=>({...f,rate:+f.rate,den:+f.denominator,dif:+f.differences}));
+ const seg=f=>{const parts=[["same_partner",+f.same_partner],["different_partner",+f.different_partner],["rfam_only",+f.rfam_only],["star3d_only",+f.star3d_only],["neither",+f.neither],["unassessable",+f.unassessable_total]],tot=parts.reduce((a,b)=>a+b[1],0);
+  return `<div class="stack" title="${parts.map(([k,v])=>`${k.replace(/_/g," ")}: ${fmt(v)}`).join(" · ")}">${parts.map(([k,v])=>`<i class="${k}" style="width:${100*v/tot}%"></i>`).join("")}</div>`};
+ return `<h2>Families</h2>
+ <p class="sm mut">Each bar shows <b>all</b> RNA A observations of the family's compared pairs, by outcome; the hatched segment marks observations that are not assessable (a nucleotide or its counterpart has no coordinates). The rate on the right is the <b>overall assessable difference rate</b> (same definition as the third card), shown with its numerator and denominator.</p>
+ <div class="legend" style="margin-bottom:8px">${CAT.map(([k,l])=>`<span><i class="sw ${k}"></i>${l}</span>`).join("")}<span><i class="sw unassessable"></i>not assessable</span></div>
+ <div class="card">${F.filter(f=>f.den).sort((a,b)=>b.pairs-a.pairs).map(f=>`<div class="hbar fam" onclick="location.hash='#/pairs/${f.family}'" title="Different-partner rate: ${f.different_partner_rate}"><div><b>${E(f.family_id)}</b> <span class="mut sm">${f.family} · ${f.pairs==1?"1 pair studied":f.pairs+" pairs"}</span></div><div>${seg(f)}</div><div class="num r sm"><b>${pct(f.dif,f.den)}</b><br>${fmt(f.dif)}/${fmt(f.den)}</div></div>`).join("")}</div>
+ <details class="card" style="margin-top:10px"><summary><b>Table view</b> <span class="mut sm">(sortable)</span></summary>${famTable(F)}</details>`;
+}
+let FSORT={k:"pairs",d:-1};
+function famTable(F){F=F||S.fam_overall.map(f=>({...f,rate:+f.rate,den:+f.denominator,dif:+f.differences}));
+ const k=FSORT.k,dir=FSORT.d;F=[...F].sort((a,b)=>(k==="family"?a.family_id.localeCompare(b.family_id):(+a[k]||0)-(+b[k]||0))*dir);
+ const th=(key,l)=>`<th class="r click" onclick="FSORT={k:'${key}',d:FSORT.k==='${key}'?-FSORT.d:-1};document.getElementById('famtab').outerHTML=famTable()">${l}${FSORT.k===key?(FSORT.d<0?" ▼":" ▲"):""}</th>`;
+ return `<div id="famtab" class="wrap"><table><tr>${th("family","Family")}${th("pairs","Pairs")}${th("rate","Overall difference rate")}<th class="r">Different / Rfam only / STAR3D only</th><th class="r">Different-partner rate</th><th class="r">Neither · not assessable</th></tr>
+ ${F.map(f=>`<tr class="click" onclick="location.hash='#/pairs/${f.family}'"><td><b>${E(f.family_id)}</b> <span class="mut sm">${f.family}</span></td><td class="r">${f.pairs==1?"1 pair studied":f.pairs}</td><td class="r">${f.den?`<b>${pct(f.dif,f.den)}</b> <span class="mut sm">${fmt(f.dif)}/${fmt(f.den)}</span>`:"NA"}</td><td class="r">${fmt(+f.different_partner)} / ${fmt(+f.rfam_only)} / ${fmt(+f.star3d_only)}</td><td class="r">${E(f.different_partner_rate)}</td><td class="r">${fmt(+f.neither)} · ${fmt(+f.unassessable_total)}</td></tr>`).join("")}</table></div>`}
+function breakdown(){
+ const o=S.overall.overall, st=S.overall.sets, u=o.unassessable, den=o.denominator;
+ const row=(k,l,n,def)=>`<tr><td><span class="sw ${k}"></span> <b>${l}</b><div class="sm mut">${def}</div></td><td class="r num">${fmt(n)}</td><td class="r num">${pct(n,den)}</td></tr>`;
+ return `<div class="sm"><a href="#/overview">← Overview</a></div><h1>All assessable alignment differences</h1>
+ <p class="lede">RNA A view: one outcome per nucleotide of RNA A, across all ${fmt(S.valid)} usable alignments. Rate = (different + Rfam only + STAR3D only) / (same + different + Rfam only + STAR3D only), assessable observations only.</p>
+ <div class="grid g2"><div class="card"><table><tr><th>Outcome</th><th class="r">RNA A observations</th><th class="r">share of denominator</th></tr>
+ ${row("same_partner","Same partner",o.same_partner,"Both methods map the nucleotide to the same counterpart.")}
+ ${row("different_partner","Different partner",o.different_partner,"Both methods map it, to different counterparts.")}
+ ${row("rfam_only","Rfam only",o.rfam_only,"Rfam maps it; STAR3D leaves it unmapped.")}
+ ${row("star3d_only","STAR3D only",o.star3d_only,"STAR3D maps it; Rfam leaves it unmapped (opposite a gap in the seed alignment).")}
+ <tr><th>All assessable differences</th><th class="r">${fmt(o.differences)}</th><th class="r">${pct(o.differences,den)}</th></tr><tr><th>Denominator (assessable)</th><th class="r">${fmt(den)}</th><th></th></tr></table></div>
+ <div class="card"><h3 style="margin-top:0">Excluded from the denominator</h3><table><tr><th>Category</th><th class="r">count</th></tr>
+ <tr><td>Neither mapped (not a difference)</td><td class="r">${fmt(o.neither)}</td></tr>
+ <tr><td>Not assessable: Rfam only, nucleotide or counterpart without coordinates</td><td class="r">${fmt(u.rfam_only)}</td></tr>
+ <tr><td>Not assessable: different partner, an endpoint without coordinates</td><td class="r">${fmt(u.different_partner)}</td></tr>
+ <tr><td>Not assessable: same partner</td><td class="r">${fmt(u.same_partner)}</td></tr><tr><td>Not assessable: STAR3D only</td><td class="r">${fmt(u.star3d_only)}</td></tr>
+ <tr><th>All RNA A observations</th><th class="r">${fmt(o.total_observations)}</th></tr></table>
+ <p class="sm mut">A nucleotide is assessable when it and every counterpart it is mapped to have coordinates in the staged structures. Raw outcomes of unassessable nucleotides are kept in the downloadable tables. The earlier different-partner metric is the same data: ${fmt(o.different_partner)} / ${fmt(o.same_partner+o.different_partner)} nucleotides mapped by both methods.</p></div></div>
+ <h2>Compare correspondence sets <span class="mut sm">(direction-independent)</span></h2>
+ <div class="card"><p class="sm"><b>Unit: residue correspondences (edges)</b>, both endpoints observed — not RNA A nucleotides. Never add these to the counts above.</p>
+ <table><tr><th>Set</th><th class="r">correspondences</th></tr><tr><td>Shared by Rfam and STAR3D (|Rfam ∩ STAR3D|)</td><td class="r">${fmt(st.shared)}</td></tr>
+ <tr><td>Rfam only (|Rfam \\ STAR3D|)</td><td class="r">${fmt(st.rfam_only)}</td></tr><tr><td>STAR3D only (|STAR3D \\ Rfam|)</td><td class="r">${fmt(st.star3d_only)}</td></tr>
+ <tr><td>Correspondence-set difference |Rfam △ STAR3D| / |Rfam ∪ STAR3D|</td><td class="r"><b>${fmt(st.symmetric_difference)} / ${fmt(st.union)}</b> (${pct(st.symmetric_difference,st.union)})</td></tr></table>
+ <p class="sm mut">A nucleotide with different partners contributes one Rfam-only and one STAR3D-only correspondence, so edge counts and nucleotide counts differ by design.</p></div>`;
+}
+/* ---------------- why */
+function why(){
+ const d=S, P=d.diag.pattern, tot=d.diag.observations, ord=["register_shift_at_gap","global_misregistration","loop_rearrangement","isolated_shift_at_gap","register_shift","other"];
+ const col={register_shift_at_gap:css("--diff"),global_misregistration:css("--sto"),loop_rearrangement:css("--rfo"),isolated_shift_at_gap:"#d9a441",register_shift:"#c06a8f",other:css("--none")};
+ const offs=Array.from({length:21},(_,i)=>i-10);
+ const hist={}; // signed offsets not in summary; show |offset|
+ const ab=d.diag.abs_offset, maxab=Math.max(...Object.values(ab));
+ const ctx=["paired","hairpin_loop","internal_loop","multiloop","exterior"], cd=d.diag.ss_context, ca=d.ctx_agree, ctd=Object.values(cd).reduce((a,b)=>a+b,0), cta=Object.values(ca).reduce((a,b)=>a+b,0);
+ const [gd,gdn]=d.diag.near_seed_gap_baseline.disagreements.split("/").map(Number),[ga,gan]=d.diag.near_seed_gap_baseline.agreements.split("/").map(Number);
+ const oc=d.obs_class, ocl=[["rfam_computational_motif","Rfam computational motif hit"],["bgsu_motif_group","BGSU Atlas motif group"],["bgsu_group_and_rfam_motif","both Atlas group and Rfam hit"],["structural_loop_only","BGSU structural loop only"],["consensus_loop_context_only","consensus loop context only"],["no_documented_hit","no documented record (BGSU loop lookup complete; Rfam absence not verified per row)"],["incomplete","Rfam coverage unknown and no other record"]];
+ const bl=d.baseline;
+ return `<h1>Difference patterns</h1>
+ <p class="lede">This page describes <b>different-partner</b> observations: nucleotides of RNA A that Rfam pairs with one residue of RNA B and STAR3D with another. One-sided mappings (Rfam only, STAR3D only) are counted in the <a href="#/breakdown">overall breakdown</a> and have no offset. We describe <i>patterns</i> in those differences. They are descriptive, not proven causes, and they do not say which method is right. Each disagreement is assigned to exactly one pattern (the first rule that applies), so the categories do not overlap and sum to the total.</p>
+ <div class="grid g2">
+ <div class="card"><h3 style="margin-top:0">Patterns among ${fmt(tot)} different-partner observations <span class="mut sm">(mutually exclusive)</span></h3>
+ ${ord.map(k=>`<div class="hbar"><div>${E(d.patterns[k][0])}</div><div class="t"><i style="width:${100*(P[k]||0)/tot}%;background:${col[k]}"></i></div><div class="num r sm">${fmt(P[k]||0)}/${fmt(tot)}<br>${pct(P[k]||0,tot)}</div></div>`).join("")}</div>
+ <div class="card"><h3 style="margin-top:0">How far apart are the two partners?</h3><p class="sm mut">Offset = position of STAR3D's partner minus position of Rfam's partner, counted along RNA B's ungapped sequence via the Step 2 crosswalk (insertion codes preserved; not a subtraction of PDB author numbers: 3W3S G47B and U47C are positions 52 and 53).</p>
+ <svg viewBox="0 0 420 170" width="100%">${Object.entries(ab).map(([k,v],i)=>`<g><rect x="${20+i*39}" y="${140-120*v/maxab}" width="30" height="${120*v/maxab}" rx="4" fill="${k==="1"?css("--diff"):css("--rfo")}"><title>${k==="10"?"≥10":k} positions: ${fmt(v)}</title></rect><text x="${35+i*39}" y="158" text-anchor="middle" font-size="11" fill="${css("--mut")}">${k==="10"?"≥10":k}</text><text x="${35+i*39}" y="${134-120*v/maxab}" text-anchor="middle" font-size="10" fill="${css("--mut")}">${v>40?fmt(v):""}</text></g>`).join("")}</svg>
+ <p class="sm"><b>${fmt(ab["1"])}/${fmt(tot)} (${pct(ab["1"],tot)})</b> of different-partner observations are one nucleotide apart.</p></div></div>
+ <h2>What each pattern means</h2><div class="card">${ord.map(k=>`<div class="whyrow"><div><span class="sw" style="background:${col[k]}"></span> <b>${E(d.patterns[k][0])}</b><div class="mut sm">${fmt(P[k]||0)}/${fmt(tot)} (${pct(P[k]||0,tot)})</div></div><div class="sm">${E(d.patterns[k][1])}${k==="global_misregistration"&&d.audit_q7.pairwide_modal_offset_share?`<div class="mut" style="margin-top:4px">Audit: ${d.audit_q7.pairwide_pairs} pairs; only ${d.audit_q7.pairwide_modal_offset_share} of these observations share their pair's most common offset, so this is not one constant offset.</div>`:""}</div></div>`).join("")}</div>
+ <h2>Are gaps enough to explain them?</h2>
+ <div class="grid g2"><div class="card"><p class="big"><b>${pct(gd,gdn)}</b> of disagreements lie within two columns of a gap in the seed alignment — but so do <b>${pct(ga,gan)}</b> of agreements.</p>
+ <div class="hbar"><div>disagreements</div><div class="t"><i style="width:${100*gd/gdn}%;background:${css("--diff")}"></i></div><div class="num r sm">${fmt(gd)}/${fmt(gdn)}</div></div>
+ <div class="hbar"><div>agreements</div><div class="t"><i style="width:${100*ga/gan}%;background:${css("--same")}"></i></div><div class="num r sm">${fmt(ga)}/${fmt(gan)}</div></div>
+ <p class="sm mut">Seed alignments are gappy, so proximity to a gap alone does not explain a disagreement; the consistent one-position <i>runs</i> do.</p></div>
+ <div class="card"><h3 style="margin-top:0">Structural context (Rfam SS_cons)</h3>${d.audit_q7.hairpin?`<p class="big">In consensus hairpin loops, <b>${d.audit_q7.hairpin.hairpin}</b> jointly assessable observations differ (${pct(...d.audit_q7.hairpin.hairpin.split("/").map(Number))}), versus <b>${d.audit_q7.hairpin.outside_hairpin}</b> elsewhere (${pct(...d.audit_q7.hairpin.outside_hairpin.split("/").map(Number))}).</p>`:""}<p class="sm mut">Disagreement rate (different / jointly assessable) in each consensus context:</p>${Object.entries(d.audit_q7.by_context||{}).map(([k,v])=>{const [n,m]=v.split("/").map(Number);return `<div class="hbar"><div>${k.replace(/_/g," ")}</div><div class="t"><i style="width:${100*n/m}%;background:var(--diff)"></i></div><div class="num r sm">${v} · ${pct(n,m)}</div></div>`}).join("")}<p class="sm mut" style="margin-top:12px">Share of disagreements vs agreements in each context:</p>
+ ${ctx.map(k=>`<div class="hbar"><div>${k.replace("_"," ")}</div><div><div class="t" style="margin-bottom:3px"><i style="width:${100*(cd[k]||0)/ctd}%;background:${css("--diff")}"></i></div><div class="t"><i style="width:${100*(ca[k]||0)/cta}%;background:${css("--same")}"></i></div></div><div class="num r sm">${pct(cd[k]||0,ctd)}<br>${pct(ca[k]||0,cta)}</div></div>`).join("")}
+ <div class="legend"><span><i class="sw" style="background:var(--diff)"></i>disagreements</span><span><i class="sw" style="background:var(--same)"></i>agreements</span></div></div></div>
+ <h2>Motif evidence at different-partner positions</h2><p class="sm mut">Evidence levels: <b>BGSU structural loop</b> (the residue belongs to a loop annotated in that exact structure); <b>BGSU Atlas group</b> (that loop is an instance of a named Motif Atlas 4.16 group); <b>Rfam computational motif</b> (a documented span of the seed row matched by an Rfam motif model). An uncovered source or missing record is not a confirmed absence.</p>
+ <div class="grid g2"><div class="card"><p class="sm mut">Each disagreement counted once; a hit at any of three endpoints (A residue, Rfam's B partner, STAR3D's B partner).</p>
+ ${ocl.map(([k,l])=>`<div class="hbar"><div>${l}</div><div class="t"><i style="width:${100*(oc[k]||0)/tot}%;background:${css("--acc")}"></i></div><div class="num r sm">${fmt(oc[k]||0)}</div></div>`).join("")}</div>
+ <div class="card"><h3 style="margin-top:0">Same question for agreements (query residue only)</h3><table><tr><th>Source</th><th class="r">disagreements</th><th class="r">agreements</th></tr>
+ <tr><td>BGSU structural loop</td><td class="r">${bl.bgsu_loop[0]}</td><td class="r">${bl.bgsu_loop[1]}</td></tr>
+ <tr><td>Rfam computational motif <span class="mut sm">(family-covered rows; absence not row-verified)</span></td><td class="r">${bl.rfam_motif[0]}</td><td class="r">${bl.rfam_motif[1]}</td></tr>
+ <tr><td>BGSU Atlas group</td><td class="r">${bl.bgsu_atlas_group[0]}</td><td class="r">${bl.bgsu_atlas_group[1]}</td></tr></table>
+ <p class="sm mut">Atlas groups cover few of these structures (denominators are Atlas-covered residues only). Rfam motif coverage is established only at family level for every family (unknown for RF00522): an absent Rfam hit is not a verified negative for an individual seed row. Positive Rfam hits are documented spans. Descriptive only — not an enrichment test.</p></div></div>${bgsuCard(d)}`;
+}
+
+
+function bgsuCard(d){const b=d.bgsu_ctx;if(!b)return"";const r=v=>{const[n,m]=v.split("/").map(Number);return [n,m]};
+ const bar=(v,c)=>{const[n,m]=r(v);return `<div class="t"><i style="width:${m?100*n/m:0}%;background:${c}"></i></div>`};
+ const L={HL:"hairpin loop (HL)",IL:"internal loop (IL)",junction:"junction (J3, J4, …)",any_bgsu_loop:"any BGSU loop",no_bgsu_loop:"no BGSU loop"};
+ const X={hairpin_loop_only:"hairpin loop only",internal_loop_only:"internal loop only",junction_only:"junction only",several_loop_types:"several loop types",no_bgsu_loop:"no BGSU loop",coverage_unknown:"coverage unknown"};
+ const [hn,hm]=r(b.hairpin_vs_outside.hairpin),[on,om]=r(b.hairpin_vs_outside.outside_hairpin);
+ return `<h2>BGSU structural loops in detail <span class="mut sm">(query residue only)</span></h2>
+ <div class="grid g2"><div class="card"><h3 style="margin-top:0">Structural context (BGSU RNA 3D Hub loops)</h3>
+ <p class="big">In BGSU hairpin loops, <b>${fmt(hn)}/${fmt(hm)}</b> jointly assessable observations differ (${pct(hn,hm)}), versus <b>${fmt(on)}/${fmt(om)}</b> elsewhere (${pct(on,om)}).</p>
+ <p class="sm mut">Disagreement rate (different / jointly assessable) by loop type. A residue in several loops counts in each type, so these rows overlap.</p>
+ ${Object.entries(b.membership_rate).map(([k,v])=>{const[n,m]=r(v);return `<div class="hbar"><div>${L[k]||k}</div>${bar(v,"var(--diff)")}<div class="num r sm">${fmt(n)}/${fmt(m)} · ${pct(n,m)}</div></div>`}).join("")}
+ <p class="sm mut" style="margin-top:12px">Same rate by exclusive category (each observation counted once):</p>
+ ${Object.entries(b.exclusive_rate).filter(([,v])=>r(v)[1]).map(([k,v])=>{const[n,m]=r(v);return `<div class="hbar"><div>${X[k]}</div>${bar(v,"var(--diff)")}<div class="num r sm">${fmt(n)}/${fmt(m)} · ${pct(n,m)}</div></div>`}).join("")}</div>
+ <div class="card"><h3 style="margin-top:0">Share of disagreements vs agreements</h3><p class="sm mut">Exclusive categories; each column sums to 100% (${fmt(b.disagreements)} disagreements, ${fmt(b.agreements)} agreements).</p>
+ ${Object.entries(b.exclusive_share).filter(([,v])=>r(v.disagreements)[0]+r(v.agreements)[0]).map(([k,v])=>{const[dn,dm]=r(v.disagreements),[an,am]=r(v.agreements);return `<div class="hbar"><div>${X[k]}</div><div>${bar(v.disagreements,"var(--diff)")}<div style="height:3px"></div>${bar(v.agreements,"var(--same)")}</div><div class="num r sm">${pct(dn,dm)}<br>${pct(an,am)}</div></div>`}).join("")}
+ <div class="legend"><span><i class="sw" style="background:var(--diff)"></i>disagreements</span><span><i class="sw" style="background:var(--same)"></i>agreements</span></div>
+ <p class="sm mut">Loop type comes from the BGSU loop ID (HL_, IL_, J3_/J4_…) for the exact PDB, model 1, chain and unit ID. Coverage unknown = the chain has no residue in any loop of that structure's loop file. Descriptive only — not an enrichment test.</p></div></div>
+ <div class="card" style="margin-top:14px;padding:4px 8px"><table><tr><th>Family</th><th class="r">in hairpin loop</th><th class="r">in internal loop</th><th class="r">in junction</th><th class="r">no BGSU loop</th><th class="r">all</th></tr>
+ ${b.by_family.map(f=>`<tr><td><b>${E(f.name)}</b> <span class="mut sm">${f.family}</span></td>${["hairpin","internal","junction","no_loop","total"].map(k=>{const[n,m]=r(f[k]);return `<td class="r">${m?`${fmt(n)}/${fmt(m)}<br><span class="mut sm">${pct(n,m)}</span>`:"–"}</td>`}).join("")}</tr>`).join("")}</table>
+ <p class="sm mut" style="padding:0 6px">Different / jointly assessable observations per family and BGSU loop type (membership; rows can overlap across columns except "no BGSU loop").</p></div>`}
+
+/* ---------------- families */
+function families(){return `<h1>Families</h1><p class="lede">The ${S.families_valid} families with usable structural comparisons.</p>${famChart()}`}
+/* ---------------- pairs list */
+function pairs(fam){
+ const opts=[...new Set(IDX.map(p=>p.family))];
+ setTimeout(()=>{const f=()=>{const fv=$("#ff").value,t=$("#ft").value.toLowerCase(),so=$("#fs").value;let L=IDX.filter(p=>(!fv||p.family===fv)&&(!t||(p.a+p.b+p.a_sp+p.b_sp+p.fname).toLowerCase().includes(t)));
+  if(so==="diff")L.sort((x,y)=>(y.both?y.diff/y.both:-1)-(x.both?x.diff/x.both:-1));if(so==="len")L.sort((x,y)=>(y.both||0)-(x.both||0));
+  $("#cnt").textContent=`${L.length} pairs`;$("#pl").innerHTML=L.slice(0,400).map(p=>`<tr class="click" onclick="location.hash='#/pair/${encodeURIComponent(p.id)}'"><td><b>${E(p.a)}</b> → <b>${E(p.b)}</b><div class="sm mut">${E(p.a_sp)} · ${E(p.b_sp)}</div></td><td>${E(p.fname)}</td>
+  <td>${p.status==="valid_alignment"?`<div class="stack" style="width:120px"><i class="different_partner" style="width:${100*p.diff/(p.both||1)}%"></i><i class="same_partner" style="width:${100-100*p.diff/(p.both||1)}%"></i></div><span class="sm num">${p.diff}/${p.both}</span>`:`<span class="tag">No similar stacks · NA</span>`}</td>
+  <td class="r num sm">${p.shared??"NA"} / ${p.rfam??"NA"}</td><td class="sm">${p.top?E(S.patterns[p.top][0]):""}</td></tr>`).join("")};["#ff","#ft","#fs"].forEach(s=>$(s).oninput=f);f()},0);
+ return `<h1>Pair explorer</h1><p class="lede">Every selected pair, run once in its frozen direction (A → B). Click a pair to see each residue's two partners.</p>
+ <div class="controls"><select id="ff"><option value="">all families</option>${opts.map(o=>`<option ${o===fam?"selected":""} value="${o}">${o} ${E(IDX.find(p=>p.family===o).fname)}</option>`).join("")}</select>
+ <input id="ft" placeholder="search PDB, species…" style="min-width:220px"><select id="fs"><option value="diff">sort: most disagreement</option><option value="len">sort: most residues</option><option value="id">sort: id</option></select><span id="cnt" class="mut sm"></span></div>
+ <div class="card" style="padding:4px 8px"><table><tr><th>Pair (A → B)</th><th>Family</th><th>A-side different / both mapped</th><th class="r">shared / Rfam pairs</th><th>main pattern</th></tr><tbody id="pl"></tbody></table></div>`;
+}
+
+/* ---------------- pair view */
+let LABELS3D=false, CUR=null, VIEW=null, SEL=null, MODE="all", PX=14, LAYOUT="seq", SHOWGAP=false, ALT="both";
+const COLORS={rnaA:"#31A8B6",rnaB:"#E7B416",start:"#6A2BD9",rfam:"#0072B2",star:"#D55E00"};
+const OUTC={same_partner:"same partner",different_partner:"different partner",rfam_only:"Rfam only",star3d_only:"STAR3D only",neither:"neither"};
+const PATNAME=k=>k==="other"?"Other pattern — does not meet the predefined pattern rules":(S.patterns[k]||[k])[0];
+const darkText=c=>c==="neither"||c==="rfam_only";
+function unitLabel(u){if(!u)return"–";const s=u.split("|");return `${s[0]} ${s[2]}:${s[3]}${s[4]}${s[7]||""}`}
+function legends(){const sq=c=>`<i class="sw" style="background:${c}"></i>`,dot=c=>`<i class="sw" style="background:${c};border-radius:50%"></i>`,bar=c=>`<i style="display:inline-block;width:5px;height:14px;border-radius:2px;background:${c}"></i>`,
+ lin=(c,w,d)=>`<svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="${c}" stroke-width="${w}" ${d?'stroke-dasharray="5 3"':""}/></svg>`;
+ return `<details class="card lgdcard"><summary><b>Legend</b> <span class="mut sm">— bars = RNA, lines = correspondences and squares = nucleotide outcome</span></summary><div class="lgd">
+ <div><b>RNA (bars)</b><span>${bar(COLORS.rnaA)}A — top row, 3D cartoon</span><span>${bar(COLORS.rnaB)}B — bottom row, 3D cartoon</span></div>
+ <div><b>Correspondence lines</b><span>${lin("var(--lshared)",2)}shared by both</span><span>${lin(COLORS.rfam,2.5,1)}Rfam only (dashed)</span><span>${lin(COLORS.star,3)}STAR3D only (solid)</span></div>
+ <div><b>Nucleotide outcome (squares)</b>${CAT.map(([k,l])=>`<span><i class="sw ${k}"></i>${l}</span>`).join("")}<span><i class="sw" style="border:1.5px dashed var(--mut);background:transparent"></i>gap</span><span><i class="sw" style="background:var(--none);opacity:.4"></i>faded = unobserved in 3D</span></div>
+</div></details>`}
+function sideRates(p,side){const os=side==="A"?"B":"A",r=p.res[side];let A=0,D=0,R=0,St=0,ex=0,ne=0;
+ const ok=u=>{const x=find(os,u);return x&&x.xyz};
+ for(const x of r){if(x.c==="neither"){ne++;continue}
+  if(x.c==="same_partner"){if(x.xyz&&ok(x.rp))A++;else ex++}else if(x.c==="different_partner"){if(x.xyz&&ok(x.rp)&&ok(x.sp))D++;else ex++}
+  else if(x.c==="rfam_only"){if(x.xyz&&ok(x.rp))R++;else ex++}else{if(x.xyz&&ok(x.sp))St++;else ex++}}
+ return {A,D,R,S:St,ex,ne,n:r.length}}
+async function pairView(id,selUnit){
+ const p=await getPair(id); CUR=p; SEL=null; ALT="both";
+ const app=$("#app");
+ if(!p.res){app.innerHTML=`<h1>${E(p.a.chain)} vs ${E(p.b.chain)}</h1><div class="card">STAR3D reported <b>No similar stacks</b> for this pair: no alignment was produced, so all scores are <b>NA</b> (not zero).</div>`;return}
+ const sc=p.scores, g=p.geom||{}, sh=+sc.shared_edges, nr=+sc.rfam_edges, ns=+sc.star3d_edges;
+ const rmsTxt=o=>o&&o.value!=null?`${o.value} Å <span class="mut sm">(${o.n}/${o.of} pairs with both C1′)</span>`:`Unavailable <span class="mut sm">(${o?(o.of?"no pair has both C1′ atoms":"no pairs"):"superposition file missing"})</span>`;
+ const ra=sideRates(p,"A"),rb=sideRates(p,"B");
+ const sumline=nr===ns?`<b>${sh} of ${nr} correspondences are shared (${pct(sh,nr)}).</b> Each method proposes ${nr-sh} additional correspondence${nr-sh===1?"":"s"} that the other does not share.`
+  :`<b>${sh} correspondences are shared</b> — ${sh}/${nr} of Rfam's and ${sh}/${ns} of STAR3D's. Rfam proposes ${nr-sh} that STAR3D does not; STAR3D proposes ${ns-sh} that Rfam does not.`;
+ app.innerHTML=`<div class="sm"><a href="#/pairs/${p.family}">← ${E(p.fname)} pairs</a></div>
+ <h1><span style="color:${COLORS.rnaA}">■</span> ${E(p.a.chain)} <span class="mut">vs</span> <span style="color:${COLORS.rnaB}">■</span> ${E(p.b.chain)}</h1>
+ <p class="lede">${E(p.fname)} (${p.family}). <b>A</b>: <a href="https://www.rcsb.org/structure/${p.a.chain.split("_")[0]}" target="_blank">${p.a.chain.split("_")[0]}</a> ${E(p.a.species)} · <b>B</b>: <a href="https://www.rcsb.org/structure/${p.b.chain.split("_")[0]}" target="_blank">${p.b.chain.split("_")[0]}</a> ${E(p.b.species)}</p>
+ <div class="card big">${sumline}</div>
+ <h2>Correspondence map</h2>
+ <div class="controls"><span class="seg"><button data-l="seq" class="${LAYOUT==="seq"?"on":""}">sequence positions</button><button data-l="cols" class="${LAYOUT==="cols"?"on":""}">Rfam alignment columns</button></span>
+ <label class="sm" id="gapopt" style="display:${LAYOUT==="cols"?"inline-flex":"none"};gap:6px;align-items:center"><input type="checkbox" id="showgap" ${SHOWGAP?"checked":""}>show columns gapped in both rows</label>
+ <span class="seg"><button data-m="all" class="on">all lines</button><button data-m="diff">only differences</button><button data-m="rfam">Rfam only</button><button data-m="star">STAR3D only</button></span>
+ <span class="mut sm">zoom</span><input id="zoom" type="range" min="7" max="22" value="${PX}"></div>
+ ${legends()}
+ <div class="ribframe"><div class="riblabels"><div style="color:${COLORS.rnaA}"><b>A</b><br>${E(p.a.chain.replace("_"," "))}</div><div style="color:${COLORS.rnaB}"><b>B</b><br>${E(p.b.chain.replace("_"," "))}</div></div><div class="ribwrap" id="rib"></div></div>
+ <p class="sm mut" id="ribnote"></p>
+ <div class="grid g2 selgrid" style="margin-top:16px;align-items:start"><div class="card" id="info"><b>Click a nucleotide, a gap or a correspondence line</b><p class="mut sm">You will see both proposed counterparts, their distances, interaction evidence and motif evidence, highlighted in 3D.</p></div>
+ <div class="viewcol"><div class="controls" style="margin:0 0 6px"><button id="v-full">Full structure</button><button id="v-sel">Selected region</button><button id="v-reset">Reset view</button></div>
+ <div id="viewer"></div><div class="lgd3d" id="lgd3d"><b>3D (circles)</b><span><i class="sw" style="background:${COLORS.start};border-radius:50%"></i>selected nucleotide</span><span><i class="sw" style="background:${COLORS.rfam};border-radius:50%"></i>Rfam counterpart</span><span><i class="sw" style="background:${COLORS.star};border-radius:50%"></i>STAR3D counterpart</span><span><svg width="26" height="8"><line x1="0" y1="4" x2="26" y2="4" stroke="var(--mut)" stroke-width="2" stroke-dasharray="5 3"/></svg>distance, not a bond</span>
+ <label class="sm" style="margin-left:auto;display:inline-flex;gap:6px;align-items:center"><input type="checkbox" id="lbl3d" ${LABELS3D?"checked":""}>show labels and distances in 3D</label></div></div></div>
+ <h2>Details</h2>
+ <details class="card" open><summary><b>Nucleotide outcomes by RNA</b></summary>
+ <p class="sm mut">These are two views of the same comparison and must not be added together.</p>
+ <div class="wrap"><table><tr><th>View</th><th class="r">nt</th><th class="r">observed</th>${CAT.map(([,l])=>`<th class="r">${l}</th>`).join("")}<th class="r">all differences (assessable)</th><th class="r">different partner only</th></tr>
+ ${[["A",p.sides.A,p.a.chain,ra],["B",p.sides.B,p.b.chain,rb]].map(([k,s,c,r])=>`<tr><td>${k} ${E(c)}</td>${["nucleotides","observed","same_partner","different_partner","rfam_only","star3d_only","neither"].map(x=>`<td class="r">${s[x]}</td>`).join("")}<td class="r"><b>${r.D+r.R+r.S}/${r.A+r.D+r.R+r.S}</b><div class="sm mut">${r.D} different · ${r.R} Rfam only · ${r.S} STAR3D only${r.ex?` · ${r.ex} not assessable`:""}</div></td><td class="r">${s.scored_different}/${s.both_mapped}</td></tr>`).join("")}</table></div></details>
+ <details class="card"><summary><b>Disagreement regions</b> <span class="mut sm">(${p.regions.length})</span></summary><div class="wrap"><table><tr><th>Region</th><th class="r">nt</th><th>from … to</th><th>RF columns</th><th>SS_cons context</th></tr>${p.regions.map(r=>`<tr class="click" onclick='pickRes("${r.side}","${r.start}",true)'><td><code>${r.side}·${r.id}</code></td><td class="r">${r.len}</td><td class="sm"><span title="${E(r.start)}">${E(unitLabel(r.start))}</span> … <span title="${E(r.end)}">${E(unitLabel(r.end).split(" ")[1])}</span></td><td class="sm">${E(r.rf)}</td><td class="sm">${E(r.ss)}</td></tr>`).join("")||'<tr><td colspan=5 class="mut">no disagreement regions</td></tr>'}</table></div></details>
+ <details class="card"><summary><b>Structural distances and RMSD</b></summary>
+ <p class="sm">RMSD summarizes many matched positions. The selected-nucleotide distances describe individual correspondences. These measurements use different atom selections and should not be directly equated.</p>
+ <table><tr><th>Measurement</th><th>Value</th><th>Definition</th></tr>
+ <tr><td>STAR3D-reported RMSD</td><td class="num">${g.star3d_rmsd?E(g.star3d_rmsd)+" Å":`NA <span class="mut sm">(not reported)</span>`}</td><td class="sm">As written by STAR3D v1.2: Kabsch superposition over the per-residue centroids of the backbone atoms C3′, C4′, C5′, O3′, O5′ and P of the residues STAR3D aligned (checked in the STAR3D source, PDB.java and STAR3D.java).</td></tr>
+ <tr><td>C1′ RMS deviation, STAR3D pairs</td><td class="num">${rmsTxt(g.c1_rms_star3d)}</td><td class="sm">Root-mean-square C1′–C1′ distance over STAR3D's correspondences in the superposition file, without refitting.</td></tr>
+ <tr><td>C1′ RMS deviation, Rfam pairs</td><td class="num">${rmsTxt(g.c1_rms_rfam)}</td><td class="sm">The same over Rfam's correspondences, in the same frame (fitted by STAR3D, which can favour its own correspondences).</td></tr></table></details>
+ ${interSection(p)}
+ <details class="card"><summary><b>Downloads and identifiers</b></summary><p class="sm">Seed rows: A <code>${E(p.a.seed)}</code>, B <code>${E(p.b.seed)}</code>. ${p.files.aln?`<a href="${p.files.aln}" target="_blank">Raw STAR3D alignment (.aln)</a>`:""} · ${p.files.pdb?`<a href="${p.files.pdb}" target="_blank">STAR3D superposition (.pdb)</a>`:""}</p></details>`;
+ document.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>{MODE=b.dataset.m;document.querySelectorAll("[data-m]").forEach(x=>x.classList.toggle("on",x===b));ribbon()});
+ document.querySelectorAll("[data-l]").forEach(b=>b.onclick=()=>{LAYOUT=b.dataset.l;document.querySelectorAll("[data-l]").forEach(x=>x.classList.toggle("on",x===b));$("#gapopt").style.display=LAYOUT==="cols"?"inline-flex":"none";ribbon()});
+ $("#showgap").onchange=e=>{SHOWGAP=e.target.checked;ribbon()};
+ $("#zoom").oninput=e=>{PX=+e.target.value;ribbon()};
+ $("#lbl3d").onchange=e=>{LABELS3D=e.target.checked;highlight3d(HL)};
+ $("#v-full").onclick=()=>{if(VIEW){VIEW.zoomTo();VIEW.render()}};$("#v-sel").onclick=()=>zoomSel();$("#v-reset").onclick=()=>{SEL=null;HL=[];ribbon();styleBase(false);if(VIEW){VIEW.zoomTo();VIEW.render()};$("#info").innerHTML='<b>Selection cleared.</b>'};
+ ribbon(); viewer3d(p);
+ if(selUnit)pickRes("A",selUnit,true);
+}
+function layout(){
+ const p=CUR,W=PX,pad=10;
+ if(LAYOUT==="seq"){const n=Math.max(p.res.A.length,p.res.B.length);return {W,pad,n,xa:i=>pad+(i-1)*W+W/2,xb:i=>pad+(i-1)*W+W/2,cols:null}}
+ const cols=p.cols.filter(c=>SHOWGAP||!(/[-.~]/.test(c.a)&&/[-.~]/.test(c.b)));const ia={},ib={};cols.forEach((c,i)=>{if(c.ap)ia[c.ap]=i;if(c.bp)ib[c.bp]=i});
+ return {W,pad,n:cols.length,cols,xa:i=>pad+ia[i]*W+W/2,xb:i=>pad+ib[i]*W+W/2}
+}
+const KB=` tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.dispatchEvent(new MouseEvent('click'))}"`;
+function ribbon(){
+ const p=CUR,L=layout(),{W,pad}=L,yA=40,yB=170,h=212,w=pad*2+L.n*W+30;
+ const show=k=>MODE==="all"||(MODE==="diff"&&k!=="s")||(MODE==="rfam"&&k==="r")||(MODE==="star"&&k==="t");
+ const selA=SEL&&SEL.side==="A"?SEL.u:null,selLine=SEL&&SEL.line;
+ let lines="";
+ const ln=(x1,x2,kind,au,bu)=>{const st={s:`stroke="var(--lshared)" stroke-width="1.4"`,r:`stroke="${COLORS.rfam}" stroke-width="2.4" stroke-dasharray="5 3"`,t:`stroke="${COLORS.star}" stroke-width="2.8"`}[kind];
+  const on=(selLine&&selLine.a===au&&selLine.b===bu&&selLine.k===kind)||selA===au;
+  const name={s:"shared by Rfam and STAR3D",r:"Rfam only",t:"STAR3D only"}[kind];
+  return `<g class="cl" onclick='pickLine("${kind}","${au}","${bu}")'${KB}><title>${E(unitLabel(au))} ↔ ${E(unitLabel(bu))}: ${name} (click)</title><line x1="${x1}" y1="${yA+13}" x2="${x2}" y2="${yB-13}" ${st} ${on?'stroke-opacity="1" style="filter:drop-shadow(0 0 2px var(--fg))"':selA||selLine?'stroke-opacity=".3"':""}/><line x1="${x1}" y1="${yA+13}" x2="${x2}" y2="${yB-13}" stroke="transparent" stroke-width="10"/></g>`};
+ for(const r of p.res.A){
+  if(r.rpp&&r.spp&&r.rpp===r.spp){if(show("s"))lines+=ln(L.xa(r.p),L.xb(r.rpp),"s",r.u,r.rp);continue}
+  if(r.rpp&&show("r"))lines+=ln(L.xa(r.p),L.xb(r.rpp),"r",r.u,r.rp);
+  if(r.spp&&show("t"))lines+=ln(L.xa(r.p),L.xb(r.spp),"t",r.u,r.sp);}
+ const fill={same_partner:"var(--same)",different_partner:"var(--diff)",rfam_only:"var(--rfo)",star3d_only:"var(--sto)",neither:"var(--none)"};
+ const box=(r,x,y,side)=>{const sel=SEL&&!SEL.line&&!SEL.gap&&SEL.side===side&&SEL.u===r.u;return `<g class="res" onclick='pickRes("${side}","${r.u}")'${KB}><title>${E(unitLabel(r.u))} · position ${r.p} · Rfam column ${r.col} · ${OUTC[r.c]}${r.xyz?"":" · unobserved in 3D"}</title><rect x="${x-W/2+.5}" y="${y-13}" width="${W-1}" height="26" rx="3" style="fill:${fill[r.c]}" ${r.xyz?"":'opacity=".4"'} ${sel?`stroke="${COLORS.start}" stroke-width="3"`:""}/>${W>=11?`<text x="${x}" y="${y+4.5}" font-size="${Math.min(13,W-2)}" text-anchor="middle" fill="${darkText(r.c)?"#111":"#fff"}" font-weight="700" font-family="ui-monospace,Menlo,monospace" pointer-events="none">${E(r.n)}</text>`:""}</g>`};
+ const gapbox=(x,y,side,c)=>`<g class="res" onclick='pickGap("${side}",${c.c})'${KB}><title>gap in ${side}'s seed row at Rfam column ${c.c} (click)</title><rect x="${x-W/2+1.5}" y="${y-12}" width="${W-3}" height="24" rx="3" fill="transparent" stroke="var(--mut)" stroke-dasharray="3 2"/>${W>=11?`<text x="${x}" y="${y+4}" font-size="12" text-anchor="middle" fill="var(--mut)" pointer-events="none">–</text>`:""}</g>`;
+ let boxes="",ticks="";
+ if(L.cols){L.cols.forEach((c,i)=>{const x=pad+i*W+W/2;
+   if(c.ap){boxes+=box(p.res.A[c.ap-1],x,yA,"A")}else boxes+=gapbox(x,yA,"A",c);
+   if(c.bp){boxes+=box(p.res.B[c.bp-1],x,yB,"B")}else boxes+=gapbox(x,yB,"B",c);
+   if(c.c%10===0)ticks+=`<text x="${x}" y="${yA-20}" font-size="10" text-anchor="middle" fill="var(--mut)">col ${c.c}</text>`;
+   if(c.rf==="insert")ticks+=`<rect x="${x-W/2}" y="${yA+16}" width="${W}" height="3" fill="var(--mut)" opacity=".5"><title>RF insert column</title></rect>`});
+  $("#ribnote").innerHTML=`<b>Alignment-column view:</b> original Rfam 15.1 seed columns (labels show the real column number), with seed-alignment gaps drawn as dashed boxes. Rfam correspondences are vertical by construction; a slanted STAR3D line pairs nucleotides from different columns. ${SHOWGAP?"":"Columns gapped in both rows are hidden."} Grey bar = RF insert column.`}
+ else{p.res.A.forEach(r=>boxes+=box(r,L.xa(r.p),yA,"A"));p.res.B.forEach(r=>boxes+=box(r,L.xb(r.p),yB,"B"));
+  ticks=p.res.A.filter(r=>r.p%10===0).map(r=>`<text x="${L.xa(r.p)}" y="${yA-20}" font-size="10" text-anchor="middle" fill="var(--mut)">${r.p}</text>`).join("")+p.res.B.filter(r=>r.p%10===0).map(r=>`<text x="${L.xb(r.p)}" y="${yB+30}" font-size="10" text-anchor="middle" fill="var(--mut)">${r.p}</text>`).join("");
+  $("#ribnote").innerHTML="<b>Sequence view:</b> nucleotides are shown in ungapped sequence order. Lines connect corresponding nucleotides; their slope does not itself indicate a gap. Switch to <b>Rfam alignment columns</b> to display seed-alignment gaps explicitly."}
+ $("#rib").innerHTML=`<svg width="${w}" height="${h}" style="display:block">${lines}${boxes}${ticks}</svg>`;
+}
+const fmtD=d=>d==null?"<span class='mut'>Unavailable</span>":`<b>${d.toFixed(2)} Å</b>`;
+function find(side,u){return CUR.res[side].find(x=>x.u===u)}
+/* interaction preservation: map both residues of a base pair through one alignment and look up the target pair */
+function preserve(side,u1,u2,lw,via){
+ const os=side==="A"?"B":"A",r1=find(side,u1),r2=find(side,u2),t1=via==="rfam"?r1.rp:r1.sp,t2=via==="rfam"?r2.rp:r2.sp;
+ if(!t1||!t2)return {cls:"unassessable",txt:"unassessable — a residue has no counterpart",t1,t2};
+ const x1=find(os,t1),x2=find(os,t2);
+ if(!x1||!x2||!x1.xyz||!x2.xyz)return {cls:"unassessable",txt:"unassessable — a counterpart has no coordinates",t1,t2};
+ const hit=(CUR.inter[os]||[]).find(x=>(x[0]===t1&&x[1]===t2)||(x[0]===t2&&x[1]===t1));
+ if(!hit){const T=CUR.inter[os]||[],sh=u=>unitLabel(u).split(" ")[1],
+   own=t=>{const q=T.filter(x=>x[0]===t||x[1]===t).map(x=>`${sh(x[0]===t?x[1]:x[0])}${x[2]?" "+x[2]:""}`);return `${sh(t)} pairs with ${q.length?q.join(", "):"nothing annotated"}`};
+  return {cls:"none",txt:`no annotated interaction between these two (not proof of absence) — in ${os==="A"?CUR.a.chain.split("_")[0]:CUR.b.chain.split("_")[0]}: ${own(t1)}; ${own(t2)}`,t1,t2}}
+ /* classes are written in the order the two nucleotides are listed (cWH = first Watson–Crick, second Hoogsteen);
+    orient the target class to the source order before comparing */
+ const tc=hit[2]&&hit[0]!==t1?hit[2][0]+hit[2][2]+hit[2][1]:hit[2];
+ if(!lw||!tc)return {cls:"nc",txt:`base pair annotated; class not comparable (${!lw?"source":"target"} uses a non-standard edge)`,t1,t2};
+ return tc===lw?{cls:"same",txt:`same interaction class (${tc})`,t1,t2}:{cls:"diff",txt:`different class: ${tc} here vs ${lw} in RNA ${side}`,t1,t2};
+}
+function interEvidence(side,r){
+ const bp=(CUR.inter[side]||[]).filter(x=>x[0]===r.u||x[1]===r.u);
+ if(!bp.length)return `<p class="sm mut">MC-Annotate reports no base pair for this nucleotide in its own structure.</p>`;
+ return bp.map(x=>{const pr=preserve(side,x[0],x[1],x[2],"rfam"),ps=preserve(side,x[0],x[1],x[2],"star");
+  return `<div class="ev"><div class="click" onclick='hlPair("${side}","${x[0]}","${x[1]}")'><b>${unitLabel(x[0])} – ${unitLabel(x[1]).split(" ")[1]}</b> ${x[2]?`<span class="tag">${E(x[2])}</span>`:""}<span class="mut sm"> MC-Annotate: ${E(x[3])}</span></div>
+  <table class="mini" style="margin-top:4px"><tr><td style="color:${COLORS.rfam}">Rfam</td><td class="sm">${pr.t1?`<a href="javascript:hlMap('${side}','${x[0]}','${x[1]}','rfam')">${unitLabel(pr.t1).split(" ")[1]} – ${unitLabel(pr.t2).split(" ")[1]}</a>`:"–"}</td><td class="sm pres-${pr.cls}">${pr.txt}</td></tr>
+  <tr><td style="color:${COLORS.star}">STAR3D</td><td class="sm">${ps.t1?`<a href="javascript:hlMap('${side}','${x[0]}','${x[1]}','star')">${unitLabel(ps.t1).split(" ")[1]} – ${unitLabel(ps.t2).split(" ")[1]}</a>`:"–"}</td><td class="sm pres-${ps.cls}">${ps.txt}</td></tr></table></div>`}).join("")}
+function motifEvidence(r){
+ if(!r.ev||!r.ev.length)return `<p class="sm mut">No documented motif record at the three endpoints (a missing record is not a confirmed absence).</p>`;
+ const roles=[["A_residue","Selected nucleotide"],["B_rfam_partner","Rfam counterpart"],["B_star3d_partner","STAR3D counterpart"]];
+ return roles.map(([k,lab])=>{const es=r.ev.filter(e=>e.role===k);if(!es.length)return "";const unit=es[0].unit;
+  const loops=es.filter(e=>e.type==="BGSU structural loop"),grps=es.filter(e=>e.type==="BGSU motif group"),rf=es.filter(e=>e.type==="Rfam computational motif hit");
+  const key=e=>(e.members||[]).map(u=>u.split("|").slice(0,8).join("|")).sort().join(","),sym=e=>{const x=(e.members||[]).map(u=>u.split("|")[8]).filter(Boolean);return x.length?x[0]:""};
+  const seen={};let lh="";for(const e of loops){const kk=key(e);const dup=seen[kk];
+   lh+=`<li><a href="${E(e.url)}" target="_blank">${E(e.record)}</a> — ${(e.members||[]).length} nucleotides${sym(e)?` (symmetry-related copy, operator ${E(sym(e))})`:""}${dup?` · <b>same nucleotides as ${E(dup)}</b>: a duplicate annotation of one loop, not independent support`:""}</li>`;if(!dup)seen[kk]=e.record}
+  const gseen={};const gh=grps.filter(e=>{const k2=e.record;const d=gseen[k2];gseen[k2]=(gseen[k2]||[]).concat(e.loop);return !d}).map(e=>`<li><a href="${E(e.url)}" target="_blank">${E(e.record)}</a> — Motif Atlas 4.16; supported by loop instance${gseen[e.record].length>1?"s":""} ${gseen[e.record].map(E).join(", ")}</li>`).join("");
+  const rh=rf.map(e=>`<li><a href="${E(e.url)}" target="_blank">${E(e.record)}</a> ${E(e.name)} — predicted hit span: ${E(e.detail)} (Rfam 15.1 motif_matches)</li>`).join("");
+  return `<details class="evg"><summary><b>${lab}</b> — ${unitLabel(unit)} <span class="mut sm">(${[loops.length&&"structural loop",grps.length&&"Atlas group",rf.length&&"Rfam prediction"].filter(Boolean).join(" · ")})</span></summary>
+  ${loops.length?`<div class="sm"><b>Structural loop</b><ul>${lh}</ul></div>`:""}${gh?`<div class="sm"><b>Atlas motif group</b><ul>${gh}</ul></div>`:""}${rh?`<div class="sm"><b>Rfam prediction</b><ul>${rh}</ul></div>`:""}</details>`}).join("")}
+function pickRes(side,u,scroll){
+ const p=CUR,r=find(side,u)||CUR.res[side].find(x=>x.u.startsWith(u));if(!r)return;SEL={side,u:r.u};ribbon();
+ const os=side==="A"?"B":"A",rp=find(os,r.rp),sp=find(os,r.sp),diff=r.rp&&r.sp&&r.rp!==r.sp;
+ const off=diff?(sp.p-rp.p):null;
+ const diffTxt=diff?`<b>Difference:</b> the STAR3D counterpart is ${Math.abs(off)} nucleotide${Math.abs(off)===1?"":"s"} ${off>0?"later":"earlier"} along RNA ${os} than the Rfam counterpart.`
+  :r.c==="same_partner"?"Both methods propose the same counterpart.":r.c==="rfam_only"?"Only Rfam proposes a counterpart; STAR3D leaves this nucleotide unmapped.":r.c==="star3d_only"?"Only STAR3D proposes a counterpart; in the seed alignment this nucleotide faces a gap.":"Neither method maps this nucleotide.";
+ let h=`<div class="tag">${OUTC[r.c]}${r.xyz?"":" · unobserved in 3D"}</div>
+ <table class="cmp"><tr><th>Selected nucleotide</th><th style="color:${COLORS.rfam}">Rfam counterpart</th><th style="color:${COLORS.star}">STAR3D counterpart</th></tr>
+ <tr><td><b>${unitLabel(r.u)}</b></td><td>${rp?`<a href="javascript:pickRes('${os}','${rp.u}')"><b>${unitLabel(rp.u)}</b></a>`:"unmapped"}</td><td>${sp?`<a href="javascript:pickRes('${os}','${sp.u}')"><b>${unitLabel(sp.u)}</b></a>`:"unmapped"}</td></tr>
+ <tr><td class="sm mut">C1′ distance after superposition</td><td>${r.rp?fmtD(r.dR):"–"}</td><td>${r.sp?fmtD(r.dS):"–"}</td></tr></table>
+ <p>${diffTxt}</p>`;
+ if(diff)h+=`<div class="controls"><span class="seg"><button data-alt="rfam" class="${ALT==="rfam"?"on":""}">Rfam correspondence</button><button data-alt="star" class="${ALT==="star"?"on":""}">STAR3D correspondence</button><button data-alt="both" class="${ALT==="both"?"on":""}">Show both</button></span></div>`;
+ h+=`<h3>Does each alignment preserve this nucleotide's base pairs?</h3>
+ <details class="evg"><summary class="sm"><b>How to read this</b></summary><div class="sm">
+ <p>The first line is a base pair that MC-Annotate finds in RNA ${side}'s own structure, with its Leontis–Westhof class and MC-Annotate's raw annotation. In the class, <b>c</b>/<b>t</b> = cis/trans and the two letters are the edges of the first and second nucleotide: <b>W</b> Watson–Crick, <b>H</b> Hoogsteen, <b>S</b> sugar. For example, cWW with Saenger class XXVIII is a G·U wobble.</p>
+ <p>The Rfam and STAR3D rows map <i>both</i> nucleotides of that pair through each alignment and report what MC-Annotate finds between the two mapped nucleotides in RNA ${side==="A"?"B":"A"}: the <b>same class</b>; a <b>different class</b>; <b>no annotated interaction</b> (MC-Annotate lists nothing, which is not proof of absence); or <b>unassessable</b> (a nucleotide is unmapped or has no coordinates). Classes are compared in the same nucleotide order, so cWH and cHW listed in reverse are recognised as the same pair.</p>
+ <p>This is one line of evidence. It does not by itself decide which alignment is correct.</p></div></details>
+ ${interEvidence(side,r)}`;
+ if(side==="A")h+=`<h3>Motif evidence</h3>${motifEvidence(r)}`;
+ h+=`<details class="evg"><summary><b>More details</b></summary><div class="kv sm"><div>Unit ID</div><div><code>${E(r.u)}</code></div><div>Position / column</div><div>${r.p} · Rfam column ${r.col} (${E(r.rf)}) · SS_cons ${E((r.ss||"").replace(/_/g," "))}</div>
+ ${r.line?`<div>STAR3D line</div><div><code>${E(r.line)}</code></div>`:""}${r.pat?`<div>Pattern</div><div>${E(PATNAME(r.pat))}</div>`:""}
+ ${r.mcls?`<div>Rfam motif scan</div><div>${r.rcov==="unknown"?"coverage unknown for this family":"family-level coverage only; an absent hit is not verified for this row"}</div>`:""}</div>
+ ${side==="B"?`<p class="sm mut">B-side view: inspect only — not added to the A-side totals.</p>`:""}</details>`;
+ $("#info").innerHTML=h;
+ document.querySelectorAll("[data-alt]").forEach(b=>b.onclick=()=>{ALT=b.dataset.alt;pickRes(side,r.u)});
+ const hl=[{side,u:r.u,role:"start",d:null}];
+ if(rp&&sp&&rp.u===sp.u)hl.push({side:os,u:rp.u,role:"shared",d:r.dR});
+ else{if(rp&&(!diff||ALT!=="star"))hl.push({side:os,u:rp.u,role:"rfam",d:r.dR});if(sp&&(!diff||ALT!=="rfam"))hl.push({side:os,u:sp.u,role:"star",d:r.dS})}
+ highlight3d(hl);
+ if(scroll){const L=layout(),el=$("#rib");el.scrollLeft=Math.max(0,(side==="A"?L.xa(r.p):L.xb(r.p))-240)}
+}
+function hlPair(side,u1,u2){highlight3d([{side,u:u1,role:"start"},{side,u:u2,role:"start"}])}
+function hlMap(side,u1,u2,via){const os=side==="A"?"B":"A",p1=preserve(side,u1,u2,"",via);const role=via==="rfam"?"rfam":"star";
+ highlight3d([{side,u:u1,role:"start"},{side,u:u2,role:"start"}].concat(p1.t1?[{side:os,u:p1.t1,role},{side:os,u:p1.t2,role}]:[]))}
+function pickLine(k,au,bu){
+ const a=find("A",au),b=find("B",bu);SEL={line:{k,a:au,b:bu}};ribbon();
+ const name={s:"Shared: both Rfam and STAR3D propose this correspondence",r:"Rfam only: the two nucleotides share a seed column, but STAR3D does not pair them",t:"STAR3D only: STAR3D pairs these nucleotides, but they are in different seed columns"}[k];
+ const d=k==="t"?a.dS:a.dR;
+ $("#info").innerHTML=`<div class="tag">correspondence</div><p><b>${name}.</b></p><table class="cmp"><tr><th style="color:${COLORS.rnaA}">RNA A</th><th style="color:${COLORS.rnaB}">RNA B</th><th>C1′ distance</th></tr>
+ <tr><td><a href="javascript:pickRes('A','${au}')"><b>${unitLabel(au)}</b></a><div class="sm mut">column ${a.col}</div></td><td><a href="javascript:pickRes('B','${bu}')"><b>${unitLabel(bu)}</b></a><div class="sm mut">column ${b.col}</div></td><td>${fmtD(d)}</td></tr></table>
+ ${k!=="r"&&a.line?`<p class="sm">STAR3D line <code>${E(a.line)}</code></p>`:""}<p class="sm mut">A correspondence is an alignment relation, not a chemical interaction.</p>`;
+ highlight3d([{side:"A",u:au,role:"start"},{side:"B",u:bu,role:k==="t"?"star":k==="r"?"rfam":"shared",d}]);
+}
+function pickGap(side,col){
+ const c=CUR.cols.find(x=>x.c===col),os=side==="A"?"B":"A",opos=side==="A"?c.bp:c.ap,o=opos?CUR.res[os][opos-1]:null;
+ SEL={gap:{side,col}};ribbon();
+ $("#info").innerHTML=`<div class="tag">gap</div><p><b>Gap in RNA ${side}'s seed row</b> at Rfam column ${col} (${E(c.rf)}): the seed row has <code>${E(side==="A"?c.a:c.b)}</code>.</p>
+ ${o?`<p>RNA ${os}'s nucleotide <a href="javascript:pickRes('${os}','${o.u}')">${unitLabel(o.u)}</a> therefore has no Rfam counterpart here. STAR3D ${o.sp?`pairs it with <b>${unitLabel(o.sp)}</b>`:"does not pair it either"}.</p>`:"<p>The other row is also gapped in this column.</p>"}
+ <p class="sm mut">A gap has no atoms, so nothing is selected in 3D.</p>`;
+ highlight3d([]);
+}
+function pickInter(side,u1,u2){const r=find(side,u1);if(r){pickRes(side,u1);hlPair(side,u1,u2)}}
+function interSection(p){const I=p.inter;if(!I)return"";
+ const rows=(I.A||[]).map(x=>({x,pr:preserve("A",x[0],x[1],x[2],"rfam"),ps:preserve("A",x[0],x[1],x[2],"star")}));
+ const c=(k,v)=>rows.filter(r=>r[k].cls===v).length;
+ return `<details class="card"><summary><b>All base pairs of RNA A and whether each alignment preserves them</b> <span class="mut sm">(${rows.length})</span></summary>
+ <p class="sm mut">${E(I.source)}. Outcomes: same interaction class · different class · class not comparable (non-standard edge) · no annotated interaction (not proof of absence) · unassessable.</p>
+ <p class="sm">Under Rfam: <b>${c("pr","same")}</b> same class, ${c("pr","diff")} different, ${c("pr","nc")} class not comparable, ${c("pr","none")} none annotated, ${c("pr","unassessable")} unassessable. Under STAR3D: <b>${c("ps","same")}</b> same class, ${c("ps","diff")} different, ${c("ps","nc")} class not comparable, ${c("ps","none")} none annotated, ${c("ps","unassessable")} unassessable.</p>
+ <div class="wrap" style="max-height:380px;overflow:auto"><table><tr><th>RNA A base pair</th><th>class</th><th>under Rfam</th><th>under STAR3D</th></tr>
+ ${rows.map(({x,pr,ps})=>`<tr class="click" onclick='pickInter("A","${x[0]}","${x[1]}")'><td class="sm">${unitLabel(x[0]).split(" ")[1]} – ${unitLabel(x[1]).split(" ")[1]}</td><td><b>${E(x[2]||"?")}</b></td><td class="sm pres-${pr.cls}">${pr.txt}</td><td class="sm pres-${ps.cls}">${ps.txt}</td></tr>`).join("")}</table></div></details>`}
+/* ---------------- 3D */
+let HL=[];
+function styleBase(fade){if(!VIEW)return;const o=fade?.3:.95;VIEW.removeAllLabels();VIEW.removeAllShapes();
+ VIEW.setStyle({model:0},{cartoon:{color:COLORS.rnaA,opacity:o,thickness:.6}});VIEW.setStyle({model:1},{cartoon:{color:COLORS.rnaB,opacity:o,thickness:.6}})}
+function viewer3d(p){
+ VIEW=null;const el=$("#viewer");
+ const off=m=>{el.innerHTML=`<p class="sm" style="padding:14px"><b>3D view unavailable.</b> ${m}</p>`;["#v-full","#v-sel","#v-reset"].forEach(b=>{const x=$(b);if(x)x.disabled=true});const l=$("#lgd3d");if(l)l.style.opacity=.35};
+ if(!(p.files.view||p.files.pdb))return off("STAR3D wrote no superposition file for this pair. The map and distances still work where coordinates exist.");
+ if(!window.$3Dmol)return off("The 3D library did not load. Reload the page.");
+ const cv=document.createElement("canvas");if(!(cv.getContext("webgl")||cv.getContext("experimental-webgl")))return off("This browser has WebGL turned off or unavailable. Enable hardware acceleration or try another browser.");
+ fetch((p.files.view||p.files.pdb)+"?b="+BUILD,{cache:"no-store"}).then(r=>{if(!r.ok)throw new Error("superposition file "+r.status);return r.text()}).catch(e=>{off("The superposition file could not be loaded ("+e.message+").");throw e}).then(t=>{const ms=t.split(/^MODEL.*$/m).slice(1).map(x=>x.split(/^ENDMDL/m)[0]);
+  try{VIEW=$3Dmol.createViewer(el,{backgroundColor:getComputedStyle(document.body).backgroundColor});ms.forEach(m=>VIEW.addModel(m,"pdb"))}catch(e){VIEW=null;return off("The 3D viewer could not start ("+e.message+").")}
+  styleBase(false);VIEW.zoomTo();VIEW.render();if(HL.length)highlight3d(HL)});
+}
+function selOf(h){const r=find(h.side,h.u);return r&&r.vi?{model:h.side==="A"?0:1,resi:r.vi}:null}
+function highlight3d(list){HL=list;if(!VIEW)return;styleBase(list.length>0);
+ const col={start:COLORS.start,rfam:COLORS.rfam,star:COLORS.star,shared:"#4D4D4D"},lab={start:"Selected",rfam:"Rfam",star:"STAR3D",shared:"Both"},pos={};
+ list.forEach((h,i)=>{const s=selOf(h);if(!s)return;VIEW.addStyle(s,{stick:{radius:.15,color:col[h.role]},cartoon:{color:col[h.role],opacity:1}});
+  const at=VIEW.selectedAtoms({...s,atom:"C1'"})[0]||VIEW.selectedAtoms(s)[0];if(!at)return;pos[i]=at;
+  if(LABELS3D)VIEW.addLabel(`${lab[h.role]}: ${unitLabel(h.u)}`,{position:{x:at.x,y:at.y,z:at.z},backgroundColor:col[h.role],backgroundOpacity:.92,fontColor:"#fff",fontSize:12,showBackground:true,inFront:true,alignment:"bottomCenter"})});
+ const si=list.findIndex(h=>h.role==="start");
+ if(LABELS3D&&si>=0&&pos[si])list.forEach((h,i)=>{if(i===si||!pos[i]||h.side===list[si].side)return;const a=pos[si],b=pos[i];
+  VIEW.addCylinder({start:{x:a.x,y:a.y,z:a.z},end:{x:b.x,y:b.y,z:b.z},radius:.09,dashed:true,color:col[h.role],fromCap:1,toCap:1});
+  if(h.d!=null)VIEW.addLabel(`${h.d.toFixed(2)} Å`,{position:{x:(a.x+b.x)/2,y:(a.y+b.y)/2,z:(a.z+b.z)/2},backgroundColor:"#222",backgroundOpacity:.75,fontColor:"#fff",fontSize:11,showBackground:true,inFront:true})});
+ zoomSel();}
+function zoomSel(){if(!VIEW)return;const ss=HL.map(selOf).filter(Boolean);if(!ss.length){VIEW.zoomTo();VIEW.render();return}
+ VIEW.zoomTo({or:ss.map(s=>({...s,byres:true,expand:6}))});VIEW.zoom(.8);VIEW.render()}
+
+async function selftest(){const out=[];const t=(n,f)=>{try{f();out.push("PASS "+n)}catch(e){out.push("FAIL "+n+": "+e.message)}};
+ const a=CUR.res.A.find(x=>x.c==="different_partner")||CUR.res.A[0];
+ t("pick nucleotide",()=>{pickRes("A",a.u);if(!$("#info").innerHTML.includes("C1′ distance"))throw new Error("panel not updated")});
+ t("Rfam/STAR3D/both buttons",()=>{const b=document.querySelector('[data-alt="star"]');if(b){b.click();if(ALT!=="star")throw new Error("alt not set")}});
+ t("pick line",()=>{pickLine(a.sp?"t":"s",a.u,a.sp||a.rp);if(!$("#info").innerHTML.includes("correspondence"))throw new Error("panel not updated")});
+ t("columns view",()=>{LAYOUT="cols";ribbon();if(!$("#rib svg"))throw new Error("no svg")});
+ t("pick gap",()=>{const c=CUR.cols.find(x=>/[-.]/.test(x.a)&&x.bp);if(c){pickGap("A",c.c);if(!$("#info").innerHTML.includes("Gap"))throw new Error("panel")}});
+ t("interaction preservation",()=>{const x=(CUR.inter.A||[])[0];if(x){pickInter("A",x[0],x[1]);if(!$("#info").innerHTML.includes("preserve"))throw new Error("panel")}});
+ t("grouped motif evidence",()=>{pickRes("A","3RG5|1|A|U|47|||C");const h=$("#info").innerHTML;if(!h.includes("STAR3D counterpart")||!h.includes("duplicate annotation"))throw new Error("grouping/duplicate note missing")});
+ t("3D library",()=>{if(!window.$3Dmol)throw new Error("3Dmol missing")});
+ $("#app").insertAdjacentHTML("afterbegin",`<div class="card" id="selftest"><b>Self-test</b><pre class="sm">${out.join("\n")}</pre></div>`)}
+async function example(){
+ const id=IDX.find(p=>p.a==="3RG5_A"&&p.b==="3W3S_B").id;
+ await pairView(id,"3RG5|1|A|U|47|||C");
+ $("#app").insertAdjacentHTML("afterbegin",`<div class="card" style="border-left:5px solid var(--diff)"><span class="tag">Lead example · tRNA-Sec (RF01852)</span>
+ <h1 style="margin-top:4px">A one-nucleotide correspondence shift within an annotated motif</h1>
+ <p class="big">Rfam aligns <b>3RG5 A:U47C</b> with <b>3W3S B:G47B</b>, while STAR3D aligns it with the neighbouring nucleotide <b>3W3S B:U47C</b>. Both proposed counterparts belong to the same annotated BGSU motif instance. This identifies a local alignment difference; it does not establish which correspondence is correct.</p>
+ <details class="evg"><summary><b>Inspect source evidence</b></summary><ul class="sm">
+ <li>Rfam: both residues sit in original seed column <b>66</b> of RF01852 (seed rows L22019.1/155-240 and AE000657.1/727371-727465).</li>
+ <li>STAR3D: raw mapping line <code>A:47C&lt;-&gt;B:47C</code>.</li>
+ <li>BGSU loop <a href="http://rna.bgsu.edu/rna3dhub/loops/view/IL_3W3S_003" target="_blank">IL_3W3S_003</a>: its six annotated nucleotides match an instance of Motif Atlas group <a href="http://rna.bgsu.edu/rna3dhub/motif/view/IL_10892.5" target="_blank">IL_10892.5</a> (release 4.16). Loop IL_3W3S_006 lists the same six nucleotides in a symmetry-related copy (operator 43_455), so it is a duplicate annotation, not independent support.</li>
+ <li>Source unit IDs such as <code>3W3S|1|B|G|47|||B</code> are used unchanged as residue IDs; the residue crosswalk maps them to author numbering, the staged STAR3D file and the Rfam column.</li></ul></details></div>`);
+}
+
+/* ---------------- method */
+function method(){
+ const d=S, r=d.selection.reviewed, n=k=>r[k]||0, ver=n("verified_natural:WHOLE_CHAIN_INDEPENDENT_RECORD"), tot=Object.values(r).reduce((a,b)=>a+b,0);
+ return `<h1>Methods &amp; limitations</h1><div class="grid g2">
+ <div class="card"><h3 style="margin-top:0">What we compared</h3><ul class="sm">
+ <li>We screened all ${fmt(d.families_screened)} Rfam 15.1 families for experimental structures whose deposited chain contains an entire original seed row exactly once.</li>
+ <li>We selected pairs of verified natural RNAs from different species, different sequences and different PDB entries, one representative pair per pair of sequences.</li>
+ <li><b>Rfam correspondences</b>: residues of the two selected seed rows that share an original seed column. <b>STAR3D correspondences</b>: the mapping lines of one forward run of original STAR3D v1.2 with default parameters, resolved to residues through a residue crosswalk.</li>
+ <li><b>Assessable</b>: a nucleotide and its counterpart(s) have coordinates in the staged structures; defined from the structures, never from either method's output. ${fmt(d.rfam_excluded)} of ${fmt(d.rfam_raw)} Rfam correspondences are not assessable by this rule.</li>
+ <li>Pair-level agreement (shared correspondences) does not depend on which RNA is called A; nucleotide counts are reported for the RNA A view and the RNA B view separately and never added.</li></ul></div>
+ <div class="card"><h3 style="margin-top:0">Selection outcomes and limitations</h3><ul class="sm">
+ <li>Of ${fmt(tot)} candidate chains reviewed from their structure files, ${fmt(ver)} had their complete deposited sequence found in an independent sequence record of their source species and were eligible.</li>
+ <li>Constructs without sufficient independent natural-sequence evidence were not included in the verified comparison cohort: complete sequence not found in the records searched (${fmt(n("provisional_origin:GENOME_NOT_FOUND"))}), source species not identifiable from the deposition (${fmt(n("provisional_origin:SPECIES_UNRESOLVED"))}), sequence search not completed (${fmt(n("provisional_origin:SEARCH_INCOMPLETE"))} chains${d.selection.search_incomplete_checks?`; ${d.selection.search_incomplete_checks} sequence checks`:""}), tRNA 3′ CCA possibly not genome-encoded (${fmt(n("provisional_origin:TRNA_3PRIME_CCA_POSSIBLY_NOT_ENCODED"))}), unidentified residues (${fmt(n("provisional_origin:UNKNOWN_RESIDUES_IN_CHAIN"))}), natural-source flank differing from the reference (${fmt(n("provisional_origin:FLANK_DIFFERS_FROM_REFERENCE_NATURAL_SOURCE"))}). These are unresolved, not shown to be engineered.</li>
+ <li>${fmt(n("excluded_engineered:NON_NATIVE_FLANK_AT_LOCUS")+n("excluded_engineered:DOCUMENTED_CONSTRUCT_CHANGE"))} chains were excluded as engineered on evidence (non-native flank at the genomic locus, or a documented construct change).</li>
+ <li>${fmt(d.selection.other.not_primary_ambiguous_rows||0)} chains matched more than one seed row and could not be tied to a single row.</li>
+ <li>Comparisons reuse RNAs, and tRNA and 5S rRNA dominate; pooled nucleotide counts are not independent samples.</li>
+ <li>Neither alignment is ground truth; a difference identifies a candidate for investigation, not an error.</li>
+ <li>Difference patterns are descriptive. Motif evidence is what the sources document: BGSU structural loops and Motif Atlas 4.16 groups by exact residue identifiers, and Rfam 15.1 computational motif hits as seed-row spans. Rfam scan coverage is established per family, not per row; a missing record is not a confirmed absence.</li>
+ <li>3D overlays use STAR3D's superposition and are shown for inspection only.</li></ul></div></div>
+ <h2>Downloads and provenance</h2><div class="card sm"><a href="data/sqarma_tables.zip">All result tables (zip)</a> · <a href="data/professor_report.md">One-page report</a> · <a href="data/sqarma.sqlite">SQLite database</a> (every table, with a provenance table of source files and SHA-256 checksums) · <a href="data/tables/star3d_run_provenance.tsv">STAR3D run provenance</a> (execution environment per run)</div>`}
+
+/* ---------------- router */
+async function route(){
+ let h=location.hash||"#/overview";if(h.includes("?")){const qs=h.split("?")[1];if(qs.includes("cols"))LAYOUT="cols";if(qs.includes("gaps"))SHOWGAP=true;h=h.split("?")[0]}
+ const [_,v,arg]=h.split("/");
+ document.querySelectorAll("#nav a").forEach(a=>a.classList.toggle("on",h.startsWith(a.getAttribute("href"))||(v==="pair"&&a.getAttribute("href")==="#/pairs")));
+ const app=$("#app"); window.scrollTo(0,0);
+ if(v==="why")app.innerHTML=why(); else if(v==="families")app.innerHTML=families(); else if(v==="pairs")app.innerHTML=pairs(arg?decodeURIComponent(arg):"");
+ else if(v==="pair"){app.innerHTML='<p class="mut">Loading pair…</p>';await pairView(decodeURIComponent(arg))} else if(v==="example"){app.innerHTML='<p class="mut">Loading…</p>';await example();if(location.hash.includes("selftest"))await selftest()}
+ else if(v==="method")app.innerHTML=method(); else if(v==="breakdown")app.innerHTML=breakdown(); else app.innerHTML=overview();
+}
+(async()=>{S=await (await fetch("data/summary.json?t="+Date.now(),{cache:"no-store"})).json();BUILD=S.build||"";IDX=await (await fetch("data/pairs_index.json?b="+BUILD,{cache:"no-store"})).json();$("#cohortline").textContent="Results from cohort "+S.cohort+".";$("#pill").textContent=S.label==="FINAL"?"Final dataset":(S.label||"INTERIM");document.title="SQARMA Results Explorer ("+(S.label||"INTERIM")+")";window.addEventListener("hashchange",route);route()})();
+</script>
+</body>
+</html>

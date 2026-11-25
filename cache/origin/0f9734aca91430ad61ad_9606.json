@@ -1,0 +1,55 @@
+{
+ "candidates": [
+  "RF00002__6XA1_L8__1-153"
+ ],
+ "deposited_length": 155,
+ "deposited_sequence": "GACUCUUAGCGGUGGAUCACUCGGCUCGUGCGUCGAUGAAGAACGCAGCUAGCUGCGAGAAUUAAUGUGAAUUGCAGGACACAUUGAUCAUCGACACUUCGAACGCACUUGCGGCCCCGGGUUCCUCCCGGGGCUACGCCUGUCUGAGCGUCGCU",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00002"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 4643,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GACUCUUAGCGGUGGAUCACUCGGCUCGUGCGUCGAUGAAGAACGCAGCUAGCUGCGAGAAUUAAUGUGAAUUGCAGGACACAUUGAUCAUCGACACUUCGAACGCACUUGCGGCCCCGGGUUCCUCCCGGGGCUACGCCUGUCUGAGCGUCG",
+   "record": "MF164267.1",
+   "source": "blast_core_nt",
+   "start": 4491,
+   "strand": "+",
+   "title": "Homo sapiens clone BAC JH8 genomic sequence"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 49,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "0f9734aca91430ad61ad9829d10c43568fbfe3a93d78ceade993def36f34029e",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 4645,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "MF164267.1",
+   "source": "blast_core_nt",
+   "start": 4491,
+   "strand": "+",
+   "title": "Homo sapiens clone BAC JH8 genomic sequence"
+  }
+ ]
+}

@@ -1,0 +1,56 @@
+{
+ "candidates": [
+  "RF00002__7CPU_L8__2-154",
+  "RF00002__7CPV_L8__2-154"
+ ],
+ "deposited_length": 158,
+ "deposited_sequence": "CGACUCUUAGCGGUGGAUCACUCGGCUCGUGCGUCGAUGAAGAACGCAGCUAGCUGCGAGAAUUAAUGUGAAUUGCAGGACACAUUGAUCAUCGACACUUCGAACGCACUUGCGGCCCCGGGUUCCUCCCGGGGCUACGCCUGUCUGAGCGUCGCUUG",
+ "evaluated_utc": "2026-11-13T08:17:33Z",
+ "families": [
+  "RF00002"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 7030,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GACUCUUAGCGGUGGAUCACUCGGCUCGUGCGUCGAUGAAGAACGCAGCUAGCUGCGAGAAUUAAUGUGAAUUGCAGGACACAUUGAUCAUCGACACUUCGAACGCACUUGCGGCCCCGGGUUCCUCCCGGGGCUACGCCUGUCUGAGCGUCG",
+   "record": "BK000964.3",
+   "source": "blast_core_nt",
+   "start": 6878,
+   "strand": "+",
+   "title": "TPA_exp: Mus musculus ribosomal DNA, complete repeating unit"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "10090",
+   "whole_chain_candidates": 35,
+   "xml": "cache/blast/10090_99b60ab084302c88.xml"
+  }
+ ],
+ "seq_sha256": "5acf1284b83dbd871648fdc3d5c8eccae994143a4c0cae49df82d5c665b6dbfd",
+ "species_name": "Mus musculus",
+ "species_taxid": "10090",
+ "strains": [
+  "10090"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 2849,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "OQ858937.1",
+   "source": "blast_core_nt",
+   "start": 2692,
+   "strand": "+",
+   "title": "Mus musculus clone BAC 8_3a 45S ribosomal RNA and 18S ribosomal RNA genes, partial sequence; internal transcribed spacer"
+  }
+ ]
+}

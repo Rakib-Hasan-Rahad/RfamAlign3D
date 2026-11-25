@@ -1,0 +1,31 @@
+{
+ "check_id": "913108987b0084dd25e8_911092",
+ "deposited_length": 93,
+ "deposited_sequence": "GGCUUAUCAAGAGAGGGUGAGCGACUGGCGCGAAGAUCCCCGGCAACCAGAAAUGGUGCCAAUUCCUGCAGCGGAAACGUUGAAAGAUGAGCC",
+ "evaluated_utc": "2026-11-13T10:42:13Z",
+ "families": [
+  "RF00162"
+ ],
+ "host": "<batch-host>",
+ "import_problems": [],
+ "imported_utc": "2026-11-13T11:45:54Z",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "exact_local_resolves": false,
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000007085.1,GCA_000007085.1_GENOME_FASTA.zip",
+   "archive_bytes": 1569659,
+   "reference": "assemblies:GCF_000007085.1,GCA_000007085.1",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "913108987b0084dd25e879138b66c3f0aae09ca7e28b72a06efc2e7f58bb7101",
+ "source": "exact_local",
+ "species_name": "Caldanaerobacter subterraneus",
+ "species_taxid": "911092",
+ "whole_chain_hits": [],
+ "whole_chain_hits_confirmed": []
+}

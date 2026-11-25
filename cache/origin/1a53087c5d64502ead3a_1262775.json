@@ -1,0 +1,28 @@
+{
+ "candidates": [
+  "RF03072__9G7C_A__1-224"
+ ],
+ "deposited_length": 224,
+ "deposited_sequence": "GGGAGUCGGGUCUGUGGUUGAAAGUCGAUGCCAGUCGCAGGCGAAACGAUCCACAUAAGCGGGGCAAAGUUCCCGUGAGCAUGGUGCGGCUUAGAUGUAAGUCCUGUCGUGCGGCAUUCCGAAUCGAAUGCGGUGCGAGAGUGGCAGUAGUGGGCGGCGUAAAGCUCAGUAGCGAACCCACCGACAGGCGAGUGUGGGGGCAAAAACCAGGUCAGCCGACUCCA",
+ "evaluated_utc": "2026-11-13T08:40:13Z",
+ "families": [
+  "RF03072"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "1262775",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/1262775_ac4fa72588d6c09a.xml"
+  }
+ ],
+ "seq_sha256": "1a53087c5d64502ead3a4fef7f51b00aef25588afa54668c2bcd678f2e02fab7",
+ "species_name": "Clostridium sp. CAG:138",
+ "species_taxid": "1262775",
+ "strains": [
+  "1262775"
+ ],
+ "whole_chain_hits": []
+}

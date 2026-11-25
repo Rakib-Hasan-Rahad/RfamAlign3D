@@ -1,0 +1,328 @@
+{
+ "different_partner_rate": {
+  "n": 4281,
+  "N": 40270,
+  "rate": 0.1063,
+  "ci95_pair_bootstrap": [
+   0.0954,
+   0.119
+  ],
+  "pairs_contributing": 503,
+  "family_balanced_rate": 0.2322,
+  "families_contributing": 10,
+  "lofo_min": 0.1004,
+  "lofo_max": 0.1126,
+  "lofo_family_with_largest_effect": "RF00001",
+  "by_family": {
+   "RF00001": "1426/14925",
+   "RF00002": "152/1244",
+   "RF00005": "2444/21980",
+   "RF00015": "0/59",
+   "RF00026": "3/86",
+   "RF00169": "32/32",
+   "RF00177": "78/1480",
+   "RF00522": "15/31",
+   "RF01852": "5/86",
+   "RF03087": "126/347"
+  }
+ },
+ "comprehensive_difference_rate": {
+  "n": 8439,
+  "N": 44428,
+  "rate": 0.1899,
+  "ci95_pair_bootstrap": [
+   0.1719,
+   0.2107
+  ],
+  "pairs_contributing": 503,
+  "family_balanced_rate": 0.2946,
+  "families_contributing": 10,
+  "lofo_min": 0.1545,
+  "lofo_max": 0.2154,
+  "lofo_family_with_largest_effect": "RF00005",
+  "by_family": {
+   "RF00001": "2265/15764",
+   "RF00002": "312/1404",
+   "RF00005": "5433/24969",
+   "RF00015": "5/64",
+   "RF00026": "10/93",
+   "RF00169": "33/33",
+   "RF00177": "106/1508",
+   "RF00522": "17/33",
+   "RF01852": "5/86",
+   "RF03087": "253/474"
+  }
+ },
+ "correspondence_set_difference": {
+  "n": 12784,
+  "N": 48773,
+  "rate": 0.2621,
+  "ci95_pair_bootstrap": [
+   0.2398,
+   0.2878
+  ],
+  "pairs_contributing": 503,
+  "family_balanced_rate": 0.3544,
+  "families_contributing": 10,
+  "lofo_min": 0.2279,
+  "lofo_max": 0.2878,
+  "lofo_family_with_largest_effect": "RF00005",
+  "by_family": {
+   "RF00001": "3695/17194",
+   "RF00002": "473/1565",
+   "RF00005": "7928/27464",
+   "RF00015": "5/64",
+   "RF00026": "13/96",
+   "RF00169": "65/65",
+   "RF00177": "184/1586",
+   "RF00522": "32/48",
+   "RF01852": "10/91",
+   "RF03087": "379/600"
+  }
+ },
+ "rfam_consensus_reproduced": {
+  "n": 35655,
+  "N": 42990,
+  "rate": 0.8294,
+  "ci95_pair_bootstrap": [
+   0.8097,
+   0.847
+  ],
+  "pairs_contributing": 503,
+  "family_balanced_rate": 0.7242,
+  "families_contributing": 10,
+  "lofo_min": 0.8009,
+  "lofo_max": 0.8701,
+  "lofo_family_with_largest_effect": "RF00005",
+  "by_family": {
+   "RF00001": "13453/15270",
+   "RF00002": "1090/1355",
+   "RF00005": "19260/24147",
+   "RF00015": "59/63",
+   "RF00026": "83/90",
+   "RF00169": "0/33",
+   "RF00177": "1402/1498",
+   "RF00522": "16/31",
+   "RF01852": "81/86",
+   "RF03087": "211/417"
+  }
+ },
+ "one_position_offset_share": {
+  "n": 3528,
+  "N": 4281,
+  "rate": 0.8241,
+  "ci95_pair_bootstrap": [
+   0.7941,
+   0.8546
+  ],
+  "pairs_contributing": 412,
+  "family_balanced_rate": 0.7304,
+  "families_contributing": 9,
+  "lofo_min": 0.798,
+  "lofo_max": 0.8303,
+  "lofo_family_with_largest_effect": "RF00005",
+  "by_family": {
+   "RF00001": "1174/1426",
+   "RF00002": "119/152",
+   "RF00005": "2062/2444",
+   "RF00026": "3/3",
+   "RF00169": "0/32",
+   "RF00177": "65/78",
+   "RF00522": "15/15",
+   "RF01852": "3/5",
+   "RF03087": "87/126"
+  }
+ },
+ "hairpin_loop_difference_rate": {
+  "n": 1629,
+  "N": 11167,
+  "rate": 0.1459,
+  "ci95_pair_bootstrap": [
+   0.1317,
+   0.1612
+  ],
+  "pairs_contributing": 502,
+  "family_balanced_rate": 0.3321,
+  "families_contributing": 10,
+  "lofo_min": 0.1307,
+  "lofo_max": 0.1534,
+  "lofo_family_with_largest_effect": "RF00005",
+  "by_family": {
+   "RF00001": "285/2406",
+   "RF00002": "59/358",
+   "RF00005": "1228/8098",
+   "RF00015": "0/4",
+   "RF00026": "3/7",
+   "RF00169": "6/6",
+   "RF00177": "23/217",
+   "RF00522": "9/11",
+   "RF01852": "5/30",
+   "RF03087": "11/30"
+  }
+ },
+ "outside_hairpin_difference_rate": {
+  "n": 2652,
+  "N": 29103,
+  "rate": 0.0911,
+  "ci95_pair_bootstrap": [
+   0.0797,
+   0.1046
+  ],
+  "pairs_contributing": 503,
+  "family_balanced_rate": 0.199,
+  "families_contributing": 10,
+  "lofo_min": 0.0881,
+  "lofo_max": 0.0943,
+  "lofo_family_with_largest_effect": "RF00005",
+  "by_family": {
+   "RF00001": "1141/12519",
+   "RF00002": "93/886",
+   "RF00005": "1216/13882",
+   "RF00015": "0/55",
+   "RF00026": "0/79",
+   "RF00169": "26/26",
+   "RF00177": "55/1263",
+   "RF00522": "6/20",
+   "RF01852": "0/56",
+   "RF03087": "115/317"
+  }
+ },
+ "internal_loop_difference_rate": {
+  "n": 930,
+  "N": 9138,
+  "rate": 0.1018,
+  "ci95_pair_bootstrap": [
+   0.0867,
+   0.1206
+  ],
+  "pairs_contributing": 233,
+  "family_balanced_rate": 0.1952,
+  "families_contributing": 9,
+  "lofo_min": 0.0976,
+  "lofo_max": 0.1261,
+  "lofo_family_with_largest_effect": "RF00001",
+  "by_family": {
+   "RF00001": "723/7496",
+   "RF00002": "22/310",
+   "RF00005": "99/622",
+   "RF00015": "0/19",
+   "RF00026": "0/21",
+   "RF00169": "22/22",
+   "RF00177": "16/522",
+   "RF01852": "0/6",
+   "RF03087": "48/120"
+  }
+ },
+ "junction_difference_rate": {
+  "n": 660,
+  "N": 7264,
+  "rate": 0.0909,
+  "ci95_pair_bootstrap": [
+   0.0756,
+   0.1076
+  ],
+  "pairs_contributing": 489,
+  "family_balanced_rate": 0.0993,
+  "families_contributing": 8,
+  "lofo_min": 0.0832,
+  "lofo_max": 0.0931,
+  "lofo_family_with_largest_effect": "RF00005",
+  "by_family": {
+   "RF00001": "127/1513",
+   "RF00002": "31/413",
+   "RF00005": "467/4943",
+   "RF00015": "0/9",
+   "RF00026": "0/13",
+   "RF00177": "13/315",
+   "RF01852": "0/14",
+   "RF03087": "22/44"
+  }
+ },
+ "any_bgsu_loop_difference_rate": {
+  "n": 3184,
+  "N": 25994,
+  "rate": 0.1225,
+  "ci95_pair_bootstrap": [
+   0.1099,
+   0.1366
+  ],
+  "pairs_contributing": 503,
+  "family_balanced_rate": 0.2816,
+  "families_contributing": 10,
+  "lofo_min": 0.1134,
+  "lofo_max": 0.1294,
+  "lofo_family_with_largest_effect": "RF00005",
+  "by_family": {
+   "RF00001": "1135/10163",
+   "RF00002": "105/969",
+   "RF00005": "1768/13511",
+   "RF00015": "0/32",
+   "RF00026": "3/41",
+   "RF00169": "28/28",
+   "RF00177": "50/998",
+   "RF00522": "9/11",
+   "RF01852": "5/48",
+   "RF03087": "81/193"
+  }
+ },
+ "no_bgsu_loop_difference_rate": {
+  "n": 1097,
+  "N": 14276,
+  "rate": 0.0768,
+  "ci95_pair_bootstrap": [
+   0.0657,
+   0.0898
+  ],
+  "pairs_contributing": 503,
+  "family_balanced_rate": 0.1962,
+  "families_contributing": 10,
+  "lofo_min": 0.0725,
+  "lofo_max": 0.0847,
+  "lofo_family_with_largest_effect": "RF00001",
+  "by_family": {
+   "RF00001": "291/4762",
+   "RF00002": "47/275",
+   "RF00005": "676/8469",
+   "RF00015": "0/27",
+   "RF00026": "0/45",
+   "RF00169": "4/4",
+   "RF00177": "28/482",
+   "RF00522": "6/20",
+   "RF01852": "0/38",
+   "RF03087": "45/154"
+  }
+ },
+ "hairpin_vs_outside": {
+  "hairpin": "1629/11167",
+  "outside": "2652/29103",
+  "rate_difference": 0.0548,
+  "ci95_pair_bootstrap": [
+   0.0419,
+   0.0676
+  ],
+  "cmh_common_odds_ratio_by_family": 1.725,
+  "cmh_chi2": 241.59,
+  "cmh_p": 1.7673659573156076e-54,
+  "cmh_strata": 10
+ },
+ "_method": {
+  "reps": 2000,
+  "seed": 20261125,
+  "unit_resampled": "pair",
+  "pairs": 503,
+  "families": [
+   "RF00001",
+   "RF00002",
+   "RF00005",
+   "RF00015",
+   "RF00026",
+   "RF00169",
+   "RF00177",
+   "RF00522",
+   "RF01852",
+   "RF03087"
+  ],
+  "interval": "percentile of the ratio of sums",
+  "populations": "as defined in s43/s44/s45"
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "candidates": [
+  "RF00005__8ASW_X__1-73"
+ ],
+ "deposited_length": 73,
+ "deposited_sequence": "GGGCACAUGGCGCAGUUGGUAGCGCGCUUCCCUUGCAAGGAAGAGGUCAUCGGUUCGAUUCCGGUUGCGUCCA",
+ "evaluated_utc": "2026-11-13T08:14:34Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "4932",
+   "whole_chain_candidates": 29,
+   "xml": "cache/blast/4932_bfa537acff994510.xml"
+  }
+ ],
+ "seq_sha256": "db7a0cd5beac0b81c2ea15e213d54c44ede69458970327d912e51b2c6db7ba38",
+ "species_name": "Saccharomyces cerevisiae",
+ "species_taxid": "4932",
+ "strains": [
+  "4932"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 666771,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "LN907790.1",
+   "source": "blast_core_nt",
+   "start": 666699,
+   "strand": "+",
+   "title": "Saccharomyces cerevisiae N85 chromosome VII, complete genome"
+  }
+ ]
+}

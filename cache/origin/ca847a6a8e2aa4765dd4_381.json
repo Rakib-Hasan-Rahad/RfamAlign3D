@@ -1,0 +1,96 @@
+{
+ "candidates": [
+  "RF02977__7WI9_V__1-50",
+  "RF02977__7WIB_V__1-50",
+  "RF02977__7WIE_V__1-50",
+  "RF02977__7WIF_V__1-50",
+  "RF02977__7WII_V__1-50"
+ ],
+ "deposited_length": 50,
+ "deposited_sequence": "GGCGUGGUCCGUUCAACUCGUUCCUCGAAAGAGGAACUACGGGAGACGCC",
+ "evaluated_utc": "2026-11-25T20:09:37Z",
+ "families": [
+  "RF02977"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_003148495.1",
+   "assembly_taxid": 381,
+   "fasta_sha256": "a43d85fbadc8e19764655a20442b5c8c4e4e1fa70e3ecaa9809f4fa197fd8753",
+   "filter": "taxon 381 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_013170705.1",
+   "assembly_taxid": 381,
+   "fasta_sha256": "2e3ab0c41e535b03f258981a80e1ad6e940676edd597fefea66f55de91f6d583",
+   "filter": "taxon 381 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_013170845.1",
+   "assembly_taxid": 935548,
+   "fasta_sha256": "8253fc7de59dda93b09b6a3ee1e4c138ef7c9de1f1acb579abdaad493e62282b",
+   "filter": "taxon 381 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_013170865.1",
+   "assembly_taxid": 381,
+   "fasta_sha256": "f791155a1fa89b078e270ef779b7f46e76cfc47fbfc4f3dbfc12eccc9187516a",
+   "filter": "taxon 381 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_014189435.1",
+   "assembly_taxid": 381,
+   "fasta_sha256": "e0069f37e3e68ab0fd197fc96f47b9a7c9c625ebbc250604f0db6dd95207f8ae",
+   "filter": "taxon 381 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_013170705.1",
+   "assembly_taxid": 381,
+   "fasta_sha256": "f34e5cc179c61d14b47372f4c59308ec2bc14797f29ca78632ef0c7bc6853173",
+   "filter": "taxon 381 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_013170845.1",
+   "assembly_taxid": 935548,
+   "fasta_sha256": "36e6354fe5006ac4529e5c1d1857fce1e4b6e446bb3c7207b556a4e17e531d56",
+   "filter": "taxon 381 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_013170865.1",
+   "assembly_taxid": 381,
+   "fasta_sha256": "6346c704b09627be98a72e5f722fedf60190d8fdf7fda3974fda40edfaf00487",
+   "filter": "taxon 381 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "381",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/381_bdf121fc98664b42.xml"
+  }
+ ],
+ "seq_sha256": "ca847a6a8e2aa4765dd48ce06162df88694a7f46c77d07685985d57f7b3906ff",
+ "species_name": "Mesorhizobium loti",
+ "species_taxid": "381",
+ "strains": [
+  "381"
+ ],
+ "whole_chain_hits": []
+}

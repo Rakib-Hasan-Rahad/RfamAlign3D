@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00005__6RFL_U__1-72",
+  "RF00005__8RQK_U__1-72"
+ ],
+ "deposited_length": 72,
+ "deposited_sequence": "GGUCCCAUGGUGUAAUGGUUAGCACUCUGGACUUUGAAUCCAGCGAUCCGAGUUCAAAUCUCGGUGGGACCU",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 3,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "eb2c7a9898ac273c8a5afd68b7be4fe78b3cc77054731e61bd73a998de741edb",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 72,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "HG983741.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "TPA: Homo sapiens tRNA-Gln-TTG-1-1 gene"
+  }
+ ]
+}

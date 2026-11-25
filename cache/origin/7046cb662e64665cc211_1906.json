@@ -1,0 +1,71 @@
+{
+ "candidates": [
+  "RF00001__9QT5_2__1-117"
+ ],
+ "deposited_length": 117,
+ "deposited_sequence": "UUCGGUGGUCAUAGCGUUAGGGAAACGCCCGGUUACAUUCCGAACCCGGAAGCUAAGCCUUUCAGCGCCGAUGGUACUGCAGGGGGGACCCUGUGGGAGAGUAGGACGCCGCCGAAC",
+ "evaluated_utc": "2026-11-13T09:22:41Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_008704425.1",
+   "assembly_taxid": 1319510,
+   "fasta_sha256": "f201e8067fff09b5651a49395d800795a6d2c6230f903670e749f145ab22ffbc",
+   "filter": "taxon 1319510 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 4
+  }
+ ],
+ "seq_sha256": "7046cb662e64665cc21101f059a5c0e54080d6c942ec13a204dc82f826602bb6",
+ "species_name": "Streptomyces fradiae",
+ "species_taxid": "1906",
+ "strains": [
+  "1319510"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 3824958,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NZ_CP023696.1",
+   "source": "assembly:GCF_008704425.1",
+   "start": 3824842,
+   "strand": "+"
+  },
+  {
+   "end": 5127072,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NZ_CP023696.1",
+   "source": "assembly:GCF_008704425.1",
+   "start": 5126956,
+   "strand": "+"
+  },
+  {
+   "end": 786155,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NZ_CP023696.1",
+   "source": "assembly:GCF_008704425.1",
+   "start": 786039,
+   "strand": "-"
+  },
+  {
+   "end": 2513505,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NZ_CP023696.1",
+   "source": "assembly:GCF_008704425.1",
+   "start": 2513389,
+   "strand": "-"
+  }
+ ]
+}

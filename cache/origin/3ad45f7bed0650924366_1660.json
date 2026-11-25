@@ -1,0 +1,53 @@
+{
+ "candidates": [
+  "RF01750__4XW7_A__1-64",
+  "RF01750__4XWF_A__1-64",
+  "RF01750__8VQV_A__1-64",
+  "RF01750__8VVJ_A__1-64"
+ ],
+ "deposited_length": 64,
+ "deposited_sequence": "GGGUCGUGACUGGCGAACAGGUGGGAAACCACCGGGGAGCGACCCUUGCCGCCCGCCUGGGCAA",
+ "evaluated_utc": "2026-11-13T08:42:48Z",
+ "families": [
+  "RF01750"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_031191545.1",
+   "assembly_taxid": 1660,
+   "fasta_sha256": "d653aa6e61b13db673430f2ddd61194334538f8c706cfcc5a8bf9e8240e00ec1",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "1660",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "1660",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/1660_21f61d61025641c8.xml"
+  }
+ ],
+ "seq_sha256": "3ad45f7bed06509243666efc1d024abcdd667571c8febcd440940b404741f822",
+ "species_name": "Schaalia odontolytica",
+ "species_taxid": "1660",
+ "strains": [
+  "1660"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 64,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "8VQV_A",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain A, RNA (64-MER)"
+  }
+ ]
+}

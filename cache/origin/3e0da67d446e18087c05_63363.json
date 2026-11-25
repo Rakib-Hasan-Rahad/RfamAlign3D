@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF01852__3W3S_B__1-95"
+ ],
+ "deposited_length": 99,
+ "deposited_sequence": "GGGAGAGGUUGGCCGGCUGGUGCCGCCCCGGGACUUCAAAUCCCGUGGGAGGUCCCGCAAGGGAGCUCCGGAGGGUUCGAUUCCCUCCCUCUCCCGCCA",
+ "evaluated_utc": "2026-11-13T08:44:07Z",
+ "families": [
+  "RF01852"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000008625.1",
+   "assembly_taxid": 224324,
+   "fasta_sha256": "0a2e1ebf99b9beb68c93623c55e9d696459a222e528ea41572e86415f169385a",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "224324",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "3e0da67d446e18087c05878e8cddce097b0d7e8b953aa292ae9d41c18455e873",
+ "species_name": "Aquifex aeolicus",
+ "species_taxid": "63363",
+ "strains": [
+  "224324"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 727469,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000918.1",
+   "source": "assembly:GCF_000008625.1",
+   "start": 727371,
+   "strand": "+"
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "candidates": [
+  "RF00458__2IL9_A__2-142",
+  "RF00458__2IL9_M__2-142"
+ ],
+ "deposited_length": 142,
+ "deposited_sequence": "GCUGACUAUGUGAUCUUAUUAAAAUUAGGUUAAAUUUCGAGGUUAAAAAUAGUUUUAAUAUUGCUAUAGUCUUAGAGGUCUUGCGAAAGCUUACCACACAAGAUGGACCGGAGCGAAAGCUCCAAUAUCUAGUGUACCCUCG",
+ "evaluated_utc": "2026-11-13T08:25:19Z",
+ "families": [
+  "RF00458"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "3048274",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/3048274_c75dd3fc0022f5c8.xml"
+  }
+ ],
+ "seq_sha256": "eddb60d34affa0ef192a6e34e414f12fcc7f3e84b483b525859f683abe1ced45",
+ "species_name": "Triatovirus plastali",
+ "species_taxid": "3048274",
+ "strains": [],
+ "whole_chain_hits": []
+}

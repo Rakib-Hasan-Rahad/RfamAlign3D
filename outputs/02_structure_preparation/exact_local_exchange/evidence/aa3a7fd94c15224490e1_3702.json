@@ -1,0 +1,33 @@
+{
+ "check_id": "aa3a7fd94c15224490e1_3702",
+ "deposited_length": 77,
+ "deposited_sequence": "GGGACCAGGGGUGCUUGUUCACAGGCUGAGAAAGUCCCUUUGAACCUGAACAGGGUAAUGCCUGCGCAGGGAGUGUC",
+ "evaluated_utc": "2026-11-13T10:45:10Z",
+ "families": [
+  "RF00059"
+ ],
+ "host": "<batch-host>",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000001735.4_GENOME_FASTA.zip",
+   "archive_bytes": 37485783,
+   "reference": "assembly:GCF_000001735.4",
+   "route": "exact_local"
+  },
+  {
+   "archive": "genome_GCF_000001735.4_RNA_FASTA.zip",
+   "archive_bytes": 24989640,
+   "reference": "refseq_rna:GCF_000001735.4",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "aa3a7fd94c15224490e18845b7468593fb38d62d9cc470a7260332040ab85c16",
+ "source": "exact_local",
+ "species_name": "Arabidopsis thaliana",
+ "species_taxid": "3702",
+ "whole_chain_hits": []
+}

@@ -1,1 +1,25 @@
+# environment
+.venv/
+__pycache__/
+*.pyc
 .DS_Store
+# pinned downloads (fetched by setup.sh, or from the release archive)
+inputs/
+# large or re-fetchable caches (release archive: evidence_blast.tar.gz)
+cache/mmcif/
+cache/mmcif_parsed/
+cache/rcsb/
+cache/genomes/
+cache/ncbi/
+cache/rnacentral/
+cache/blast/
+# large outputs shipped as release archives
+outputs/03_star3d/*/returned/runs/
+outputs/03_star3d/*/returned/preprocess/
+outputs/05_results/*/app/
+outputs/05_results/*/*.sqlite
+outputs/verification_archive/step2_verify/
+outputs/verification_archive/step3/
+work/
+# manuscript drafts are kept private until submission
+paper/

@@ -1,0 +1,45 @@
+{
+ "candidates": [
+  "RF00005__7UCJ_2__2-73",
+  "RF00005__7UCK_2__2-73",
+  "RF00005__9H6Y_1__2-73",
+  "RF00005__9H74_1__2-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GAGCAGAGUGGCGCAGCGGAAGCGUGCUGGGCCCAUAACCCAGAGGUCGAUGGAUCGAAACCAUCCUCUGCUACCA",
+ "evaluated_utc": "2026-11-13T08:18:59Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "mRNA",
+   "end": 675,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "AGCAGAGUGGCGCAGCGGAAGCGUGCUGGGCCCAUAACCCAGAGGUCGAUGGAUCGAAACCAUCCUCUGCUA",
+   "record": "XM_070074864.2",
+   "source": "blast_core_nt",
+   "start": 604,
+   "strand": "-",
+   "title": "PREDICTED: Oryctolagus cuniculus histone H4 (LOC138849828), mRNA"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9986",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/9986_a86b2906b50203b4.xml"
+  }
+ ],
+ "seq_sha256": "a35775d8dfc5430fec41c50279d7a6fa25ec08d43c02c6ed48750badaf333dc3",
+ "species_name": "Oryctolagus cuniculus",
+ "species_taxid": "9986",
+ "strains": [
+  "9986"
+ ],
+ "whole_chain_hits": []
+}

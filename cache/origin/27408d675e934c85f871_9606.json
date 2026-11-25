@@ -1,0 +1,58 @@
+{
+ "candidates": [
+  "RF00005__9DOW_C__1-73",
+  "RF00005__9DPA_C__1-73",
+  "RF00005__9DPB_C__1-73",
+  "RF00005__9DPL_C__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GCCCGGAUAGCUCAGUCGGUAGAGCAUCAGACUUUUAAUCUGAGGGUCCAGGGUUCAAGUCCCUGUUCGGGCGCCA",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 64277,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GCCCGGAUAGCUCAGUCGGUAGAGCAUCAGACUUUUAAUCUGAGGGUCCAGGGUUCAAGUCCCUGUUCGGGCG",
+   "record": "AC130329.8",
+   "source": "blast_core_nt",
+   "start": 64205,
+   "strand": "-",
+   "title": "Homo sapiens chromosome 17, clone RP13-348C17, complete sequence"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 2,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "27408d675e934c85f8717f3049764c0c80e1cf4522b89deef0a7631a195fc6e7",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "tRNA",
+   "end": 76,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "U00939.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Homo sapiens tRNA-Lys gene, complete sequence"
+  }
+ ]
+}

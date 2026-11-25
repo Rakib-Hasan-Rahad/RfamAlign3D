@@ -1,0 +1,55 @@
+{
+ "candidates": [
+  "RF00005__7O81_AT__1-72"
+ ],
+ "deposited_length": 75,
+ "deposited_sequence": "GGCUCGUUGGUCUAGGGGUAUGAUUCUCGCUUAGGGUGCGAGAGGUCCCGGGUUCAAAUCCCGGACGAGCCCCCA",
+ "evaluated_utc": "2026-11-13T08:22:27Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 72,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "interval": "GGCUCGUUGGUCUAGGGGUAUGAUUCUCGCUUAGGGUGCGAGAGGUCCCGGGUUCAAAUCCCGGACGAGCCC",
+   "record": "X56627.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Bovine tRNA-pro (anticodon IGG [inosine])"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9913",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/9913_281856d5ba2e7ccb.xml"
+  }
+ ],
+ "seq_sha256": "54ab576a8bd4008b9e21e574e03d09dc7069cb7a387dc5a004a1d5627bc7948e",
+ "species_name": "Bos taurus",
+ "species_taxid": "9913",
+ "strains": [
+  "9913"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 75,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "X56627.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Bovine tRNA-pro (anticodon IGG [inosine])"
+  }
+ ]
+}

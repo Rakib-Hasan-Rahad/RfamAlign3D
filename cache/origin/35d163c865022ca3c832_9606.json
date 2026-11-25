@@ -1,0 +1,66 @@
+{
+ "candidates": [
+  "RF00026__5XJC_F__1-107",
+  "RF00026__5YZG_F__1-107",
+  "RF00026__5Z56_F__1-107",
+  "RF00026__5Z57_F__1-107",
+  "RF00026__5Z58_F__1-107",
+  "RF00026__6AH0_F__1-107",
+  "RF00026__6AHD_F__1-107",
+  "RF00026__6FF4_6__1-107",
+  "RF00026__6FF7_6__1-107",
+  "RF00026__6ICZ_F__1-107",
+  "RF00026__6ID0_F__1-107",
+  "RF00026__6ID1_F__1-107",
+  "RF00026__7W59_F__1-107",
+  "RF00026__7W5A_F__1-107",
+  "RF00026__7W5B_F__1-107",
+  "RF00026__8H6E_6A__1-107",
+  "RF00026__8H6J_6A__1-107",
+  "RF00026__8H6K_6A__1-107",
+  "RF00026__8H6L_6A__1-107",
+  "RF00026__8I0P_F__1-107",
+  "RF00026__8I0R_F__1-107",
+  "RF00026__8I0S_F__1-107",
+  "RF00026__8I0T_F__1-107",
+  "RF00026__8I0U_F__1-107",
+  "RF00026__8I0V_F__1-107",
+  "RF00026__8I0W_F__1-107"
+ ],
+ "deposited_length": 107,
+ "deposited_sequence": "GUGCUCGCUUCGGCAGCACAUAUACUAAAAUUGGAACGAUACAGAGAAGAUUAGCAUGGCCCCUGCGCAAGGAUGACACGCAAAUUCGUGAAGCGUUCCAUAUUUUU",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00026"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 26,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "35d163c865022ca3c8322306fe660be86ca299b115056fc771affd5210712004",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 155721,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "AC009292.11",
+   "source": "blast_core_nt",
+   "start": 155615,
+   "strand": "-",
+   "title": "Homo sapiens chromosome 15, clone RP11-34F13, complete sequence"
+  }
+ ]
+}

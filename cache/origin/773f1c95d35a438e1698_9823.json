@@ -1,0 +1,58 @@
+{
+ "candidates": [
+  "RF00001__3J7O_7__1-119",
+  "RF00001__3J7P_7__1-119",
+  "RF00001__3J7Q_7__1-119",
+  "RF00001__3J7R_7__1-119"
+ ],
+ "deposited_length": 120,
+ "deposited_sequence": "GUCUACGGCCAUACCACCCUGAACGCGCCCGAUCUCGUCUGAUCUCGGAAGCUAAGCAGGGUCGGGCCUGGUUAGUACUUGGAUGGGAGACCGCCUGGGAAUACCGGGUGCUGUAGGCUU",
+ "evaluated_utc": "2026-11-25T20:05:17Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "mRNA",
+   "end": 119,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GUCUACGGCCAUACCACCCUGAACGCGCCCGAUCUCGUCUGAUCUCGGAAGCUAAGCAGGGUCGGGCCUGGUUAGUACUUGGAUGGGAGACCGCCUGGGAAUACCGGGUGCUGUAGGCU",
+   "record": "AK389382.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Sus scrofa mRNA, clone: ADR010058F11, expressed in adrenal gland"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9823",
+   "whole_chain_candidates": 3,
+   "xml": "cache/blast/9823_64ff78f8e69f1b01.xml"
+  }
+ ],
+ "seq_sha256": "773f1c95d35a438e1698716cd890d73efcfa586a59a6298d3bf7b8d1fbb94877",
+ "species_name": "Sus scrofa",
+ "species_taxid": "9823",
+ "strains": [
+  "9823"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "mRNA",
+   "end": 120,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "AK389382.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Sus scrofa mRNA, clone: ADR010058F11, expressed in adrenal gland"
+  }
+ ]
+}

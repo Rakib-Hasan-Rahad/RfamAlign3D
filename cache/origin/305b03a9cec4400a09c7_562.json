@@ -1,0 +1,94 @@
+{
+ "candidates": [
+  "RF00005__2K4C_A__1-73",
+  "RF00005__5IBB_3K__1-73",
+  "RF00005__5IBB_3L__1-73",
+  "RF00005__6BY1_AV__1-73",
+  "RF00005__6BY1_AW__1-73",
+  "RF00005__6BY1_AY__1-73",
+  "RF00005__6BY1_BV__1-73",
+  "RF00005__6BY1_BW__1-73",
+  "RF00005__7EQJ_A__1-73",
+  "RF00005__7EQJ_B__1-73",
+  "RF00005__7K00_Y__1-73",
+  "RF00005__8PVA_Y__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GGGUGAUUAGCUCAGCUGGGAGAGCACCUCCCUUACAAGGAGGGGGUCGGCGGUUCGAUCCCGUCAUCACCCACCA",
+ "evaluated_utc": "2026-11-13T08:07:10Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000005845.2",
+   "assembly_taxid": 511145,
+   "fasta_sha256": "daaa4d8b0eecbb01f8aee80314c6a59c5cb67a4178de0b2783527839fde57a15",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "83333",
+   "whole_chain_hits": 5
+  }
+ ],
+ "seq_sha256": "305b03a9cec4400a09c73a28c0d73097761974fe0fab1aa16eac7e2b7b7f1f3d",
+ "species_name": "Escherichia coli",
+ "species_taxid": "562",
+ "strains": [
+  "562",
+  "83333"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 780840,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 780765,
+   "strand": "+"
+  },
+  {
+   "end": 781143,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 781068,
+   "strand": "+"
+  },
+  {
+   "end": 2521006,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 2520931,
+   "strand": "+"
+  },
+  {
+   "end": 2521126,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 2521051,
+   "strand": "+"
+  },
+  {
+   "end": 2521248,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 2521173,
+   "strand": "+"
+  }
+ ]
+}

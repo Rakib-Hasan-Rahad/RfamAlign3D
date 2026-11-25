@@ -1,0 +1,59 @@
+{
+ "candidates": [
+  "RF00005__6T7T_6__1-73",
+  "RF00005__6T7T_7__1-73",
+  "RF00005__6T83_6b__1-73",
+  "RF00005__6T83_8__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "UCCUUGUUAGCUCAGUUGGUAGAGCGUUCGGCUUUUAACCGAAAUGUCAGGGGUUCGAGCCCCCUAUGAGGAGCCA",
+ "evaluated_utc": "2026-11-13T08:14:34Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "tRNA",
+   "end": 73,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "interval": "UCCUUGUUAGCUCAGUUGGUAGAGCGUUCGGCUUUUAACCGAAAUGUCAGGGGUUCGAGCCCCCUAUGAGGAG",
+   "record": "K00287.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Yeast (S.cerevisiae, baker's) Lys-tRNA-2"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "4932",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/4932_bfa537acff994510.xml"
+  }
+ ],
+ "seq_sha256": "8617dcf7ab1ae177c67943449b2c06cc3c228c645bd741b3d82c5ba67607403f",
+ "species_name": "Saccharomyces cerevisiae",
+ "species_taxid": "4932",
+ "strains": [
+  "4932",
+  "559292"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "tRNA",
+   "end": 76,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "K00287.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Yeast (S.cerevisiae, baker's) Lys-tRNA-2"
+  }
+ ]
+}

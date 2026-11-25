@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+title: "RfamAlign3D: testing Rfam seed-alignment correspondences against 3D structural alignment"
+type: software
+authors:
+  - family-names: Rahad
+    given-names: Rakib Hasan
+repository-code: "https://github.com/Rakib-Hasan-Rahad/RfamAlign3D"
+license: MIT
+version: "0.9.0"
+date-released: "2026-11-25"
+keywords: [Rfam, RNA, multiple sequence alignment, RNA 3D structure, STAR3D, noncanonical base pairs]

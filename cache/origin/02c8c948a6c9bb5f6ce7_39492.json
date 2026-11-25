@@ -1,0 +1,39 @@
+{
+ "candidates": [
+  "RF01831__3SUH_X__1-101",
+  "RF01831__3SUX_X__1-101",
+  "RF01831__3SUY_X__1-101"
+ ],
+ "deposited_length": 101,
+ "deposited_sequence": "GGACAGAGUAGGUAAACGUGCGUAAAGUGCCUGAGGGACGGGGAGUUGUCCUCAGGACGAACACCGAAAGGUGGCGGUACGUUUACCGCAUCUCGCUGUUC",
+ "evaluated_utc": "2026-11-13T08:33:40Z",
+ "families": [
+  "RF01831"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000210635.1",
+   "assembly_taxid": 717961,
+   "fasta_sha256": "2d7e25c34ec6bee0fea09ef4d6280b741beb59eb426d25b9121c878a5fce454f",
+   "filter": "filters.assembly_level=chromosome",
+   "route": "assembly",
+   "taxon_queried": "717961",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "39492",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/39492_513c8d164ec59fc1.xml"
+  }
+ ],
+ "seq_sha256": "02c8c948a6c9bb5f6ce7762fdefdec4016519193508974188646cacea8f66bac",
+ "species_name": "[Eubacterium] siraeum",
+ "species_taxid": "39492",
+ "strains": [
+  "717961"
+ ],
+ "whole_chain_hits": []
+}

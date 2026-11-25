@@ -1,0 +1,52 @@
+{
+ "candidates": [
+  "RF00005__5E81_3K__1-73",
+  "RF00005__5E81_3L__1-73",
+  "RF00005__5IB8_1L__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCACCA",
+ "evaluated_utc": "2026-11-13T08:22:28Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000091545.1",
+   "assembly_taxid": 300852,
+   "fasta_sha256": "968eebc96d32e14d57c5a0981c4168a4ec73b481245048f8c02c374bbfbc3fdb",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "300852",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "274",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/274_fc2b1ebbe14f27d8.xml"
+  }
+ ],
+ "seq_sha256": "87ca17862c63487980fabcc3cf2501f38c4c74d75c381fc4e4ba29683c0d026b",
+ "species_name": "Thermus thermophilus",
+ "species_taxid": "274",
+ "strains": [
+  "300852"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 76,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "5E81_3K",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain 3K, tRNA-Lys"
+  }
+ ]
+}

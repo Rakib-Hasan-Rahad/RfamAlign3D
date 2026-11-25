@@ -1,0 +1,29 @@
+{
+ "candidates": [
+  "RF00005__8B2L_W2__1-73",
+  "RF00005__8B2L_i2__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GCGGGGAUAGCUCAGUUGGGAGAGCGUCAGACUGAAGAUCUGAAGGUCGCGUGUUCGAUCCACGCUCACCGCACCA",
+ "evaluated_utc": "2026-11-25T20:05:17Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "4097",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/4097_046c5d63d8b65b9f.xml"
+  }
+ ],
+ "seq_sha256": "335fc919daf1c01bb28f3d1730ab599de836d051c5a9c897b277352dfb611890",
+ "species_name": "Nicotiana tabacum",
+ "species_taxid": "4097",
+ "strains": [
+  "4097"
+ ],
+ "whole_chain_hits": []
+}

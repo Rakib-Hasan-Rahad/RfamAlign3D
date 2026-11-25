@@ -1,0 +1,28 @@
+{
+ "candidates": [
+  "RF00374__2L1F_A__1-65"
+ ],
+ "deposited_length": 65,
+ "deposited_sequence": "GGCGGACCCGUGGUGGAACAGACGUGUUCGGAACACCCGGCCGCAACCCUGGGAGACGUCCCAGG",
+ "evaluated_utc": "2026-11-13T08:38:56Z",
+ "families": [
+  "RF00374"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "3428959",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/3428959_6e6bf7b99d22ed43.xml"
+  }
+ ],
+ "seq_sha256": "18dd24d6c4b1fc8806cb4f93a4fa66e6315dc58e70aa6db00caa6b3f381576be",
+ "species_name": "Gammaretrovirus murleu",
+ "species_taxid": "3428959",
+ "strains": [
+  "11801"
+ ],
+ "whole_chain_hits": []
+}

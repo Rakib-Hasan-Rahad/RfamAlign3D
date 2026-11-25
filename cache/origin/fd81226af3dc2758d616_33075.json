@@ -1,0 +1,44 @@
+{
+ "candidates": [
+  "RF03013__7D7V_A__1-57"
+ ],
+ "deposited_length": 57,
+ "deposited_sequence": "GCGCAACAUCCCCGCCGGUUGGGCGCAUUGCACUCCGCGCAGUGAACCGGCUGCGCC",
+ "evaluated_utc": "2026-11-25T20:13:59Z",
+ "families": [
+  "RF03013"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000022565.1",
+   "assembly_taxid": 240015,
+   "fasta_sha256": "201e2f9a5e363482298058907e18d8fc272c1d331cf0fbca67ab754291539792",
+   "filter": "taxon 240015 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_000022565.1",
+   "assembly_taxid": 240015,
+   "fasta_sha256": "badcbb4a273be90893b5a925629a54f162d0f9305145c6afb5408f8ef038b54e",
+   "filter": "taxon 240015 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "33075",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/33075_169735a17aecf8c0.xml"
+  }
+ ],
+ "seq_sha256": "fd81226af3dc2758d616d4eaab236595e0b6916f4250ae3193bb69aae200cb16",
+ "species_name": "Acidobacterium capsulatum",
+ "species_taxid": "33075",
+ "strains": [
+  "240015"
+ ],
+ "whole_chain_hits": []
+}

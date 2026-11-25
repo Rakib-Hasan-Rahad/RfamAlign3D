@@ -1,0 +1,55 @@
+{
+ "candidates": [
+  "RF00005__7ONU_T__39-104"
+ ],
+ "deposited_length": 128,
+ "deposited_sequence": "GAGAAUAGUCAACGGUCGGCGAACAUCAGUGGGGGUGAGGUAAAAUGGCUGAGUGAAGCAUUGGACUGUAAAUCUAAAGACAGGGGUUAGGCCUCUUUUUACCAGCUCCGAGGUGAUUUUCAAGCUCG",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 5893,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GGUAAAAUGGCUGAGUGAAGCAUUGGACUGUAAAUCUAAAGACAGGGGUUAGGCCUCUUUUUACCA",
+   "record": "ON127816.1",
+   "source": "blast_core_nt",
+   "start": 5828,
+   "strand": "-",
+   "title": "Homo sapiens isolate Daur mitochondrion sequence"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "d6200cfd8895e9e1f3f70039db1cd918e6ab2f98fa3f93f40ec81ca33da5471f",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 128,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "7ONU_T",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain T, Mitochondrial Precursor tRNA-Tyr"
+  }
+ ]
+}

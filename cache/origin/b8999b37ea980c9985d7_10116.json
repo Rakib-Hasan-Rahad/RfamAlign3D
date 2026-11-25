@@ -1,0 +1,55 @@
+{
+ "candidates": [
+  "RF00002__7QGG_D__2-154"
+ ],
+ "deposited_length": 157,
+ "deposited_sequence": "CGACUCUUAGCGGUGGAUCACUCGGCUCGUGCGUCGAUGAAGAACGCAGCUAGCUGCGAGAAUUAAUGUGAAUUGCAGGACACAUUGAUCAUCGACACUUCGAACGCACUUGCGGCCCCGGGUUCCUCCCGGGGCUACGCCUGUCUGAGCGUCGCUU",
+ "evaluated_utc": "2026-11-13T08:28:25Z",
+ "families": [
+  "RF00002"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "mRNA",
+   "end": 153,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GACUCUUAGCGGUGGAUCACUCGGCUCGUGCGUCGAUGAAGAACGCAGCUAGCUGCGAGAAUUAAUGUGAAUUGCAGGACACAUUGAUCAUCGACACUUCGAACGCACUUGCGGCCCCGGGUUCCUCCCGGGGCUACGCCUGUCUGAGCGUCG",
+   "record": "FQ232700.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Rattus norvegicus TL0AEA64YL18 mRNA sequence"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "10116",
+   "whole_chain_candidates": 5,
+   "xml": "cache/blast/10116_a0eac573e355a435.xml"
+  }
+ ],
+ "seq_sha256": "b8999b37ea980c9985d7f7974765f5ac75de3ea4165329960577838ca56e2498",
+ "species_name": "Rattus norvegicus",
+ "species_taxid": "10116",
+ "strains": [
+  "10116"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 157,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "K01592.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "rat 8s rna"
+  }
+ ]
+}

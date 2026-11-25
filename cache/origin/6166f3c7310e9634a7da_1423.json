@@ -1,0 +1,50 @@
+{
+ "candidates": [
+  "RF00162__4KQY_A__1-119"
+ ],
+ "deposited_length": 119,
+ "deposited_sequence": "GUUCUUAUCAAGAGAAGCAGAGGGACUGGCCCGACGAAGCUUCAGCAACCGGUGUAAUGGCGAAAGCCAUGACCAAGGUGCUAAAUCCAGCAAGCUCGAACAGCUUGGAAGAUAAGAAC",
+ "evaluated_utc": "2026-11-13T08:16:10Z",
+ "families": [
+  "RF00162"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000321395.1",
+   "assembly_taxid": 1192196,
+   "fasta_sha256": "006e81084ab5b3401bf4280d591eaaab616271e784ad1383d278dcafccfcfa87",
+   "filter": "filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "taxon_queried": "1192196",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "1423",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/1423_99a4be99aaf83a39.xml"
+  }
+ ],
+ "seq_sha256": "6166f3c7310e9634a7daf92e8447d17de512c55e24005a52b020926eb404fa19",
+ "species_name": "Bacillus subtilis",
+ "species_taxid": "1423",
+ "strains": [
+  "1192196"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 119,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "4KQY_A",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain A, YitJ S box/SAM-I riboswitch"
+  }
+ ]
+}

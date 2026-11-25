@@ -1,0 +1,87 @@
+{
+ "candidates": [
+  "RF00001__4D5Y_4__1-119",
+  "RF00001__6D90_7__1-119",
+  "RF00001__6D9J_7__1-119",
+  "RF00001__6GZ3_A4__1-119",
+  "RF00001__6GZ4_A4__1-119",
+  "RF00001__6GZ5_A4__1-119",
+  "RF00001__6P5I_7__1-119",
+  "RF00001__6P5J_7__1-119",
+  "RF00001__6P5K_7__1-119",
+  "RF00001__6P5N_7__1-119",
+  "RF00001__8BHF_B2__1-119"
+ ],
+ "deposited_length": 119,
+ "deposited_sequence": "GUCUACGGCCAUACCACCCUGAACGCGCCCGAUCUCGUCUGAUCUCGGAAGCUAAGCAGGGUCGGGCCUGGUUAGUACUUGGAUGGGAGACCGCCUGGGAAUACCGGGUGCUGUAGGCU",
+ "evaluated_utc": "2026-11-13T08:18:59Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9986",
+   "whole_chain_candidates": 4,
+   "xml": "cache/blast/9986_a86b2906b50203b4.xml"
+  }
+ ],
+ "seq_sha256": "a531778a4504c81807d91f033142f455069f36e92a5865a38bfd884f2f2e4a0f",
+ "species_name": "Oryctolagus cuniculus",
+ "species_taxid": "9986",
+ "strains": [
+  "9986"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "rRNA",
+   "end": 119,
+   "exact_confirmed": "yes",
+   "independence_basis": "short_record_not_older_than_structure",
+   "independent": "no",
+   "record": "XR_016215177.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "PREDICTED: Oryctolagus cuniculus 5S ribosomal RNA (LOC149123875), rRNA"
+  },
+  {
+   "biomol": "other",
+   "end": 119,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "4D5Y_4",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain 4, 5S Ribosomal RNA"
+  },
+  {
+   "biomol": "other",
+   "end": 119,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "4CXE_4",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain 4, 5s Rrna"
+  },
+  {
+   "biomol": "other",
+   "end": 119,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "6FRK_7",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain 7, 5S ribosomal RNA"
+  }
+ ]
+}

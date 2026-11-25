@@ -1,0 +1,56 @@
+{
+ "candidates": [
+  "RF00005__9BDN_TIRN__1-73",
+  "RF00005__9BDP_TIRN__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GGGCGUGUGGCGUAGUCGGUAGCGCGCUCCCUUAGCAUGGGAGAGGUCUCCGGUUCGAUUCCGGACUCGUCCACCA",
+ "evaluated_utc": "2026-11-13T08:14:34Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 646352,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GGGCGUGUGGCGUAGUCGGUAGCGCGCUCCCUUAGCAUGGGAGAGGUCUCCGGUUCGAUUCCGGACUCGUCCA",
+   "record": "LN907790.1",
+   "source": "blast_core_nt",
+   "start": 646280,
+   "strand": "+",
+   "title": "Saccharomyces cerevisiae N85 chromosome VII, complete genome"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "4932",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/4932_bfa537acff994510.xml"
+  }
+ ],
+ "seq_sha256": "61b81023667baf203263b6b1a2ef2105ec6e72d9e1ef09e269e29c94d5459e77",
+ "species_name": "Saccharomyces cerevisiae",
+ "species_taxid": "4932",
+ "strains": [
+  "4932"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 76,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "9BDP_TIRN",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain TIRN, tRNAAla"
+  }
+ ]
+}

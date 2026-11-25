@@ -1,0 +1,5 @@
+key	url	local_path	obtained_by	bytes	sha256	utc
+rfam_seed	https://ftp.ebi.ac.uk/pub/databases/Rfam/15.1/Rfam.seed.gz	inputs/rfam/15.1/Rfam.seed.gz	copied_from_local_mirror	5928432	41f014f4ab5628620935f089b1bb77987ebc162fda7c72bff368a32c9cccabac	2026-11-13T06:39:16Z
+rfam_pdb_mapping	https://ftp.ebi.ac.uk/pub/databases/Rfam/15.1/Rfam.pdb.gz	inputs/rfam/15.1/Rfam.pdb.gz	copied_from_local_mirror	87290	4eac9865f671325b0d09e50b7db49a0608e82a0f7de33ad7ee220bbb38290155	2026-11-13T06:39:16Z
+rfam_readme	https://ftp.ebi.ac.uk/pub/databases/Rfam/15.1/README	inputs/rfam/15.1/README	copied_from_local_mirror	17470	3644c076ee3420a6b37bd8f7b8759dff408eea64067e4973ac5e0d54ec72a807	2026-11-13T06:39:16Z
+star3d	http://genome.ucf.edu/STAR3D/STAR3D_v1.2.tar.gz	inputs/software/STAR3D_v1.2.tar.gz	copied_from_local_mirror	5637749	c9da44059d9cfc40828e798ebd4f6194c55415e17aaae7d90ac0f849ec2ed946	2026-11-13T06:39:16Z

@@ -1,0 +1,126 @@
+{
+ "candidates": [
+  "RF00005__4KZZ_j__1-72",
+  "RF00005__4UG0_S6__1-72",
+  "RF00005__4V6X_BC__1-72",
+  "RF00005__5T2C_An__1-72",
+  "RF00005__6FEC_N__1-72",
+  "RF00005__6QZP_S6__1-72",
+  "RF00005__6Y57_B4__1-72",
+  "RF00005__6YBV_w__1-72",
+  "RF00005__6ZMW_w__1-72",
+  "RF00005__7QP6_w__1-72",
+  "RF00005__7QP7_w__1-72",
+  "RF00005__7QVP_B5__1-72",
+  "RF00005__7TQL_3__1-72",
+  "RF00005__8K2C_CC__1-72",
+  "RF00005__8OZ0_y__1-72",
+  "RF00005__8PJ1_w__1-72",
+  "RF00005__8PJ2_w__1-72",
+  "RF00005__8PJ3_w__1-72",
+  "RF00005__8PJ4_w__1-72",
+  "RF00005__8PJ5_w__1-72",
+  "RF00005__8PJ6_w__1-72",
+  "RF00005__8PPL_Iw__1-72",
+  "RF00005__8XSX_CC__1-72",
+  "RF00005__8XSY_CC__1-72",
+  "RF00005__8XSZ_CC__1-72",
+  "RF00005__8XSZ_CD__1-72",
+  "RF00005__9KN6_zy__1-72",
+  "RF00005__9KRP_zy__1-72",
+  "RF00005__9YPG_11__1-72",
+  "RF00005__9YPG_13__1-72",
+  "RF00005__9YPO_11__1-72",
+  "RF00005__9YPO_13__1-72",
+  "RF00005__9YPS_11__1-72",
+  "RF00005__9YPS_13__1-72",
+  "RF00005__9YPT_11__1-72",
+  "RF00005__9YPT_13__1-72",
+  "RF00005__9YPV_11__1-72",
+  "RF00005__9YPV_13__1-72",
+  "RF00005__9YPW_11__1-72",
+  "RF00005__9YPW_13__1-72",
+  "RF00005__9YPY_11__1-72",
+  "RF00005__9YPY_13__1-72",
+  "RF00005__9YPZ_11__1-72",
+  "RF00005__9YPZ_13__1-72",
+  "RF00005__9YQ0_11__1-72",
+  "RF00005__9YQ0_13__1-72",
+  "RF00005__9YQ1_11__1-72",
+  "RF00005__9YQ1_13__1-72"
+ ],
+ "deposited_length": 75,
+ "deposited_sequence": "AGCAGAGUGGCGCAGCGGAAGCGUGCUGGGCCCAUAACCCAGAGGUCGAUGGAUCGAAACCAUCCUCUGCUACCA",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 403,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "AGCAGAGUGGCGCAGCGGAAGCGUGCUGGGCCCAUAACCCAGAGGUCGAUGGAUCGAAACCAUCCUCUGCUA",
+   "record": "NG_077957.2",
+   "source": "blast_core_nt",
+   "start": 332,
+   "strand": "-",
+   "title": "Homo sapiens Sharpr-MPRA regulatory region 6095 (LOC123620075) on chromosome 6"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 3,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "70e42ab758cf4ec5e58036c9455bfcc1bdba69d5dfe8e0c7f92a31ff3aa8fd4a",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 75,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "9RPV_B4",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain B4, P/E tRNA on the collided 80S"
+  },
+  {
+   "biomol": "other",
+   "end": 150,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "9RPV_B4",
+   "source": "blast_core_nt",
+   "start": 76,
+   "strand": "+",
+   "title": "Chain B4, P/E tRNA on the collided 80S"
+  },
+  {
+   "biomol": "tRNA",
+   "end": 75,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "K00328.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Human initiator Met-tRNA-i"
+  }
+ ]
+}

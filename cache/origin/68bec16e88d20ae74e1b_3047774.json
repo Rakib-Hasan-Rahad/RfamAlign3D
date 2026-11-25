@@ -1,0 +1,29 @@
+{
+ "candidates": [
+  "RF00458__5IT9_i__1-192",
+  "RF00458__7JQC_i__1-192"
+ ],
+ "deposited_length": 192,
+ "deposited_sequence": "AAAAAUGUGAUCUUGCUUGUAAAUACAAUUUUGAGAGGUUAAUAAAUUACAAGUAGUGCUAUUUUUGUAUUUAGGUUAGCUAUUUAGCUUUACGUUCCAGGAUGCCUAGUGGCAGCCCCACAAUAUCCAGGAAGCCCUCUCUGCGGCUUUUCAGAUUAGGUAGUCGAAAAACCUAAGAAAUUUACCUGCUAC",
+ "evaluated_utc": "2026-11-13T08:20:42Z",
+ "families": [
+  "RF00458"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "3047774",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/3047774_f919d657c8bee4d8.xml"
+  }
+ ],
+ "seq_sha256": "68bec16e88d20ae74e1b1262da7f99a3af8494ffb9255dbf5cdd82341b6db0d3",
+ "species_name": "Cripavirus grylli",
+ "species_taxid": "3047774",
+ "strains": [
+  "12136"
+ ],
+ "whole_chain_hits": []
+}

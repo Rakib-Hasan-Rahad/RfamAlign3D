@@ -1,0 +1,57 @@
+{
+ "candidates": [
+  "RF00005__4UY8_V__1-74",
+  "RF00005__4V5H_AV__1-74",
+  "RF00005__4V6M_AV__1-74",
+  "RF00005__6I0Y_V__1-74",
+  "RF00005__8URM_5__1-74",
+  "RF00005__8UTJ_5__1-74",
+  "RF00005__8UX8_5__1-74",
+  "RF00005__8UXB_5__1-74",
+  "RF00005__8UZ3_5__1-74",
+  "RF00005__8UZG_5__1-74",
+  "RF00005__8V03_5__1-74",
+  "RF00005__8VUP_5__1-74",
+  "RF00005__8VV4_5__1-74",
+  "RF00005__8VWQ_5__1-74",
+  "RF00005__8W2N_5__1-74"
+ ],
+ "deposited_length": 77,
+ "deposited_sequence": "CGGCACGUAGCGCAGCCUGGUAGCGCACCGUCAUGGGGUGUCGGGGGUCGGAGGUUCAAAUCCUCUCGUGCCGACCA",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000023365.1",
+   "assembly_taxid": 536056,
+   "fasta_sha256": "bb3a20989169a9080313799fa4c133bb0b1485ef2a4fe14ffde871d2a1a44616",
+   "filter": "filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "taxon_queried": "536056",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "0f27c982356c09ceb860acfd8a8711fe1fcb368e8d53e781de1e92b3102b2ab7",
+ "species_name": "Escherichia coli",
+ "species_taxid": "562",
+ "strains": [
+  "536056",
+  "562"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 1590648,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_017625.1",
+   "source": "assembly:GCF_000023365.1",
+   "start": 1590572,
+   "strand": "-"
+  }
+ ]
+}

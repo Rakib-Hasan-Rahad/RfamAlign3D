@@ -1,0 +1,58 @@
+{
+ "candidates": [
+  "RF03013__6TB7_A__1-52",
+  "RF03013__6TF0_A__1-52",
+  "RF03013__6TF1_A__1-52",
+  "RF03013__6TF2_A__1-52",
+  "RF03013__6TF3_A__1-52",
+  "RF03013__6TFE_A__1-52",
+  "RF03013__6TFF_A__1-52",
+  "RF03013__6TFG_A__1-52",
+  "RF03013__6TFH_A__1-52"
+ ],
+ "deposited_length": 52,
+ "deposited_sequence": "GGCUUCAACAACCCCGUAGGUUGGGCCGAAAGGCAGCGAAUCUACUGGAGCC",
+ "evaluated_utc": "2026-11-13T08:34:58Z",
+ "families": [
+  "RF03013"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000014005.1",
+   "assembly_taxid": 204669,
+   "fasta_sha256": "f9bde30d33387711b469a020f6aacba0475bae920e25b2f7df51c79fe238ddf6",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "204669",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "658062",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/658062_a09e55f7ce55f25c.xml"
+  }
+ ],
+ "seq_sha256": "0c42b5e033599d470b1bf580d2c74f13541033ce31d43f5c35377d42229aba30",
+ "species_name": "Candidatus Korobacter versatilis",
+ "species_taxid": "658062",
+ "strains": [
+  "204669"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 52,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "6TF1_A",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain A, Chains: A"
+  }
+ ]
+}

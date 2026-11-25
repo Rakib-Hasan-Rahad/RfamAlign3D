@@ -1,0 +1,58 @@
+{
+ "candidates": [
+  "RF00015__6AH0_I__1-144",
+  "RF00015__6AHD_I__1-144",
+  "RF00015__8H6J_4A__1-144",
+  "RF00015__8QO9_4__1-144",
+  "RF00015__8QOZ_4__1-144",
+  "RF00015__8QP8_4__1-144",
+  "RF00015__8QP9_4__1-144",
+  "RF00015__8QPA_4__1-144",
+  "RF00015__8QPB_4__1-144",
+  "RF00015__8QPE_4__1-144",
+  "RF00015__8QPK_4__1-144",
+  "RF00015__8QXD_4__1-144",
+  "RF00015__8QZS_4__1-144",
+  "RF00015__8R08_4__1-144",
+  "RF00015__8R09_4__1-144",
+  "RF00015__8R0A_4__1-144",
+  "RF00015__8R0B_4__1-144",
+  "RF00015__8RM5_4__1-144"
+ ],
+ "deposited_length": 144,
+ "deposited_sequence": "AGCUUUGCGCAGUGGCAGUAUCGUAGCCAAUGAGGUCUAUCCGAGGCGCGAUUAUUGCUAAUUGAAAACUUUUCCCAAUACCCCGCCGUGACGACUUGCAAUAUAGUCGGCACUGGCAAUUUUUGACAGUCUCUACGGAGACUG",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00015"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 7,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "7abbfecace83442f078fe260893d9b17cb41cb0df8f0859e5c31c530fbccc71d",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "ncRNA|snRNA",
+   "end": 144,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "NR_003925.2",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Homo sapiens RNA, U4 small nuclear 1 (RNU4-1), small nuclear RNA"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "check_id": "ca847a6a8e2aa4765dd4_381",
+ "deposited_length": 50,
+ "deposited_sequence": "GGCGUGGUCCGUUCAACUCGUUCCUCGAAAGAGGAACUACGGGAGACGCC",
+ "evaluated_utc": "2026-11-13T10:48:25Z",
+ "families": [
+  "RF02977"
+ ],
+ "host": "<batch-host>",
+ "import_problems": [],
+ "imported_utc": "2026-11-13T11:45:54Z",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "exact_local_resolves": false,
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_001676765.1,GCF_002356515.1,GCF_013170705.1,GCF_013170845.1,GCF_013170865.1,GCF_014189435.1,GCA_001676765.1,GCA_002356515.1,GCA_013170705.1,GCA_013170845.1_GENOME_FASTA.zip",
+   "archive_bytes": 21917458,
+   "reference": "assemblies:GCF_001676765.1,GCF_002356515.1,GCF_013170705.1,GCF_013170845.1,GCF_013170865.1,GCF_014189435.1,GCA_001676765.1,GCA_002356515.1,GCA_013170705.1,GCA_013170845.1",
+   "route": "exact_local"
+  },
+  {
+   "archive": "genome_GCA_013170865.1,GCA_014189435.1_GENOME_FASTA.zip",
+   "archive_bytes": 4502898,
+   "reference": "assemblies:GCA_013170865.1,GCA_014189435.1",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "ca847a6a8e2aa4765dd48ce06162df88694a7f46c77d07685985d57f7b3906ff",
+ "source": "exact_local",
+ "species_name": "Mesorhizobium loti",
+ "species_taxid": "381",
+ "whole_chain_hits": [],
+ "whole_chain_hits_confirmed": []
+}

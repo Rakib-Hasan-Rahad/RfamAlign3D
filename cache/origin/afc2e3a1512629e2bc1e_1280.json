@@ -1,0 +1,117 @@
+{
+ "candidates": [
+  "RF00001__5NGM_AB__1-115",
+  "RF00001__6DDD_2__1-115",
+  "RF00001__6DDG_2__1-115",
+  "RF00001__6FXC_AB__1-115",
+  "RF00001__6FXC_BB__1-115",
+  "RF00001__6HMA_B__1-115",
+  "RF00001__6S0X_B__1-115",
+  "RF00001__6S12_B__1-115",
+  "RF00001__6S13_B__1-115",
+  "RF00001__6SJ6_B__1-115",
+  "RF00001__6YEF_B__1-115",
+  "RF00001__7ASM_B__1-115",
+  "RF00001__7NHL_B__1-115",
+  "RF00001__7NHM_B__1-115",
+  "RF00001__7P48_B__1-115",
+  "RF00001__8P2F_B__1-115",
+  "RF00001__8P2G_B__1-115",
+  "RF00001__8P2H_B__1-115",
+  "RF00001__8Y36_B__1-115",
+  "RF00001__8Y37_B__1-115",
+  "RF00001__8Y38_B__1-115",
+  "RF00001__8Y39_B__1-115",
+  "RF00001__9GHG_B__1-115",
+  "RF00001__9GHH_B__1-115",
+  "RF00001__9QEH_B__1-115"
+ ],
+ "deposited_length": 115,
+ "deposited_sequence": "UCUGGUGACUAUAGCAAGGAGGUCACACCUGUUCCCAUGCCGAACACAGAAGUUAAGCUCCUUAGCGUCGAUGGUAGUCGAACUUACGUUCCGCUAGAGUAGAACGUUGCCAGGC",
+ "evaluated_utc": "2026-11-13T09:23:04Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000013465.1",
+   "assembly_taxid": 451515,
+   "fasta_sha256": "270dae46cf2c8e09116db6c79fec2abf50a40e61288929f23a6f7489bd2167f4",
+   "filter": "taxon 367830 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 6
+  }
+ ],
+ "seq_sha256": "afc2e3a1512629e2bc1e04829f2cb2329c7c7926578fe2574e517aa5f8ad4994",
+ "species_name": "Staphylococcus aureus",
+ "species_taxid": "1280",
+ "strains": [
+  "1280",
+  "367830",
+  "93061"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 517918,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_007793.1",
+   "source": "assembly:GCF_000013465.1",
+   "start": 517804,
+   "strand": "+"
+  },
+  {
+   "end": 556311,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_007793.1",
+   "source": "assembly:GCF_000013465.1",
+   "start": 556197,
+   "strand": "+"
+  },
+  {
+   "end": 561521,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_007793.1",
+   "source": "assembly:GCF_000013465.1",
+   "start": 561407,
+   "strand": "+"
+  },
+  {
+   "end": 1997701,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_007793.1",
+   "source": "assembly:GCF_000013465.1",
+   "start": 1997587,
+   "strand": "-"
+  },
+  {
+   "end": 2175925,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_007793.1",
+   "source": "assembly:GCF_000013465.1",
+   "start": 2175811,
+   "strand": "-"
+  },
+  {
+   "end": 2292479,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_007793.1",
+   "source": "assembly:GCF_000013465.1",
+   "start": 2292365,
+   "strand": "-"
+  }
+ ]
+}

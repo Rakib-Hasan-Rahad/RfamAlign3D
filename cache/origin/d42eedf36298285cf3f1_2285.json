@@ -1,0 +1,49 @@
+{
+ "candidates": [
+  "RF00001__8HKU_A5S__6-120",
+  "RF00001__8HKV_A5S__6-120",
+  "RF00001__8HKY_A5S__6-120",
+  "RF00001__8HKZ_A5S__6-120",
+  "RF00001__8HL1_A5S__6-120",
+  "RF00001__8HL2_A5S__6-120",
+  "RF00001__8HL3_A5S__6-120",
+  "RF00001__8HL4_A5S__6-120",
+  "RF00001__8HL5_A5S__6-120"
+ ],
+ "deposited_length": 122,
+ "deposited_sequence": "UGCCCACCCGGUCAUAGUGAGCGGGUAACACCCGGACUCGUUUCGAACCCGGAAGUUAAGCCGCUCACGUCAGAGGGGCCGUGGGAUCCGAGAGGGCCCGCAGCCUCUCUGAGCUGGGAUGG",
+ "evaluated_utc": "2026-11-13T09:23:30Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000012285.1",
+   "assembly_taxid": 330779,
+   "fasta_sha256": "c523b56f38b2ae4cd5163dfef03f868d9d7d6697b984950cc649c045cf7c3e16",
+   "filter": "taxon 330779 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "d42eedf36298285cf3f13e3c482d6fbceeb4d4733de3670d2c7130b7c8e08b0c",
+ "species_name": "Sulfolobus acidocaldarius",
+ "species_taxid": "2285",
+ "strains": [
+  "330779"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 1294034,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_007181.1",
+   "source": "assembly:GCF_000012285.1",
+   "start": 1293913,
+   "strand": "+"
+  }
+ ]
+}

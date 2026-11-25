@@ -1,0 +1,12 @@
+# Python 3.13. Versions match the earlier SQARMA runs (v2 lock + v3 phases).
+certifi==2026.10.23
+gemmi==0.7.5
+matplotlib==3.11.2
+mmcif-pdbx==2.1.0
+numpy==2.5.4
+openpyxl==3.1.5
+pandas==3.0.6
+pytest==9.2.0
+PyYAML==6.0.3
+scipy==1.18.1
+fr3d @ git+https://github.com/BGSU-RNA/fr3d-python.git@288f98ccfd72dc6d88036c124605c05ce623b1b7

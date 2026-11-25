@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00005__4V3P_S2__1-72",
+  "RF00005__4V7E_Ae__1-72"
+ ],
+ "deposited_length": 75,
+ "deposited_sequence": "UCCGUGAUAGUUUAAUGGUCAGAAUGGGCGCUUGUCGCGUGCCAGAUCGGGGUUCAAUUCCCCGUCGCGGAGCCA",
+ "evaluated_utc": "2026-11-13T08:22:27Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "4565",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/4565_5deec02509eb3cb6.xml"
+  }
+ ],
+ "seq_sha256": "5c75aee225e2a845d327e94bf67b43c27b4c214df2bfd57e7870893c2a418cde",
+ "species_name": "Triticum aestivum",
+ "species_taxid": "4565",
+ "strains": [
+  "4565"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 75,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "4V7E_Ae",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain Ae, P-site tRNA"
+  }
+ ]
+}

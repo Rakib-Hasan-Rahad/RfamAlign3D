@@ -1,0 +1,67 @@
+{
+ "candidates": [
+  "RF00174__8FW4_Z__1-210",
+  "RF00174__8SA2_A__1-210",
+  "RF00174__8SA2_B__1-210",
+  "RF00174__8SA3_A__1-210",
+  "RF00174__8SA3_B__1-210",
+  "RF00174__8SA4_A__1-210",
+  "RF00174__8SA4_B__1-210",
+  "RF00174__8SA5_A__1-210",
+  "RF00174__8SA5_B__1-210",
+  "RF00174__8SA6_A__1-210",
+  "RF00174__8SA6_B__1-210"
+ ],
+ "deposited_length": 210,
+ "deposited_sequence": "GGUUAAAGCCUUAUGGUCGCUACCAUUGCACUCCGGUAGCGUUAAAAGGGAAGACGGGUGAGAAUCCCGCGCAGCCCCCGCUACUGUGAGGGAGGACGAAGCCCUAGUAAGCCACUGCCGAAAGGUGGGAAGGCAGGGUGGAGGAUGAGUCCCGAGCCAGGAGACCUGCCAUAAGGUUUUAGAAGUUCGCCUUCGGGGGGAAGGUGAACA",
+ "evaluated_utc": "2026-11-25T20:05:45Z",
+ "families": [
+  "RF00174"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000007085.1",
+   "assembly_taxid": 273068,
+   "fasta_sha256": "faf457628e185a45a70f835a3400dfdb73f6042a7cd6aeadea8cff69b4b6ae77",
+   "filter": "taxon 119072 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_000007085.1",
+   "assembly_taxid": 273068,
+   "fasta_sha256": "da4d6e6b306647b7284a40ea3824b7909e029b118dfc31abad648d4fec5ff396",
+   "filter": "taxon 119072 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "911092",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/911092_ccb3376c6be52b2c.xml"
+  }
+ ],
+ "seq_sha256": "7fcabf4e0778e8e9d5501c0d332743cbe04d32585cc56cf137bb1e38f3e34b5f",
+ "species_name": "Caldanaerobacter subterraneus",
+ "species_taxid": "911092",
+ "strains": [
+  "119072"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 210,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "8FW4_Z",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain Z, RNA (210-MER)"
+  }
+ ]
+}

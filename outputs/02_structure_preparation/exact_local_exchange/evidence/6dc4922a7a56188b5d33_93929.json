@@ -1,0 +1,27 @@
+{
+ "check_id": "6dc4922a7a56188b5d33_93929",
+ "deposited_length": 52,
+ "deposited_sequence": "GGGCGAUGAGGCCCGCCCAAACUGCCCUGAAAAGGGCUGAUGGCCUCUACUG",
+ "evaluated_utc": "2026-11-13T10:47:26Z",
+ "families": [
+  "RF01734"
+ ],
+ "host": "<batch-host>",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000016785.1,GCF_000025105.1,GCA_000016785.1,GCA_000025105.1_GENOME_FASTA.zip",
+   "archive_bytes": 2154899,
+   "reference": "assemblies:GCF_000016785.1,GCF_000025105.1,GCA_000016785.1,GCA_000025105.1",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "6dc4922a7a56188b5d33a0cde6b3cea2c61c5957df5501e445c7f41b1efa1e96",
+ "source": "exact_local",
+ "species_name": "Thermotoga petrophila",
+ "species_taxid": "93929",
+ "whole_chain_hits": []
+}

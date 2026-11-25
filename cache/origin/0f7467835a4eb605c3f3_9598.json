@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00622__7QR3_C__1-69",
+  "RF00622__7QR3_D__1-69"
+ ],
+ "deposited_length": 69,
+ "deposited_sequence": "GGGGGCCACAGCAGAAGCGUUCACGUCGCGGCCCCUGUCAGCCAUUGCACUCCGGCUGCGAAUUCUGCU",
+ "evaluated_utc": "2026-11-13T08:36:17Z",
+ "families": [
+  "RF00622"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9598",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/9598_43d5ba57bf956ba0.xml"
+  }
+ ],
+ "seq_sha256": "0f7467835a4eb605c3f3d4e9892621ed0569d1dddfb05fd48b73078e5882eaa2",
+ "species_name": "Pan troglodytes",
+ "species_taxid": "9598",
+ "strains": [
+  "9598"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 69,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "7QR3_C",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain C, chimpanzee CPEB3 ribozyme"
+  }
+ ]
+}

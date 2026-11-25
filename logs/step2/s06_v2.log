@@ -1,0 +1,36 @@
+# Step 2 validation report (INTERIM)
+
+Generated 2026-11-13T10:55:58Z (automated).
+
+| Gate | Result |
+|---|---|
+| g1_all_families_one_status | PASS |
+| g2_primary_jobs_meet_all_rules | PASS |
+| g3_staged_files_valid | PASS |
+| g4_reference_endpoints_round_trip | PASS |
+| g4_unobserved_distinct_from_gap | PASS |
+| g5_selected_outranks_all_alternatives_and_bounds | PASS |
+| g6_tests_pass | PASS |
+| g8_step1_unchanged | PASS |
+| g8_earlier_study_files_unchanged | PASS |
+| g7_workbook_reconciles_with_tsvs | PASS |
+
+## Details
+```
+{
+ "g1_outcome_counts": {
+  "in_progress_evidence_pending": 16,
+  "eligible_pairs_selected": 8,
+  "exact_match_single_sequence_no_pair_possible": 64,
+  "no_candidate_in_searched_sources": 4058,
+  "pair_possible_no_eligible_pair": 11,
+  "candidate_found_no_exact_seed_match": 64,
+  "no_different_species_pair_possible": 6
+ },
+ "g2_violations": [],
+ "g3_violations": [],
+ "g6_tests_summary": "28 passed in 5.83s",
+ "g8_earlier_files_modified": [],
+ "g7_end_to_end_trace": "Pair RF00522__rf00522_6vuh_Au_1_33__vs__rf00522_7rex_Au_1_34 (RF00522 PreQ1): query 6VUH_A [Caldanaerobacter subterraneus (911092)] seed row URS000080E32E_119072/1-33; target 7REX_A [Carnobacterium antarcticum (2126436)] seed row URS00023119CB_2126436/1-34.\nRfam column 6 (consensus): query C = A:1 (staged rf00522_6vuh_Au_1_33 A:1), target U = A:1 (staged rf00522_7rex_Au_1_34 A:1).\n  crosswalk RF00522__6VUH_A__1-33: col 6 -> ungapped 1 -> A/1 -> auth A:1 (C) -> inputs_star3d/rf00522_6vuh_Au_1_33.pdb A:1\n  crosswalk RF00522__7REX_A__1-34: col 6 -> ungapped 1 -> A/1 -> auth A:1 (U) -> inputs_star3d/rf00522_7rex_Au_1_34.pdb A:1\nOrigin: query verified_natural (NC_003869.1:1523221-1523253- [assembly:GCF_000007085.1; genome_assembly]); target verified_natural (NZ_JBHSQC010000023.1:2567-2600- [assembly:GCF_042658365.1; genome_assembly])."
+}
+```

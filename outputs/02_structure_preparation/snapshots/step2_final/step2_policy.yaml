@@ -1,0 +1,153 @@
+# SQARMA Step 2 policy — frozen 2026-11-13 before any candidate selection.
+# Any change: append to `revisions` (what, why, which candidates to re-evaluate) and rerun from the stage named.
+policy_version: "2.0"
+frozen_utc: "2026-11-13"
+rerun: |
+  cd "<repo>/ RfamVSTAR3D findings"
+  .venv/bin/python scripts/step2/run_all.py          # s01..s05 in order; every stage is cached and resumable
+
+inputs:
+  step1: outputs/01_inventory/   # families.tsv, row_pdb_links.tsv, pdb_leads.tsv, seed_rows.jsonl.gz, family_tracks.jsonl.gz
+  rfam_seed: {release: "15.1", sha256: 41f014f4ab5628620935f089b1bb77987ebc162fda7c72bff368a32c9cccabac}
+  rfam_family_to_pdb:
+    - {file: inputs/rfam/15.1/Rfam.pdb.gz, url: https://ftp.ebi.ac.uk/pub/databases/Rfam/15.1/Rfam.pdb.gz,
+       schema: "rfam_acc pdb_id chain pdb_start pdb_end bit_score evalue cm_start cm_end hex_colour (no header)"}
+    - {file: inputs/rfam/15.1/database_files/pdb_full_region.txt.gz,
+       url: https://ftp.ebi.ac.uk/pub/databases/Rfam/15.1/database_files/pdb_full_region.txt.gz,
+       schema_file: inputs/rfam/15.1/database_files/pdb_full_region.sql,
+       schema: "rfam_acc pdb_id chain pdb_start pdb_end bit_score evalue_score cm_start cm_end hex_colour is_significant"}
+    # Union of both files is used; every row is kept as an evidence record with its file and is_significant flag.
+    # pdb_start/pdb_end numbering is NOT assumed; it is only compared diagnostically with the verified interval.
+  pdb_deposited_sequences: {file: inputs/pdb/pdb_seqres.txt.gz, url: https://files.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt.gz,
+                            use: "screening only (author chain IDs, deposited polymer sequence incl. unobserved residues)"}
+  structures: {mmcif: "https://files.rcsb.org/download/{PDB}.cif.gz", page: "https://www.rcsb.org/structure/{PDB}",
+               metadata: "https://data.rcsb.org/graphql (derived from the mmCIF; screening + ranking only)",
+               obsolete: "https://data.rcsb.org/rest/v1/holdings/removed/{PDB}", substitution_of_replacements: never}
+  taxonomy: {file: inputs/ncbi_taxonomy/taxdump.tar.gz, url: https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/taxdump.tar.gz,
+             md5_published: 67d1ba409ce6bc60c11ff2d4b8b04fec, snapshot: "Last-Modified 2026-11-13T07:30:27Z",
+             merged_ids: merged.dmp, deleted_ids: delnodes.dmp}
+  genome_evidence: "NCBI BLAST URL API (blastn, core_nt, ENTREZ_QUERY txid<species>[Organism:exp]) + NCBI E-utilities efetch/esummary"
+
+discovery:
+  sources: [explicit_seed_row_tag, step1_lead, rfam_family_to_pdb_mapping]
+  chains_per_source:
+    explicit_seed_row_tag: the tagged author chain
+    rfam_family_to_pdb_mapping: the mapped chain (author chain ID in pdb_seqres; verified in mmCIF)
+    step1_lead: every nucleic-acid chain of the named entry (chain never guessed)
+  negative_statements: "a free-text lead whose own sentence says the entry is 'not included' is kept as evidence but not searched"
+  no_cmalign: true
+  family_discovery_status: [no_candidate_in_searched_sources, candidate_found_no_exact_seed_match, exact_seed_match_found, search_incomplete]
+
+sequence_matching:
+  row_sequence: Step 1 ungapped_sequence, uppercased; no T->U
+  exact: "the ENTIRE ungapped seed row occurs as one contiguous substring of the deposited polymer sequence (parent-base code)"
+  rows_with_non_ACGU: "diagnostic wildcard match only; never exact"
+  deposited_non_ACGU: "modified residues use their declared parent (chem_comp.mon_nstd_parent_comp_id); X/N = unknown; an unknown inside the interval prevents an exact match"
+  interval_clusters: "occurrences of all family rows in one chain are grouped by overlap; each cluster is one candidate interval"
+  row_identity: "a cluster is exact_unique if exactly one row ID occurs there and that row occurs nowhere else in the chain; several row IDs -> resolved only by an explicit #=GR tag on this chain or, after species resolution, by a unique URS taxon suffix of the same species; otherwise ambiguous (kept, not primary)"
+  multi_chain_concatenation: forbidden
+  mismatch_tolerant_alignment: diagnostic only
+
+species:
+  source_of_rna: "_entity_src_nat / _entity_src_gen (gene source, not host) / _pdbx_entity_src_syn of the RNA entity"
+  placeholders_unresolved: [32630, 12908, 256318, 2787823, 155900, 408169]   # synthetic construct, unclassified, metagenome(s), unidentified
+  description_binomial: "if no informative taxon: a binomial in the RNA entity description or entry title that exactly equals an NCBI scientific name at species rank or below (species_basis=description_binomial; still requires genome evidence)"
+  comparison_rank: species       # viruses: NCBI rank 'species' as well (strains/isolates/serotypes collapse to species)
+  merged_ids: resolved via merged.dmp; deleted ids -> unresolved
+
+origin:
+  decisions: [verified_natural, excluded_engineered, provisional_origin, not_evaluated_no_possible_partner]
+  whole_chain: "the full deposited polymer sequence, before cropping, must occur exactly (either strand) in an independent record of the resolved species"
+  independent_record: "esummary sourcedb != pdb; organism species == resolved species; title without 'synthetic construct'/'Chain'; AND (record length >= chain length + 50 OR record create date < PDB initial deposition date)"
+  confirmation: "every BLAST candidate is confirmed by exact string search of the efetched record region (+/- 60 nt); BLAST scores alone never verify"
+  engineered_evidence:
+    documented: "RNA entity pdbx_mutation (non-placeholder), or RNA entity description/details containing mutant|mutation|engineered|chimer*|fusion|linker|circular permut*|tag(ged)?|T7 leader"
+    flank_at_locus: "family interval found exactly in an independent species record but the deposited flank differs at every occurrence -> excluded_engineered NON_NATIVE_FLANK_AT_LOCUS (except tRNA 3' CCA -> provisional GENOME_MATCH_EXCEPT_3PRIME_CCA)"
+    t7_leader: "recorded only when documented in the entry; a 5' G/GG alone is not evidence"
+  conflicts: "documented engineering + whole-chain genome match -> provisional_origin CONFLICTING_EVIDENCE"
+  not_found: "no confirmed whole-chain match -> provisional_origin GENOME_NOT_FOUND (never 'engineered')"
+  non_ACGU_deposited: "provisional_origin UNKNOWN_RESIDUES_IN_CHAIN"
+  cropping_does_not_rescue: true
+  evidence_cache_key: "(deposited full sequence, species taxid) for genome evidence; (PDB, entity) for documentation"
+  review: "automated; no human review has occurred"
+
+coordinates:
+  model: first model in the file
+  altloc: "gemmi remove_alternative_conformations (keeps the first conformer of each atom; no mixing)"
+  residues: "selected by verified label_seq_id interval, never by author-number range"
+  numbering: author residue number + insertion code kept; legacy-PDB range -999..9999 required
+  chain: "author chain if 1 character, otherwise reversible alias 'A' recorded in the conversion table"
+  modified_residues: "kept with deposited comp_id and record type (HETATM stays HETATM); names >3 characters -> technical_unusable_or_unresolved"
+  backbone_atoms: ["P", "O5'", "C5'", "C4'", "C3'", "O3'"]   # STAR3D PDB.java centroid atoms
+  status: [ready, ready_with_coverage_flags, technical_unusable_or_unresolved]
+  ready: "all interval residues observed with all 6 backbone atoms"
+  ready_with_coverage_flags: "readable, intended chain present, reversible numbering, but some interval residues unobserved or missing backbone atoms"
+  unusable: "no observed residue in interval, residue without any backbone atom (STAR3D centroid undefined), name >3 chars, numbering outside range, ID collision, >99999 atoms, ambiguous mapping, parse failure"
+  coverage_cutoff: none
+  reader_check: "the staged file is parsed back with STAR3D PDB.java's fixed-column rules (Python re-implementation) and compared to the crosswalk; STAR3D is not executed"
+
+pairs:
+  eligible: "same family; both members verified_natural and ready|ready_with_coverage_flags; different ungapped sequence strings; different resolved species; different PDB entries; exact seed rows"
+  formation_before_selection: true
+  representative_unit: "one per (family, unordered pair of distinct ungapped sequences)"
+  ranking: ["max(min over members of observed fraction of interval)",
+            "max(min over members of fraction of interval residues with all 6 backbone atoms)",
+            "fewer members without a reported resolution (NMR etc.)",
+            "lower worst resolution (Angstrom) of the two members",
+            "lexicographic stable ID of the combination"]
+  lazy_evaluation: "combinations are ranked with RCSB-derived coverage, then verified in rank order; the first combination whose two members both pass is selected; ranking keys are recomputed from the mmCIF for every verified member and the walk is repeated until stable"
+  order: "query = member with lexicographically smaller stable ID '<RFAM>__<PDB>_<authchain>__<label_start>-<label_end>'"
+  pair_identity: "reported over seed alignment columns where both rows have a residue (denominator stated); descriptive only"
+
+star3d_step3_template:
+  image: star3d-runtime:1
+  preprocess: "java -cp STAR3D.jar Preprocess <stem> <chain>"   # per staged file, inside a fresh STAR3D_source copy with PDB/<stem>.pdb
+  align: "java -jar STAR3D.jar -o out/<pair_id>__forward.aln -p <query_stem> <query_chain> <target_stem> <target_chain>"
+  parameters: "defaults (-r 4.0 -s 3 -g -5 -e -2 -m 3 -i 0 -t 1); one forward run; no replicates; no auto-retry"
+  executed_in_step2: false
+
+revisions:
+  - id: R1
+    date: "2026-11-13"
+    stage_rerun_from: s03 (before any origin decision was made; no candidate re-evaluation needed)
+    what:
+      - "Execution order only: genome evidence deduplicated per (full deposited sequence sha256, species); Bacteria/Archaea searched locally in one NCBI Datasets assembly per taxon (entity strain taxon first, else species reference); others and misses via ONE batched BLAST job per species."
+      - "Mature RNAs (e.g. tRNA): an independent mature-transcript record (biomol RNA/tRNA/rRNA in core_nt) that contains the whole deposited sequence exactly is accepted as independent evidence (already within 'genome, transcript or other biological record'). 'Genome + CCA' is never accepted automatically -> provisional GENOME_MATCH_EXCEPT_3PRIME_CCA; absence as one contiguous genomic substring is not a rejection."
+      - "Flank rule tightened: NON_NATIVE_FLANK_AT_LOCUS (excluded_engineered) only if the interval occurs exactly in an independent record AND the whole chain occurs in no searched record (assembly AND species-wide BLAST). Otherwise a flank difference in one reference is provisional FLANK_DIFFERS_FROM_REFERENCE."
+      - "Ranking without early stopping: for each (family, unordered sequence pair) every combination whose UPPER-BOUND key (RCSB-derived observed fraction, which equals the mmCIF value and is asserted per structure; backbone completeness bounded by observed fraction) could beat the best verified combination is evaluated from its mmCIF before a representative is chosen (branch-and-bound)."
+      - "Validation sample: 10 mapping-only candidates (seeded, spread over families, including an ambiguous and a rejected one) are re-checked against the mmCIF polymer sequence and seed row."
+      - "Delivery in family batches; workbook labelled INTERIM until every family has an outcome."
+    why: "user instruction 2026-11-13: optimise execution order, not eligibility; clarify mature tRNA handling"
+  - id: R2
+    date: "2026-11-13"
+    stage_rerun_from: s04 (parent resolution of cached entries; before any s05 decision)
+    what: "Parent of a modified residue, in order: the entry's _chem_comp.mon_nstd_parent_comp_id; the entity's wwPDB canonical one-letter code at that position (only when its length equals the polymer length); gemmi's tabulated code; the wwPDB Chemical Component Dictionary definition (files.rcsb.org/ligands/view/<comp>.cif). 'N'/'UNK' and parents outside A/C/G/U (e.g. inosine) stay unknown. The source used is recorded per residue (parent_source). Deposited chemistry is never rewritten."
+    why: "many entries omit mon_nstd_parent_comp_id (e.g. 1EHZ, CM0/3AU in tRNAs); the CCD is the authoritative declaration of that field"
+    affected: "wildcard-only chains (90) re-screened; deposited parent sequences of all parsed entries"
+  - id: R3
+    date: "2026-11-13"
+    stage_rerun_from: s05 (reviews with unresolved species only)
+    what: "An RNA-source record (_entity_src_nat/_entity_src_gen/_pdbx_entity_src_syn) that gives the organism by scientific name without a taxonomy ID is resolved by exact match to an NCBI scientific name in the pinned snapshot (species_basis suffix '_by_name'). Common names ('yeast') are not interpreted."
+    why: "e.g. 3D2G entity_src_gen names Arabidopsis thaliana with no taxon ID; RCSB reports the same organism"
+  - id: R4
+    date: "2026-11-13"
+    stage_rerun_from: s05 (decision only; cached evidence unchanged)
+    what: "NON_NATIVE_FLANK_AT_LOCUS (excluded_engineered) applies only to RNA entities whose _entity.src_method is not 'nat'. RNA isolated from the organism (src_method nat) with a flank absent from the searched records becomes provisional_origin FLANK_DIFFERS_FROM_REFERENCE_NATURAL_SOURCE."
+    why: "3 natural-source rRNA chains (7LS1 C2, 7QVP L5/L6) were labelled engineered by the flank rule; natural processing heterogeneity and incomplete rDNA records explain such differences"
+    affected: "RF00002 7LS1_C2, 7QVP_L5, 7QVP_L6 (now provisional); 9 syn/man constructs unchanged"
+  - id: R5
+    date: "2026-11-13"
+    stage_rerun_from: s05 (reviews whose species was a placeholder taxon)
+    what: "A taxon does not identify the RNA's organism if its lineage is under 'unclassified sequences' (12908), 'environmental samples' (48479) or 'synthetic construct' (32630), or its name contains metagenome/unidentified/uncultured. Such taxa leave species unresolved (provisional_origin SPECIES_UNRESOLVED); no genome search is made for them."
+    why: "'marine metagenome' (408172) and 'unidentified eubacterium clone A70' carry species rank in NCBI and passed the fixed placeholder list"
+  - id: R6
+    date: "2026-11-13"
+    stage_rerun_from: s03 (execution order only)
+    what: "All Bacteria/Archaea keys are searched locally first (phase 1), in up to 8 NCBI Datasets assemblies per species: strain taxa (reference, complete genome, chromosome), then the species reference, then species complete genomes/chromosomes in stable accession order. Only keys not found locally go to the batched BLAST (phase 2). A stall watchdog (60 min without a completed check) restarts the stage from cache."
+    why: "6 workers were idle behind NCBI BLAST queue waits of 30-73 min while prokaryotic keys that need only a local search were not started"
+  - id: R7
+    date: "2026-11-13"
+    stage_rerun_from: s05 (decisions only; no evidence changed)
+    what: "Step 2 CLOSED by the researcher's decision. Any (deposited sequence, species) check still lacking whole-chain evidence after (a) NCBI BLAST (7 jobs stalled in NCBI's queue since 2026-11-13T08:50Z, abandoned) and (b) exact local search of versioned assemblies/transcripts becomes provisional_origin SEARCH_INCOMPLETE. This is NOT a biological exclusion and NOT evidence of engineering; exact local search outcomes (not_found / interval_found_flank_differs) are recorded as context only. Pairs are then selected from verified structures exactly as before."
+    why: "NCBI BLAST completed no search for several hours; the researcher chose to finalize rather than wait"
+    record: outputs/02_structure_preparation/STEP2_CLOSED.json

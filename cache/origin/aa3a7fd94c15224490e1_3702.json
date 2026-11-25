@@ -1,0 +1,35 @@
+{
+ "candidates": [
+  "RF00059__2CKY_A__1-77",
+  "RF00059__2CKY_B__1-77",
+  "RF00059__3D2G_A__1-77",
+  "RF00059__3D2G_B__1-77",
+  "RF00059__3D2V_A__1-77",
+  "RF00059__3D2V_B__1-77",
+  "RF00059__3D2X_A__1-77",
+  "RF00059__3D2X_B__1-77"
+ ],
+ "deposited_length": 77,
+ "deposited_sequence": "GGGACCAGGGGUGCUUGUUCACAGGCUGAGAAAGUCCCUUUGAACCUGAACAGGGUAAUGCCUGCGCAGGGAGUGUC",
+ "evaluated_utc": "2026-11-25T20:08:06Z",
+ "families": [
+  "RF00059"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "3702",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/3702_305b6243eacae0ff.xml"
+  }
+ ],
+ "seq_sha256": "aa3a7fd94c15224490e18845b7468593fb38d62d9cc470a7260332040ab85c16",
+ "species_name": "Arabidopsis thaliana",
+ "species_taxid": "3702",
+ "strains": [
+  "3702"
+ ],
+ "whole_chain_hits": []
+}

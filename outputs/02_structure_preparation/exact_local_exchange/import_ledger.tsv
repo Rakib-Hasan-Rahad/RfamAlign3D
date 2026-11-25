@@ -1,0 +1,52 @@
+check_id	species	exact_local_outcome	whole_chain_hits	mac_reconfirmed	resolves_check	ncbi_evidence	conflict	problems	evidence
+08adcd7cc73bb5217aa6_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+335fc919daf1c01bb28f_4097	Nicotiana tabacum	interval_found_flank_differs	0	False	False	pending			
+3748b8b80faf2c036fd3_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+381b919b40b6f14ab01a_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+4152728c15b0a55b8863_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+47950b7cc56951a6b8ea_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+4b8ec25761389490bb2f_4097	Nicotiana tabacum	whole_chain_found	40	True	True	pending			NC_134091.1:65287797-65287915+ (assembly:GCF_000715075.1)
+4bd2ad4e73fe87b626bd_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+597a08c50c5055c99f03_9823	Sus scrofa	whole_chain_found	20	True	True	pending			NC_139390.1:55339089-55339244+ (assembly:GCF_054392235.1)
+597a08c50c5055c99f03_9940	Ovis aries	whole_chain_found	4	True	True	pending			NC_056055.1:250054375-250054530+ (assembly:GCF_016772045.2)
+6061c6e4c04f228daba2_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+644f94f26842003b885d_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+6495a9541f65d784236b_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+6ad86f0af03c10a24d10_7227	Drosophila melanogaster	whole_chain_found	13	True	True	pending			NW_001845390.1:1596-1718+ (assembly:GCF_000001215.4)
+6ba8c17b8fc9f7700f60_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+6dc4922a7a56188b5d33_93929	Thermotoga petrophila	not_found	0	False	False	pending			
+6fa5e783504b059f5bfa_4896	Schizosaccharomyces pombe	whole_chain_found	2	True	True	pending			NC_003423.3:783253-783498+ (assembly:GCF_000002945.2)
+70e42ab758cf4ec5e580_5741	Giardia duodenalis	not_found	0	False	False	pending			
+7299e9d6f11b8261958a_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+73166ba4c70d7e36c1a1_3418650	Lentivirus humimdef1	not_found	0	False	False	pending			
+73bb6931bf4ecede92b2_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+76a7efb6eab5f9c02f73_5811	Toxoplasma gondii	whole_chain_found	20	True	True	pending			NC_031477.1:5045184-5045307+ (assembly:GCF_000006565.2)
+773f1c95d35a438e1698_9823	Sus scrofa	whole_chain_found	20	True	True	pending			NC_139396.1:73601927-73602046- (assembly:GCF_054392235.1)
+7832c7efcdf4b8312403_2320	Methanopyrus kandleri	interval_found_flank_differs	0	False	False	pending			
+7fcabf4e0778e8e9d550_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+800d7447011941d9f289_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+913108987b0084dd25e8_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+94af805ff09def0add8f_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+9644fdea85571a20ecb1_5693	Trypanosoma cruzi	not_found	0	False	False	pending			
+974f51da94729865209d_1309	Streptococcus mutans	not_found	0	False	False	pending			
+aa3a7fd94c15224490e1_3702	Arabidopsis thaliana	not_found	0	False	False	pending			
+b86b4265a36d73156e86_1351	Enterococcus faecalis	whole_chain_found	3	True	True	pending			NZ_CP019512.1:919721-920300+ (assemblies:GCF_001878735.3,GCF_001886675.2,GCF_001931845.1,GCF_001989555.1,GCF_002140075.1,GCF_002163735.1,GCF_002208945.1,GCF_002221625.2,GCF_002289045.2,GCF_002355755.1)
+b91d2150475c671466a7_53633	Sulfobacillus acidophilus	not_found	0	False	False	pending			
+bbe6f7ca2333f9fb914a_1359	Lactococcus cremoris	interval_found_flank_differs	0	False	False	pending			
+c25b5f9d01f523503883_3048459	Orthoflavivirus zikaense	not_found	0	False	False	pending			
+c351febb3cf800b3790f_7227	Drosophila melanogaster	not_found	0	False	False	pending			
+c6df548440aeb286fab8_5911	Tetrahymena thermophila	interval_found_flank_differs	0	False	False	pending			
+c852e7fa9f65d9b4b8da_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+ca847a6a8e2aa4765dd4_381	Mesorhizobium loti	not_found	0	False	False	pending			
+cc802d0903becf7211bb_204038	Dickeya dadantii	not_found	0	False	False	pending			
+d61146e1d049797c442c_145262	Methanothermobacter thermautotrophicus	not_found	0	False	False	pending			
+dd416030e29000f31cc3_209285	Thermochaetoides thermophila	whole_chain_found	1	True	True	pending			NW_006383034.1:1811601-1811701- (assembly:GCF_000221225.1)
+dedb90787568cd1027e4_4896	Schizosaccharomyces pombe	whole_chain_found	2	True	True	pending			NC_003421.2:1369974-1370202- (assembly:GCF_000002945.2)
+eb2c7a9898ac273c8a5a_10245	Orthopoxvirus vaccinia	not_found	0	False	False	pending			
+eeaff8e8021103680682_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+f6075f391d19420ed377_5476	Candida albicans	whole_chain_found	2	True	True	pending			NC_032096.1:1888934-1889054- (assembly:GCF_000182965.3)
+f645a90a8678b84bbd14_666	Vibrio cholerae	not_found	0	False	False	pending			
+f9ceef20be9cdb752407_911092	Caldanaerobacter subterraneus	not_found	0	False	False	pending			
+fa9f4c63f11a4134b27b_5141	Neurospora crassa	not_found	0	False	False	pending			
+fd64d2528621eb4796c1_4081	Solanum lycopersicum	whole_chain_found	20	True	True	pending			NC_090800.1:36346267-36346386- (assembly:GCF_036512215.1)
+fd81226af3dc2758d616_33075	Acidobacterium capsulatum	not_found	0	False	False	pending			

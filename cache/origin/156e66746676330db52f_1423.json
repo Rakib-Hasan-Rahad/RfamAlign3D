@@ -1,0 +1,72 @@
+{
+ "candidates": [
+  "RF00005__6POM_B__1-72"
+ ],
+ "deposited_length": 75,
+ "deposited_sequence": "GCGGAAGUAGUUCAGUGGUAGAACACCACCUUGCCAAGGUGGGGGUCGCGGGUUCGAAUCCCGUCUUCCGCUCCA",
+ "evaluated_utc": "2026-11-13T08:16:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000009045.1",
+   "assembly_taxid": 224308,
+   "fasta_sha256": "2f8ddf6c27c7d9d05a514071fb2bdd572a7739c97b9980834e83aa543177d859",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "1423",
+   "whole_chain_hits": 4
+  }
+ ],
+ "seq_sha256": "156e66746676330db52f940d17f18768990ae93353bdf54ea68fb2ab1cc72695",
+ "species_name": "Bacillus subtilis",
+ "species_taxid": "1423",
+ "strains": [
+  "1423"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 95846,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 95772,
+   "strand": "+"
+  },
+  {
+   "end": 166033,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 165959,
+   "strand": "+"
+  },
+  {
+   "end": 952775,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 952701,
+   "strand": "+"
+  },
+  {
+   "end": 3173398,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 3173324,
+   "strand": "-"
+  }
+ ]
+}

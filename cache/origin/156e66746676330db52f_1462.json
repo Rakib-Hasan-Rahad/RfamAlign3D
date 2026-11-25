@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  "RF00005__6PMO_B__1-72"
+ ],
+ "deposited_length": 75,
+ "deposited_sequence": "GCGGAAGUAGUUCAGUGGUAGAACACCACCUUGCCAAGGUGGGGGUCGCGGGUUCGAAUCCCGUCUUCCGCUCCA",
+ "evaluated_utc": "2026-11-13T08:37:37Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000009785.1",
+   "assembly_taxid": 235909,
+   "fasta_sha256": "513a060f7c5ded068d75866fa9803bc13b3b359393c4cd3ec9bc2a289bd3531b",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "1462",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "1462",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/1462_a7bcd1184b3cb552.xml"
+  }
+ ],
+ "seq_sha256": "156e66746676330db52f940d17f18768990ae93353bdf54ea68fb2ab1cc72695",
+ "species_name": "Geobacillus kaustophilus",
+ "species_taxid": "1462",
+ "strains": [
+  "1462"
+ ],
+ "whole_chain_hits": []
+}

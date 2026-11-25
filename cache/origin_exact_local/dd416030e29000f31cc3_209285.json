@@ -1,0 +1,65 @@
+{
+ "check_id": "dd416030e29000f31cc3_209285",
+ "deposited_length": 101,
+ "deposited_sequence": "GCCCUUCGGGGCAUUUGGUCAAUUUGAAACGAUACAGAGAAGAUUAGCAUGGCCCCUGCACUAAGGAUGACACGCUACUCAAAGAGACGCUACCAAUUUUU",
+ "evaluated_utc": "2026-11-13T10:43:49Z",
+ "families": [
+  "RF00026"
+ ],
+ "host": "<batch-host>",
+ "import_problems": [],
+ "imported_utc": "2026-11-13T11:45:54Z",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "whole_chain_found",
+ "exact_local_resolves": true,
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000221225.1_GENOME_FASTA.zip",
+   "archive_bytes": 8979887,
+   "reference": "assembly:GCF_000221225.1",
+   "route": "exact_local"
+  },
+  {
+   "archive": "genome_GCF_000221225.1_RNA_FASTA.zip",
+   "archive_bytes": 3685163,
+   "reference": "refseq_rna:GCF_000221225.1",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "dd416030e29000f31cc3d6805671bee06be0c2f655e5daf1043692981588e719",
+ "source": "exact_local",
+ "species_name": "Thermochaetoides thermophila",
+ "species_taxid": "209285",
+ "whole_chain_hits": [
+  {
+   "end": 1811701,
+   "exact_confirmed": "yes",
+   "file": "GCF_000221225.1_CTHT_3.0_genomic.fna",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "mac_reconfirmation": "efetch NW_006383034.1:1811601-1811701- exact; esummary taxid 759272, sourcedb refseq",
+   "record": "NW_006383034.1",
+   "source": "assembly:GCF_000221225.1",
+   "start": 1811601,
+   "strand": "-",
+   "title": "NW_006383034.1 Thermochaetoides thermophila DSM 1495 unplaced genomic scaffold scf7180000011818, whole genome shotgun sequence"
+  }
+ ],
+ "whole_chain_hits_confirmed": [
+  {
+   "end": 1811701,
+   "exact_confirmed": "yes",
+   "file": "GCF_000221225.1_CTHT_3.0_genomic.fna",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "mac_reconfirmation": "efetch NW_006383034.1:1811601-1811701- exact; esummary taxid 759272, sourcedb refseq",
+   "record": "NW_006383034.1",
+   "source": "assembly:GCF_000221225.1",
+   "start": 1811601,
+   "strand": "-",
+   "title": "NW_006383034.1 Thermochaetoides thermophila DSM 1495 unplaced genomic scaffold scf7180000011818, whole genome shotgun sequence"
+  }
+ ]
+}

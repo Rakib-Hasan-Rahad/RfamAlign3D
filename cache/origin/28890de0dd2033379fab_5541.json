@@ -1,0 +1,28 @@
+{
+ "candidates": [
+  "RF00005__4V7H_A7__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GCGGAUUUAGCUCAGUUGGGAGAGCGCCAGACUGAAGAUCUGGAGGUCCUGUGUUCGAUCCACAGAAUUCGCACCA",
+ "evaluated_utc": "2026-11-13T08:41:31Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "5541",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/5541_78393cfce0a34700.xml"
+  }
+ ],
+ "seq_sha256": "28890de0dd2033379fabebc7165a219d6092ad9bbadc77f4c7528be78963ca0b",
+ "species_name": "Thermomyces lanuginosus",
+ "species_taxid": "5541",
+ "strains": [
+  "5541"
+ ],
+ "whole_chain_hits": []
+}

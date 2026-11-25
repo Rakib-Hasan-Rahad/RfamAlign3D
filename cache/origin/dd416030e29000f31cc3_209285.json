@@ -1,0 +1,30 @@
+{
+ "candidates": [
+  "RF00026__9L5R_6__1-101",
+  "RF00026__9L5S_6__1-101",
+  "RF00026__9L5T_6__1-101"
+ ],
+ "deposited_length": 101,
+ "deposited_sequence": "GCCCUUCGGGGCAUUUGGUCAAUUUGAAACGAUACAGAGAAGAUUAGCAUGGCCCCUGCACUAAGGAUGACACGCUACUCAAAGAGACGCUACCAAUUUUU",
+ "evaluated_utc": "2026-11-25T20:10:22Z",
+ "families": [
+  "RF00026"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "209285",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/209285_10551f52b2bba0f6.xml"
+  }
+ ],
+ "seq_sha256": "dd416030e29000f31cc3d6805671bee06be0c2f655e5daf1043692981588e719",
+ "species_name": "Thermochaetoides thermophila",
+ "species_taxid": "209285",
+ "strains": [
+  "759272"
+ ],
+ "whole_chain_hits": []
+}

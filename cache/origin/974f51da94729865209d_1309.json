@@ -1,0 +1,93 @@
+{
+ "candidates": [
+  "RF01831__6Q57_A__1-89",
+  "RF01831__7KD1_A__1-89"
+ ],
+ "deposited_length": 89,
+ "deposited_sequence": "GGAGAGUAGAUGAUUCGCGUUAAGUGUGUGUGAAUGGGAUGUCGUCACACAACGAAGCGAGAGCGCGGUGAAUCAUUGCAUCCGCUCCA",
+ "evaluated_utc": "2026-11-25T20:08:04Z",
+ "families": [
+  "RF01831"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000007465.2",
+   "assembly_taxid": 210007,
+   "fasta_sha256": "f8541f8afd10ba7c693e80e536575a585b71c04b1bc03bf315dab76abdd43a93",
+   "filter": "taxon 210007 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_000007465.2",
+   "assembly_taxid": 210007,
+   "fasta_sha256": "ce67a95074d83cc76783302afc9b0d4db9e1bf01ce9742e2c5227b869c5e9681",
+   "filter": "taxon 210007 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_019048645.1",
+   "assembly_taxid": 1309,
+   "fasta_sha256": "e01774a3ab38c8603ef2c3b9f1c59e55987adbd5c3a04cb893b019defb93ee8b",
+   "filter": "taxon 1309 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_006739205.1",
+   "assembly_taxid": 1309,
+   "fasta_sha256": "4b9e0ba65e5ab7098912af8d9a1ef463b8ddfdeda86f2fa1e43f0c1062483002",
+   "filter": "taxon 1309 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_044360185.1",
+   "assembly_taxid": 1309,
+   "fasta_sha256": "4c463952d80f7d0405df16c8e866f9b1c93649ccf0670d7b2ff24666888e75f2",
+   "filter": "taxon 1309 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_900475095.1",
+   "assembly_taxid": 1309,
+   "fasta_sha256": "f1df3fd32adbaf91b08c849969c50e710839ab89eb535a58c29664917238a7de",
+   "filter": "taxon 1309 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_006739205.1",
+   "assembly_taxid": 1309,
+   "fasta_sha256": "69e20ae7e4f15087d7a8c84a8ef56fbdaa9439587d26fd584b86e1f7ae1e0049",
+   "filter": "taxon 1309 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_019048645.1",
+   "assembly_taxid": 1309,
+   "fasta_sha256": "e593a7514550cfa27851ac1c67b9b0f897f811d02bc5fe344b85c1f378baf176",
+   "filter": "taxon 1309 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "1309",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/1309_a60a9bb2c339b3ff.xml"
+  }
+ ],
+ "seq_sha256": "974f51da94729865209d77ea0328a5f6d9dcd2d165363cd1e56bbc9c795d2214",
+ "species_name": "Streptococcus mutans",
+ "species_taxid": "1309",
+ "strains": [
+  "210007"
+ ],
+ "whole_chain_hits": []
+}

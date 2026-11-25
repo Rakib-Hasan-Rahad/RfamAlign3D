@@ -1,0 +1,61 @@
+{
+ "candidates": [
+  "RF00005__6IP5_zu__1-72",
+  "RF00005__6IP5_zy__1-72",
+  "RF00005__6IP6_zy__1-72",
+  "RF00005__6IP8_zy__1-72",
+  "RF00005__9KZU_zy__1-72",
+  "RF00005__9KZX_zu__1-72",
+  "RF00005__9KZX_zy__1-72"
+ ],
+ "deposited_length": 75,
+ "deposited_sequence": "GGCUCGUUGGUCUAGGGGUAUGAUUCUCGCUUAGGGUGCGAGAGGUCCCGGGUUCAAAUCCCGGACGAGCCCCCA",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 80764,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GGCUCGUUGGUCUAGGGGUAUGAUUCUCGCUUAGGGUGCGAGAGGUCCCGGGUUCAAAUCCCGGACGAGCCC",
+   "record": "AC114481.2",
+   "source": "blast_core_nt",
+   "start": 80693,
+   "strand": "-",
+   "title": "Homo sapiens chromosome 3 clone RP13-487A18, complete sequence"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "54ab576a8bd4008b9e21e574e03d09dc7069cb7a387dc5a004a1d5627bc7948e",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 75,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "6IP5_zy",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain zy, P-site tRNA"
+  }
+ ]
+}

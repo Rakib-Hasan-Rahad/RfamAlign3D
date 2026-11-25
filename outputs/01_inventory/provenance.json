@@ -1,0 +1,18 @@
+{
+  "step": "Step 1 - master inventory of explicit seed-row to PDB-chain links",
+  "rfam_release": "15.1",
+  "source_url": "https://ftp.ebi.ac.uk/pub/databases/Rfam/15.1/Rfam.seed.gz",
+  "local_path": "inputs/rfam/15.1/Rfam.seed.gz",
+  "seed_gz_sha256": "41f014f4ab5628620935f089b1bb77987ebc162fda7c72bff368a32c9cccabac",
+  "seed_gz_bytes": 5928432,
+  "decompressed_bytes": 38143095,
+  "decompressed_sha256": "a6fc52d98766fa2b8d479763a819f4edbc288fe63fcdb754ff01e2af95a241b9",
+  "run_utc": "2026-11-13T06:52:58Z",
+  "parser_version": "step1-inventory 1.0.0",
+  "parser_script_sha256": "e853d9d5016ec59ae63e129098417f5a06cae0eeaa1301aa865c7da9f5f34512",
+  "link_rule": "^([0-9][A-Za-z0-9]{3})_([A-Za-z0-9]{1,4})_SS$",
+  "sequence_hash_rule": "sha256(ascii(uppercase(ungapped))); no T->U",
+  "ungap_rule": "remove '-' and '.' only",
+  "python": "3.13.7",
+  "openpyxl": "3.1.5"
+}

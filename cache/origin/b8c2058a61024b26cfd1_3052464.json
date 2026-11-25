@@ -1,0 +1,41 @@
+{
+ "candidates": [
+  "RF02340__7UMC_A__2-70"
+ ],
+ "deposited_length": 70,
+ "deposited_sequence": "GGAGUGGUUAGUCUACGUGGACCGACAAGACUUCGGUCGAAUCGGAAGGAAACUUAACGUAGUUCUAACC",
+ "evaluated_utc": "2026-11-13T08:29:51Z",
+ "families": [
+  "RF02340"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "3052464",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/3052464_fd05b4a306ae053d.xml"
+  }
+ ],
+ "seq_sha256": "b8c2058a61024b26cfd19e103e7d4da414aa6839654ec7a5e103bc5f1072a15a",
+ "species_name": "Orthoflavivirus denguei",
+ "species_taxid": "3052464",
+ "strains": [
+  "11053"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 70,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "7UMC_A",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain A, RNA (70-MER)"
+  }
+ ]
+}

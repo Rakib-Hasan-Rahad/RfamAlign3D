@@ -1,0 +1,64 @@
+{
+ "candidates": [
+  "RF00005__3J7Y_B__2-70",
+  "RF00005__3J9M_B__2-70",
+  "RF00005__6VLZ_B__2-70",
+  "RF00005__6VMI_B__2-70",
+  "RF00005__6ZS9_XB__2-70",
+  "RF00005__7A5H_B__2-70",
+  "RF00005__7A5I_B3__2-70",
+  "RF00005__7A5K_B3__2-70",
+  "RF00005__7L08_B__2-70",
+  "RF00005__7L20_B__2-70"
+ ],
+ "deposited_length": 73,
+ "deposited_sequence": "CCAGAGUGUAGCUUAACACAAAGCACCCAACUUACACUUAGGAGAUUUCAACUUAACUUGACCGCUCUGACCA",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 1672,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "CAGAGUGUAGCUUAACACAAAGCACCCAACUUACACUUAGGAGAUUUCAACUUAACUUGACCGCUCUGA",
+   "record": "ON127816.1",
+   "source": "blast_core_nt",
+   "start": 1604,
+   "strand": "+",
+   "title": "Homo sapiens isolate Daur mitochondrion sequence"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "273725f07ff78e08f1ad159447923a8c04a5f21aa40620d7f7a78342c5d87bb8",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 73,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "7A5H_B",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain B, mt-tRNAVal"
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "candidates": [
+  "RF00005__5CCB_N__2-74",
+  "RF00005__5CCX_N__2-74",
+  "RF00005__5CD1_M__2-74",
+  "RF00005__5CD1_N__2-74"
+ ],
+ "deposited_length": 77,
+ "deposited_sequence": "GGCCCGGAUAGCUCAGUCGGUAGAGCAUCAGACUUUUAAUCUGAGGGUCCAGGGUUCAAGUCCCUGUUCGGGCGCCA",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 64277,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GCCCGGAUAGCUCAGUCGGUAGAGCAUCAGACUUUUAAUCUGAGGGUCCAGGGUUCAAGUCCCUGUUCGGGCG",
+   "record": "AC130329.8",
+   "source": "blast_core_nt",
+   "start": 64205,
+   "strand": "-",
+   "title": "Homo sapiens chromosome 17, clone RP13-348C17, complete sequence"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9606",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/9606_bc0fe0e6297cab2e.xml"
+  }
+ ],
+ "seq_sha256": "4b7e6e9bb5f31d7af6e789e70126dd1ace0737ec8738d3cde8f79526e6e9dd32",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": []
+}

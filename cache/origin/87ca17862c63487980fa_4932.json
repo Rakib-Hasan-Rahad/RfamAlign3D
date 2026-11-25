@@ -1,0 +1,60 @@
+{
+ "candidates": [
+  "RF00005__5GAK_A__1-73",
+  "RF00005__5MC6_m__1-73",
+  "RF00005__6HD7_A__1-73",
+  "RF00005__6TNU_m__1-73",
+  "RF00005__7NRC_Sm__1-73",
+  "RF00005__8UT0_m__1-73",
+  "RF00005__8UTI_m__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCACCA",
+ "evaluated_utc": "2026-11-13T08:14:34Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "4932",
+   "whole_chain_candidates": 2,
+   "xml": "cache/blast/4932_bfa537acff994510.xml"
+  }
+ ],
+ "seq_sha256": "87ca17862c63487980fabcc3cf2501f38c4c74d75c381fc4e4ba29683c0d026b",
+ "species_name": "Saccharomyces cerevisiae",
+ "species_taxid": "4932",
+ "strains": [
+  "4932",
+  "559292"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 76,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "5GAK_A",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain A, The A-site tRNA was modeled based on an E. coli tRNA-Lys"
+  },
+  {
+   "biomol": "other",
+   "end": 76,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "9YDC_m",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain m, A site tRNA"
+  }
+ ]
+}

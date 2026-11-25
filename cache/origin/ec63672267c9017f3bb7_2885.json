@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00029__4R0D_A__548-622"
+ ],
+ "deposited_length": 622,
+ "deposited_sequence": "GUGCGACAAGAAGUUCAGGAAGGGAUUGAGGUGAAAGUCCUCCUCCCGAAUCGUUCAUGGGAGAGUCUAUCCAGACUUGCGUAGCGAGUAAUCGCUAGGUGAGAAGCUCUGGAGACAAUGUACCUGCCCUUCAAUUGGAGGUGCCAGGGCUAGGCUUUGUUCCUAUGGCUAGCGAAAGCGAAUACAGGUUAUUAGGCGUCGUGAAAACAAAACUCUUUCGACAUAAGGGAGAGGCUCGUAGAUGAGUUACCCUCCUUUUUAUGGGGUAACUGAACGAUCAAUAUCUACCGGCGUAGACUGUGAGCCUAAAGGAAACGAAUGAAAGUGUCCCUUCCUGGGAACUUGGUAAGCCCAAUAGACUCCCUCUGGGAAACCAGAGGAGGAGUAAGAGCAAUCUUACUUAUCGUCUAGUGGGUAAAAGACAUAAUAGGAAGCAAAUGCUUGGUUGUAACGAUCGAGAUAGAAUCUGUUGAUUUAAGCUGAAAGGCUGCAGACUUAUUAAAUGGGUGUUCUGCUGUAUGGCGUUCGCGCCUAAGCAGCAGAAUGCGUGAGCCGUGUGCGAUGAAAGUCGCAAGCACGGUUCUGAUGGGGGGAAAACGAGAGAUCGUCUACCUAUCCAACU",
+ "evaluated_utc": "2026-11-13T08:31:12Z",
+ "families": [
+  "RF00029"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 6487,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GUGAGCCGUGUGCGAUGAAAGUCGCAAGCACGGUUCUGAUGGGGGGAAAACGAGAGAUCGUCUACCUAUCCAACU",
+   "record": "NC_003055.1",
+   "source": "blast_core_nt",
+   "start": 6413,
+   "strand": "+",
+   "title": "Pylaiella littoralis mitochondrion, complete genome"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "2885",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/2885_58f160b022baa07f.xml"
+  }
+ ],
+ "seq_sha256": "ec63672267c9017f3bb7584d0456b73700816dd641ebc5b6a557e1d1f7ba73f6",
+ "species_name": "Pylaiella littoralis",
+ "species_taxid": "2885",
+ "strains": [
+  "2885"
+ ],
+ "whole_chain_hits": []
+}

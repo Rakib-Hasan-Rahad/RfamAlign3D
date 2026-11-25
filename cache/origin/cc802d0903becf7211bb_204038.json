@@ -1,0 +1,92 @@
+{
+ "candidates": [
+  "RF00442__5U3G_B__1-85"
+ ],
+ "deposited_length": 85,
+ "deposited_sequence": "GGUGACUAGGGUUCCGGCGAAAGCCGGUCCGAGAGUUACCGACCGCCGAAAGGCGGUUACACGGCGGGAAAAAAGCCCGGGAGGA",
+ "evaluated_utc": "2026-11-25T20:09:38Z",
+ "families": [
+  "RF00442"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_003049785.1",
+   "assembly_taxid": 204038,
+   "fasta_sha256": "75f4d8637ab49dda689e3c2a63b3372bb4519770895e6bd287d45a91929cf7e5",
+   "filter": "taxon 204038 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_018904205.1",
+   "assembly_taxid": 204038,
+   "fasta_sha256": "0ef79be4dff46beff4775c07972d6d83db755389b809cd0c2f8bacedd26f9c35",
+   "filter": "taxon 204038 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_025643375.1",
+   "assembly_taxid": 204038,
+   "fasta_sha256": "5a60bcab4f366193d7c95001a487661ee5f84f6e99fd5a863a3cc06f42da55a5",
+   "filter": "taxon 204038 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_030168535.1",
+   "assembly_taxid": 204038,
+   "fasta_sha256": "9d986d0c891a96be4c78568b46fb54b329420522434b7c7ee930e5b9e06e6882",
+   "filter": "taxon 204038 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_003049785.1",
+   "assembly_taxid": 204038,
+   "fasta_sha256": "adf0edc760cc0e78783ac8d5de9f96f00189c742c4b97cde92e37093d79402f4",
+   "filter": "taxon 204038 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_018904205.1",
+   "assembly_taxid": 204038,
+   "fasta_sha256": "f24b85bcf25fec58b4fda00305bbf76528999e53dc3045dd8dbc942b379504da",
+   "filter": "taxon 204038 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_025643375.1",
+   "assembly_taxid": 204038,
+   "fasta_sha256": "403f9ed0880897c2442a15a555ca1105db445235c93f677298ac5a3d0b5906df",
+   "filter": "taxon 204038 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_030168535.1",
+   "assembly_taxid": 204038,
+   "fasta_sha256": "035f467616e6e17af7e01a019c77574ca34a1263cbdd6a85e0c29829643d9d89",
+   "filter": "taxon 204038 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "204038",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/204038_4ca6de224f0a9dc7.xml"
+  }
+ ],
+ "seq_sha256": "cc802d0903becf7211bbda67e7295514308ebffc174ab05a4057ad67ad2be46f",
+ "species_name": "Dickeya dadantii",
+ "species_taxid": "204038",
+ "strains": [
+  "204038"
+ ],
+ "whole_chain_hits": []
+}

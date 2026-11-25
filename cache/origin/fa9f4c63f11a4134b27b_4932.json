@@ -1,0 +1,44 @@
+{
+ "candidates": [
+  "RF00005__6I7O_n__1-73",
+  "RF00005__6Q8Y_n__1-73",
+  "RF00005__6SV4_n__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "UUCCUCGUGGCCCAAUGGUCACGGCGUCUGGCUACGAACCAGAAGAUUCCAGGUUCAAGUCCUGGCGGGGAAGCCA",
+ "evaluated_utc": "2026-11-13T08:14:34Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 102,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "interval": "UUCCUCGUGGCCCAAUGGUCACGGCGUCUGGCUACGAACCAGAAGAUUCCAGGUUCAAGUCCUGGCGGGGAAG",
+   "record": "X55338.1",
+   "source": "blast_core_nt",
+   "start": 30,
+   "strand": "+",
+   "title": "S.cerevisiae tRNA-Arg(ACG) gene and flank with Ty3 integration site"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "4932",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/4932_bfa537acff994510.xml"
+  }
+ ],
+ "seq_sha256": "fa9f4c63f11a4134b27bf1604e6368897ac071defd62fbbe6c928f2a909c4279",
+ "species_name": "Saccharomyces cerevisiae",
+ "species_taxid": "4932",
+ "strains": [
+  "4932"
+ ],
+ "whole_chain_hits": []
+}

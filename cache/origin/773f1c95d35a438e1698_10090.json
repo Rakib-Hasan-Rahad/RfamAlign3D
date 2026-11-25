@@ -1,0 +1,57 @@
+{
+ "candidates": [
+  "RF00001__7CPU_L7__1-119",
+  "RF00001__7CPV_L7__1-119",
+  "RF00001__9H4N_B2__1-119"
+ ],
+ "deposited_length": 120,
+ "deposited_sequence": "GUCUACGGCCAUACCACCCUGAACGCGCCCGAUCUCGUCUGAUCUCGGAAGCUAAGCAGGGUCGGGCCUGGUUAGUACUUGGAUGGGAGACCGCCUGGGAAUACCGGGUGCUGUAGGCUU",
+ "evaluated_utc": "2026-11-13T08:17:33Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 3428,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GUCUACGGCCAUACCACCCUGAACGCGCCCGAUCUCGUCUGAUCUCGGAAGCUAAGCAGGGUCGGGCCUGGUUAGUACUUGGAUGGGAGACCGCCUGGGAAUACCGGGUGCUGUAGGCU",
+   "record": "AC140552.3",
+   "source": "blast_core_nt",
+   "start": 3310,
+   "strand": "-",
+   "title": "Mus musculus BAC clone RP24-372G15 from 8, complete sequence"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "10090",
+   "whole_chain_candidates": 45,
+   "xml": "cache/blast/10090_99b60ab084302c88.xml"
+  }
+ ],
+ "seq_sha256": "773f1c95d35a438e1698716cd890d73efcfa586a59a6298d3bf7b8d1fbb94877",
+ "species_name": "Mus musculus",
+ "species_taxid": "10090",
+ "strains": [
+  "10090"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 3428,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "AC140552.3",
+   "source": "blast_core_nt",
+   "start": 3309,
+   "strand": "-",
+   "title": "Mus musculus BAC clone RP24-372G15 from 8, complete sequence"
+  }
+ ]
+}

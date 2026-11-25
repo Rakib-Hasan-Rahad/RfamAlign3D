@@ -1,0 +1,77 @@
+{
+ "candidates": [
+  "RF01734__3VRS_A__1-52",
+  "RF01734__4EN5_A__1-52",
+  "RF01734__4ENA_A__1-52",
+  "RF01734__4ENB_A__1-52",
+  "RF01734__4ENC_A__1-52"
+ ],
+ "deposited_length": 52,
+ "deposited_sequence": "GGGCGAUGAGGCCCGCCCAAACUGCCCUGAAAAGGGCUGAUGGCCUCUACUG",
+ "evaluated_utc": "2026-11-25T20:06:43Z",
+ "families": [
+  "RF01734"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000016785.1",
+   "assembly_taxid": 390874,
+   "fasta_sha256": "56a754d30c87fdc8e31befe359b0adb143eb117c5b05ab0501f784403fda6fe8",
+   "filter": "taxon 93929 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_000025105.1",
+   "assembly_taxid": 590168,
+   "fasta_sha256": "52803ba2685541ab17697f823d81ef5d895998f4de823435b36697cb1b2e201c",
+   "filter": "taxon 93929 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_000016785.1",
+   "assembly_taxid": 390874,
+   "fasta_sha256": "0d2f78f62690d9f2ea9e17af71c975f488346189a4314d81c511f8acdfd8e8ed",
+   "filter": "taxon 93929 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_000025105.1",
+   "assembly_taxid": 590168,
+   "fasta_sha256": "f46127fe4493b83e179e12bc09766032264b0b2389cd3fb7fbaab7e4ed89108f",
+   "filter": "taxon 93929 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "93929",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/93929_f0def8772d41bca2.xml"
+  }
+ ],
+ "seq_sha256": "6dc4922a7a56188b5d33a0cde6b3cea2c61c5957df5501e445c7f41b1efa1e96",
+ "species_name": "Thermotoga petrophila",
+ "species_taxid": "93929",
+ "strains": [
+  "93929"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 52,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "3VRS_A",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain A, Fluoride riboswitch"
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+ "candidates": [
+  "RF00442__5T83_A__1-95"
+ ],
+ "deposited_length": 95,
+ "deposited_sequence": "GUCUAAAGUUUGCUAGGGUUCCGCGUCAUAGGUGGUCUGGUCCAAGAGCAAACGGCUUUCACAAAGCCACACGGAAGGAUAAAAGCCUGGGAGAU",
+ "evaluated_utc": "2026-11-25T20:08:19Z",
+ "families": [
+  "RF00442"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000237975.1",
+   "assembly_taxid": 679936,
+   "fasta_sha256": "47503a9e59ea0b106ec319399207487afe51a564b2b495b36b6976afa8ca79b0",
+   "filter": "taxon 679936 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_000237975.1",
+   "assembly_taxid": 679936,
+   "fasta_sha256": "1e7d2928a9ce6d15b83d894f5f10326b6c41ff20ded108cf500895578bf78ff1",
+   "filter": "taxon 679936 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_000219855.1",
+   "assembly_taxid": 1051632,
+   "fasta_sha256": "0efaabc994b29afddfaa985dee255d6958b801b6b07a60b7774e754f29db46da",
+   "filter": "taxon 53633 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_000219855.1",
+   "assembly_taxid": 1051632,
+   "fasta_sha256": "250cda3f07c337b79cfa2a6e444e9e16aa09cd581f012873666c5ee2b3021e81",
+   "filter": "taxon 53633 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "53633",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/53633_cfb555ea68fd8433.xml"
+  }
+ ],
+ "seq_sha256": "b91d2150475c671466a7ae2ad0ff224bab0abc54367e126009dbf8ff6059ad8c",
+ "species_name": "Sulfobacillus acidophilus",
+ "species_taxid": "53633",
+ "strains": [
+  "679936"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 95,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "5T83_A",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain A, RNA (95-MER)"
+  }
+ ]
+}

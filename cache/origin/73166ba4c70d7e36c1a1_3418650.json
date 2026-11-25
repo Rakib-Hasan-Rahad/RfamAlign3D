@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  "RF00480__6VWL_4__49-93",
+  "RF00480__6VWM_4__49-93",
+  "RF00480__6VWN_4__49-93"
+ ],
+ "deposited_length": 93,
+ "deposited_sequence": "GGUUUUUCUUCUGAAGAUAAAGCAACAACAACAAGGCAAGGAGGUAAAAAUGUUCGAGAAGAUCUGGCCUUCCCACAAGGGAAGGCCAGGGAA",
+ "evaluated_utc": "2026-11-25T20:06:51Z",
+ "families": [
+  "RF00480"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "3418650",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/3418650_38a97da8355c621f.xml"
+  }
+ ],
+ "seq_sha256": "73166ba4c70d7e36c1a11715256de4dfc7bdd51791c4b3303d3f64602bc41ff7",
+ "species_name": "Lentivirus humimdef1",
+ "species_taxid": "3418650",
+ "strains": [
+  "11676"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 93,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "6VWL_4",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain 4, HIV frameshift stimulating sequence mRNA"
+  }
+ ]
+}

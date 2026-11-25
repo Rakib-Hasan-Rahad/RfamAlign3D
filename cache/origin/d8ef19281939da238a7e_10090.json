@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF01852__3RG5_A__1-86",
+  "RF01852__3RG5_B__1-86"
+ ],
+ "deposited_length": 86,
+ "deposited_sequence": "GCCCGGAUGAUCCUCAGUGGUCUGGGGUGCAGGCUUCAAACCUGUAGCUGUUUAGCGACAGAGUGGUUCAAUUCCACCUUUCGGGC",
+ "evaluated_utc": "2026-11-13T08:17:33Z",
+ "families": [
+  "RF01852"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "10090",
+   "whole_chain_candidates": 12,
+   "xml": "cache/blast/10090_99b60ab084302c88.xml"
+  }
+ ],
+ "seq_sha256": "d8ef19281939da238a7efc622772e6f39ebec37032f95bbb804696c8a765b425",
+ "species_name": "Mus musculus",
+ "species_taxid": "10090",
+ "strains": [
+  "10090"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 153273,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "AC118017.15",
+   "source": "blast_core_nt",
+   "start": 153188,
+   "strand": "-",
+   "title": "Mus musculus chromosome 7, clone RP23-457C1, complete sequence"
+  }
+ ]
+}

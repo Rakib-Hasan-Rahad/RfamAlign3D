@@ -1,0 +1,44 @@
+{
+ "candidates": [
+  "RF00023__3IYQ_A__1-349",
+  "RF00023__3IYR_A__1-349",
+  "RF00023__6Q95_4__1-349"
+ ],
+ "deposited_length": 349,
+ "deposited_sequence": "GGGGGUGAAACGGUCUCGACGGGGGUCGCCGAGGGCGUGGCUGCGCGCCGAGGUGCGGGUGGCCUCGUAAAAACCCGCAACGGCAUAACUGCCAACACCAACUACGCUCUCGCGGCUUAAUGACCGCGACCUCGCCCGGUAGCCCUGCCGGGGGCUCACCGGAAGCGGGGACACAAACCCGGCUAGCCCGGGGCCACGCCCUCUAACCCCGGGCGAAGCUUGAAGGGGGCUCGCUCCUGGCCGCCCGUCCGCGGGCCAAGCCAGGAGGACACGCGAAACGCGGACUACGCGCGUAGAGGCCCGCCGUAGGGACCUUCGGACGGGGGUUCGACUCCCCCCACCUCCACCA",
+ "evaluated_utc": "2026-11-13T08:22:03Z",
+ "families": [
+  "RF00023"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000091545.1",
+   "assembly_taxid": 300852,
+   "fasta_sha256": "968eebc96d32e14d57c5a0981c4168a4ec73b481245048f8c02c374bbfbc3fdb",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "300852",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "cd7aad2812ecea32a9e475a0805365c29ef5f0855dfff3a049e209ee662e8f6f",
+ "species_name": "Thermus thermophilus",
+ "species_taxid": "274",
+ "strains": [
+  "300852"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 666432,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_006461.1",
+   "source": "assembly:GCF_000091545.1",
+   "start": 666084,
+   "strand": "+"
+  }
+ ]
+}

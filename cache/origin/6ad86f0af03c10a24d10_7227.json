@@ -1,0 +1,44 @@
+{
+ "candidates": [
+  "RF00002__4V6W_A8__1-123",
+  "RF00002__6XU6_A8__1-123",
+  "RF00002__6XU7_A8__1-123",
+  "RF00002__6XU8_A8__1-123"
+ ],
+ "deposited_length": 123,
+ "deposited_sequence": "AACUCUAAGCGGUGGAUCACUCGGCUCAUGGGUCGAUGAAGAACGCAGCAAACUGUGCGUCAUCGUGUGAACUGCAGGACACAUGAACAUCGACAUUUUGAACGCAUAUCGCAGUCCAUGCUG",
+ "evaluated_utc": "2026-11-25T20:05:17Z",
+ "families": [
+  "RF00002"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "7227",
+   "whole_chain_candidates": 8,
+   "xml": "cache/blast/7227_c7de2de460de030e.xml"
+  }
+ ],
+ "seq_sha256": "6ad86f0af03c10a24d103087efd67d4e1cc7a65541569e2e49b1a352a9ae0b8e",
+ "species_name": "Drosophila melanogaster",
+ "species_taxid": "7227",
+ "strains": [
+  "7227"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "pre-RNA",
+   "end": 3705,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "NR_133558.1",
+   "source": "blast_core_nt",
+   "start": 3583,
+   "strand": "+",
+   "title": "Drosophila melanogaster pre-ribosomal RNA (pre-rRNA:CR45847), preRNA"
+  }
+ ]
+}

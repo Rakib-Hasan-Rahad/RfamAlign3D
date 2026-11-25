@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00023__5ZEY_A__1-369"
+ ],
+ "deposited_length": 369,
+ "deposited_sequence": "GGGGCUGAACGGUUUCGACUUCGAGCAUCGAAUCCAGGGAAGCGUGCCGGUGCAGGCAAGAGACCACCGUAAGCGUCGUUGCAACCAAUUAAGCGCCGAUUCCAAUCAGCGCGACUACGCCCUCGCUGCCUAAGCGACGGCUGGUCUGUCAGACCGGGAGUGCCCUCGGCCCGGAUCCUGGCAUCAGCUAGAGGGACCCACCCACGGGUUCGGUCGCGGGACCUGUGGGGACAUCAAACAGCGACUGGGAUCGUCAUCUCGGCUUGUUCGUGUGACCGGGAGAUCCGAGUAGAGACAUAGCGAACUGCGCACGGAGAAGCCUCGAGGACAUGCCGUAGGACCCGGGUUCAAUUCCCGGCAGCUCCACCA",
+ "evaluated_utc": "2026-11-13T08:26:42Z",
+ "families": [
+  "RF00023"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000767605.1",
+   "assembly_taxid": 246196,
+   "fasta_sha256": "849bc74f844b1f704a0ddc1bea265b89dbcea3df9c1b060bba51dc6acc00fa76",
+   "filter": "filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "taxon_queried": "246196",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "6074cc50c2538c8c58e6810f3456ffe106189c09bb130c6f65c02ba4432f8563",
+ "species_name": "Mycolicibacterium smegmatis",
+ "species_taxid": "1772",
+ "strains": [
+  "246196"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 2169666,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NZ_CP009494.1",
+   "source": "assembly:GCF_000767605.1",
+   "start": 2169298,
+   "strand": "+"
+  }
+ ]
+}

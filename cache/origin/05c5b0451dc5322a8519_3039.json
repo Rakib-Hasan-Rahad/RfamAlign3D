@@ -1,0 +1,41 @@
+{
+ "candidates": [
+  "RF00002__6ZJ3_LA__1-163"
+ ],
+ "deposited_length": 163,
+ "deposited_sequence": "ACCUGUUGUGGUGGAUGUCUUGGCCCAGGUUCUGAGGAAGGACACAGCAGCCUUGCGAUACGUUCGGUGAUACGCAGAGUCUUGUGAUCUGGACAAAGGAACAGCUUCGAACGCAACUGGCCAGCAAGGGGUUCCCCCCCGAGCUGCCUGUGCGCCAGUGUUG",
+ "evaluated_utc": "2026-11-13T08:25:23Z",
+ "families": [
+  "RF00002"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "3039",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/3039_e91b8f84c878d7cd.xml"
+  }
+ ],
+ "seq_sha256": "05c5b0451dc5322a8519c662ab5233b76b41e2d1a2174ec1c3ede6f4c2591ea6",
+ "species_name": "Euglena gracilis",
+ "species_taxid": "3039",
+ "strains": [
+  "3039"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 1368,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "X53361.2",
+   "source": "blast_core_nt",
+   "start": 1206,
+   "strand": "+",
+   "title": "Euglena gracilis extrachromosomal DNA for large subunit (LSU) rRNA (14 subunits) and (LSU)rRNA-(SSU)rRNA intergenic spac"
+  }
+ ]
+}

@@ -1,0 +1,127 @@
+{
+ "candidates": [
+  "RF03087__9ISV_A__1-580",
+  "RF03087__9J3R_A__1-580",
+  "RF03087__9J3R_B__1-580",
+  "RF03087__9J3R_C__1-580",
+  "RF03087__9J3R_D__1-580",
+  "RF03087__9J3T_A__1-580",
+  "RF03087__9J3T_B__1-580",
+  "RF03087__9J3T_C__1-580",
+  "RF03087__9J3T_D__1-580",
+  "RF03087__9J3T_E__1-580",
+  "RF03087__9J3T_F__1-580",
+  "RF03087__9J3T_G__1-580",
+  "RF03087__9J3T_H__1-580",
+  "RF03087__9MM6_A__1-580",
+  "RF03087__9MM6_E__1-580",
+  "RF03087__9MM6_I__1-580",
+  "RF03087__9MM6_M__1-580",
+  "RF03087__9MM6_Q__1-580",
+  "RF03087__9MM6_U__1-580",
+  "RF03087__9MM6_Y__1-580",
+  "RF03087__9MM6_c__1-580",
+  "RF03087__9MMG_c__1-580"
+ ],
+ "deposited_length": 580,
+ "deposited_sequence": "AAUUGAAAAAUCAAUAGAUUUAAACCUAGUGAAGAGCAUUUGAACAAUGUGCUAGGGUAGUAUGGGAUAAGUCGAUAACUAAAAUGAAUUGGGAUACUGAUUGAUUUUAGUGGUGGAUUUUACAGCAAUGUAAAAAGGACUAAUAGUAAAAGCUAUUAAUCGCAAAGUACUACGUGGAAUUUGUGCAGGUGUAAGGUACGAAACUUUCGAGUGUGACAAUAGACGCUCCAGUGGAGAAUAAUCUAAGUUAGGUGGAAGUGUGAGAAGCUUGGCAGACCUUAGAAAACUCAAACCAAGCGCUUUGCAGAGAAACUGAGAAAUCAGUGUUUAACGAAAGAAGUCGGUACGAGUAGCUUAAUGCAGCAAUUUAUUUACAGAUGACAAAUAAUAAAAAUGGGACUCUUAUGUAAAUGCUGAAUGUUCAAGUGAAAGUUAUUAGCCAGUAGAGCUAGAUCAUACAGAAAAAGCAAAGAGAAGCUAUUGGGUAGCGCCCGAUAGUUCAGCCUCUUUGGGUAUGUGACUGAAUAACACUGUAAACAAAGGAAGCAGGAAGAAAAGCCUAAAUCUGUUGAUUUUUGAG",
+ "evaluated_utc": "2026-11-25T20:08:18Z",
+ "families": [
+  "RF03087"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000393015.1",
+   "assembly_taxid": 1169293,
+   "fasta_sha256": "94820da4621742450cb4072fc4f9be93d5b020c745fa9204e818cc5abf7bde31",
+   "filter": "taxon 1351 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_021610105.1",
+   "assembly_taxid": 1351,
+   "fasta_sha256": "d8627ad29e87ab79a58b4123bd48b3b9553d34631023fa2883a01f2389a6d438",
+   "filter": "taxon 1351 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_022869705.1",
+   "assembly_taxid": 1351,
+   "fasta_sha256": "559e2e50ec43b59cf6727f18d9cc00889a9af7f31039b471f9c908f82460d40c",
+   "filter": "taxon 1351 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_029024925.1",
+   "assembly_taxid": 1351,
+   "fasta_sha256": "b2973d11010c2df82fedd467aa0340138ed18aabb53b510dc5828b8e54c286d7",
+   "filter": "taxon 1351 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_050485625.1",
+   "assembly_taxid": 1351,
+   "fasta_sha256": "59aa46d8637f5f454b2de13d0f2925eb7b07e423d7b1498f3d72b24cb7cc673d",
+   "filter": "taxon 1351 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_021610105.1",
+   "assembly_taxid": 1351,
+   "fasta_sha256": "7e19cf910ed1c374e5561c48fc6301963e15e2640f7c78f0e14562a6cbf1e6f8",
+   "filter": "taxon 1351 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_022869705.1",
+   "assembly_taxid": 1351,
+   "fasta_sha256": "90522d2f798cab74e10cacc6f659475bff4210e4ce1983450eecec416e4948b1",
+   "filter": "taxon 1351 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_029024925.1",
+   "assembly_taxid": 1351,
+   "fasta_sha256": "deabee31c969539289844a849a0e9086d8ee17095ff6acaf684976f04f7aa51c",
+   "filter": "taxon 1351 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "1351",
+   "whole_chain_candidates": 52,
+   "xml": "cache/blast/1351_48321fec814030b5.xml"
+  }
+ ],
+ "seq_sha256": "b86b4265a36d73156e86a1571742a8bf5fab1d80f1fd719772ffd476797e6a94",
+ "species_name": "Enterococcus faecalis",
+ "species_taxid": "1351",
+ "strains": [
+  "1351",
+  "565648"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 1932688,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "CP149539.1",
+   "source": "blast_core_nt",
+   "start": 1932109,
+   "strand": "-",
+   "title": "Enterococcus faecalis strain 1403D011 chromosome, complete genome"
+  }
+ ]
+}

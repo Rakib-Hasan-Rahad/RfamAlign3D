@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00002__7LS1_C2__2-154"
+ ],
+ "deposited_length": 174,
+ "deposited_sequence": "CGACUCUUAGCGGUGGAUCACUCGGCUCGUGCGUCGAUGAAGAACGCAGCUAGCUGCGAGAAUUAAUGUGAAUUGCAGGACACAUUGAUCAUCGACACUUCGAACGCACUUGCGGCCCCGGGUUCCUCCCGGGGCUACGCCUGUCUGAGCGUCGCUGCCUGUCUGAGCGUCGCU",
+ "evaluated_utc": "2026-11-13T08:17:33Z",
+ "families": [
+  "RF00002"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 7030,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GACUCUUAGCGGUGGAUCACUCGGCUCGUGCGUCGAUGAAGAACGCAGCUAGCUGCGAGAAUUAAUGUGAAUUGCAGGACACAUUGAUCAUCGACACUUCGAACGCACUUGCGGCCCCGGGUUCCUCCCGGGGCUACGCCUGUCUGAGCGUCG",
+   "record": "BK000964.3",
+   "source": "blast_core_nt",
+   "start": 6878,
+   "strand": "+",
+   "title": "TPA_exp: Mus musculus ribosomal DNA, complete repeating unit"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "10090",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/10090_99b60ab084302c88.xml"
+  }
+ ],
+ "seq_sha256": "c7e4f73d7fb1fe8c5eab6a4a4f33533a8db5f0c0d49fd106886b9b11adb1fdcf",
+ "species_name": "Mus musculus",
+ "species_taxid": "10090",
+ "strains": [
+  "10090"
+ ],
+ "whole_chain_hits": []
+}

@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  "RF00166__7YR6_A__1-118",
+  "RF00166__7YR7_A__1-118"
+ ],
+ "deposited_length": 118,
+ "deposited_sequence": "GCGUACAGGGAACACGCAACCCCGAAGGAUCGGGGAAGGGACGUCGCCAGGGAGGCGAUUCCAUCAGGAUGAUGACGAGGGACUGAAGAGUGGGCGGGGUAAUACCCCGCCCCUUUUU",
+ "evaluated_utc": "2026-11-13T08:25:40Z",
+ "families": [
+  "RF00166"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000006765.1",
+   "assembly_taxid": 208964,
+   "fasta_sha256": "9753bd20cd751373f56d2492295ce5869514f5993929d2dd553c751c5c994d96",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "287",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "287",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/287_170e70159e7384b9.xml"
+  }
+ ],
+ "seq_sha256": "1eedfbc5839f67d67960cfbf476d30c0d11b617eb9ac5a242ab7cb02eedd30a7",
+ "species_name": "Pseudomonas aeruginosa",
+ "species_taxid": "287",
+ "strains": [
+  "287"
+ ],
+ "whole_chain_hits": []
+}

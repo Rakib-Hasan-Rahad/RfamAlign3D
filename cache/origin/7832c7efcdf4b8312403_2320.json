@@ -1,0 +1,81 @@
+{
+ "candidates": [
+  "RF01852__3ADB_C__2-88",
+  "RF01852__3ADB_D__2-88",
+  "RF01852__3ADC_C__2-88",
+  "RF01852__3ADC_D__2-88",
+  "RF01852__3ADD_C__2-88",
+  "RF01852__3ADD_D__2-88"
+ ],
+ "deposited_length": 92,
+ "deposited_sequence": "GGCCGCCGCCACCGGGGUGGUCCCCGGGCCGGACUUCAGAUCCGGCGCGCCCCGAGUGGGGCGCGGGGUUCAAUUCCCCGCGGCGGCCGCCA",
+ "evaluated_utc": "2026-11-25T20:07:04Z",
+ "families": [
+  "RF01852"
+ ],
+ "interval_hits": [
+  {
+   "end": 188326,
+   "exact_confirmed": "yes",
+   "interval": "GCCGCCGCCACCGGGGUGGUCCCCGGGCCGGACUUCAGAUCCGGCGCGCCCCGAGUGGGGCGCGGGGUUCAAUUCCCCGCGGCGGCC",
+   "record": "NC_003551.1",
+   "source": "assembly:GCF_000007185.1",
+   "start": 188240,
+   "strand": "+"
+  },
+  {
+   "end": 188326,
+   "exact_confirmed": "yes",
+   "interval": "GCCGCCGCCACCGGGGUGGUCCCCGGGCCGGACUUCAGAUCCGGCGCGCCCCGAGUGGGGCGCGGGGUUCAAUUCCCCGCGGCGGCC",
+   "record": "AE009439.1",
+   "source": "assembly:GCA_000007185.1",
+   "start": 188240,
+   "strand": "+"
+  },
+  {
+   "biomol": "genomic",
+   "end": 188326,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GCCGCCGCCACCGGGGUGGUCCCCGGGCCGGACUUCAGAUCCGGCGCGCCCCGAGUGGGGCGCGGGGUUCAAUUCCCCGCGGCGGCC",
+   "record": "AE009439.1",
+   "source": "blast_core_nt",
+   "start": 188240,
+   "strand": "+",
+   "title": "Methanopyrus kandleri AV19, complete genome"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000007185.1",
+   "assembly_taxid": 190192,
+   "fasta_sha256": "2569b08b499250c2e4c4f0f6d005700bf7cf09d67fab9613ae5fd70e10b18153",
+   "filter": "taxon 2320 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_000007185.1",
+   "assembly_taxid": 190192,
+   "fasta_sha256": "f58ee80475a1e40835ab83ec59cec1a1d318118bf53d73f807640dd67f08046a",
+   "filter": "taxon 2320 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "2320",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/2320_fd8a69cbf239b171.xml"
+  }
+ ],
+ "seq_sha256": "7832c7efcdf4b8312403b92cfedcf96509a0afc22bbf20ae3c9beefca0ebceef",
+ "species_name": "Methanopyrus kandleri",
+ "species_taxid": "2320",
+ "strains": [
+  "2320"
+ ],
+ "whole_chain_hits": []
+}

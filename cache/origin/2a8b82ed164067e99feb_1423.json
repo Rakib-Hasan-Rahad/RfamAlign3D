@@ -1,0 +1,122 @@
+{
+ "candidates": [
+  "RF00001__6TNN_V__1-116"
+ ],
+ "deposited_length": 116,
+ "deposited_sequence": "UUUGGUGGCGAUAGCGAAGAGGUCACACCCGUUCCCAUACCGAACACGGAAGUUAAGCUCUUCAGCGCCGAUGGUAGUCGGGGGUUUCCCCCUGUGAGAGUAGGACGCCGCCAAGC",
+ "evaluated_utc": "2026-11-13T08:16:08Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000009045.1",
+   "assembly_taxid": 224308,
+   "fasta_sha256": "2f8ddf6c27c7d9d05a514071fb2bdd572a7739c97b9980834e83aa543177d859",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "224308",
+   "whole_chain_hits": 9
+  }
+ ],
+ "seq_sha256": "2a8b82ed164067e99febe15c9232ab139492c4edbec070172468e6b7f73e264c",
+ "species_name": "Bacillus subtilis",
+ "species_taxid": "1423",
+ "strains": [
+  "224308"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 14807,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 14692,
+   "strand": "+"
+  },
+  {
+   "end": 35352,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 35237,
+   "strand": "+"
+  },
+  {
+   "end": 95352,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 95237,
+   "strand": "+"
+  },
+  {
+   "end": 101208,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 101093,
+   "strand": "+"
+  },
+  {
+   "end": 165706,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 165591,
+   "strand": "+"
+  },
+  {
+   "end": 171312,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 171197,
+   "strand": "+"
+  },
+  {
+   "end": 176312,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 176197,
+   "strand": "+"
+  },
+  {
+   "end": 640253,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 640138,
+   "strand": "+"
+  },
+  {
+   "end": 3173935,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 3173820,
+   "strand": "-"
+  }
+ ]
+}

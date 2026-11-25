@@ -1,0 +1,134 @@
+{
+ "cohort": "step2_final",
+ "source": "MC-Annotate (bundled with STAR3D v1.2), base pairs only",
+ "rule": "class compared in the same nucleotide order; missing annotation is not proof of absence",
+ "base_pairs_in_A": 22099,
+ "structure_pairs": 503,
+ "rfam_outcomes_all_A_pairs": {
+  "same_class": 12202,
+  "not_comparable": 2739,
+  "no_annotation": 5447,
+  "unassessable": 1193,
+  "different_class": 518
+ },
+ "rfam_outcomes_touching_disagreement": {
+  "no_annotation": 1475,
+  "unassessable": 202,
+  "same_class": 750,
+  "different_class": 223,
+  "not_comparable": 322
+ },
+ "star3d_outcomes_all_A_pairs": {
+  "same_class": 12157,
+  "not_comparable": 2452,
+  "unassessable": 2192,
+  "no_annotation": 4979,
+  "different_class": 319
+ },
+ "star3d_outcomes_touching_disagreement": {
+  "unassessable": 478,
+  "same_class": 773,
+  "no_annotation": 1530,
+  "different_class": 54,
+  "not_comparable": 137
+ },
+ "all": {
+  "assessable_under_both": 19315,
+  "rfam_same_class": "11860/19315",
+  "star3d_same_class": "11938/19315",
+  "difference_star3d_minus_rfam": 0.004,
+  "ci95_pair_bootstrap": [
+   0.0008,
+   0.0074
+  ],
+  "rfam_ci95": [
+   0.6034,
+   0.6242
+  ],
+  "star3d_ci95": [
+   0.6077,
+   0.6282
+  ]
+ },
+ "touching_disagreement": {
+  "assessable_under_both": 2339,
+  "rfam_same_class": "669/2339",
+  "star3d_same_class": "747/2339",
+  "difference_star3d_minus_rfam": 0.0333,
+  "ci95_pair_bootstrap": [
+   0.0067,
+   0.0606
+  ],
+  "rfam_ci95": [
+   0.2568,
+   0.3133
+  ],
+  "star3d_ci95": [
+   0.2892,
+   0.3476
+  ]
+ },
+ "touching_disagreement_by_type": {
+  "canonical_watson_crick": {
+   "n": 1153,
+   "rfam_same": 570,
+   "star3d_same": 563,
+   "rfam_rate": 0.4944,
+   "star3d_rate": 0.4883,
+   "rfam_ci95": [
+    0.4498,
+    0.5332
+   ],
+   "star3d_ci95": [
+    0.4424,
+    0.5296
+   ],
+   "difference_ci95": [
+    -0.0492,
+    0.037
+   ],
+   "pairs_contributing": 298
+  },
+  "cww_non_watson_crick": {
+   "n": 205,
+   "rfam_same": 56,
+   "star3d_same": 89,
+   "rfam_rate": 0.2732,
+   "star3d_rate": 0.4341,
+   "rfam_ci95": [
+    0.2077,
+    0.3402
+   ],
+   "star3d_ci95": [
+    0.3641,
+    0.502
+   ],
+   "difference_ci95": [
+    0.0784,
+    0.2423
+   ],
+   "pairs_contributing": 140
+  },
+  "noncanonical": {
+   "n": 444,
+   "rfam_same": 43,
+   "star3d_same": 95,
+   "rfam_rate": 0.0968,
+   "star3d_rate": 0.214,
+   "rfam_ci95": [
+    0.0675,
+    0.1291
+   ],
+   "star3d_ci95": [
+    0.1671,
+    0.2657
+   ],
+   "difference_ci95": [
+    0.0586,
+    0.1782
+   ],
+   "pairs_contributing": 217
+  }
+ },
+ "type_rule": "canonical_watson_crick = cWW A-U/U-A/G-C/C-G; cww_non_watson_crick = other cWW (e.g. G-U wobble); noncanonical = any other Leontis-Westhof class; pairs without an LW class are excluded"
+}

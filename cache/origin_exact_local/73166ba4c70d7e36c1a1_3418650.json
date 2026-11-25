@@ -1,0 +1,31 @@
+{
+ "check_id": "73166ba4c70d7e36c1a1_3418650",
+ "deposited_length": 93,
+ "deposited_sequence": "GGUUUUUCUUCUGAAGAUAAAGCAACAACAACAAGGCAAGGAGGUAAAAAUGUUCGAGAAGAUCUGGCCUUCCCACAAGGGAAGGCCAGGGAA",
+ "evaluated_utc": "2026-11-13T11:02:50Z",
+ "families": [
+  "RF00480"
+ ],
+ "host": "<batch-host>",
+ "import_problems": [],
+ "imported_utc": "2026-11-13T11:45:54Z",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "exact_local_resolves": false,
+ "routes_tried": [
+  {
+   "archive": "virus_3418650_GENOME.zip",
+   "archive_bytes": 592251390,
+   "reference": "ncbi_virus_taxon:3418650",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "73166ba4c70d7e36c1a11715256de4dfc7bdd51791c4b3303d3f64602bc41ff7",
+ "source": "exact_local",
+ "species_name": "Lentivirus humimdef1",
+ "species_taxid": "3418650",
+ "whole_chain_hits": [],
+ "whole_chain_hits_confirmed": []
+}

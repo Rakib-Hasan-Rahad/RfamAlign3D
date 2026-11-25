@@ -1,0 +1,56 @@
+{
+ "candidates": [
+  "RF00005__7O7Y_AT__1-73",
+  "RF00005__7O7Z_AT__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GCCGAAAUAGCUCAGUUGGGAGAGCGUUAGACUGAAGAUCUAAAGGUCCCUGGUUCGAUCCCGGGUUUCGGCACCA",
+ "evaluated_utc": "2026-11-13T08:22:27Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "tRNA",
+   "end": 73,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "interval": "GCCGAAAUAGCUCAGUUGGGAGAGCGUUAGACUGAAGAUCUAAAGGUCCCUGGUUCGAUCCCGGGUUUCGGCA",
+   "record": "K00353.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Bovine Phe-tRNA-2"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9913",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/9913_281856d5ba2e7ccb.xml"
+  }
+ ],
+ "seq_sha256": "6e2c4a48b3af580ee37ef337f914ef56b4ac14792b984c49cb10d6cb50871b38",
+ "species_name": "Bos taurus",
+ "species_taxid": "9913",
+ "strains": [
+  "9913"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "tRNA",
+   "end": 76,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "K00353.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Bovine Phe-tRNA-2"
+  }
+ ]
+}

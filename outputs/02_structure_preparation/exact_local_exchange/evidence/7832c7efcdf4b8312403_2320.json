@@ -1,0 +1,50 @@
+{
+ "check_id": "7832c7efcdf4b8312403_2320",
+ "deposited_length": 92,
+ "deposited_sequence": "GGCCGCCGCCACCGGGGUGGUCCCCGGGCCGGACUUCAGAUCCGGCGCGCCCCGAGUGGGGCGCGGGGUUCAAUUCCCCGCGGCGGCCGCCA",
+ "evaluated_utc": "2026-11-13T10:47:53Z",
+ "families": [
+  "RF01852"
+ ],
+ "host": "<batch-host>",
+ "interval_hits": [
+  {
+   "end": 188326,
+   "exact_confirmed": "yes",
+   "file": "GCA_000007185.1_ASM718v1_genomic.fna",
+   "interval": "GCCGCCGCCACCGGGGUGGUCCCCGGGCCGGACUUCAGAUCCGGCGCGCCCCGAGUGGGGCGCGGGGUUCAAUUCCCCGCGGCGGCC",
+   "record": "AE009439.1",
+   "source": "assemblies:GCF_000007185.1,GCA_000007185.1",
+   "start": 188240,
+   "strand": "+",
+   "title": "AE009439.1 Methanopyrus kandleri AV19, complete genome"
+  },
+  {
+   "end": 188326,
+   "exact_confirmed": "yes",
+   "file": "GCF_000007185.1_ASM718v1_genomic.fna",
+   "interval": "GCCGCCGCCACCGGGGUGGUCCCCGGGCCGGACUUCAGAUCCGGCGCGCCCCGAGUGGGGCGCGGGGUUCAAUUCCCCGCGGCGGCC",
+   "record": "NC_003551.1",
+   "source": "assemblies:GCF_000007185.1,GCA_000007185.1",
+   "start": 188240,
+   "strand": "+",
+   "title": "NC_003551.1 Methanopyrus kandleri AV19, complete sequence"
+  }
+ ],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000007185.1,GCA_000007185.1_GENOME_FASTA.zip",
+   "archive_bytes": 1004212,
+   "reference": "assemblies:GCF_000007185.1,GCA_000007185.1",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "7832c7efcdf4b8312403b92cfedcf96509a0afc22bbf20ae3c9beefca0ebceef",
+ "source": "exact_local",
+ "species_name": "Methanopyrus kandleri",
+ "species_taxid": "2320",
+ "whole_chain_hits": []
+}

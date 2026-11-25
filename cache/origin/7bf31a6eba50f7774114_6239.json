@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00001__9BH5_A7__1-119",
+  "RF00001__9CAI_A7__1-119"
+ ],
+ "deposited_length": 119,
+ "deposited_sequence": "GCUUACGACCAUAUCACGUUGAAUGCACGCCAUCCCGUCCGAUCUGGCAAGUUAAGCAACGUUGAGUCCAGUUAGUACUUGGAUCGGAGACGGCCUGGGAAUCCUGGAUGUUGUAAGCU",
+ "evaluated_utc": "2026-11-13T08:27:05Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "6239",
+   "whole_chain_candidates": 17,
+   "xml": "cache/blast/6239_b1799fbe6dd39b0c.xml"
+  }
+ ],
+ "seq_sha256": "7bf31a6eba50f7774114596cee89e83adb23a84d1767a60d4e60a5e14ed2a34b",
+ "species_name": "Caenorhabditis elegans",
+ "species_taxid": "6239",
+ "strains": [
+  "6239"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "rRNA",
+   "end": 119,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "NR_070092.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "-",
+   "title": "Caenorhabditis elegans 5S ribosomal RNA (rrn-4.2), rRNA"
+  }
+ ]
+}

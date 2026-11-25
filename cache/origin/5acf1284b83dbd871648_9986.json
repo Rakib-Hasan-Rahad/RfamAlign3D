@@ -1,0 +1,77 @@
+{
+ "candidates": [
+  "RF00002__7O7Y_B8__2-154",
+  "RF00002__7O7Z_B8__2-154",
+  "RF00002__7O80_B8__2-154",
+  "RF00002__7O81_B8__2-154",
+  "RF00002__7ZJW_L8__2-154",
+  "RF00002__7ZJX_L8__2-154",
+  "RF00002__8BTK_B8__2-154",
+  "RF00002__8P2K_B8__2-154",
+  "RF00002__9F1B_B8__2-154",
+  "RF00002__9F1C_B8__2-154",
+  "RF00002__9F1D_B8__2-154",
+  "RF00002__9QQA_B8__2-154",
+  "RF00002__9QQB_B8__2-154"
+ ],
+ "deposited_length": 158,
+ "deposited_sequence": "CGACUCUUAGCGGUGGAUCACUCGGCUCGUGCGUCGAUGAAGAACGCAGCUAGCUGCGAGAAUUAAUGUGAAUUGCAGGACACAUUGAUCAUCGACACUUCGAACGCACUUGCGGCCCCGGGUUCCUCCCGGGGCUACGCCUGUCUGAGCGUCGCUUG",
+ "evaluated_utc": "2026-11-13T08:18:59Z",
+ "families": [
+  "RF00002"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9986",
+   "whole_chain_candidates": 3,
+   "xml": "cache/blast/9986_a86b2906b50203b4.xml"
+  }
+ ],
+ "seq_sha256": "5acf1284b83dbd871648fdc3d5c8eccae994143a4c0cae49df82d5c665b6dbfd",
+ "species_name": "Oryctolagus cuniculus",
+ "species_taxid": "9986",
+ "strains": [
+  "9986"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 1364,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "9Q7Q_5",
+   "source": "blast_core_nt",
+   "start": 1207,
+   "strand": "+",
+   "title": "Chain 5, 28S rRNA"
+  },
+  {
+   "biomol": "other",
+   "end": 158,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "4CXE_3",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain 3, 5.8s Rrna"
+  },
+  {
+   "biomol": "other",
+   "end": 1364,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "9MR4_5",
+   "source": "blast_core_nt",
+   "start": 1207,
+   "strand": "+",
+   "title": "Chain 5, 28S rRNA"
+  }
+ ]
+}

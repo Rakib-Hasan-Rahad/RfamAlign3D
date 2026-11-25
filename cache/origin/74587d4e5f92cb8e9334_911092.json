@@ -1,0 +1,44 @@
+{
+ "candidates": [
+  "RF00522__6VUH_A__1-33",
+  "RF00522__6VUI_A__1-33",
+  "RF00522__7E9I_A__1-33"
+ ],
+ "deposited_length": 33,
+ "deposited_sequence": "CUGGGUCGCAGUAACCCCAGUUAACAAAACAAG",
+ "evaluated_utc": "2026-11-13T08:07:13Z",
+ "families": [
+  "RF00522"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000007085.1",
+   "assembly_taxid": 273068,
+   "fasta_sha256": "faf457628e185a45a70f835a3400dfdb73f6042a7cd6aeadea8cff69b4b6ae77",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "119072",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "74587d4e5f92cb8e93340faef67356fa1592fa31850000046a6554e92de644d8",
+ "species_name": "Caldanaerobacter subterraneus",
+ "species_taxid": "911092",
+ "strains": [
+  "119072"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 1523253,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_003869.1",
+   "source": "assembly:GCF_000007085.1",
+   "start": 1523221,
+   "strand": "-"
+  }
+ ]
+}

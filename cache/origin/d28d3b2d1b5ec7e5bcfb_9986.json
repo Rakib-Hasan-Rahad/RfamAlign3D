@@ -1,0 +1,44 @@
+{
+ "candidates": [
+  "RF00001__4D67_4__1-119",
+  "RF00001__4UJC_A4__1-119",
+  "RF00001__4UJD_A4__1-119",
+  "RF00001__4UJE_A4__1-119"
+ ],
+ "deposited_length": 121,
+ "deposited_sequence": "GUCUACGGCCAUACCACCCUGAACGCGCCCGAUCUCGUCUGAUCUCGGAAGCUAAGCAGGGUCGGGCCUGGUUAGUACUUGGAUGGGAGACCGCCUGGGAAUACCGGGUGCUGUAGGCUUU",
+ "evaluated_utc": "2026-11-13T08:18:59Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9986",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/9986_a86b2906b50203b4.xml"
+  }
+ ],
+ "seq_sha256": "d28d3b2d1b5ec7e5bcfbc703370404db71b4e7920a567402e4e73f9a5f68990e",
+ "species_name": "Oryctolagus cuniculus",
+ "species_taxid": "9986",
+ "strains": [
+  "9986"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 121,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "4CXE_4",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain 4, 5s Rrna"
+  }
+ ]
+}

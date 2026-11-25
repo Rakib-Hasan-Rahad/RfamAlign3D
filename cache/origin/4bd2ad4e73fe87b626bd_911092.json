@@ -1,0 +1,44 @@
+{
+ "candidates": [
+  "RF00162__2YGH_A__1-95"
+ ],
+ "deposited_length": 95,
+ "deposited_sequence": "GGCUUAUCAAGAGAGGUGAAGGGACUGGCCCGACGAAACCCGGCAACCAGAAAUGGUGCCAAUUCCUGCAGCGGAAACGUUGAAAGAUGAGCCGA",
+ "evaluated_utc": "2026-11-25T20:05:28Z",
+ "families": [
+  "RF00162"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000007085.1",
+   "assembly_taxid": 273068,
+   "fasta_sha256": "faf457628e185a45a70f835a3400dfdb73f6042a7cd6aeadea8cff69b4b6ae77",
+   "filter": "taxon 119072 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_000007085.1",
+   "assembly_taxid": 273068,
+   "fasta_sha256": "da4d6e6b306647b7284a40ea3824b7909e029b118dfc31abad648d4fec5ff396",
+   "filter": "taxon 119072 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "911092",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/911092_ccb3376c6be52b2c.xml"
+  }
+ ],
+ "seq_sha256": "4bd2ad4e73fe87b626bd080886f07870d9abba03c1e50e03ed0bc57b1f572742",
+ "species_name": "Caldanaerobacter subterraneus",
+ "species_taxid": "911092",
+ "strains": [
+  "119072"
+ ],
+ "whole_chain_hits": []
+}

@@ -1,0 +1,47 @@
+{
+ "candidates": [
+  "RF00005__8BR8_Lu__1-72",
+  "RF00005__8BSI_Lu__1-72",
+  "RF00005__8BSJ_u__1-72",
+  "RF00005__8BSJ_v__1-72",
+  "RF00005__8BTD_u__1-72",
+  "RF00005__8BTR_u__1-72"
+ ],
+ "deposited_length": 75,
+ "deposited_sequence": "AGCAGAGUGGCGCAGCGGAAGCGUGCUGGGCCCAUAACCCAGAGGUCGAUGGAUCGAAACCAUCCUCUGCUACCA",
+ "evaluated_utc": "2026-11-25T20:06:48Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "5741",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/5741_93ba2c3f879b6d76.xml"
+  }
+ ],
+ "seq_sha256": "70e42ab758cf4ec5e58036c9455bfcc1bdba69d5dfe8e0c7f92a31ff3aa8fd4a",
+ "species_name": "Giardia duodenalis",
+ "species_taxid": "5741",
+ "strains": [
+  "184922",
+  "5741"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 75,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "8BR8_Lu",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain Lu, E-site tRNA"
+  }
+ ]
+}

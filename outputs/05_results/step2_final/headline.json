@@ -1,0 +1,76 @@
+{
+ "families_screened": 4227,
+ "pairs": 535,
+ "valid": 503,
+ "no_stacks": 32,
+ "failures": 0,
+ "families_with_pairs": 11,
+ "families_valid": 10,
+ "assessable": 40270,
+ "different": 4281,
+ "rfam_edges": 43434,
+ "star3d_edges": 41328,
+ "shared_edges": 35989,
+ "rfam_consensus_reproduced": [
+  35655,
+  42990
+ ],
+ "rfam_insert_reproduced": [
+  334,
+  444
+ ],
+ "rfam_unknown_reproduced": [
+  0,
+  0
+ ],
+ "rfam_raw": 43970,
+ "rfam_excluded": {
+  "A endpoint unobserved": 121,
+  "A endpoint unobserved;B endpoint unobserved": 53,
+  "B endpoint unobserved": 362
+ },
+ "star3d_excluded": 0,
+ "rfam_cov_obs": {
+  "family_inferred": 4266,
+  "unknown": 15
+ },
+ "rf_pairs": 503,
+ "obs_class": {
+  "bgsu_group_and_rfam_motif": 32,
+  "bgsu_motif_group": 15,
+  "consensus_loop_context_only": 21,
+  "incomplete": 5,
+  "no_documented_hit": 286,
+  "rfam_computational_motif": 1162,
+  "structural_loop_only": 2760
+ },
+ "atlas_any": 47,
+ "rfam_any": 1194,
+ "baseline": {
+  "bgsu_loop": [
+   "3184/4281",
+   "22810/35989"
+  ],
+  "rfam_motif": [
+   "735/4266",
+   "7661/35973"
+  ],
+  "bgsu_atlas_group": [
+   "11/128",
+   "306/1465"
+  ]
+ },
+ "rfam_cov": {
+  "RF00001": "covered",
+  "RF00002": "covered",
+  "RF00005": "covered",
+  "RF00015": "covered",
+  "RF00023": "covered",
+  "RF00026": "covered",
+  "RF00169": "covered",
+  "RF00177": "covered",
+  "RF00522": "coverage_unknown",
+  "RF01852": "covered",
+  "RF03087": "covered"
+ }
+}

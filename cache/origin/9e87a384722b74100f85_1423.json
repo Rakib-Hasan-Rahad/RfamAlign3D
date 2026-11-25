@@ -1,0 +1,82 @@
+{
+ "candidates": [
+  "RF00005__3J9W_AX__1-74",
+  "RF00005__7O5B_U__1-74",
+  "RF00005__7QGU_z__1-74",
+  "RF00005__7QH4_1__1-74",
+  "RF00005__7QH4_y__1-74",
+  "RF00005__7QV1_H__1-74",
+  "RF00005__7QV2_H__1-74",
+  "RF00005__7QV3_H__1-74",
+  "RF00005__8QPP_U__1-74",
+  "RF00005__8R55_U__1-74"
+ ],
+ "deposited_length": 77,
+ "deposited_sequence": "GGUCCGGUAGUUCAGUUGGUUAGAAUGCCUGCCUGUCACGCAGGAGGUCGCGGGUUCGAGUCCCGUCCGGACCGCCA",
+ "evaluated_utc": "2026-11-13T08:16:11Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000009045.1",
+   "assembly_taxid": 224308,
+   "fasta_sha256": "2f8ddf6c27c7d9d05a514071fb2bdd572a7739c97b9980834e83aa543177d859",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "224308",
+   "whole_chain_hits": 4
+  }
+ ],
+ "seq_sha256": "9e87a384722b74100f858bb3b691384616788e65686db2769bf200ae8dce5a6e",
+ "species_name": "Bacillus subtilis",
+ "species_taxid": "1423",
+ "strains": [
+  "1423",
+  "224308"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 640481,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 640405,
+   "strand": "+"
+  },
+  {
+   "end": 952118,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 952042,
+   "strand": "+"
+  },
+  {
+   "end": 3172588,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 3172512,
+   "strand": "-"
+  },
+  {
+   "end": 4154971,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 4154895,
+   "strand": "-"
+  }
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "check_id": "b91d2150475c671466a7_53633",
+ "deposited_length": 95,
+ "deposited_sequence": "GUCUAAAGUUUGCUAGGGUUCCGCGUCAUAGGUGGUCUGGUCCAAGAGCAAACGGCUUUCACAAAGCCACACGGAAGGAUAAAAGCCUGGGAGAU",
+ "evaluated_utc": "2026-11-13T10:45:15Z",
+ "families": [
+  "RF00442"
+ ],
+ "host": "<batch-host>",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000219855.1,GCF_000237975.1,GCA_000219855.1,GCA_000237975.1_GENOME_FASTA.zip",
+   "archive_bytes": 4220961,
+   "reference": "assemblies:GCF_000219855.1,GCF_000237975.1,GCA_000219855.1,GCA_000237975.1",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "b91d2150475c671466a7ae2ad0ff224bab0abc54367e126009dbf8ff6059ad8c",
+ "source": "exact_local",
+ "species_name": "Sulfobacillus acidophilus",
+ "species_taxid": "53633",
+ "whole_chain_hits": []
+}

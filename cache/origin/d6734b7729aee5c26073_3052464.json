@@ -1,0 +1,28 @@
+{
+ "candidates": [
+  "RF02340__7LYF_A__31-102"
+ ],
+ "deposited_length": 139,
+ "deposited_sequence": "GCCCGGAUAGCUCAGUCGGUAGAGCAGCGGAGCUGUUAGUCUACGUGGACCGACAAAGACAGAUUCUUUGAGGGAGCUAAGCUCAACGUAGUUCUAACAGCUCCGCGGGUCCAGGGUUCAAGUCCCUGUUCGGGCGCCA",
+ "evaluated_utc": "2026-11-13T08:29:51Z",
+ "families": [
+  "RF02340"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "3052464",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/3052464_fd05b4a306ae053d.xml"
+  }
+ ],
+ "seq_sha256": "d6734b7729aee5c26073e9c3ab3386053dcefb1cb47bbb975e4097292adafc9f",
+ "species_name": "Orthoflavivirus denguei",
+ "species_taxid": "3052464",
+ "strains": [
+  "11060"
+ ],
+ "whole_chain_hits": []
+}

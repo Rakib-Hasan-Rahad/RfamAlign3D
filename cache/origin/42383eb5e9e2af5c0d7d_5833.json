@@ -1,0 +1,45 @@
+{
+ "candidates": [
+  "RF00001__9BUP_AB__1-119",
+  "RF00001__9BUQ_AB__1-119",
+  "RF00001__9BUS_AB__1-119",
+  "RF00001__9BUT_AB__1-119",
+  "RF00001__9BUU_AB__1-119"
+ ],
+ "deposited_length": 119,
+ "deposited_sequence": "UGACUCGUUCAUACUACAGUGGCCACACCAGAUCCCAUCAGAACUCUGAAGUUAAGCACUGUAAGGCUUGGCUAGUACUGAGGUGGGAGACCGCUCGGGAACACCAGGUGAUGAGUCAU",
+ "evaluated_utc": "2026-11-13T08:44:09Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "5833",
+   "whole_chain_candidates": 5,
+   "xml": "cache/blast/5833_8973378a70e4caa9.xml"
+  }
+ ],
+ "seq_sha256": "42383eb5e9e2af5c0d7d3299c9756be4c190ff8f307a4858ba7f4f1762cc1fbe",
+ "species_name": "Plasmodium falciparum",
+ "species_taxid": "5833",
+ "strains": [
+  "36329"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "rRNA",
+   "end": 119,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "XR_002273092.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Plasmodium falciparum 3D7 ribosomal RNA (PF3D7_1418500), rRNA"
+  }
+ ]
+}

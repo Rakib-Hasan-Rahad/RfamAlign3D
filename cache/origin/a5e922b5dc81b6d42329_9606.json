@@ -1,0 +1,24 @@
+{
+ "candidates": [
+  "RF00005__6WB0_D__1-73",
+  "RF00005__6WB1_D__1-73",
+  "RF00005__6WB2_D__1-73"
+ ],
+ "deposited_length": 79,
+ "deposited_sequence": "GCCCGGAUAGCUCAGUCGGUAGAGCAUCAGACUUUUAAUCUGAGGGUCCAGGGUUCAAGUCCCUGUUCGGGCGCCACTG",
+ "evaluated_utc": "2026-11-13T08:07:08Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "note": "T",
+ "outcome": "unknown_residues_in_chain",
+ "routes_tried": [],
+ "seq_sha256": "a5e922b5dc81b6d42329bb346cc70ba42c7d322e1f8e376e7b0591564dad3206",
+ "species_name": "Homo sapiens",
+ "species_taxid": "9606",
+ "strains": [
+  "9606"
+ ],
+ "whole_chain_hits": []
+}

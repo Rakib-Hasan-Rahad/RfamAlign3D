@@ -1,0 +1,518 @@
+{
+ "check_id": "6fa5e783504b059f5bfa_4896",
+ "deposited_length": 246,
+ "deposited_sequence": "UUAAACGUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCUUCCUUUUAUUCUUUUUGCUUUUUGUUUGAGCUCAUUUGGGAAUAAUAAUCAUUUACCUUGAUUCGUACUUAUUCAUUUCAAUACCUUUGCACAUAAUAUUAUUGUGUACUAUGAAUGAUAU",
+ "evaluated_utc": "2026-11-13T10:42:17Z",
+ "families": [
+  "RF00001"
+ ],
+ "host": "<batch-host>",
+ "import_problems": [],
+ "imported_utc": "2026-11-13T11:45:54Z",
+ "interval_hits": [
+  {
+   "end": 149776,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003424.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 149658,
+   "strand": "+",
+   "title": "NC_003424.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: I"
+  },
+  {
+   "end": 2976937,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003424.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 2976819,
+   "strand": "+",
+   "title": "NC_003424.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: I"
+  },
+  {
+   "end": 3165514,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003424.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 3165396,
+   "strand": "+",
+   "title": "NC_003424.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: I"
+  },
+  {
+   "end": 3634489,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003424.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 3634371,
+   "strand": "+",
+   "title": "NC_003424.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: I"
+  },
+  {
+   "end": 3830498,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003424.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 3830380,
+   "strand": "+",
+   "title": "NC_003424.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: I"
+  },
+  {
+   "end": 4184473,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003424.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 4184355,
+   "strand": "-",
+   "title": "NC_003424.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: I"
+  },
+  {
+   "end": 4240968,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003424.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 4240850,
+   "strand": "-",
+   "title": "NC_003424.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: I"
+  },
+  {
+   "end": 464645,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003423.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 464527,
+   "strand": "+",
+   "title": "NC_003423.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: II"
+  },
+  {
+   "end": 520421,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003423.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 520303,
+   "strand": "+",
+   "title": "NC_003423.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: II"
+  },
+  {
+   "end": 783377,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003423.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 783259,
+   "strand": "+",
+   "title": "NC_003423.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: II"
+  },
+  {
+   "end": 1200045,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003423.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 1199927,
+   "strand": "+",
+   "title": "NC_003423.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: II"
+  },
+  {
+   "end": 1406703,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003423.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 1406585,
+   "strand": "+",
+   "title": "NC_003423.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: II"
+  },
+  {
+   "end": 1504491,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003423.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 1504373,
+   "strand": "+",
+   "title": "NC_003423.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: II"
+  },
+  {
+   "end": 2032528,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003423.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 2032410,
+   "strand": "+",
+   "title": "NC_003423.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: II"
+  },
+  {
+   "end": 3938696,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003423.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 3938578,
+   "strand": "+",
+   "title": "NC_003423.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: II"
+  },
+  {
+   "end": 2261489,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003423.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 2261371,
+   "strand": "-",
+   "title": "NC_003423.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: II"
+  },
+  {
+   "end": 4210499,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003423.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 4210381,
+   "strand": "-",
+   "title": "NC_003423.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: II"
+  },
+  {
+   "end": 523435,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003421.2",
+   "source": "assembly:GCF_000002945.2",
+   "start": 523317,
+   "strand": "+",
+   "title": "NC_003421.2 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: III"
+  },
+  {
+   "end": 926260,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003421.2",
+   "source": "assembly:GCF_000002945.2",
+   "start": 926142,
+   "strand": "+",
+   "title": "NC_003421.2 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: III"
+  },
+  {
+   "end": 1702242,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NC_003421.2",
+   "source": "assembly:GCF_000002945.2",
+   "start": 1702124,
+   "strand": "+",
+   "title": "NC_003421.2 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: III"
+  },
+  {
+   "end": 169,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151395.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 51,
+   "strand": "+",
+   "title": "NR_151395.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.03), rRNA"
+  },
+  {
+   "end": 120,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151398.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 2,
+   "strand": "+",
+   "title": "NR_151398.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.06), rRNA"
+  },
+  {
+   "end": 154,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151399.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 36,
+   "strand": "+",
+   "title": "NR_151399.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.07), rRNA"
+  },
+  {
+   "end": 119,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151400.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 1,
+   "strand": "+",
+   "title": "NR_151400.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.10), rRNA"
+  },
+  {
+   "end": 148,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151403.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 30,
+   "strand": "+",
+   "title": "NR_151403.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.13), rRNA"
+  },
+  {
+   "end": 161,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151404.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 43,
+   "strand": "+",
+   "title": "NR_151404.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.14), rRNA"
+  },
+  {
+   "end": 120,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151406.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 2,
+   "strand": "+",
+   "title": "NR_151406.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.16), rRNA"
+  },
+  {
+   "end": 119,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151407.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 1,
+   "strand": "+",
+   "title": "NR_151407.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.17), rRNA"
+  },
+  {
+   "end": 164,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151409.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 46,
+   "strand": "+",
+   "title": "NR_151409.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.19), rRNA"
+  },
+  {
+   "end": 119,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151410.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 1,
+   "strand": "+",
+   "title": "NR_151410.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.20), rRNA"
+  },
+  {
+   "end": 147,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151411.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 29,
+   "strand": "+",
+   "title": "NR_151411.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.24), rRNA"
+  },
+  {
+   "end": 153,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151412.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 35,
+   "strand": "+",
+   "title": "NR_151412.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.26), rRNA"
+  },
+  {
+   "end": 164,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151413.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 46,
+   "strand": "+",
+   "title": "NR_151413.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.27), rRNA"
+  },
+  {
+   "end": 119,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151414.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 1,
+   "strand": "+",
+   "title": "NR_151414.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.28), rRNA"
+  },
+  {
+   "end": 168,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151415.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 50,
+   "strand": "+",
+   "title": "NR_151415.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.29), rRNA"
+  },
+  {
+   "end": 125,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151417.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 7,
+   "strand": "+",
+   "title": "NR_151417.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.31), rRNA"
+  },
+  {
+   "end": 319,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151418.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 201,
+   "strand": "+",
+   "title": "NR_151418.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.32), rRNA"
+  },
+  {
+   "end": 160,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151419.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 42,
+   "strand": "+",
+   "title": "NR_151419.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.33), rRNA"
+  },
+  {
+   "end": 119,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151420.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 1,
+   "strand": "+",
+   "title": "NR_151420.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.34), rRNA"
+  },
+  {
+   "end": 119,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_151422.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 1,
+   "strand": "+",
+   "title": "NR_151422.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.36), rRNA"
+  }
+ ],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "whole_chain_found",
+ "exact_local_resolves": true,
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000002945.2_GENOME_FASTA.zip",
+   "archive_bytes": 3993384,
+   "reference": "assembly:GCF_000002945.2",
+   "route": "exact_local"
+  },
+  {
+   "archive": "genome_GCF_000002945.2_RNA_FASTA.zip",
+   "archive_bytes": 5158737,
+   "reference": "refseq_rna:GCF_000002945.2",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "6fa5e783504b059f5bfae7a61aa1087f457392a73a8aab1d9d6290be9611c880",
+ "source": "exact_local",
+ "species_name": "Schizosaccharomyces pombe",
+ "species_taxid": "4896",
+ "whole_chain_hits": [
+  {
+   "end": 783498,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "mac_reconfirmation": "efetch NC_003423.3:783253-783498+ exact; esummary taxid 4896, sourcedb refseq",
+   "record": "NC_003423.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 783253,
+   "strand": "+",
+   "title": "NC_003423.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: II"
+  },
+  {
+   "end": 246,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "independence_basis": "refseq_transcript",
+   "independent": "yes",
+   "record": "NR_151417.1",
+   "source": "refseq_rna:GCF_000002945.2",
+   "start": 1,
+   "strand": "+",
+   "title": "NR_151417.1 Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.31), rRNA"
+  }
+ ],
+ "whole_chain_hits_confirmed": [
+  {
+   "end": 783498,
+   "exact_confirmed": "yes",
+   "file": "GCF_000002945.2_ASM294v3_genomic.fna",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "mac_reconfirmation": "efetch NC_003423.3:783253-783498+ exact; esummary taxid 4896, sourcedb refseq",
+   "record": "NC_003423.3",
+   "source": "assembly:GCF_000002945.2",
+   "start": 783253,
+   "strand": "+",
+   "title": "NC_003423.3 Schizosaccharomyces pombe strain 972h- genome assembly, chromosome: II"
+  }
+ ]
+}

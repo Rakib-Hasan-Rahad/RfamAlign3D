@@ -1,0 +1,122 @@
+{
+ "check_id": "335fc919daf1c01bb28f_4097",
+ "deposited_length": 76,
+ "deposited_sequence": "GCGGGGAUAGCUCAGUUGGGAGAGCGUCAGACUGAAGAUCUGAAGGUCGCGUGUUCGAUCCACGCUCACCGCACCA",
+ "evaluated_utc": "2026-11-13T10:49:19Z",
+ "families": [
+  "RF00005"
+ ],
+ "host": "<batch-host>",
+ "interval_hits": [
+  {
+   "end": 212875634,
+   "exact_confirmed": "yes",
+   "file": "GCF_000715075.1_ASM71507v2_genomic.fna",
+   "interval": "GCGGGGAUAGCUCAGUUGGGAGAGCGUCAGACUGAAGAUCUGAAGGUCGCGUGUUCGAUCCACGCUCACCGCA",
+   "record": "NC_134080.1",
+   "source": "assembly:GCF_000715075.1",
+   "start": 212875562,
+   "strand": "+",
+   "title": "NC_134080.1 Nicotiana tabacum cultivar K326 chromosome 1, ASM71507v2, whole genome shotgun sequence"
+  },
+  {
+   "end": 218290986,
+   "exact_confirmed": "yes",
+   "file": "GCF_000715075.1_ASM71507v2_genomic.fna",
+   "interval": "GCGGGGAUAGCUCAGUUGGGAGAGCGUCAGACUGAAGAUCUGAAGGUCGCGUGUUCGAUCCACGCUCACCGCA",
+   "record": "NC_134080.1",
+   "source": "assembly:GCF_000715075.1",
+   "start": 218290914,
+   "strand": "+",
+   "title": "NC_134080.1 Nicotiana tabacum cultivar K326 chromosome 1, ASM71507v2, whole genome shotgun sequence"
+  },
+  {
+   "end": 103759288,
+   "exact_confirmed": "yes",
+   "file": "GCF_000715075.1_ASM71507v2_genomic.fna",
+   "interval": "GCGGGGAUAGCUCAGUUGGGAGAGCGUCAGACUGAAGAUCUGAAGGUCGCGUGUUCGAUCCACGCUCACCGCA",
+   "record": "NC_134081.1",
+   "source": "assembly:GCF_000715075.1",
+   "start": 103759216,
+   "strand": "-",
+   "title": "NC_134081.1 Nicotiana tabacum cultivar K326 chromosome 2, ASM71507v2, whole genome shotgun sequence"
+  },
+  {
+   "end": 760996,
+   "exact_confirmed": "yes",
+   "file": "GCF_000715075.1_ASM71507v2_genomic.fna",
+   "interval": "GCGGGGAUAGCUCAGUUGGGAGAGCGUCAGACUGAAGAUCUGAAGGUCGCGUGUUCGAUCCACGCUCACCGCA",
+   "record": "NC_134082.1",
+   "source": "assembly:GCF_000715075.1",
+   "start": 760924,
+   "strand": "+",
+   "title": "NC_134082.1 Nicotiana tabacum cultivar K326 chromosome 3, ASM71507v2, whole genome shotgun sequence"
+  },
+  {
+   "end": 186239546,
+   "exact_confirmed": "yes",
+   "file": "GCF_000715075.1_ASM71507v2_genomic.fna",
+   "interval": "GCGGGGAUAGCUCAGUUGGGAGAGCGUCAGACUGAAGAUCUGAAGGUCGCGUGUUCGAUCCACGCUCACCGCA",
+   "record": "NC_134087.1",
+   "source": "assembly:GCF_000715075.1",
+   "start": 186239474,
+   "strand": "-",
+   "title": "NC_134087.1 Nicotiana tabacum cultivar K326 chromosome 8, ASM71507v2, whole genome shotgun sequence"
+  },
+  {
+   "end": 140164333,
+   "exact_confirmed": "yes",
+   "file": "GCF_000715075.1_ASM71507v2_genomic.fna",
+   "interval": "GCGGGGAUAGCUCAGUUGGGAGAGCGUCAGACUGAAGAUCUGAAGGUCGCGUGUUCGAUCCACGCUCACCGCA",
+   "record": "NC_134098.1",
+   "source": "assembly:GCF_000715075.1",
+   "start": 140164261,
+   "strand": "-",
+   "title": "NC_134098.1 Nicotiana tabacum cultivar K326 chromosome 19, ASM71507v2, whole genome shotgun sequence"
+  },
+  {
+   "end": 81421903,
+   "exact_confirmed": "yes",
+   "file": "GCF_000715075.1_ASM71507v2_genomic.fna",
+   "interval": "GCGGGGAUAGCUCAGUUGGGAGAGCGUCAGACUGAAGAUCUGAAGGUCGCGUGUUCGAUCCACGCUCACCGCA",
+   "record": "NC_134100.1",
+   "source": "assembly:GCF_000715075.1",
+   "start": 81421831,
+   "strand": "-",
+   "title": "NC_134100.1 Nicotiana tabacum cultivar K326 chromosome 21, ASM71507v2, whole genome shotgun sequence"
+  },
+  {
+   "end": 86619040,
+   "exact_confirmed": "yes",
+   "file": "GCF_000715075.1_ASM71507v2_genomic.fna",
+   "interval": "GCGGGGAUAGCUCAGUUGGGAGAGCGUCAGACUGAAGAUCUGAAGGUCGCGUGUUCGAUCCACGCUCACCGCA",
+   "record": "NC_134102.1",
+   "source": "assembly:GCF_000715075.1",
+   "start": 86618968,
+   "strand": "-",
+   "title": "NC_134102.1 Nicotiana tabacum cultivar K326 chromosome 23, ASM71507v2, whole genome shotgun sequence"
+  }
+ ],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000715075.1_GENOME_FASTA.zip",
+   "archive_bytes": 1233784671,
+   "reference": "assembly:GCF_000715075.1",
+   "route": "exact_local"
+  },
+  {
+   "archive": "genome_GCF_000715075.1_RNA_FASTA.zip",
+   "archive_bytes": 51797001,
+   "reference": "refseq_rna:GCF_000715075.1",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "335fc919daf1c01bb28f3d1730ab599de836d051c5a9c897b277352dfb611890",
+ "source": "exact_local",
+ "species_name": "Nicotiana tabacum",
+ "species_taxid": "4097",
+ "whole_chain_hits": []
+}

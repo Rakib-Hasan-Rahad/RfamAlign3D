@@ -1,0 +1,70 @@
+{
+ "candidates": [
+  "RF00005__5K0Y_N__1-72",
+  "RF00005__6HCJ_33__1-72",
+  "RF00005__6HCQ_33__1-72",
+  "RF00005__6YAL_1__1-72",
+  "RF00005__6YAM_1__1-72",
+  "RF00005__6YAN_1__1-72",
+  "RF00005__7SYR_i__1-72",
+  "RF00005__7SYS_i__1-72",
+  "RF00005__7SYT_i__1-72",
+  "RF00005__7SYU_i__1-72",
+  "RF00005__7SYV_i__1-72",
+  "RF00005__7SYW_i__1-72",
+  "RF00005__7SYX_i__1-72",
+  "RF00005__8P03_1__1-72",
+  "RF00005__8P09_1__1-72",
+  "RF00005__9CPA_1__1-72"
+ ],
+ "deposited_length": 75,
+ "deposited_sequence": "AGCAGAGUGGCGCAGCGGAAGCGUGCUGGGCCCAUAACCCAGAGGUCGAUGGAUCGAAACCAUCCUCUGCUACCA",
+ "evaluated_utc": "2026-11-13T08:18:59Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "mRNA",
+   "end": 675,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "AGCAGAGUGGCGCAGCGGAAGCGUGCUGGGCCCAUAACCCAGAGGUCGAUGGAUCGAAACCAUCCUCUGCUA",
+   "record": "XM_070074864.2",
+   "source": "blast_core_nt",
+   "start": 604,
+   "strand": "-",
+   "title": "PREDICTED: Oryctolagus cuniculus histone H4 (LOC138849828), mRNA"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9986",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/9986_a86b2906b50203b4.xml"
+  }
+ ],
+ "seq_sha256": "70e42ab758cf4ec5e58036c9455bfcc1bdba69d5dfe8e0c7f92a31ff3aa8fd4a",
+ "species_name": "Oryctolagus cuniculus",
+ "species_taxid": "9986",
+ "strains": [
+  "9986"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 75,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "5K0Y_N",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain N, tRNA"
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00001__8AZW_C__1-119",
+  "RF00001__8B2L_C3__1-119"
+ ],
+ "deposited_length": 119,
+ "deposited_sequence": "GGAUGCGAUCAUACCAGCACUAACGCACCGGAUCCCAUCAGAACUCCGAAGUUAAGCGUGCUUGGGCGAGAGUAGUACUAGGAUGGGUGACCCCCUGGGAAGUCCUCGUGUUGCAUCCC",
+ "evaluated_utc": "2026-11-25T20:05:17Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "4097",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/4097_046c5d63d8b65b9f.xml"
+  }
+ ],
+ "seq_sha256": "4b8ec25761389490bb2fb1dc3cc986c966016e043b1eef5556de8c407bdc83e0",
+ "species_name": "Nicotiana tabacum",
+ "species_taxid": "4097",
+ "strains": [
+  "4097"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "rRNA",
+   "end": 119,
+   "exact_confirmed": "yes",
+   "independence_basis": "short_record_not_older_than_structure",
+   "independent": "no",
+   "record": "XR_012707222.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "PREDICTED: Nicotiana tabacum 5S ribosomal RNA (LOC142179137), rRNA"
+  }
+ ]
+}

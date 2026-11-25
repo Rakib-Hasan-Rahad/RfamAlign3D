@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00169__3NDB_M__72-104"
+ ],
+ "deposited_length": 136,
+ "deposited_sequence": "GUCUCGUCCCGUGGGGCUCGGCGGUGGGGGAGCAUCUCCUGUAGGGGAGAUGUAACCCCCUUUACCUGCCGAACCCCGCCAGGCCCGGAAGGGAGCAACGGUAGGCAGGACGUCGGCGCUCACGGGGGUGCGGGAC",
+ "evaluated_utc": "2026-11-13T08:24:15Z",
+ "families": [
+  "RF00169"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000091665.1",
+   "assembly_taxid": 243232,
+   "fasta_sha256": "2d17db1bedf6cb2c5c7ffd07e5b92eddf2bbd55662e0090c9d4b3100381c9aab",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "243232",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "9c5f96342ba05490ece255733c3750edc93d35bd6f68405b406cd0b6e66b4ff8",
+ "species_name": "Methanocaldococcus jannaschii",
+ "species_taxid": "2190",
+ "strains": [
+  "243232"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 552794,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000909.1",
+   "source": "assembly:GCF_000091665.1",
+   "start": 552659,
+   "strand": "+"
+  }
+ ]
+}

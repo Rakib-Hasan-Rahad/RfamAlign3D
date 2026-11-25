@@ -1,0 +1,105 @@
+{
+ "candidates": [
+  "RF00005__7N2V_Pt__1-73"
+ ],
+ "deposited_length": 106,
+ "deposited_sequence": "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCACCAUCGCAGGUUCGAAUCCUGCACGACCCACCA",
+ "evaluated_utc": "2026-11-13T08:22:31Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "end": 780626,
+   "exact_confirmed": "yes",
+   "interval": "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCA",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 780554,
+   "strand": "+"
+  },
+  {
+   "end": 780915,
+   "exact_confirmed": "yes",
+   "interval": "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCA",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 780843,
+   "strand": "+"
+  },
+  {
+   "end": 781219,
+   "exact_confirmed": "yes",
+   "interval": "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCA",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 781147,
+   "strand": "+"
+  },
+  {
+   "end": 781441,
+   "exact_confirmed": "yes",
+   "interval": "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCA",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 781369,
+   "strand": "+"
+  },
+  {
+   "end": 781649,
+   "exact_confirmed": "yes",
+   "interval": "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCA",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 781577,
+   "strand": "+"
+  },
+  {
+   "end": 2521325,
+   "exact_confirmed": "yes",
+   "interval": "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCA",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 2521253,
+   "strand": "+"
+  },
+  {
+   "biomol": "genomic",
+   "end": 1607374,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GGGUCGUUAGCUCAGUUGGUAGAGCAGUUGACUUUUAAUCAAUUGGUCGCAGGUUCGAAUCCUGCACGACCCA",
+   "record": "AP045172.1",
+   "source": "blast_core_nt",
+   "start": 1607302,
+   "strand": "-",
+   "title": "Escherichia coli JNEC-KY176 DNA, complete genome"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000005845.2",
+   "assembly_taxid": 511145,
+   "fasta_sha256": "daaa4d8b0eecbb01f8aee80314c6a59c5cb67a4178de0b2783527839fde57a15",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "83333",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "562",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/562_3ac9dd43826e6cb3.xml"
+  }
+ ],
+ "seq_sha256": "8c2a683a1ce7340973973661bcbce838d785c7f44799610d725a67fba07a8bb6",
+ "species_name": "Escherichia coli",
+ "species_taxid": "562",
+ "strains": [
+  "83333"
+ ],
+ "whole_chain_hits": []
+}

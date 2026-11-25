@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00005__1FIR_A__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GCCCGGAUAGCUCAGUCGGUAGAGCAUCAGACUUUUAAUCUGAGGGUCCAGGGUUCAAGUCCCUGUUCGGGCGCCA",
+ "evaluated_utc": "2026-11-13T08:22:27Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "ncRNA|lncRNA",
+   "end": 229,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GCCCGGAUAGCUCAGUCGGUAGAGCAUCAGACUUUUAAUCUGAGGGUCCAGGGUUCAAGUCCCUGUUCGGGCG",
+   "record": "XR_001501985.3",
+   "source": "blast_core_nt",
+   "start": 157,
+   "strand": "+",
+   "title": "PREDICTED: Bos taurus uncharacterized lncRNA (LOC107133209), ncRNA"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9913",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/9913_281856d5ba2e7ccb.xml"
+  }
+ ],
+ "seq_sha256": "27408d675e934c85f8717f3049764c0c80e1cf4522b89deef0a7631a195fc6e7",
+ "species_name": "Bos taurus",
+ "species_taxid": "9913",
+ "strains": [
+  "9913"
+ ],
+ "whole_chain_hits": []
+}

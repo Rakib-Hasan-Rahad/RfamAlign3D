@@ -1,0 +1,56 @@
+{
+ "candidates": [
+  "RF00001__8EUG_9__51-169",
+  "RF00001__8EUI_9__51-169"
+ ],
+ "deposited_length": 229,
+ "deposited_sequence": "GUUAACCUACUUGAAUAACAGAAUAAAUACUAUUAUUUAACACAACAAAUGUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCUUCCUUUUAUUCUUUUUGCUUUUUCUGCUUUAUUUUAAUUCCUCGUUUUCGACAUCAAAUC",
+ "evaluated_utc": "2026-11-25T20:05:17Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "ncRNA|lncRNA",
+   "end": 441,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GUCUACGGCCAUACCUAGGCGAAAACACCAGUUCCCGUCCGAUCACUGCAGUUAAGCGUCUGAGGGCCUCGUUAGUACUAUGGUUGGAGACAACAUGGGAAUCCGGGGUGCUGUAGGCU",
+   "record": "NR_203318.1",
+   "source": "blast_core_nt",
+   "start": 323,
+   "strand": "-",
+   "title": "Schizosaccharomyces pombe non-coding RNA (SPOM_SPNCRNA.5566), lncRNA"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "4896",
+   "whole_chain_candidates": 2,
+   "xml": "cache/blast/4896_50d52d45093993f4.xml"
+  }
+ ],
+ "seq_sha256": "dedb90787568cd1027e43cbf072d887628437f1419e94a635d22860c117699b3",
+ "species_name": "Schizosaccharomyces pombe",
+ "species_taxid": "4896",
+ "strains": [
+  "4896"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "rRNA",
+   "end": 229,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "NR_151395.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Schizosaccharomyces pombe 5S ribosomal RNA (SPOM_SPRRNA.03), rRNA"
+  }
+ ]
+}

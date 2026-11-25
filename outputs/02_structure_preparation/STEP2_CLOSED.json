@@ -1,0 +1,290 @@
+{
+ "closed_utc": "2026-11-13T12:02:01Z",
+ "decision": "researcher: finalize now",
+ "ncbi_abandoned_jobs": [
+  "abandoned NCBI job: 4097_046c5d63d8b65b9f.rid.json FDJDD9B0016",
+  "abandoned NCBI job: 4896_50d52d45093993f4.rid.json FDJEGRH6016",
+  "abandoned NCBI job: 562_37f69e75920aa44d.rid.json FDHA563Y014",
+  "abandoned NCBI job: 7227_c7de2de460de030e.rid.json FDJEEMH4016",
+  "abandoned NCBI job: 911092_ccb3376c6be52b2c.rid.json FDHA4P8Z014",
+  "abandoned NCBI job: 9823_64ff78f8e69f1b01.rid.json FDJEDESU016",
+  "abandoned NCBI job: 9940_e40bbc9ddff0073a.rid.json FDKUP4BF014"
+ ],
+ "policy_revision": "R7",
+ "resolved_by_exact_local": 12,
+ "unresolved_checks": [
+  {
+   "check_id": "d61146e1d049797c442c_145262",
+   "families": "RF00001",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Methanothermobacter thermautotrophicus"
+  },
+  {
+   "check_id": "c351febb3cf800b3790f_7227",
+   "families": "RF00001",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Drosophila melanogaster"
+  },
+  {
+   "check_id": "c6df548440aeb286fab8_5911",
+   "families": "RF00001",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "interval_found_flank_differs",
+   "species": "Tetrahymena thermophila"
+  },
+  {
+   "check_id": "fa9f4c63f11a4134b27b_5141",
+   "families": "RF00005",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Neurospora crassa"
+  },
+  {
+   "check_id": "335fc919daf1c01bb28f_4097",
+   "families": "RF00005",
+   "ncbi": "job abandoned",
+   "exact_local": "interval_found_flank_differs",
+   "species": "Nicotiana tabacum"
+  },
+  {
+   "check_id": "70e42ab758cf4ec5e580_5741",
+   "families": "RF00005",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Giardia duodenalis"
+  },
+  {
+   "check_id": "eb2c7a9898ac273c8a5a_10245",
+   "families": "RF00005",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Orthopoxvirus vaccinia"
+  },
+  {
+   "check_id": "bbe6f7ca2333f9fb914a_1359",
+   "families": "RF00029",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "interval_found_flank_differs",
+   "species": "Lactococcus cremoris"
+  },
+  {
+   "check_id": "aa3a7fd94c15224490e1_3702",
+   "families": "RF00059",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Arabidopsis thaliana"
+  },
+  {
+   "check_id": "f9ceef20be9cdb752407_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "4bd2ad4e73fe87b626bd_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "73bb6931bf4ecede92b2_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "4152728c15b0a55b8863_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "800d7447011941d9f289_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "6ba8c17b8fc9f7700f60_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "47950b7cc56951a6b8ea_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "381b919b40b6f14ab01a_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "eeaff8e8021103680682_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "913108987b0084dd25e8_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "644f94f26842003b885d_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "08adcd7cc73bb5217aa6_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "6061c6e4c04f228daba2_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "6495a9541f65d784236b_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "7299e9d6f11b8261958a_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "94af805ff09def0add8f_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "c852e7fa9f65d9b4b8da_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "3748b8b80faf2c036fd3_911092",
+   "families": "RF00162",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "7fcabf4e0778e8e9d550_911092",
+   "families": "RF00174",
+   "ncbi": "job abandoned",
+   "exact_local": "not_found",
+   "species": "Caldanaerobacter subterraneus"
+  },
+  {
+   "check_id": "b91d2150475c671466a7_53633",
+   "families": "RF00442",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Sulfobacillus acidophilus"
+  },
+  {
+   "check_id": "cc802d0903becf7211bb_204038",
+   "families": "RF00442",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Dickeya dadantii"
+  },
+  {
+   "check_id": "73166ba4c70d7e36c1a1_3418650",
+   "families": "RF00480",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Lentivirus humimdef1"
+  },
+  {
+   "check_id": "6dc4922a7a56188b5d33_93929",
+   "families": "RF01734",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Thermotoga petrophila"
+  },
+  {
+   "check_id": "974f51da94729865209d_1309",
+   "families": "RF01831",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Streptococcus mutans"
+  },
+  {
+   "check_id": "7832c7efcdf4b8312403_2320",
+   "families": "RF01852",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "interval_found_flank_differs",
+   "species": "Methanopyrus kandleri"
+  },
+  {
+   "check_id": "c25b5f9d01f523503883_3048459",
+   "families": "RF02340",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Orthoflavivirus zikaense"
+  },
+  {
+   "check_id": "9644fdea85571a20ecb1_5693",
+   "families": "RF02546",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Trypanosoma cruzi"
+  },
+  {
+   "check_id": "ca847a6a8e2aa4765dd4_381",
+   "families": "RF02977",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Mesorhizobium loti"
+  },
+  {
+   "check_id": "fd81226af3dc2758d616_33075",
+   "families": "RF03013",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Acidobacterium capsulatum"
+  },
+  {
+   "check_id": "f645a90a8678b84bbd14_666",
+   "families": "RF03167",
+   "ncbi": "not submitted (queued behind stalled jobs)",
+   "exact_local": "not_found",
+   "species": "Vibrio cholerae"
+  }
+ ]
+}

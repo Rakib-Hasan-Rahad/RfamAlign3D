@@ -1,0 +1,13 @@
+{
+ "cohort": "step2_final",
+ "motif_data_read": false,
+ "sha256": {
+  "run_outcomes.tsv": "c8539d16c4aa5530d72b929c6e52c5414e96d23da4ea7ce97346e289e48b1c04",
+  "alignment_edges.tsv.gz": "efc938dfcfadbf36f05e140681f013bd2c737d06cfcb702284cb13bbf3c10635",
+  "pair_scores.tsv": "8d7cb6765460e73bb5869847c78af945435300e7f3a28afbfc4102b1ecfbd516",
+  "side_scores.tsv": "96bbb4301e0412bb94aaa08952f83ac2ead53bfd758da413afe2630b3136cccf",
+  "residue_comparisons.tsv.gz": "a7baaf55d9d4d67df56e3843f384b92c6a77aef64140553d6ad2483149f54122",
+  "regions.tsv": "506172dc91427b1c8c71e98f97bd68f3b30fc9845df1b70b104e3c84bbb5f089",
+  "region_members.tsv.gz": "e196f490aa7f38d3de6f88ae836837e4d7e3d8947cc952d69fb1bedfe7bc2275"
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "candidates": [
+  "RF00001__5O60_B__3-116",
+  "RF00001__5O61_B__3-116",
+  "RF00001__6DZI_B__3-116",
+  "RF00001__6DZP_B__3-116",
+  "RF00001__7S0S_i__3-116",
+  "RF00001__7XAM_B__3-116",
+  "RF00001__7Y41_B__3-116",
+  "RF00001__8FR8_B__3-116",
+  "RF00001__8KAB_B__3-116",
+  "RF00001__8V9J_B__3-116",
+  "RF00001__8V9K_B__3-116",
+  "RF00001__8V9L_B__3-116",
+  "RF00001__8VIO_B__3-116",
+  "RF00001__8VK0_B__3-116",
+  "RF00001__8VK7_B__3-116",
+  "RF00001__8VKI_B__3-116",
+  "RF00001__8VKW_B__3-116",
+  "RF00001__8VPK_B__3-116",
+  "RF00001__8VR4_B__3-116",
+  "RF00001__8VR8_B__3-116",
+  "RF00001__8VRL_B__3-116",
+  "RF00001__8WHX_B__3-116",
+  "RF00001__8WHY_B__3-116",
+  "RF00001__8WI7_B__3-116",
+  "RF00001__8WI8_B__3-116",
+  "RF00001__8WIB_B__3-116",
+  "RF00001__8WIC_B__3-116",
+  "RF00001__8XZ3_B__3-116",
+  "RF00001__9B1W_U__3-116",
+  "RF00001__9B1X_U__3-116",
+  "RF00001__9B1Y_U__3-116",
+  "RF00001__9B24_U__3-116",
+  "RF00001__9K0Z_B__3-116",
+  "RF00001__9K10_B__3-116",
+  "RF00001__9N5T_B__3-116"
+ ],
+ "deposited_length": 118,
+ "deposited_sequence": "GUUACGGCGGUCCAUAGCGGCAGGGAAACGCCCGGUCCCAUCCCGAACCCGGAAGCUAAGCCUGCCAGCGCCGAUGAUACUACCCAUCCGGGUGGAAAAGUAGGACACCGCCGAACAC",
+ "evaluated_utc": "2026-11-13T08:26:36Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000767605.1",
+   "assembly_taxid": 246196,
+   "fasta_sha256": "849bc74f844b1f704a0ddc1bea265b89dbcea3df9c1b060bba51dc6acc00fa76",
+   "filter": "filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "taxon_queried": "246196",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "35b64ff13f358c707f3e48d4187499ca6a665dcaada6012e7e316d3b529fbdb4",
+ "species_name": "Mycolicibacterium smegmatis",
+ "species_taxid": "1772",
+ "strains": [
+  "1772",
+  "246196"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 5024363,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NZ_CP009494.1",
+   "source": "assembly:GCF_000767605.1",
+   "start": 5024246,
+   "strand": "-"
+  }
+ ]
+}

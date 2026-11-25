@@ -1,0 +1,91 @@
+{
+  "provenance": {
+    "step": "Step 1 - master inventory of explicit seed-row to PDB-chain links",
+    "rfam_release": "15.1",
+    "source_url": "https://ftp.ebi.ac.uk/pub/databases/Rfam/15.1/Rfam.seed.gz",
+    "local_path": "inputs/rfam/15.1/Rfam.seed.gz",
+    "seed_gz_sha256": "41f014f4ab5628620935f089b1bb77987ebc162fda7c72bff368a32c9cccabac",
+    "seed_gz_bytes": 5928432,
+    "decompressed_bytes": 38143095,
+    "decompressed_sha256": "a6fc52d98766fa2b8d479763a819f4edbc288fe63fcdb754ff01e2af95a241b9",
+    "run_utc": "2026-11-13T06:52:58Z",
+    "parser_version": "step1-inventory 1.0.0",
+    "parser_script_sha256": "e853d9d5016ec59ae63e129098417f5a06cae0eeaa1301aa865c7da9f5f34512",
+    "link_rule": "^([0-9][A-Za-z0-9]{3})_([A-Za-z0-9]{1,4})_SS$",
+    "sequence_hash_rule": "sha256(ascii(uppercase(ungapped))); no T->U",
+    "ungap_rule": "remove '-' and '.' only",
+    "python": "3.13.7",
+    "openpyxl": "3.1.5"
+  },
+  "checks": {
+    "families_parsed": 4227,
+    "unique_accessions": 4227,
+    "release_readme_family_count": 4227,
+    "coverage_each_family_once": true,
+    "coverage_matches_release_count": true,
+    "anomaly_counts": {
+      "latin1_fallback_decode": 1
+    },
+    "alignment_integrity_no_structural_anomalies": true,
+    "all_rows_have_family_width": true,
+    "every_family_has_RF_and_SS_cons": true,
+    "decode_fallback_lines": 1,
+    "decode_fallbacks_only_in_GF_free_text": true,
+    "gapped_alphabet": {
+      "-": 13081762,
+      "A": 3430184,
+      "B": 1,
+      "C": 2883456,
+      "D": 1,
+      "G": 3391886,
+      "H": 6,
+      "K": 24,
+      "M": 36,
+      "N": 495,
+      "R": 133,
+      "S": 23,
+      "U": 3223389,
+      "V": 3,
+      "W": 34,
+      "Y": 126
+    },
+    "seed_rows_total": 109390,
+    "seed_row_keys_unique": true,
+    "links_total": 383,
+    "links_resolve_to_exact_seed_row": true,
+    "link_sequences_equal_seed_row": true,
+    "link_keys_unique": true,
+    "ungapped_equals_gapped_minus_gaps": true,
+    "rows_with_T": 0,
+    "rows_with_non_ACGU": 474,
+    "rows_with_lowercase_residues": 0,
+    "rows_linked_to_multiple_chains": 80,
+    "chains_linked_in_multiple_families": [
+      "6MJ0_A:RF00233,RF00390",
+      "6MJ0_B:RF00233,RF00390"
+    ],
+    "families_with_links": 74,
+    "families_without_links": 4153,
+    "leads_total": 195,
+    "leads_by_source": {
+      "#=GF CC": 194,
+      "#=GR": 1
+    },
+    "family_summary_agrees_with_details": true,
+    "tsv_roundtrip_families": true,
+    "tsv_roundtrip_links": true,
+    "tsv_roundtrip_leads": true,
+    "jsonl_seed_rows_roundtrip": true,
+    "jsonl_family_tracks_roundtrip": true,
+    "xlsx_identifiers_are_text": true,
+    "xlsx_values_equal_records": true,
+    "xlsx_cells_redirected_to_companion": 0,
+    "previous_inventory_comparison": {
+      "previous_links": 383,
+      "current_links": 383,
+      "only_previous": [],
+      "only_current": []
+    }
+  },
+  "failed_checks": []
+}

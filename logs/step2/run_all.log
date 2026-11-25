@@ -1,0 +1,27 @@
+
+===== s03 2026-11-13T09:10:16Z
+sequence-species keys: 238; cached 178; to evaluate 60
+
+===== s03 2026-11-13T09:22:17Z
+sequence-species keys: 236; cached 178; to evaluate 58
+phase 1: assembly search for 37 prokaryotic keys
+[1/58 0.5 min] Streptomyces fradiae 7046cb66 -> whole_chain_found
+[2/58 0.7 min] Borreliella burgdorferi a5b5212a -> whole_chain_found
+[3/58 0.7 min] Fusobacterium ulcerans 9b33908d -> whole_chain_found
+[4/58 0.8 min] Staphylococcus aureus afc2e3a1 -> whole_chain_found
+[5/58 1.2 min] Sulfolobus acidocaldarius d42eedf3 -> whole_chain_found
+[6/58 1.4 min] Haloarcula marismortui d61146e1 -> whole_chain_found
+[7/58 1.4 min] Carnobacterium antarcticum ece479b5 -> whole_chain_found
+phase 2: 51 keys in 29 species need BLAST
+WATCHDOG: no completed check for 60 min at 2026-11-13T10:24:22Z; exiting so the driver restarts from cache
+
+===== s03 2026-11-13T10:24:52Z
+sequence-species keys: 234; cached 183; to evaluate 51
+phase 1: assembly search for 30 prokaryotic keys
+phase 2: 51 keys in 29 species need BLAST
+WATCHDOG: no completed check for 60 min at 2026-11-13T11:24:58Z; exiting so the driver restarts from cache
+
+===== s03 2026-11-13T11:25:28Z
+sequence-species keys: 234; cached 183; to evaluate 51
+phase 1: assembly search for 30 prokaryotic keys
+phase 2: 51 keys in 29 species need BLAST

@@ -1,0 +1,105 @@
+{
+ "candidates": [
+  "RF00001__4ADX_9__4-120"
+ ],
+ "deposited_length": 122,
+ "deposited_sequence": "UUAGGCGGCCACAGCGGUGGGGUUGCCUCCCGUACCCAUCCCGAACACGGAAGAUAAGCCCACCAGCGUUCCAGGGAGUACUGGAGUGCGCGAGCCUCUGGGAAAUCCGGUUCGCCGCCACC",
+ "evaluated_utc": "2026-11-25T20:09:42Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000008645.1",
+   "assembly_taxid": 187420,
+   "fasta_sha256": "772f4e05e07a4cecd8c50ebdb7646923f4e8dc7fdb2feaccf78840eb4c3c2ab2",
+   "filter": "taxon 187420 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_000008645.1",
+   "assembly_taxid": 187420,
+   "fasta_sha256": "021be3ee3a447bc45a3ce848089654ccf666df07b15283dc8489996d8db4f56c",
+   "filter": "taxon 187420 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_027554905.1",
+   "assembly_taxid": 145262,
+   "fasta_sha256": "6aa97197e002d512c133f8571c7b3fb7d96e80af0ff031f78ce77184ef79e952",
+   "filter": "taxon 145262 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_027555045.1",
+   "assembly_taxid": 145262,
+   "fasta_sha256": "fd35c81df6a635d24799dc75b0f91a992dbb02905347c01dd2bcec26d5c4e4a0",
+   "filter": "taxon 145262 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCF_050908155.1",
+   "assembly_taxid": 145262,
+   "fasta_sha256": "dbc9b81145296a3e6f23b56d3e9eca83c0da37da928c6e6c61224b71d61e0f4e",
+   "filter": "taxon 145262 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_027554905.1",
+   "assembly_taxid": 145262,
+   "fasta_sha256": "a61195bca6e8f397fc164f80bb3b43e556e08443c37c72b080f28dc24af098d2",
+   "filter": "taxon 145262 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_027555045.1",
+   "assembly_taxid": 145262,
+   "fasta_sha256": "0e0f2c5b490f151654d441898b310025aa2f2825545173a373b663fc66eadd9f",
+   "filter": "taxon 145262 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "assembly": "GCA_050908155.1",
+   "assembly_taxid": 145262,
+   "fasta_sha256": "261ea7cf5434da65a0bb90d4446ac34e8b623be3956dbb1fe9d904d5e32baa8c",
+   "filter": "taxon 145262 filters.assembly_level=complete_genome",
+   "route": "assembly",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "145262",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/145262_1ec62329ac6fa6fd.xml"
+  }
+ ],
+ "seq_sha256": "d61146e1d049797c442ce6e9c911bc272ee9b912bbcd734a233692a48ba6b452",
+ "species_name": "Methanothermobacter thermautotrophicus",
+ "species_taxid": "145262",
+ "strains": [
+  "187420"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 122,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "4ADX_9",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain 9, 5S Ribosomal RNA"
+  }
+ ]
+}

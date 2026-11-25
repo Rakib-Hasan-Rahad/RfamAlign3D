@@ -1,0 +1,33 @@
+{
+ "check_id": "c351febb3cf800b3790f_7227",
+ "deposited_length": 120,
+ "deposited_sequence": "GCCAACGACCAUACCACGCUGAAUACAUCGGUUCUCGUCCGAUCACCGAAAUUAAGCAGCGUCGCGGGCGGUUAGUACUUAGAUGGGGGACCGCUUGGGAACACCGCGUGUUGUUGGCCU",
+ "evaluated_utc": "2026-11-13T10:42:14Z",
+ "families": [
+  "RF00001"
+ ],
+ "host": "<batch-host>",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000001215.4_GENOME_FASTA.zip",
+   "archive_bytes": 44239833,
+   "reference": "assembly:GCF_000001215.4",
+   "route": "exact_local"
+  },
+  {
+   "archive": "genome_GCF_000001215.4_RNA_FASTA.zip",
+   "archive_bytes": 23533716,
+   "reference": "refseq_rna:GCF_000001215.4",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "c351febb3cf800b3790ff927ad3f6dee5ab69e6f41504e099bb25ab677ad6c1a",
+ "source": "exact_local",
+ "species_name": "Drosophila melanogaster",
+ "species_taxid": "7227",
+ "whole_chain_hits": []
+}

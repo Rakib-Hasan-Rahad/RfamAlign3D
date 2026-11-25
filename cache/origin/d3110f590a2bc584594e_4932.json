@@ -1,0 +1,23 @@
+{
+ "candidates": [
+  "RF00005__6XZ7_g__1-73",
+  "RF00005__6XZB_g2__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GCGGAUUUAGCUCAGUUGGGAGAGCGCCAGACUGAAGAUCUGGAGGUCCUGUGUUCGAUCCACAGAAUUCGCACCX",
+ "evaluated_utc": "2026-11-13T08:14:34Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "note": "X",
+ "outcome": "unknown_residues_in_chain",
+ "routes_tried": [],
+ "seq_sha256": "d3110f590a2bc584594e96e65dfdd4c26396f061a3791e1d5ae7ef539ffc5d50",
+ "species_name": "Saccharomyces cerevisiae",
+ "species_taxid": "4932",
+ "strains": [
+  "4932"
+ ],
+ "whole_chain_hits": []
+}

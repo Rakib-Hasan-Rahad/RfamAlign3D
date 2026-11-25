@@ -1,0 +1,59 @@
+{
+ "candidates": [
+  "RF00005__7CPU_S6__1-72",
+  "RF00005__7CPV_S6__1-72",
+  "RF00005__7LS1_n2__1-72",
+  "RF00005__7LS2_n2__1-72",
+  "RF00005__9H4N_n2__1-72"
+ ],
+ "deposited_length": 75,
+ "deposited_sequence": "AGCAGAGUGGCGCAGCGGAAGCGUGCUGGGCCCAUAACCCAGAGGUCGAUGGAUCGAAACCAUCCUCUGCUACCA",
+ "evaluated_utc": "2026-11-13T08:17:33Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 2715,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "AGCAGAGUGGCGCAGCGGAAGCGUGCUGGGCCCAUAACCCAGAGGUCGAUGGAUCGAAACCAUCCUCUGCUA",
+   "record": "AF458249.1",
+   "source": "blast_core_nt",
+   "start": 2644,
+   "strand": "-",
+   "title": "Mus musculus interleukin enhancer binding factor 2 gene, complete cds"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "10090",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/10090_99b60ab084302c88.xml"
+  }
+ ],
+ "seq_sha256": "70e42ab758cf4ec5e58036c9455bfcc1bdba69d5dfe8e0c7f92a31ff3aa8fd4a",
+ "species_name": "Mus musculus",
+ "species_taxid": "10090",
+ "strains": [
+  "10090"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "tRNA",
+   "end": 75,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "K00329.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Mouse initiator Met-tRNA-i"
+  }
+ ]
+}

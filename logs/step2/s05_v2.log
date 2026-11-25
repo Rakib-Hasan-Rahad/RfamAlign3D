@@ -1,0 +1,38 @@
+RF00001: groups=19 selected=136 pending=35 reviewed=437/437
+RF00002: groups=6 selected=10 pending=0 reviewed=275/275
+RF00005: groups=44 selected=351 pending=138 reviewed=549/549
+RF00008: groups=2 selected=0 pending=0 reviewed=7/7
+RF00015: groups=3 selected=1 pending=0 reviewed=23/23
+RF00023: groups=2 selected=1 pending=0 reviewed=3/4
+RF00026: groups=2 selected=1 pending=0 reviewed=2/29
+RF00029: groups=2 selected=0 pending=1 reviewed=6/6
+RF00032: groups=2 selected=0 pending=0 reviewed=9/9
+RF00059: groups=4 selected=0 pending=3 reviewed=36/36
+RF00162: groups=24 selected=0 pending=108 reviewed=29/29
+RF00166: groups=2 selected=0 pending=0 reviewed=4/4
+RF00169: groups=3 selected=1 pending=0 reviewed=11/11
+  RF00174: screening facts differ from mmCIF for 1 structures -> exhaustive re-walk
+RF00174: groups=3 selected=0 pending=2 reviewed=14/14
+RF00177: groups=2 selected=1 pending=0 reviewed=2/16
+RF00374: groups=2 selected=0 pending=0 reviewed=3/3
+RF00442: groups=3 selected=0 pending=3 reviewed=3/3
+RF00458: groups=11 selected=0 pending=0 reviewed=15/15
+RF00480: groups=2 selected=0 pending=1 reviewed=5/5
+RF00522: groups=5 selected=1 pending=0 reviewed=16/16
+RF00622: groups=2 selected=0 pending=0 reviewed=3/3
+RF01725: groups=2 selected=0 pending=0 reviewed=2/2
+RF01734: groups=2 selected=0 pending=1 reviewed=6/6
+RF01750: groups=3 selected=0 pending=0 reviewed=14/14
+RF01831: groups=3 selected=0 pending=2 reviewed=12/12
+RF01852: groups=3 selected=1 pending=2 reviewed=9/9
+RF02340: groups=3 selected=0 pending=2 reviewed=3/3
+RF02546: groups=3 selected=0 pending=3 reviewed=10/10
+RF02678: groups=2 selected=0 pending=0 reviewed=3/3
+RF02679: groups=2 selected=0 pending=0 reviewed=8/8
+  RF02977: screening facts differ from mmCIF for 10 structures -> exhaustive re-walk
+RF02977: groups=2 selected=0 pending=1 reviewed=15/15
+RF03013: groups=4 selected=0 pending=3 reviewed=16/16
+RF03072: groups=2 selected=0 pending=0 reviewed=3/3
+RF03087: groups=2 selected=1 pending=0 reviewed=14/28
+RF03167: groups=2 selected=0 pending=1 reviewed=6/6
+selected pairs 505 | staged 129 | pending evidence keys 39 | reviewed 1573

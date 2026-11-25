@@ -1,0 +1,70 @@
+{
+ "candidates": [
+  "RF00002__3J7O_8__2-154",
+  "RF00002__3J7P_8__2-154",
+  "RF00002__3J7Q_8__2-154",
+  "RF00002__3J7R_8__2-154"
+ ],
+ "deposited_length": 156,
+ "deposited_sequence": "CGACUCUUAGCGGUGGAUCACUCGGCUCGUGCGUCGAUGAAGAACGCAGCUAGCUGCGAGAAUUAAUGUGAAUUGCAGGACACAUUGAUCAUCGACACUUCGAACGCACUUGCGGCCCCGGGUUCCUCCCGGGGCUACGCCUGUCUGAGCGUCGCU",
+ "evaluated_utc": "2026-11-25T20:05:17Z",
+ "families": [
+  "RF00002"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "rRNA",
+   "end": 153,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "interval": "GACUCUUAGCGGUGGAUCACUCGGCUCGUGCGUCGAUGAAGAACGCAGCUAGCUGCGAGAAUUAAUGUGAAUUGCAGGACACAUUGAUCAUCGACACUUCGAACGCACUUGCGGCCCCGGGUUCCUCCCGGGGCUACGCCUGUCUGAGCGUCG",
+   "record": "NR_046250.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Sus scrofa 5.8S ribosomal RNA (RN5-8S), ribosomal RNA"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9823",
+   "whole_chain_candidates": 3,
+   "xml": "cache/blast/9823_64ff78f8e69f1b01.xml"
+  }
+ ],
+ "seq_sha256": "597a08c50c5055c99f032f4d8e55ab7de9d5e19420ee2dbfaf3080833167e4f1",
+ "species_name": "Sus scrofa",
+ "species_taxid": "9823",
+ "strains": [
+  "9823"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 156,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "4W1Z_8",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain 8, 5.8S ribosomal RNA"
+  },
+  {
+   "biomol": "mRNA",
+   "end": 161,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "AK236486.1",
+   "source": "blast_core_nt",
+   "start": 6,
+   "strand": "+",
+   "title": "Sus scrofa mRNA, clone:OVRM10197C06, expressed in ovary"
+  }
+ ]
+}

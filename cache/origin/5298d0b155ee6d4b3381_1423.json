@@ -1,0 +1,37 @@
+{
+ "candidates": [
+  "RF00174__6VMY_A__1-130"
+ ],
+ "deposited_length": 148,
+ "deposited_sequence": "GGUCAAAUAGGUGCCGGUCCGUGAACAACAGCCGGCUUAAAAGGGAAACCGGUAAAAGCCGGUGCGGUCCCGCCACUGUAAUUGGCCAAGCGCCAAGAGCCAGGAUACCUGCCUGUUUGAUCAGCACGAAUUCUGCGAGGACAGAUGA",
+ "evaluated_utc": "2026-11-13T08:16:10Z",
+ "families": [
+  "RF00174"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000009045.1",
+   "assembly_taxid": 224308,
+   "fasta_sha256": "2f8ddf6c27c7d9d05a514071fb2bdd572a7739c97b9980834e83aa543177d859",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "1423",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "1423",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/1423_99a4be99aaf83a39.xml"
+  }
+ ],
+ "seq_sha256": "5298d0b155ee6d4b338114e652a6752e0c411670cef2a5412a89e77f72b7c577",
+ "species_name": "Bacillus subtilis",
+ "species_taxid": "1423",
+ "strains": [
+  "1423"
+ ],
+ "whole_chain_hits": []
+}

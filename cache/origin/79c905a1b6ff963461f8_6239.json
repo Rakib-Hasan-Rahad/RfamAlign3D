@@ -1,0 +1,56 @@
+{
+ "candidates": [
+  "RF00002__9BH5_A8__2-151",
+  "RF00002__9CAI_A8__2-151"
+ ],
+ "deposited_length": 153,
+ "deposited_sequence": "CUAGCUUCAGCGAUGGAUCGGUUGCAUCGAGUAUCGAUGAAGAACGCAGCUUGCUGCGUUACUUACCACGAAUUGCAGACGCUUAGAGUGGUGAAAUUUCGAACGCAUAGCACCAACUGGGCCUCCAGUUGGUACGUCUGGUUCAGGGUUGUU",
+ "evaluated_utc": "2026-11-13T08:27:05Z",
+ "families": [
+  "RF00002"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 26194,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "UAGCUUCAGCGAUGGAUCGGUUGCAUCGAGUAUCGAUGAAGAACGCAGCUUGCUGCGUUACUUACCACGAAUUGCAGACGCUUAGAGUGGUGAAAUUUCGAACGCAUAGCACCAACUGGGCCUCCAGUUGGUACGUCUGGUUCAGGGUUG",
+   "record": "Z92784.2",
+   "source": "blast_core_nt",
+   "start": 26045,
+   "strand": "+",
+   "title": "Caenorhabditis elegans Cosmid F31C3, complete sequence"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "6239",
+   "whole_chain_candidates": 14,
+   "xml": "cache/blast/6239_b1799fbe6dd39b0c.xml"
+  }
+ ],
+ "seq_sha256": "79c905a1b6ff963461f8eb7593bf297034a7276839db4856b25cb66baa8a4a0b",
+ "species_name": "Caenorhabditis elegans",
+ "species_taxid": "6239",
+ "strains": [
+  "6239"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 26196,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "Z92784.2",
+   "source": "blast_core_nt",
+   "start": 26044,
+   "strand": "+",
+   "title": "Caenorhabditis elegans Cosmid F31C3, complete sequence"
+  }
+ ]
+}

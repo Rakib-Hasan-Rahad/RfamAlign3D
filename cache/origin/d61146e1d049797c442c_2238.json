@@ -1,0 +1,69 @@
+{
+ "candidates": [
+  "RF00001__1YHQ_9__4-120",
+  "RF00001__1YI2_9__4-120",
+  "RF00001__1YIJ_9__4-120",
+  "RF00001__1YIT_9__4-120",
+  "RF00001__1YJ9_9__4-120",
+  "RF00001__1YJN_9__4-120",
+  "RF00001__1YJW_9__4-120",
+  "RF00001__3CC2_9__4-120",
+  "RF00001__3CC4_9__4-120",
+  "RF00001__3CC7_9__4-120",
+  "RF00001__3CCE_9__4-120",
+  "RF00001__3CCJ_9__4-120",
+  "RF00001__3CCL_9__4-120",
+  "RF00001__3CCM_9__4-120",
+  "RF00001__3CCQ_9__4-120",
+  "RF00001__3CCR_9__4-120",
+  "RF00001__3CCS_9__4-120",
+  "RF00001__3CCU_9__4-120",
+  "RF00001__3CCV_9__4-120",
+  "RF00001__3CD6_9__4-120",
+  "RF00001__3CMA_9__4-120",
+  "RF00001__3CME_9__4-120",
+  "RF00001__3G4S_9__4-120",
+  "RF00001__3G6E_9__4-120",
+  "RF00001__3G71_9__4-120",
+  "RF00001__3I55_9__4-120",
+  "RF00001__3I56_9__4-120",
+  "RF00001__4V9F_9__4-120"
+ ],
+ "deposited_length": 122,
+ "deposited_sequence": "UUAGGCGGCCACAGCGGUGGGGUUGCCUCCCGUACCCAUCCCGAACACGGAAGAUAAGCCCACCAGCGUUCCAGGGAGUACUGGAGUGCGCGAGCCUCUGGGAAAUCCGGUUCGCCGCCACC",
+ "evaluated_utc": "2026-11-13T09:23:34Z",
+ "families": [
+  "RF00001"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000011085.1",
+   "assembly_taxid": 272569,
+   "fasta_sha256": "cf9a462716f0c2598540f09a3f8c50b8e34124f3df309bc7154b3ded9abd00aa",
+   "filter": "taxon 272569 filters.reference_only=true",
+   "route": "assembly",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "d61146e1d049797c442ce6e9c911bc272ee9b912bbcd734a233692a48ba6b452",
+ "species_name": "Haloarcula marismortui",
+ "species_taxid": "2238",
+ "strains": [
+  "2238",
+  "272569"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 2637393,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_006396.1",
+   "source": "assembly:GCF_000011085.1",
+   "start": 2637272,
+   "strand": "+"
+  }
+ ]
+}

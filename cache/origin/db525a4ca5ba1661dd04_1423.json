@@ -1,0 +1,81 @@
+{
+ "candidates": [
+  "RF00005__7AQC_P__1-73",
+  "RF00005__7AQC_T__1-73",
+  "RF00005__7AQD_T__1-73",
+  "RF00005__7AS8_2__1-73",
+  "RF00005__7AS9_2__1-73",
+  "RF00005__7ASA_2__1-73",
+  "RF00005__7OPE_2__1-73",
+  "RF00005__8S1P_a__1-73",
+  "RF00005__8S1U_a__1-73",
+  "RF00005__8S1U_c__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GGGGCCUUAGCUCAGCUGGGAGAGCGCCUGCUUUGCACGCAGGAGGUCAGCGGUUCGAUCCCGCUAGGCUCCACCA",
+ "evaluated_utc": "2026-11-13T08:16:12Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000009045.1",
+   "assembly_taxid": 224308,
+   "fasta_sha256": "2f8ddf6c27c7d9d05a514071fb2bdd572a7739c97b9980834e83aa543177d859",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "224308",
+   "whole_chain_hits": 4
+  }
+ ],
+ "seq_sha256": "db525a4ca5ba1661dd048c85f5ba003647e206c6145e1781763c93a17c4ed7df",
+ "species_name": "Bacillus subtilis",
+ "species_taxid": "1423",
+ "strains": [
+  "224308"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 11627,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 11552,
+   "strand": "+"
+  },
+  {
+   "end": 32095,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 32020,
+   "strand": "+"
+  },
+  {
+   "end": 96221,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 96146,
+   "strand": "+"
+  },
+  {
+   "end": 166328,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000964.3",
+   "source": "assembly:GCF_000009045.1",
+   "start": 166253,
+   "strand": "+"
+  }
+ ]
+}

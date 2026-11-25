@@ -1,0 +1,73 @@
+# RfamVSTAR3D findings — from-scratch rerun. Pinned sources and fixed policy.
+# Written 2026-11-13 before any data step. Change a value only with a dated entry in notes/CHANGELOG.md.
+
+project: rfam_vs_star3d_findings
+config_version: 1
+created: "2026-11-13"
+
+# ------------------------------------------------------------------ pinned sources
+# fetch_sources.py downloads each file (or copies it from `local_mirror` when that copy has the same
+# sha256). A checksum mismatch is a hard error; files in inputs/ are never overwritten.
+local_mirror: ""                                   # optional folder with identical copies of the pinned files
+sources:
+  - key: rfam_seed
+    url: https://ftp.ebi.ac.uk/pub/databases/Rfam/15.1/Rfam.seed.gz
+    path: inputs/rfam/15.1/Rfam.seed.gz
+    mirror: rfam/15.1/Rfam.seed.gz
+    sha256: 41f014f4ab5628620935f089b1bb77987ebc162fda7c72bff368a32c9cccabac
+  - key: rfam_pdb_mapping
+    url: https://ftp.ebi.ac.uk/pub/databases/Rfam/15.1/Rfam.pdb.gz
+    path: inputs/rfam/15.1/Rfam.pdb.gz
+    mirror: rfam/15.1/Rfam.pdb.gz
+    sha256: 4eac9865f671325b0d09e50b7db49a0608e82a0f7de33ad7ee220bbb38290155
+  - key: rfam_readme
+    url: https://ftp.ebi.ac.uk/pub/databases/Rfam/15.1/README
+    path: inputs/rfam/15.1/README
+    mirror: rfam/15.1/README
+    sha256: 3644c076ee3420a6b37bd8f7b8759dff408eea64067e4973ac5e0d54ec72a807
+  - key: star3d
+    url: http://genome.ucf.edu/STAR3D/STAR3D_v1.2.tar.gz
+    path: inputs/software/STAR3D_v1.2.tar.gz
+    mirror: software/STAR3D_v1.2.tar.gz
+    sha256: c9da44059d9cfc40828e798ebd4f6194c55415e17aaae7d90ac0f849ec2ed946
+
+# Fetched later, per structure (cached under cache/, recorded in logs/sources_manifest.tsv)
+on_demand:
+  rcsb_mmcif: https://files.rcsb.org/download/{pdb}.cif.gz
+  pdb_seqres: https://files.wwpdb.org/pub/pdb/derived_data/pdb_seqres.txt.gz
+  rcsb_entry_api: https://data.rcsb.org/rest/v1/core/entry/{pdb}
+  bgsu_loops: http://rna.bgsu.edu/rna3dhub/loops
+
+# ------------------------------------------------------------------ reference policy
+reference:
+  source: Rfam.seed.gz                       # the ONLY alignment reference
+  release: "15.1"
+  forbidden: [Rfam.3d.seed.gz, cmalign-added rows, full-family alignments, other releases]
+  explicit_link_regex: '^[0-9][A-Za-z0-9]{3}_[A-Za-z0-9]{1,4}_SS$'   # #=GR <row> <PDB>_<chain>_SS
+  normalization: "uppercase; T->U; no other changes"
+
+# ------------------------------------------------------------------ dataset policy
+dataset:
+  natural_sequences_only: true               # engineered constructs excluded, masking does not rescue them
+  unresolved_enters_cohort: false
+  min_distinct_linked_sequences_per_family: 2
+  min_observed_fraction_of_row: 0.90         # SUPERSEDED by Step 2 policy v2.0 (coverage_cutoff: none; coverage ranks candidates). See docs/DECISIONS.md
+  model: first_model
+  altloc: first_conformer
+  numbering: author
+  single_char_chain_required_for_star3d: true
+
+# ------------------------------------------------------------------ STAR3D
+star3d:
+  image: star3d-runtime:1                    # env/Dockerfile.star3d (ubuntu:22.04 + openjdk-8, linux/amd64)
+  platform: linux/amd64
+  parameters: defaults                       # -r 4.0 -s 3 -g -5 -e -2 -m 3 -i 0 -t 1
+  extra_flags: ["-o", "-p"]
+  alignments_per_pair: 1                     # one forward run (query -> target), no replicates, no auto-retry
+  primary_direction: sorted_stable_id        # query = lexicographically smaller "<PDB>_<chain>"
+
+# ------------------------------------------------------------------ FR3D
+fr3d:
+  package: git+https://github.com/BGSU-RNA/fr3d-python.git@288f98ccfd72dc6d88036c124605c05ce623b1b7
+  categories: [basepair, stacking]
+  canonical: "cWW AND identity in {AU,UA,GC,CG}; GU/UG cWW reported separately as wobble"

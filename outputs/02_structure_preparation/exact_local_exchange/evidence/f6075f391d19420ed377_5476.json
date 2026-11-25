@@ -1,0 +1,58 @@
+{
+ "check_id": "f6075f391d19420ed377_5476",
+ "deposited_length": 121,
+ "deposited_sequence": "GGUUGCGGCCAUAUCUAGCAGAAAGCACCGUUCCCCGUUCGAUCAACCGUAGUUAAGCUGCUAAGAGCAAUACCGAGUAGUGUAGUGGGAGACCAUACGCGAAACUAUUGUGCUGCAAUCU",
+ "evaluated_utc": "2026-11-13T10:42:28Z",
+ "families": [
+  "RF00001"
+ ],
+ "host": "<batch-host>",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000182965.3_GENOME_FASTA.zip",
+   "archive_bytes": 4533155,
+   "reference": "assembly:GCF_000182965.3",
+   "route": "exact_local"
+  },
+  {
+   "archive": "genome_GCF_000182965.3_RNA_FASTA.zip",
+   "archive_bytes": 2771625,
+   "reference": "refseq_rna:GCF_000182965.3",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "f6075f391d19420ed377dc54cccda8de45c8461a9c2a45530bbc1a7cc6d15538",
+ "source": "exact_local",
+ "species_name": "Candida albicans",
+ "species_taxid": "5476",
+ "whole_chain_hits": [
+  {
+   "end": 1889054,
+   "exact_confirmed": "yes",
+   "file": "GCF_000182965.3_ASM18296v3_genomic.fna",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_032096.1",
+   "source": "assembly:GCF_000182965.3",
+   "start": 1888934,
+   "strand": "-",
+   "title": "NC_032096.1 Candida albicans SC5314 chromosome R, complete sequence"
+  },
+  {
+   "end": 121,
+   "exact_confirmed": "yes",
+   "file": "rna.fna",
+   "independence_basis": "refseq_transcript",
+   "independent": "yes",
+   "record": "XR_002086441.1",
+   "source": "refseq_rna:GCF_000182965.3",
+   "start": 1,
+   "strand": "+",
+   "title": "XR_002086441.1 Candida albicans SC5314 5S ribosomal RNA (RDN5), rRNA"
+  }
+ ]
+}

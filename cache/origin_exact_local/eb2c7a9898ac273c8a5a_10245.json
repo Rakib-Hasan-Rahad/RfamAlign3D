@@ -1,0 +1,31 @@
+{
+ "check_id": "eb2c7a9898ac273c8a5a_10245",
+ "deposited_length": 72,
+ "deposited_sequence": "GGUCCCAUGGUGUAAUGGUUAGCACUCUGGACUUUGAAUCCAGCGAUCCGAGUUCAAAUCUCGGUGGGACCU",
+ "evaluated_utc": "2026-11-13T10:43:43Z",
+ "families": [
+  "RF00005"
+ ],
+ "host": "<batch-host>",
+ "import_problems": [],
+ "imported_utc": "2026-11-13T11:45:54Z",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "exact_local_resolves": false,
+ "routes_tried": [
+  {
+   "archive": "virus_10245_GENOME.zip",
+   "archive_bytes": 20998190,
+   "reference": "ncbi_virus_taxon:10245",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "eb2c7a9898ac273c8a5afd68b7be4fe78b3cc77054731e61bd73a998de741edb",
+ "source": "exact_local",
+ "species_name": "Orthopoxvirus vaccinia",
+ "species_taxid": "10245",
+ "whole_chain_hits": [],
+ "whole_chain_hits_confirmed": []
+}

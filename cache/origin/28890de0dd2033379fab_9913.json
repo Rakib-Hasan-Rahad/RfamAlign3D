@@ -1,0 +1,41 @@
+{
+ "candidates": [
+  "RF00005__3IZY_N__1-73"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "GCGGAUUUAGCUCAGUUGGGAGAGCGCCAGACUGAAGAUCUGGAGGUCCUGUGUUCGAUCCACAGAAUUCGCACCA",
+ "evaluated_utc": "2026-11-13T08:22:27Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "9913",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/9913_281856d5ba2e7ccb.xml"
+  }
+ ],
+ "seq_sha256": "28890de0dd2033379fabebc7165a219d6092ad9bbadc77f4c7528be78963ca0b",
+ "species_name": "Bos taurus",
+ "species_taxid": "9913",
+ "strains": [
+  "9913"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 76,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "3IZY_N",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain N, tRNA-Phe"
+  }
+ ]
+}

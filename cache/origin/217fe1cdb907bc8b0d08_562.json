@@ -1,0 +1,65 @@
+{
+ "candidates": [
+  "RF00005__6K0B_U__1-82",
+  "RF00005__6K0B_V__1-82"
+ ],
+ "deposited_length": 83,
+ "deposited_sequence": "GGUGGGGUUCCCGAGCGGCCAAAGGGAGCAGACUCUAAAUCUGCCGUCAUCGACUUCGAAGGUUCGAAUCCUUCCCCCACCAC",
+ "evaluated_utc": "2026-11-13T08:22:27Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "tRNA",
+   "end": 82,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "interval": "GGUGGGGUUCCCGAGCGGCCAAAGGGAGCAGACUCUAAAUCUGCCGUCAUCGACUUCGAAGGUUCGAAUCCUUCCCCCACCA",
+   "record": "M10878.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "E.coli Tyr-tRNA suppressor su+III"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000005845.2",
+   "assembly_taxid": 511145,
+   "fasta_sha256": "daaa4d8b0eecbb01f8aee80314c6a59c5cb67a4178de0b2783527839fde57a15",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "562",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "562",
+   "whole_chain_candidates": 6,
+   "xml": "cache/blast/562_3ac9dd43826e6cb3.xml"
+  }
+ ],
+ "seq_sha256": "217fe1cdb907bc8b0d08f39765d5c45f35f44ef039bbe85d6afbb61a88d9480b",
+ "species_name": "Escherichia coli",
+ "species_taxid": "562",
+ "strains": [
+  "562"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "tRNA",
+   "end": 83,
+   "exact_confirmed": "yes",
+   "independence_basis": "record_predates_structure",
+   "independent": "yes",
+   "record": "M10878.1",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "E.coli Tyr-tRNA suppressor su+III"
+  }
+ ]
+}

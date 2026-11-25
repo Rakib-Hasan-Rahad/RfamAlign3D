@@ -1,0 +1,50 @@
+{
+ "cohort": "step2_final",
+ "view": "RNA A view (one outcome per A-side nucleotide)",
+ "overall": {
+  "total_observations": 45735,
+  "same_partner": 35989,
+  "different_partner": 4281,
+  "rfam_only": 3164,
+  "star3d_only": 994,
+  "differences": 8439,
+  "denominator": 44428,
+  "rate": 0.1899,
+  "different_partner_rate": "4281/40270",
+  "neither": 771,
+  "unassessable": {
+   "same_partner": 0,
+   "different_partner": 64,
+   "rfam_only": 472,
+   "star3d_only": 0
+  },
+  "unassessable_total": 536
+ },
+ "sets": {
+  "unit": "residue correspondences (edges), both endpoints observed",
+  "shared": 35989,
+  "rfam_only": 7445,
+  "star3d_only": 5339,
+  "union": 48773,
+  "symmetric_difference": 12784,
+  "set_difference_rate": 0.2621
+ },
+ "offsets": {
+  "one_position": 3528,
+  "different_partner_observations": 4281
+ },
+ "definitions": {
+  "rate": "(different + Rfam only + STAR3D only) / (same + different + Rfam only + STAR3D only), assessable only",
+  "assessable": "the A nucleotide and every counterpart it is mapped to have coordinates in the staged structures",
+  "excluded": "neither-mapped (not a difference) and unassessable observations; both reported separately"
+ },
+ "checks": {
+  "every_A_observation_one_outcome": true,
+  "partition_sums_to_total": true,
+  "numerator_equals_categories": true,
+  "different_partner_matches_audit": true,
+  "edge_sets_consistent": true,
+  "offset_population_is_different_partner": true,
+  "families_sum_to_total": true
+ }
+}

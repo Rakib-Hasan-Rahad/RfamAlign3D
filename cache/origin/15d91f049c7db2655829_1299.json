@@ -1,0 +1,43 @@
+{
+ "candidates": [
+  "RF00169__2XXA_F__4-103",
+  "RF00169__2XXA_G__4-103"
+ ],
+ "deposited_length": 106,
+ "deposited_sequence": "GCAUUGCUGGUGCAGCGCAGCGCGGACGCCCGAACCUGGUCAGAGCCGGAAGGCAGCAGCCAUAAGGGAUGCUUUGCGGGUGCCGUUGCCUUCCGGCAAUGCUUUU",
+ "evaluated_utc": "2026-11-13T08:38:53Z",
+ "families": [
+  "RF00169"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_020546685.1",
+   "assembly_taxid": 243230,
+   "fasta_sha256": "68e4cdbd5759ec24a59fa686ef88d475285aa5ad393487ff9644195835c672c3",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "1299",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "15d91f049c7db26558295eb81e324082eaf32a1fca3259192b3c50652711aee0",
+ "species_name": "Deinococcus radiodurans",
+ "species_taxid": "1299",
+ "strains": [
+  "1299"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 2228807,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NZ_CP038663.1",
+   "source": "assembly:GCF_020546685.1",
+   "start": 2228702,
+   "strand": "+"
+  }
+ ]
+}

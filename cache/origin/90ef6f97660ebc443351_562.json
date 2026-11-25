@@ -1,0 +1,42 @@
+{
+ "candidates": [
+  "RF00005__7ST7_5__1-74"
+ ],
+ "deposited_length": 76,
+ "deposited_sequence": "CGGCGAGUAGCGCAGCUUGGUAGCGCAACUGGUUUGGGACCAGUGGGUCGGAGGUUCGAAUCCUCUCUCGCCGACC",
+ "evaluated_utc": "2026-11-13T08:07:18Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000005845.2",
+   "assembly_taxid": 511145,
+   "fasta_sha256": "daaa4d8b0eecbb01f8aee80314c6a59c5cb67a4178de0b2783527839fde57a15",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "83333",
+   "whole_chain_hits": 1
+  }
+ ],
+ "seq_sha256": "90ef6f97660ebc443351df3de5fab3b56c3320d06ff64d651afcd80e5fa17049",
+ "species_name": "Escherichia coli",
+ "species_taxid": "562",
+ "strains": [
+  "83333"
+ ],
+ "whole_chain_hits": [
+  {
+   "end": 3982810,
+   "exact_confirmed": "yes",
+   "independence_basis": "genome_assembly",
+   "independent": "yes",
+   "record": "NC_000913.3",
+   "source": "assembly:GCF_000005845.2",
+   "start": 3982735,
+   "strand": "+"
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "candidates": [
+  "RF00005__6OSI_QV__1-74",
+  "RF00005__6OSI_XV__1-74"
+ ],
+ "deposited_length": 77,
+ "deposited_sequence": "CGGUGAUUGGCGCAGCCUGGUAGCGCACUUCGUUCGGGACGAAGGGGUCGGAGGUUCGAAUCCUCUAUCACCGACCA",
+ "evaluated_utc": "2026-11-13T08:22:29Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000091545.1",
+   "assembly_taxid": 300852,
+   "fasta_sha256": "968eebc96d32e14d57c5a0981c4168a4ec73b481245048f8c02c374bbfbc3fdb",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "300852",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "274",
+   "whole_chain_candidates": 0,
+   "xml": "cache/blast/274_fc2b1ebbe14f27d8.xml"
+  }
+ ],
+ "seq_sha256": "ce894a25215d0927d690893945d3cdc9ccb6e783fec35b77fd3c972b4af79450",
+ "species_name": "Thermus thermophilus",
+ "species_taxid": "274",
+ "strains": [
+  "300852"
+ ],
+ "whole_chain_hits": []
+}

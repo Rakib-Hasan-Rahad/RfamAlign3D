@@ -1,0 +1,33 @@
+{
+ "check_id": "fa9f4c63f11a4134b27b_5141",
+ "deposited_length": 76,
+ "deposited_sequence": "UUCCUCGUGGCCCAAUGGUCACGGCGUCUGGCUACGAACCAGAAGAUUCCAGGUUCAAGUCCUGGCGGGGAAGCCA",
+ "evaluated_utc": "2026-11-13T10:43:24Z",
+ "families": [
+  "RF00005"
+ ],
+ "host": "<batch-host>",
+ "interval_hits": [],
+ "method": "exact substring search, both strands, full deposited sequence (U->T)",
+ "notes": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "archive": "genome_GCF_000182925.2_GENOME_FASTA.zip",
+   "archive_bytes": 12976201,
+   "reference": "assembly:GCF_000182925.2",
+   "route": "exact_local"
+  },
+  {
+   "archive": "genome_GCF_000182925.2_RNA_FASTA.zip",
+   "archive_bytes": 7096335,
+   "reference": "refseq_rna:GCF_000182925.2",
+   "route": "exact_local"
+  }
+ ],
+ "seq_sha256": "fa9f4c63f11a4134b27bf1604e6368897ac071defd62fbbe6c928f2a909c4279",
+ "source": "exact_local",
+ "species_name": "Neurospora crassa",
+ "species_taxid": "5141",
+ "whole_chain_hits": []
+}

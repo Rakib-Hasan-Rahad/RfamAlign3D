@@ -1,0 +1,56 @@
+{
+ "candidates": [
+  "RF00458__4XEJ_AIRE__6-196",
+  "RF00458__4XEJ_BIRE__6-196"
+ ],
+ "deposited_length": 196,
+ "deposited_sequence": "AAGCUGACUAUGUGAUCUUAUUAAAAUUAGGUUAAAUUUCGAGGUUAAAAAUAGUUUUAAUAUUGCUAUAGUCUUAGAGGUCUUGUAUAUUUAUACUUACCACACAAGAUGGACCGGAGCAGCCCUCCAAUAUCUAGUGUACCCUCGUGCUCGCUCAAACAUUAAGUGGUGUUGUGCGAAAAGAAUCUCACUUCAA",
+ "evaluated_utc": "2026-11-13T08:25:19Z",
+ "families": [
+  "RF00458"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "genomic",
+   "end": 6195,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "GACUAUGUGAUCUUAUUAAAAUUAGGUUAAAUUUCGAGGUUAAAAAUAGUUUUAAUAUUGCUAUAGUCUUAGAGGUCUUGUAUAUUUAUACUUACCACACAAGAUGGACCGGAGCAGCCCUCCAAUAUCUAGUGUACCCUCGUGCUCGCUCAAACAUUAAGUGGUGUUGUGCGAAAAGAAUCUCACUUCAA",
+   "record": "NC_003779.1",
+   "source": "blast_core_nt",
+   "start": 6005,
+   "strand": "+",
+   "title": "Plautia stali intestine virus RNA for nonstructural polyprotein, capsid protein precursor, complete cds"
+  }
+ ],
+ "outcome": "whole_chain_found",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "3048274",
+   "whole_chain_candidates": 2,
+   "xml": "cache/blast/3048274_c75dd3fc0022f5c8.xml"
+  }
+ ],
+ "seq_sha256": "051067cf205add45aba188eeb74d57f573ab2b697ae8aa71e7114ec1f994982d",
+ "species_name": "Triatovirus plastali",
+ "species_taxid": "3048274",
+ "strains": [
+  "64698"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "genomic",
+   "end": 6195,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "record": "NC_003779.1",
+   "source": "blast_core_nt",
+   "start": 6000,
+   "strand": "+",
+   "title": "Plautia stali intestine virus RNA for nonstructural polyprotein, capsid protein precursor, complete cds"
+  }
+ ]
+}

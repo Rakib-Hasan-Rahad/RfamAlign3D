@@ -1,0 +1,61 @@
+{
+ "candidates": [
+  "RF00059__4NYB_A__1-83",
+  "RF00059__4NYC_A__1-83",
+  "RF00059__4NYD_A__1-83",
+  "RF00059__4NYG_A__1-83",
+  "RF00059__7TD7_A__1-83",
+  "RF00059__7TDA_A__1-83",
+  "RF00059__7TDB_A__1-83",
+  "RF00059__7TDC_A__1-83",
+  "RF00059__7TZT_A__1-83",
+  "RF00059__7TZU_A__1-83",
+  "RF00059__8F4O_A__1-83",
+  "RF00059__8F4O_B__1-83"
+ ],
+ "deposited_length": 83,
+ "deposited_sequence": "GCGACUCGGGGUGCCCUUCUGCGUGAAGGCUGAGAAAUACCCGUAUCACCUGAUCUGGAUAAUGCCAGCGUAGGGAAGUCGCA",
+ "evaluated_utc": "2026-11-13T08:22:31Z",
+ "families": [
+  "RF00059"
+ ],
+ "interval_hits": [],
+ "outcome": "not_found",
+ "routes_tried": [
+  {
+   "assembly": "GCF_000005845.2",
+   "assembly_taxid": 511145,
+   "fasta_sha256": "daaa4d8b0eecbb01f8aee80314c6a59c5cb67a4178de0b2783527839fde57a15",
+   "filter": "filters.reference_only=true",
+   "route": "assembly",
+   "taxon_queried": "562",
+   "whole_chain_hits": 0
+  },
+  {
+   "route": "blast_core_nt",
+   "species": "562",
+   "whole_chain_candidates": 1,
+   "xml": "cache/blast/562_3ac9dd43826e6cb3.xml"
+  }
+ ],
+ "seq_sha256": "79dc9078a98d9e05e7a644ce8cd19e5a54fe597adc0f6f83a7cd865a4dbfab21",
+ "species_name": "Escherichia coli",
+ "species_taxid": "562",
+ "strains": [
+  "562"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 83,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "7TD7_A",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain A, thiM riboswitch RNA (78-MER)"
+  }
+ ]
+}

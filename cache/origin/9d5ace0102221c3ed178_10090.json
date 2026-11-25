@@ -1,0 +1,67 @@
+{
+ "candidates": [
+  "RF00032__6V4X_Y__1-26"
+ ],
+ "deposited_length": 52,
+ "deposited_sequence": "CCAAAGGCUCUUUUCAGAGCCACCCACUGAAUCAGAUAAAGAGCUGUAACAC",
+ "evaluated_utc": "2026-11-13T08:17:33Z",
+ "families": [
+  "RF00032"
+ ],
+ "interval_hits": [
+  {
+   "biomol": "mRNA",
+   "end": 496,
+   "exact_confirmed": "yes",
+   "independence_basis": "long_record",
+   "independent": "yes",
+   "interval": "CCAAAGGCUCUUUUCAGAGCCACCCA",
+   "record": "NM_178203.3",
+   "source": "blast_core_nt",
+   "start": 471,
+   "strand": "+",
+   "title": "Mus musculus H3 clustered histone 2 (H3c2), mRNA"
+  }
+ ],
+ "outcome": "interval_found_flank_differs",
+ "routes_tried": [
+  {
+   "route": "blast_core_nt",
+   "species": "10090",
+   "whole_chain_candidates": 2,
+   "xml": "cache/blast/10090_99b60ab084302c88.xml"
+  }
+ ],
+ "seq_sha256": "9d5ace0102221c3ed1789195ece6427724416ee093e330912d1d0d04f527db2a",
+ "species_name": "Mus musculus",
+ "species_taxid": "10090",
+ "strains": [
+  "10090"
+ ],
+ "whole_chain_hits": [
+  {
+   "biomol": "other",
+   "end": 52,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "9N96_Y",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain Y, modified H2a pre-mRNA"
+  },
+  {
+   "biomol": "other",
+   "end": 52,
+   "exact_confirmed": "yes",
+   "independence_basis": "pdb_derived_record",
+   "independent": "no",
+   "record": "6V4X_Y",
+   "source": "blast_core_nt",
+   "start": 1,
+   "strand": "+",
+   "title": "Chain Y, modified H2a pre-mRNA"
+  }
+ ]
+}

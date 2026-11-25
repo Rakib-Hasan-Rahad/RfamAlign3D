@@ -1,0 +1,23 @@
+{
+ "candidates": [
+  "RF00005__4W29_AX__1-73",
+  "RF00005__4W29_CX__1-73"
+ ],
+ "deposited_length": 78,
+ "deposited_sequence": "GGGUGAUUAGCUCAGCUGGGAGAGCACCUCCCUUACAAGGAGGGGGUCGGCGGUUCGAUCCCGUCAUCACCCACCAVX",
+ "evaluated_utc": "2026-11-13T08:07:18Z",
+ "families": [
+  "RF00005"
+ ],
+ "interval_hits": [],
+ "note": "VX",
+ "outcome": "unknown_residues_in_chain",
+ "routes_tried": [],
+ "seq_sha256": "94fa16d653b58e3cdea9022490c0feca7fb3cd65a84df72b117e998639a8cb70",
+ "species_name": "Escherichia coli",
+ "species_taxid": "562",
+ "strains": [
+  "562"
+ ],
+ "whole_chain_hits": []
+}
