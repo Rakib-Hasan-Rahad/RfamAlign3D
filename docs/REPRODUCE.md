@@ -12,14 +12,15 @@ headline numbers from the raw comparison and interaction tables. Checks that nee
 unpack them (section 2); a skipped check is never counted as passed.
 
 ## 2. Add the large files (release archives)
-Download the archives from GitHub release v1.0.0 (unchanged in 1.1.0, which adds step 6 to the repository itself)
-and unpack them in the repository root:
+Download the archives and unpack them in the repository root. `browser_and_database.tar.gz` comes from release
+v1.1.0 (rebuilt with the step 6 evidence); the other four are unchanged and come from release v1.0.0. Each release
+lists the sha256 of its archives in `SHA256SUMS.txt`.
 
 | Archive | Contents | Unpacks to |
 |---|---|---|
 | `star3d_runs.tar.gz` | Raw STAR3D alignments, superpositions and preprocessing for all 570 runs | `outputs/03_star3d/step2_r8/returned/` |
 | `verification_archive.tar.gz` | Exact local search evidence and STAR3D run outputs as collected | `outputs/verification_archive/` |
-| `browser_and_database.tar.gz` | Interactive browser and SQLite database | `outputs/05_results/step2_r8/` |
+| `browser_and_database.tar.gz` (v1.1.0) | Interactive browser (incl. the Structural evidence page) and SQLite database (incl. step 6 tables) | `outputs/05_results/step2_r8/` |
 | `pinned_inputs.tar.gz` | The exact Rfam 15.1, wwPDB and NCBI taxonomy files used (STAR3D excluded, see below) | `inputs/` |
 | `evidence_blast.tar.gz` | NCBI BLAST XML behind every natural-origin decision | `cache/blast/` |
 

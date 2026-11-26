@@ -177,6 +177,8 @@ def build(cohort):
     diag = {(d["pair_id"], d["unit_id"]): d for d in B.tsv(os.path.join(diag_p, "disagreement_diagnostics.tsv.gz"))}
     dsum = json.load(open(os.path.join(diag_p, "summary.json")))
     ret = os.path.join(ROOT, "outputs", "03_star3d", cohort, "returned", "runs")
+    s6 = os.path.join(ROOT, "outputs", "06_audit", cohort)
+    tier6 = {r["region_id"]: r for r in B.tsv(os.path.join(s6, "region_support_audit.tsv"))} if os.path.exists(os.path.join(s6, "region_support_audit.tsv")) else {}
 
     # ---------------- per-family A-side category totals
     famcat = collections.defaultdict(collections.Counter)
@@ -280,7 +282,10 @@ def build(cohort):
                 x["rpp"] = posA.get(x["rp"]) if x["rp"] else None
                 x["spp"] = posA.get(x["sp"]) if x["sp"] else None
             det["res"] = res
-            det["regions"] = [dict(id=rid.split(":", 2)[2], side=sd, len=int(ln), start=su, end=eu, rf=rfc, ss=ssc)
+            det["regions"] = [dict(id=rid.split(":", 2)[2], side=sd, len=int(ln), start=su, end=eu, rf=rfc, ss=ssc,
+                                   **({"tier": tier6[rid]["interaction_tier"],
+                                       "g": [int(tier6[rid][k]) for k in ("mca_gain_star3d", "mca_gain_rfam", "fr3d_gain_star3d", "fr3d_gain_rfam")]}
+                                      if rid in tier6 else {}))
                               for rid, sd, ln, su, eu, rfc, ssc in q(db, "SELECT region_id, side, length, start_unit, end_unit, rf_composition, ss_composition FROM regions WHERE pair_id=?", pid)]
         if s:
             enrich(det, pid, p, ret, db, staged)
@@ -309,6 +314,30 @@ def build(cohort):
         if os.path.exists(src):
             dst = os.path.basename(src) if "diagnostics" not in src else "difference_patterns_summary.json"
             shutil.copy2(src, os.path.join(tdir, dst))
+    step6 = None
+    if os.path.exists(os.path.join(s6, "interaction_summary.json")):
+        for f in ("interaction_preservation_by_family.tsv", "region_support_audit.tsv", "origin_check_reconciliation.tsv", "claim_evidence.tsv"):
+            shutil.copy2(os.path.join(s6, f), os.path.join(tdir, f))
+        d6 = os.path.join(app, "data", "step6")
+        os.makedirs(d6, exist_ok=True)
+        for f in ("fig2_results.png", "fig3_correction.png"):
+            shutil.copy2(os.path.join(s6, "figures", f), os.path.join(d6, f))
+        for f in ("RF00001.seed.proposed_core.sto", "RF00001.seed.proposed_core.diff", "patch_check.json", "interaction_column_support.tsv"):
+            shutil.copy2(os.path.join(s6, "correction_case", f), os.path.join(d6, f))
+        IS = json.load(open(os.path.join(s6, "interaction_summary.json")))["results"]
+        fam6 = [r for r in B.tsv(os.path.join(s6, "interaction_preservation_by_family.tsv")) if r["direction"] == "A->B" and r["scope"] in ("disagreement", "whole")
+                and r["type"] in ("canonical_WC", "GU_wobble", "noncanonical")]
+        keep = ("annotator", "scope", "type", "family", "common_eligible", "rna_pairs_common", "rfam_class", "star3d_class", "rfam_class_rate",
+                "star3d_class_rate", "rfam_any_rate", "star3d_any_rate", "eligible_rfam", "eligible_star3d", "source_interactions")
+        ci = {f"{a}|{k}": dict(pair=v.get("ci95_diff_class_pair_bootstrap"), seq=v.get("ci95_diff_class_sequence_vertex_bootstrap"), diff=v["diff_class"])
+              for a in ("MC-Annotate", "FR3D") for k, v in ((kk.split("|", 2)[2], vv) for kk, vv in IS.items() if kk.startswith(f"{a}|A->B|"))}
+        step6 = dict(fam=[{k: r[k] for k in keep} for r in fam6], ci=ci,
+                     regions=json.load(open(os.path.join(s6, "region_summary.json"))),
+                     origin=json.load(open(os.path.join(s6, "origin_summary.json"))),
+                     patch=json.load(open(os.path.join(s6, "correction_case", "patch_check.json")))["core"],
+                     example="RF00001__rf00001_7kgb_Bu_2_114__vs__rf00001_9qt5_2d_1_117",
+                     contrast="RF00005__rf00005_7o7y_AuTu_1_73__vs__rf00005_8asw_Xu_1_73")
+        step6["origin"].pop("cohort_chains_older_record_only", None)
     prov = os.path.join(ROOT, "outputs", "03_star3d", cohort, "returned", "run_provenance.tsv")
     if os.path.exists(prov):
         shutil.copy2(prov, os.path.join(tdir, "star3d_run_provenance.tsv"))
@@ -321,7 +350,7 @@ def build(cohort):
                    rfam_excluded=H["rfam_raw"] - H["rfam_edges"], cons=list(cons), ins=list(H["rfam_insert_reproduced"]),
                    obs_class=H["obs_class"], baseline={k: list(v) for k, v in H["baseline"].items()}, atlas_any=H["atlas_any"],
                    rfam_any=H["rfam_any"], diag=dsum, ctx_agree=dict(ctx_agree), patterns=PATTERN_TEXT, families=fams,
-                   trna_5s=sum(f["pairs"] for f in fams if f["id"] in ("RF00005", "RF00001")))
+                   trna_5s=sum(f["pairs"] for f in fams if f["id"] in ("RF00005", "RF00001")), step6=step6)
     json.dump(summary, open(os.path.join(app, "data", "summary.json"), "w"), separators=(",", ":"))
     json.dump(index, open(os.path.join(app, "data", "pairs_index.json"), "w"), separators=(",", ":"))
     shutil.copy2(os.path.join(out, "rfamalign3d.sqlite"), os.path.join(app, "data", "rfamalign3d.sqlite"))
