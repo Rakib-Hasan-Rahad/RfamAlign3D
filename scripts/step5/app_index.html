@@ -74,7 +74,7 @@ footer{color:var(--mut);font-size:.8rem;text-align:center;padding:30px}
 <body>
 <header><div class="bar">
 <div class="brand">RfamAlign3D <small>Rfam seed vs original STAR3D</small></div><span class="pill" id="pill">Final dataset</span>
-<nav id="nav"><a href="#/overview">Overview</a><a href="#/why">Difference patterns</a><a href="#/families">Families</a><a href="#/pairs">Pair explorer</a><a href="#/example">Lead example</a><a href="#/method">Methods &amp; limitations</a></nav>
+<nav id="nav"><a href="#/overview">Overview</a><a href="#/why">Difference patterns</a><a href="#/evidence">Structural evidence</a><a href="#/families">Families</a><a href="#/pairs">Pair explorer</a><a href="#/example">Correction example</a><a href="#/method">Methods &amp; limitations</a></nav>
 <button id="theme" title="toggle theme">◐</button>
 </div></header>
 <main id="app"><p class="mut">Loading…</p></main>
@@ -123,6 +123,7 @@ function overview(){
    <details onclick="event.stopPropagation()"><summary>What does this mean?</summary><p class="sm">Only for nucleotides both methods map, to different residues: how far apart the two proposed counterparts are along RNA B. One-sided mappings have no offset.</p></details></a>
  </div>
  <p class="sm mut">The four percentages use different denominators; they are not complements of one another.</p>
+ ${S.step6?evTeaser():""}
  <div class="actions"><a class="btn" href="#/families">Explore families →</a><a class="btn" href="#/example">Inspect an example →</a><a class="btn" href="data/rfamalign3d_tables.zip">Download report and tables ↓</a></div>
  <h2>From all Rfam families to compared pairs</h2>
  <div class="steps">${[[fmt(d.families_screened),"families screened"],[d.families_with_pairs,"families with selected pairs"],[d.pairs,"pairs attempted"],[d.valid,"usable alignments"],[d.families_valid,"families compared"]].map((s,i)=>`${i?'<span class="arrow">→</span>':''}<div class="step"><b>${s[0]}</b><span class="mut sm">${s[1]}</span></div>`).join("")}</div>
@@ -295,7 +296,7 @@ async function pairView(id,selUnit){
  <p class="sm mut">These are two views of the same comparison and must not be added together.</p>
  <div class="wrap"><table><tr><th>View</th><th class="r">nt</th><th class="r">observed</th>${CAT.map(([,l])=>`<th class="r">${l}</th>`).join("")}<th class="r">all differences (assessable)</th><th class="r">different partner only</th></tr>
  ${[["A",p.sides.A,p.a.chain,ra],["B",p.sides.B,p.b.chain,rb]].map(([k,s,c,r])=>`<tr><td>${k} ${E(c)}</td>${["nucleotides","observed","same_partner","different_partner","rfam_only","star3d_only","neither"].map(x=>`<td class="r">${s[x]}</td>`).join("")}<td class="r"><b>${r.D+r.R+r.S}/${r.A+r.D+r.R+r.S}</b><div class="sm mut">${r.D} different · ${r.R} Rfam only · ${r.S} STAR3D only${r.ex?` · ${r.ex} not assessable`:""}</div></td><td class="r">${s.scored_different}/${s.both_mapped}</td></tr>`).join("")}</table></div></details>
- <details class="card"><summary><b>Disagreement regions</b> <span class="mut sm">(${p.regions.length})</span></summary><div class="wrap"><table><tr><th>Region</th><th class="r">nt</th><th>from … to</th><th>RF columns</th><th>SS_cons context</th></tr>${p.regions.map(r=>`<tr class="click" onclick='pickRes("${r.side}","${r.start}",true)'><td><code>${r.side}·${r.id}</code></td><td class="r">${r.len}</td><td class="sm"><span title="${E(r.start)}">${E(unitLabel(r.start))}</span> … <span title="${E(r.end)}">${E(unitLabel(r.end).split(" ")[1])}</span></td><td class="sm">${E(r.rf)}</td><td class="sm">${E(r.ss)}</td></tr>`).join("")||'<tr><td colspan=5 class="mut">no disagreement regions</td></tr>'}</table></div></details>
+ <details class="card"><summary><b>Disagreement regions</b> <span class="mut sm">(${p.regions.length})</span></summary><div class="wrap"><table><tr><th>Region</th><th class="r">nt</th><th>from … to</th><th>RF columns</th><th>SS_cons context</th><th>Interaction evidence <a href="#/evidence" class="sm">?</a></th></tr>${p.regions.map(r=>`<tr class="click" onclick='pickRes("${r.side}","${r.start}",true)'><td><code>${r.side}·${r.id}</code></td><td class="r">${r.len}</td><td class="sm"><span title="${E(r.start)}">${E(unitLabel(r.start))}</span> … <span title="${E(r.end)}">${E(unitLabel(r.end).split(" ")[1])}</span></td><td class="sm">${E(r.rf)}</td><td class="sm">${E(r.ss)}</td><td class="sm">${tierCell(r)}</td></tr>`).join("")||'<tr><td colspan=6 class="mut">no disagreement regions</td></tr>'}</table></div></details>
  <details class="card"><summary><b>Structural distances and RMSD</b></summary>
  <p class="sm">RMSD summarizes many matched positions. The selected-nucleotide distances describe individual correspondences. These measurements use different atom selections and should not be directly equated.</p>
  <table><tr><th>Measurement</th><th>Value</th><th>Definition</th></tr>
@@ -481,21 +482,67 @@ async function selftest(){const out=[];const t=(n,f)=>{try{f();out.push("PASS "+
  t("columns view",()=>{LAYOUT="cols";ribbon();if(!$("#rib svg"))throw new Error("no svg")});
  t("pick gap",()=>{const c=CUR.cols.find(x=>/[-.]/.test(x.a)&&x.bp);if(c){pickGap("A",c.c);if(!$("#info").innerHTML.includes("Gap"))throw new Error("panel")}});
  t("interaction preservation",()=>{const x=(CUR.inter.A||[])[0];if(x){pickInter("A",x[0],x[1]);if(!$("#info").innerHTML.includes("preserve"))throw new Error("panel")}});
- t("grouped motif evidence",()=>{pickRes("A","3RG5|1|A|U|47|||C");const h=$("#info").innerHTML;if(!h.includes("STAR3D counterpart")||!h.includes("duplicate annotation"))throw new Error("grouping/duplicate note missing")});
+ t("example residue panel",()=>{pickRes("A","7KGB|1|B|C|83");const h=$("#info").innerHTML;if(!h.includes("STAR3D counterpart"))throw new Error("panel missing")});
+ t("region interaction tiers",()=>{if(!(CUR.regions||[]).some(r=>r.tier))throw new Error("no tier on regions");if(!document.body.innerHTML.includes("favours STAR3D"))throw new Error("tier not rendered")});
+ t("structural evidence page",()=>{const h=evidence();if(!h.includes("5S rRNA")||!h.includes("FR3D"))throw new Error("evidence page incomplete")});
  t("3D library",()=>{if(!window.$3Dmol)throw new Error("3Dmol missing")});
  $("#app").insertAdjacentHTML("afterbegin",`<div class="card" id="selftest"><b>Self-test</b><pre class="sm">${out.join("\n")}</pre></div>`)}
 async function example(){
- const id=IDX.find(p=>p.a==="3RG5_A"&&p.b==="3W3S_B").id;
- await pairView(id,"3RG5|1|A|U|47|||C");
- $("#app").insertAdjacentHTML("afterbegin",`<div class="card" style="border-left:5px solid var(--diff)"><span class="tag">Lead example · tRNA-Sec (RF01852)</span>
- <h1 style="margin-top:4px">A one-nucleotide correspondence shift within an annotated motif</h1>
- <p class="big">Rfam aligns <b>3RG5 A:U47C</b> with <b>3W3S B:G47B</b>, while STAR3D aligns it with the neighbouring nucleotide <b>3W3S B:U47C</b>. Both proposed counterparts belong to the same annotated BGSU motif instance. This identifies a local alignment difference; it does not establish which correspondence is correct.</p>
- <details class="evg"><summary><b>Inspect source evidence</b></summary><ul class="sm">
- <li>Rfam: both residues sit in original seed column <b>66</b> of RF01852 (seed rows L22019.1/155-240 and AE000657.1/727371-727465).</li>
- <li>STAR3D: raw mapping line <code>A:47C&lt;-&gt;B:47C</code>.</li>
- <li>BGSU loop <a href="http://rna.bgsu.edu/rna3dhub/loops/view/IL_3W3S_003" target="_blank">IL_3W3S_003</a>: its six annotated nucleotides match an instance of Motif Atlas group <a href="http://rna.bgsu.edu/rna3dhub/motif/view/IL_10892.5" target="_blank">IL_10892.5</a> (release 4.16). Loop IL_3W3S_006 lists the same six nucleotides in a symmetry-related copy (operator 43_455), so it is a duplicate annotation, not independent support.</li>
- <li>Source unit IDs such as <code>3W3S|1|B|G|47|||B</code> are used unchanged as residue IDs; the residue crosswalk maps them to author numbering, the staged STAR3D file and the Rfam column.</li></ul></details></div>`);
+ const X=S.step6, id=(X&&X.example)||IDX.find(p=>p.a==="7KGB_B"&&p.b==="9QT5_2").id, pc=X?X.patch:null;
+ await pairView(id,"7KGB|1|B|C|83");
+ $("#app").insertAdjacentHTML("afterbegin",`<div class="card" style="border-left:5px solid var(--sto)"><span class="tag">Correction example · 5S rRNA (RF00001) · candidate for curator review</span>
+ <h1 style="margin-top:4px">In the mycobacterial 5S rRNA seed rows, helix IV is placed in columns that its 3D base pairs do not support</h1>
+ <p class="big">In <b>M. tuberculosis 7KGB B</b> vs <b>S. fradiae 9QT5 2</b>, the seed alignment and STAR3D disagree across helix IV. Under STAR3D's correspondences, six helix IV Watson–Crick/G·U pairs and the noncanonical pairs <b>U76–A95 (tWH)</b> and <b>A77–A94 (tHS)</b> of 7KGB map onto pairs of the same class in 9QT5; under the seed alignment they do not.</p>
+ <p>The same shift recurs against most of the 18 partners of both mycobacterial seed rows. Moving ${pc?pc.residues_moved["X75601.1/91-203"]:"15"} residues of the <i>M. tuberculosis</i> row (sequence unchanged) puts these eight 7KGB pairs at columns where 11–16 of ${pc?pc.reference_rows:17} other 5S structures have the same FR3D pair, against 0–1 now. This test does not use STAR3D.</p>
+ <div class="scope"><b>Conflicting evidence.</b> The moved rows form fewer canonical pairs at SS_cons-paired columns (${pc?pc.ss_cons["X75601.1/91-203"].original.canonical_or_GU:30} → ${pc?pc.ss_cons["X75601.1/91-203"].proposed.canonical_or_GU:27}); in this window SS_cons itself departs from the 3D structures (column 168 pairs with 194 in SS_cons, with 193 in 16 of 17 structures). The proposal is a candidate for curator review, not a confirmed correction.</div>
+ <div class="actions"><a class="btn" href="#/evidence">All structural evidence →</a><a class="btn" href="data/step6/RF00001.seed.proposed_core.diff">Proposed seed change (diff) ↓</a><a class="btn" href="data/step6/RF00001.seed.proposed_core.sto">Proposed Stockholm ↓</a>${X?`<a class="btn" href="#/pair/${encodeURIComponent(X.contrast)}">Contrasting tRNA case (Rfam better) →</a>`:""}</div>
+ <details class="evg"><summary><b>How to read the pair below</b></summary><ul class="sm">
+ <li>The selected nucleotide 7KGB C83 is paired by the seed alignment with 9QT5 G83 and by STAR3D with G82. Click any helix IV nucleotide to compare its base pairs under both correspondences.</li>
+ <li>The “Disagreement regions” table (Details) gives each region's interaction evidence from MC-Annotate and FR3D.</li>
+ <li>Distances are measured in STAR3D's own superposition, which favours STAR3D; they are shown for inspection and are not used as evidence.</li></ul></details></div>`);
 }
+
+/* ---------------- structural evidence (step 6) */
+const TIER={STAR3D_strong:"favours STAR3D (strong)",STAR3D_moderate:"favours STAR3D",STAR3D_weak_single_annotator:"favours STAR3D (one annotator)",
+ Rfam_strong:"favours Rfam (strong)",Rfam_moderate:"favours Rfam",Rfam_weak_single_annotator:"favours Rfam (one annotator)",
+ tied:"tied",mixed_annotators_disagree:"annotators disagree",no_interaction_difference:"no difference",unassessable:"not assessable"};
+function tierCell(r){if(!r.tier)return r.side==="B"?'<span class="mut">RNA A regions only</span>':"–";
+ const c=r.tier.startsWith("STAR3D")?"var(--sto)":r.tier.startsWith("Rfam")?"var(--rfo)":"var(--mut)";
+ return `<span style="color:${c};font-weight:600">${TIER[r.tier]||r.tier}</span>${r.g?`<div class="mut" title="base pairs kept only under STAR3D / only under Rfam">MC-Annotate ${r.g[0]}/${r.g[1]} · FR3D ${r.g[2]}/${r.g[3]}</div>`:""}`}
+function ev6(ann,scope,type,fam){return (S.step6.fam||[]).find(r=>r.annotator===ann&&r.scope===scope&&r.type===type&&r.family===fam)}
+function rp(r,m){return r&&+r.common_eligible?(100*(+r[m+"_class"])/(+r.common_eligible)).toFixed(1)+"%":"NA"}
+function evTeaser(){const a=ev6("MC-Annotate","disagreement","noncanonical","RF00001"),b=ev6("MC-Annotate","disagreement","noncanonical","RF00005");
+ return `<div class="card" style="border-left:5px solid var(--sto);margin-top:14px"><h3 style="margin-top:0">Which correspondence keeps the 3D interactions?</h3>
+ <p>Where the two alignments disagree, both keep canonical Watson–Crick pairs at similar rates. Noncanonical pairs separate them, and the direction depends on the family: in <b>5S rRNA</b> STAR3D's correspondences keep the class of noncanonical pairs far more often (${rp(a,"star3d")} vs ${rp(a,"rfam")} for Rfam), while in <b>tRNA</b> the seed alignment does better (${rp(b,"rfam")} vs ${rp(b,"star3d")}). An independent annotator (FR3D) gives the same picture.</p>
+ <div class="actions"><a class="btn" href="#/evidence">Structural evidence →</a><a class="btn" href="#/example">Correction example →</a></div></div>`}
+function evidence(){const X=S.step6;if(!X)return "<h1>Structural evidence</h1><p class='mut'>Not available for this cohort.</p>";
+ const groups=[["5S rRNA","RF00001"],["tRNA","RF00005"],["other families","ALL_excl_tRNA_5S"],["pooled","ALL"]],
+  types=[["canonical_WC","Canonical A–U / G–C"],["GU_wobble","G·U wobble"],["noncanonical","Noncanonical"]];
+ const row=(t,tl,g,gl)=>{const m=ev6("MC-Annotate","disagreement",t,g),f=ev6("FR3D","disagreement",t,g);if(!m||!+m.common_eligible)return"";
+  const cell=r=>r&&+r.common_eligible?`<span style="color:var(--rfo)"><b>${rp(r,"rfam")}</b></span> vs <span style="color:var(--sto)"><b>${rp(r,"star3d")}</b></span> <span class="mut sm">n=${fmt(+r.common_eligible)}</span>`:"NA";
+  return `<tr><td>${tl}</td><td>${gl}</td><td>${cell(m)}</td><td>${cell(f)}</td></tr>`};
+ const ci=(a,t)=>{const c=X.ci[`${a}|disagreement|${t}`];return c&&c.pair?`${(100*c.diff).toFixed(1)} pts; pairs ${(100*c.pair[0]).toFixed(1)} to ${(100*c.pair[1]).toFixed(1)}; sequences ${(100*c.seq[0]).toFixed(1)} to ${(100*c.seq[1]).toFixed(1)}`:"NA"};
+ const tb=X.regions.interaction_tiers_by_family, fams=Object.keys(tb), tg=[["5S rRNA",["RF00001"]],["tRNA",["RF00005"]],["other",fams.filter(f=>f!=="RF00001"&&f!=="RF00005")]],
+  tsum=(fl,k)=>fl.reduce((a,f)=>a+(tb[f][k]||0),0), it=X.regions.interaction_tiers, w=(a,t)=>{const r=ev6(a,"whole",t,"ALL");return r?`${rp(r,"rfam")} vs ${rp(r,"star3d")}`:"NA"};
+ return `<h1>Structural evidence</h1>
+ <p class="lede">For every base pair of RNA A, we ask whether each method's counterparts in RNA B form a base pair of the <b>same Leontis–Westhof class</b> (compared in mapped order). Only pairs whose two nucleotides are mapped under <b>both</b> methods are compared, so unmapped nucleotides never count for or against either method. Neither alignment is treated as ground truth.</p>
+ <div class="scope"><b>Two annotators.</b> MC-Annotate is the annotation STAR3D itself uses to score loops, so it is not independent of STAR3D. FR3D is run separately on the deposited structures. Results agreeing between both are the ones we rely on.</div>
+ <h2>Base pairs kept at disagreements <span class="mut sm">(Rfam vs STAR3D, RNA A → RNA B)</span></h2>
+ <div class="card wrap"><table><tr><th>Interaction</th><th>Family</th><th>MC-Annotate</th><th>FR3D</th></tr>${types.map(([t,tl])=>groups.map(([gl,g])=>row(t,tl,g,gl)).join("")).join("")}</table>
+ <p class="sm mut">Across the whole compared interval (not only disagreements) the methods are close: canonical ${w("MC-Annotate","canonical_WC")}, noncanonical ${w("MC-Annotate","noncanonical")} (MC-Annotate).</p>
+ <details><summary class="sm"><b>Uncertainty</b></summary><p class="sm">Pooled STAR3D − Rfam difference with 95% intervals from 2,000 bootstrap replicates, resampling RNA pairs and, because one sequence enters many pairs, resampling sequences. Noncanonical, MC-Annotate: ${ci("MC-Annotate","noncanonical")}. FR3D: ${ci("FR3D","noncanonical")}. Canonical, MC-Annotate: ${ci("MC-Annotate","canonical_WC")}. The pooled noncanonical difference is not robust to shared sequences; the family results above are the finding.</p></details></div>
+ <h2>Disagreement regions</h2>
+ <div class="card wrap"><p class="sm">A region favours a method when base pairs kept only under that method outnumber those kept only under the other, under both annotators (<b>strong</b>: at least 2 more under both and none for the other method). C1′ distances in STAR3D's superposition favour STAR3D by construction and never decide.</p>
+ <table><tr><th>Family</th><th class="r">favours STAR3D (strong)</th><th class="r">favours Rfam (strong)</th><th class="r">one annotator S / R</th><th class="r">no difference</th><th class="r">not assessable</th></tr>
+ ${tg.map(([l,fl])=>`<tr><td>${l}</td><td class="r">${tsum(fl,"STAR3D_strong")+tsum(fl,"STAR3D_moderate")} (${tsum(fl,"STAR3D_strong")})</td><td class="r">${tsum(fl,"Rfam_strong")+tsum(fl,"Rfam_moderate")} (${tsum(fl,"Rfam_strong")})</td><td class="r">${tsum(fl,"STAR3D_weak_single_annotator")} / ${tsum(fl,"Rfam_weak_single_annotator")}</td><td class="r">${tsum(fl,"no_interaction_difference")}</td><td class="r">${tsum(fl,"unassessable")}</td></tr>`).join("")}
+ <tr><td><b>all ${fmt(X.regions.regions)}</b></td><td class="r"><b>${(it.STAR3D_strong||0)+(it.STAR3D_moderate||0)}</b> (${it.STAR3D_strong||0})</td><td class="r"><b>${(it.Rfam_strong||0)+(it.Rfam_moderate||0)}</b> (${it.Rfam_strong||0})</td><td class="r">${it.STAR3D_weak_single_annotator||0} / ${it.Rfam_weak_single_annotator||0}</td><td class="r">${it.no_interaction_difference||0}</td><td class="r">${it.unassessable||0}</td></tr></table>
+ <p class="sm mut">Each pair's regions and their evidence are listed in the Pair explorer (Details → Disagreement regions). Ties: ${it.tied||0}; annotators disagree: ${it.mixed_annotators_disagree||0}.</p></div>
+ <h2>Candidate correction of the RF00001 seed</h2>
+ <div class="card"><img src="data/step6/fig3_correction.png" alt="Proposed change to the mycobacterial 5S rRNA seed rows and its structural support" style="width:100%;max-width:900px;background:#fff;border-radius:8px">
+ <div class="actions"><a class="btn" href="#/example">Inspect in 3D →</a><a class="btn" href="data/step6/RF00001.seed.proposed_core.diff">Diff ↓</a><a class="btn" href="data/step6/RF00001.seed.proposed_core.sto">Stockholm ↓</a><a class="btn" href="data/step6/interaction_column_support.tsv">Support per base pair ↓</a></div></div>
+ <h2>Natural-origin checks</h2>
+ <div class="card sm"><p>All ${X.origin.keys_in_current_queue} sequence–species searches finished: ${Object.entries(X.origin.current_outcomes).map(([k,v])=>`${E(k.replace(/_/g," "))} ${v}`).join(" · ")}. Only chains with an exact whole-chain match in an independent record are used. The ${X.origin.cohort_chains} cohort chains rest on a genome assembly (${X.origin.cohort_chain_evidence.genome_assembly}), a record at least 50 nt longer than the chain (${X.origin.cohort_chain_evidence["long_record(>=chain+50nt)"]}) or only a record older than the structure (${X.origin.cohort_chain_evidence.older_record_only}).</p></div>
+ <h2>Downloads</h2><div class="card sm"><a href="data/tables/interaction_preservation_by_family.tsv">Interaction preservation by family</a> · <a href="data/tables/region_support_audit.tsv">Region evidence</a> · <a href="data/tables/origin_check_reconciliation.tsv">Origin checks</a> · <a href="data/tables/claim_evidence.tsv">Claims and their evidence</a> · <a href="data/results_report.md">One-page report</a></div>`}
 
 /* ---------------- method */
 function method(){
@@ -516,6 +563,13 @@ function method(){
  <li>Neither alignment is ground truth; a difference identifies a candidate for investigation, not an error.</li>
  <li>Difference patterns are descriptive. Motif evidence is what the sources document: BGSU structural loops and Motif Atlas 4.16 groups by exact residue identifiers, and Rfam 15.1 computational motif hits as seed-row spans. Rfam scan coverage is established per family, not per row; a missing record is not a confirmed absence.</li>
  <li>3D overlays use STAR3D's superposition and are shown for inspection only.</li></ul></div></div>
+ <div class="card"><h3 style="margin-top:0">Structural evidence (step 6)</h3><ul class="sm">
+ <li><b>Annotators.</b> MC-Annotate, as produced by STAR3D's preprocessing (STAR3D's loop score uses these pairs), and FR3D run separately on the deposited mmCIF files (first model).</li>
+ <li><b>Kept base pair.</b> Both nucleotides of an RNA A base pair are mapped, and the two counterparts form a pair of the same Leontis–Westhof class compared in mapped order (cWH seen from the other side is cHW). Also reported: any annotated pair, and same class with identical nucleotides.</li>
+ <li><b>Types.</b> Canonical = cWW A–U/G–C; G·U wobble = cWW G–U; noncanonical = every other class and cWW between other bases.</li>
+ <li><b>Eligibility.</b> Comparisons use base pairs whose nucleotides are mapped under both methods; missing coordinates and unmapped nucleotides are kept as separate states, never counted as preserved or lost.</li>
+ <li><b>Uncertainty.</b> Bootstrap intervals resample RNA pairs and, separately, sequences, because one sequence enters many pairs. Family results are descriptive; three families carry nearly all the evidence.</li>
+ <li><b>Regions.</b> Decided by interaction evidence from both annotators; distances in STAR3D's frame are shown but never decide. An earlier region rule, which counted unmapped nucleotides as STAR3D gains, was withdrawn.</li></ul></div>
  <h2>Downloads and provenance</h2><div class="card sm"><a href="data/rfamalign3d_tables.zip">All result tables (zip)</a> · <a href="data/results_report.md">One-page report</a> · <a href="data/rfamalign3d.sqlite">SQLite database</a> (every table, with a provenance table of source files and SHA-256 checksums) · <a href="data/tables/star3d_run_provenance.tsv">STAR3D run provenance</a> (execution environment per run)</div>`}
 
 /* ---------------- router */
@@ -526,7 +580,7 @@ async function route(){
  const app=$("#app"); window.scrollTo(0,0);
  if(v==="why")app.innerHTML=why(); else if(v==="families")app.innerHTML=families(); else if(v==="pairs")app.innerHTML=pairs(arg?decodeURIComponent(arg):"");
  else if(v==="pair"){app.innerHTML='<p class="mut">Loading pair…</p>';await pairView(decodeURIComponent(arg))} else if(v==="example"){app.innerHTML='<p class="mut">Loading…</p>';await example();if(location.hash.includes("selftest"))await selftest()}
- else if(v==="method")app.innerHTML=method(); else if(v==="breakdown")app.innerHTML=breakdown(); else app.innerHTML=overview();
+ else if(v==="method")app.innerHTML=method(); else if(v==="evidence")app.innerHTML=evidence(); else if(v==="breakdown")app.innerHTML=breakdown(); else app.innerHTML=overview();
 }
 (async()=>{S=await (await fetch("data/summary.json?t="+Date.now(),{cache:"no-store"})).json();BUILD=S.build||"";IDX=await (await fetch("data/pairs_index.json?b="+BUILD,{cache:"no-store"})).json();$("#cohortline").textContent="Results from cohort "+S.cohort+".";$("#pill").textContent=S.label==="FINAL"?"Final dataset":(S.label||"INTERIM");document.title="RfamAlign3D Results Explorer ("+(S.label||"INTERIM")+")";window.addEventListener("hashchange",route);route()})();
 </script>

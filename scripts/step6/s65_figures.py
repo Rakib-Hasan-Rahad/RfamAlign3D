@@ -183,7 +183,7 @@ ax.text(0, .86 - len(lines) * .095, "Sequences unchanged; only these two rows mo
         fontsize=5.4, va="top", color="#444")
 # (b) per-interaction support in other rows (FR3D), M. tuberculosis 7KGB_B and M. smegmatis 9N5T_B
 ics = [r for r in tsv(f"{D}/interaction_column_support.tsv") if r["variant"] == "core" and r["chain"] in ("7KGB_B",)]
-ics.sort(key=lambda r: int(r["u1"][1:]))
+ics.sort(key=lambda r: int(r["seed_pos1"]))
 ax = fig.add_axes([.1, .26, .38, .30])
 y = range(len(ics))
 nref = json.load(open(f"{D}/patch_check.json"))["core"]["reference_rows"]
@@ -192,7 +192,7 @@ ax.barh([i - .18 for i in y], [int(r["rows_supporting_proposed"]) for r in ics],
 ax.set_yticks(list(y), [f"{r['u1']}-{r['u2']} {r['fr3d_class']}" for r in ics], fontsize=5.4)
 ax.invert_yaxis(); ax.set_xlim(0, nref); ax.set_xlabel(f"other 5S rows with the same pair\nat these columns (of {nref})", fontsize=5.6)
 ax.legend(frameon=False, fontsize=5, loc="lower right")
-ax.set_title("b  FR3D pairs, M. tuberculosis 7KGB B", loc="left", fontsize=6.6, weight="bold")
+ax.set_title("b  FR3D pairs of 7KGB B (PDB numbering)", loc="left", fontsize=6.3, weight="bold")
 # (c) STAR3D votes along the segment, both mycobacterial rows
 ax = fig.add_axes([.6, .26, .38, .30])
 votes = collections.defaultdict(lambda: collections.Counter())
@@ -217,8 +217,8 @@ ax.bar(ps, [votes[q]["seed"] / t for q, t in zip(ps, tot_)], bottom=[votes[q]["o
 moved = [int(k) for k in pc["moves"]["X75601.1/91-203"]]
 mv = [q for q in moved if q >= 80]
 ax.plot([min(mv) - .4, max(mv) + .4], [-.06, -.06], color=DK, lw=1.2, clip_on=False)
-ax.set_title(f"c  STAR3D placement vs partners\n    (black bar: residues moved, {min(mv)}-{max(mv)})", loc="left", fontsize=6.6, weight="bold")
-ax.set_xlabel("M. tuberculosis 5S position", fontsize=5.6, labelpad=6); ax.set_ylabel("share of 18 partners", fontsize=5.6)
+ax.set_title(f"c  STAR3D placement vs partners\n    (black bar: seed positions moved, {min(mv)}-{max(mv)})", loc="left", fontsize=6.6, weight="bold")
+ax.set_xlabel("position in seed row X75601.1 (7KGB B number = position + 1)", fontsize=5.4, labelpad=6); ax.set_ylabel("share of 18 partners", fontsize=5.6)
 ax.legend(frameon=False, fontsize=4.6, loc="upper center", bbox_to_anchor=(.5, -.3), ncol=2); ax.set_ylim(0, 1.0)
 
 # (d) caveat line

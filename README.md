@@ -26,7 +26,7 @@ without treating either alignment as ground truth, and reports candidate correct
 | Difference rate in BGSU hairpin loops vs outside | 14.4% vs 9.4% (difference 4.9 points, 3.6–6.1) |
 | Canonical A–U/G–C pairs preserved at disagreements, Rfam vs STAR3D | 50.2% vs 49.3% (648 and 636 of 1,290; similar observed rates) |
 | Noncanonical pairs preserved at disagreements, pooled | 13.8% vs 27.6% (588 pairs); not robust to shared sequences (sequence bootstrap −4.2 to +32.2 points) |
-| **…5S rRNA** | **12.0% vs 43.7%** (293 pairs; FR3D 10.8% vs 50.6%) |
+| **…5S rRNA** | **11.9% vs 43.7%** (293 pairs; FR3D 10.8% vs 50.6%) |
 | **…tRNA** | **18.0% vs 8.8%** (250 pairs; FR3D 21.5% vs 13.1%): here the seed alignment does better |
 | Disagreement regions favoured by interactions (both annotators) | STAR3D 218 (74 strong), Rfam 208 (55 strong), of 1,155 |
 | Candidate seed correction | RF00001 *M. tuberculosis* and *M. smegmatis* rows, helix IV ([`outputs/06_audit/step2_r8/correction_case/`](outputs/06_audit/step2_r8/correction_case/)) |

@@ -72,6 +72,12 @@ def build_db(cohort, out):
         "motif_baseline": os.path.join(s4, "motif", "motif_baseline.tsv"),
         "region_motif": os.path.join(s4, "motif", "region_motif_overlap.tsv"),
     }
+    s6 = os.path.join(ROOT, "outputs", "06_audit", cohort)
+    for t, f in (("origin_checks", "origin_check_reconciliation.tsv"), ("interaction_preservation", "interaction_preservation_by_family.tsv"),
+                 ("interactions", "interactions_long.tsv.gz"), ("region_support", "region_support_audit.tsv"),
+                 ("correction_case_support", "correction_case/interaction_column_support.tsv"), ("claim_evidence", "claim_evidence.tsv")):
+        if os.path.exists(os.path.join(s6, f)):
+            sources[t] = os.path.join(s6, f)
     dbp = os.path.join(out, "rfamalign3d.sqlite")
     if os.path.exists(dbp):
         os.remove(dbp)
@@ -369,6 +375,45 @@ maps <code>3W3S|1|B|G|47|||B</code> → author B:47B → staged B:47B → ungapp
 
 
 # ------------------------------------------------------------------ professor report
+def step6_md(cohort):
+    """Report section from outputs/06_audit/<cohort> (step 6); empty when step 6 has not been run."""
+    d = os.path.join(ROOT, "outputs", "06_audit", cohort)
+    if not os.path.exists(os.path.join(d, "interaction_summary.json")):
+        return ""
+    S = json.load(open(os.path.join(d, "interaction_summary.json")))["results"]
+    RS = json.load(open(os.path.join(d, "region_summary.json")))
+    pc = json.load(open(os.path.join(d, "correction_case", "patch_check.json")))["core"]
+    fam = {r["family"] + "|" + r["annotator"] + "|" + r["type"]: r for r in tsv(os.path.join(d, "interaction_preservation_by_family.tsv"))
+           if r["direction"] == "A->B" and r["scope"] == "disagreement"}
+
+    def cell(ann, t, f):
+        r = fam.get(f"{f}|{ann}|{t}")
+        if not r or not r["common_eligible"] or r["common_eligible"] == "0":
+            return "NA"
+        n = int(r["common_eligible"])
+        return f"{100 * int(r['rfam_class']) / n:.1f}% vs {100 * int(r['star3d_class']) / n:.1f}% (n={n:,})"
+    rows = "\n".join(f"| {lbl} | {cell('MC-Annotate', t, f)} | {cell('FR3D', t, f)} |"
+                      for t, tl in (("canonical_WC", "canonical A-U/G-C"), ("noncanonical", "noncanonical")) for f, fl in
+                      (("RF00001", "5S rRNA"), ("RF00005", "tRNA"), ("ALL_excl_tRNA_5S", "other families"), ("ALL", "pooled"))
+                      for lbl in [f"{tl}, {fl}"])
+    nc = S["MC-Annotate|A->B|disagreement|noncanonical"]
+    it = RS["interaction_tiers"]
+    s_ = lambda k: it.get(k, 0)  # noqa: E731
+    return f"""**Structural evidence: base-pair preservation at disagreements** (step 6). For each base pair of RNA A that touches a disagreement and whose two nucleotides are mapped under both methods, does each method's counterpart pair carry the same Leontis-Westhof class (compared in mapped order)? Two annotators: MC-Annotate (the file STAR3D itself uses for scoring) and FR3D (independent). Rfam vs STAR3D:
+
+| Interaction, family | MC-Annotate | FR3D |
+|---|---|---|
+{rows}
+
+The pooled noncanonical difference ({nc['diff_class'] * 100:+.1f} points) is not robust once shared sequences are resampled (95% interval {nc['ci95_diff_class_sequence_vertex_bootstrap'][0] * 100:.1f} to {nc['ci95_diff_class_sequence_vertex_bootstrap'][1] * 100:.1f}); the effect is family specific: STAR3D's correspondences preserve noncanonical pairs far more often in 5S rRNA, and Rfam's do better in tRNA.
+
+**Disagreement regions** ({RS['regions']:,}): interaction evidence agreed between both annotators in favour of STAR3D in {s_('STAR3D_strong') + s_('STAR3D_moderate')} regions ({s_('STAR3D_strong')} strong) and of Rfam in {s_('Rfam_strong') + s_('Rfam_moderate')} ({s_('Rfam_strong')} strong); {s_('unassessable')} had no pair eligible under both methods and {s_('no_interaction_difference')} showed no difference. C1' distances are measured in STAR3D's own superposition and never decide.
+
+**Candidate correction (for curator review).** RF00001 seed rows X75601.1/91-203 (*M. tuberculosis*) and X55251.1/3-116 (*M. smegmatis*), helix IV: STAR3D places the same segment in the same alternative columns against most of the 18 partners. Moving {pc['residues_moved']['X75601.1/91-203']} and {pc['residues_moved']['X55251.1/3-116']} residues (sequences unchanged) places the six helix IV cWW pairs and the noncanonical pairs U76-A95 (tWH) and A77-A94 (tHS) of 7KGB chain B at columns where 11-16 of {pc['reference_rows']} other structures have the same FR3D pair, against 0-1 now. Conflicting evidence: fewer canonical pairs at SS_cons-paired columns (30 to 27), but SS_cons in this window departs from the 3D structures. Proposed Stockholm file: `outputs/06_audit/{cohort}/correction_case/`.
+
+**Contrasting case.** Bovine tRNA 7O7Y AT vs yeast 8ASW X: STAR3D shifts the acceptor-stem 3' strand by one and loses four Watson-Crick pairs that the seed alignment keeps, although distances in STAR3D's frame favour STAR3D."""
+
+
 def report(db, H, out, site):
     cons, ins = H["rfam_consensus_reproduced"], H["rfam_insert_reproduced"]
     fam_rows = []
@@ -425,9 +470,9 @@ The percentages use different denominators and are not complements.
 
 **Motif evidence** (different-partner observations, any of three endpoints, counted once): Rfam computational motif span {oc.get('rfam_computational_motif', 0):,}; BGSU Atlas group {oc.get('bgsu_motif_group', 0)}; both {oc.get('bgsu_group_and_rfam_motif', 0)}; BGSU structural loop only {oc.get('structural_loop_only', 0):,}; consensus loop context only {oc.get('consensus_loop_context_only', 0)}; no documented record {oc.get('no_documented_hit', 0)}; Rfam coverage unknown with no other record {oc.get('incomplete', 0)}. Rfam scan coverage is established per family, not per row; a missing record is not a confirmed absence. Descriptive only.
 
-**Example.** tRNA-Sec 3RG5 A U47C corresponds to 3W3S B G47B in the seed alignment (column 66) and to 3W3S B U47C in STAR3D (`A:47C<->B:47C`); both 3W3S residues belong to BGSU loop IL_3W3S_003 (Motif Atlas 4.16 group IL_10892.5) — a correspondence difference within one motif that does not establish which partner is correct.
+{step6_md(os.path.basename(out))}
 
-**Limitations.** Constructs without sufficient independent natural-sequence evidence were not included in the verified comparison cohort; this includes chains whose sequence search did not complete, which are unresolved rather than shown to be engineered. Methods, selection counts and provenance (execution environments, checksums, policy history) are in the website's Methods & limitations page and the downloadable tables.
+**Limitations.** STAR3D is one aligner run in one direction, and its loop score uses the MC-Annotate base pairs; FR3D is the independent check. One sequence enters many pairs and three families (tRNA, 5S rRNA, 5.8S rRNA) carry nearly all the interaction evidence, so family results are descriptive. Annotators can miss weak contacts, and structures differ in resolution and context. Chains without a whole-chain match in an independent record were not used; they are unresolved, not shown to be engineered. Methods, selection counts and provenance (execution environments, checksums, policy history) are in the website's Methods & limitations page and the downloadable tables.
 """
         open(os.path.join(out, "results_report.md"), "w").write(md)
         shutil.copy2(os.path.join(out, "results_report.md"), os.path.join(site, "data", "results_report.md"))
@@ -477,7 +522,11 @@ The percentages use different denominators and are not complements.
 
 
 def set_label(cohort):
-    if cohort.startswith("step2_final"):
+    if cohort == "step2_r8":
+        LABEL.update(v="FINAL", text="Final cohort: every natural-origin search finished (policy R8); chains without a whole-chain "
+                                     "match in an independent record are not used. STAR3D: 505 runs natively on Linux, 30 in the documented "
+                                     "x86-64 container, 35 new runs natively; identical STAR3D v1.2 package and settings.")
+    elif cohort.startswith("step2_final"):
         LABEL.update(v="FINAL", text="", _old="Final cohort: Step 2 closed on 2026-11-13 by the researcher's decision (policy R7); "
                                      "39 natural-sequence checks whose NCBI search did not complete are provisional (SEARCH_INCOMPLETE), "
                                      "not excluded as engineered. STAR3D: 505 of 535 runs natively on Linux; the 30 new pairs ran in Docker "

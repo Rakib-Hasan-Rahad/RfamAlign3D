@@ -190,7 +190,7 @@ for vname, frac in (("core", 2 / 3), ("extended", 0.5 + 1e-9)):
                 if not (p1 in info[row] or p2 in info[row]):
                     continue
                 b = len(ref[(um[k1][2], um[k2][2], c)]); a_ = len(ref[(cmn[p1], cmn[p2], c)])
-                rows_out.append(dict(variant=vname, chain=ch, seed_row=row, u1=f"{um[k1][3]}{p1}", u2=f"{um[k2][3]}{p2}",
+                rows_out.append(dict(variant=vname, chain=ch, seed_row=row, u1=f"{um[k1][3]}{k1[3]}{k1[4]}", u2=f"{um[k2][3]}{k2[3]}{k2[4]}", seed_pos1=p1, seed_pos2=p2,
                                      fr3d_class=c, cols_original=f"{um[k1][2]}-{um[k2][2]}", cols_proposed=f"{cmn[p1]}-{cmn[p2]}",
                                      rows_supporting_original=b, rows_supporting_proposed=a_,
                                      type="canonical_WC" if c == "cWW" and um[k1][3] + um[k2][3] in ("AU", "UA", "GC", "CG")
