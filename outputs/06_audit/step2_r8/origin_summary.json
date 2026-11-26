@@ -1,0 +1,146 @@
+{
+ "keys_total": 236,
+ "keys_in_current_queue": 234,
+ "open_at_R7": 39,
+ "open_at_R7_now": {
+  "not_found": 35,
+  "whole_chain_found": 2,
+  "interval_found_flank_differs": 2
+ },
+ "current_outcomes": {
+  "not_found": 85,
+  "whole_chain_found": 103,
+  "interval_found_flank_differs": 36,
+  "unknown_residues_in_chain": 10
+ },
+ "dispositions": {
+  "documented_engineering_or_non_native_flank": 25,
+  "no_whole_chain_match_in_searched_references (origin unresolved; not used)": 93,
+  "exact_independent_sequence_support": 105,
+  "not_searchable_unknown_residues": 10,
+  "exact_independent_sequence_support (no chain decision uses it)": 1,
+  "removed_from_queue: chain has no possible partner or key superseded; cached result kept; chain not used": 2
+ },
+ "reevaluated_R8": 51,
+ "cohort_chains": 138,
+ "cohort_chain_evidence": {
+  "genome_assembly": 72,
+  "older_record_only": 28,
+  "long_record(>=chain+50nt)": 38
+ },
+ "cohort_chains_older_record_only": [
+  [
+   "RF00001__4V8P_B3__5-114",
+   "J01893.1:1-120+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00001__6XU6_A7__1-119",
+   "M25016.1:1-120+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00001__6XU8_A7__1-119",
+   "M25016.1:1-120+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00001__6ZJ3_LO__1-119",
+   "X01484.1:2-121+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00001__8EUG_9__51-169",
+   "NR_151395.1:1-229+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00001__9BH5_A7__1-119",
+   "NR_070092.1:1-119- [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00001__9BUP_AB__1-119",
+   "XR_002273092.1:1-119+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00001__9BUQ_AB__1-119",
+   "XR_002273092.1:1-119+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00001__9CAI_A7__1-119",
+   "NR_070092.1:1-119- [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__6K0B_U__1-82",
+   "M10878.1:1-83+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__6QZP_S6__1-72",
+   "K00328.1:1-75+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__6T7T_6__1-73",
+   "K00287.1:1-76+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__7CPU_S6__1-72",
+   "K00329.1:1-75+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__7O7Y_AT__1-73",
+   "K00353.1:1-76+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__7O81_AT__1-72",
+   "X56627.1:1-75+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__7TQL_3__1-72",
+   "K00328.1:1-75+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__8IP8_cl__1-72",
+   "V01383.1:1-75+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__8K2C_CC__1-72",
+   "K00328.1:1-75+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__8RQK_U__1-72",
+   "HG983741.1:1-72+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__8Y2O_C__1-73",
+   "K00350.1:1-76+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__9DOW_C__1-73",
+   "U00939.1:1-76+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__9DPA_C__1-73",
+   "U00939.1:1-76+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__9DPB_C__1-73",
+   "U00939.1:1-76+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__9DPL_C__1-73",
+   "U00939.1:1-76+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__9H4N_n2__1-72",
+   "K00329.1:1-75+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__9HLZ_t__1-73",
+   "X00843.1:1-76+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00005__9HM0_t__1-73",
+   "X00843.1:1-76+ [blast_core_nt; record_predates_structure]"
+  ],
+  [
+   "RF00015__6AHD_I__1-144",
+   "NR_003925.2:1-144+ [blast_core_nt; record_predates_structure]"
+  ]
+ ],
+ "keys_used_by_cohort": 79
+}

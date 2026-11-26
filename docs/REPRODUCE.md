@@ -8,11 +8,12 @@ git clone https://github.com/Rakib-Hasan-Rahad/RfamAlign3D.git && cd RfamAlign3D
 python3 scripts/verify.py
 ```
 Needs only Python 3 (standard library). It verifies the sha256 of every file in the Step 2 snapshot and recounts the
-headline numbers from the raw comparison table. Checks that need the release archives report `SKIPPED` until you
+headline numbers from the raw comparison and interaction tables. Checks that need the release archives report `SKIPPED` until you
 unpack them (section 2); a skipped check is never counted as passed.
 
 ## 2. Add the large files (release archives)
-Download the archives from the GitHub release of the version you are checking and unpack them in the repository root:
+Download the archives from GitHub release v1.0.0 (unchanged in 1.1.0, which adds step 6 to the repository itself)
+and unpack them in the repository root:
 
 | Archive | Contents | Unpacks to |
 |---|---|---|
@@ -31,8 +32,9 @@ Browse the results: `python3 scripts/step5/serve.py outputs/05_results/step2_r8/
 ```bash
 bash setup.sh            # Python 3.13 venv, Docker image for STAR3D, pinned downloads (sha256-checked), environment check
 ```
-STAR3D v1.2 is downloaded from its authors' site (genome.ucf.edu) and checked against the sha256 in `config.yaml`;
-it is not redistributed here.
+STAR3D v1.2 is downloaded from its authors' site (genome.ucf.edu) and checked against the sha256 in `config.yaml`
+(tarball `c9da4405…`). It is not redistributed here: the distribution contains no license file, and it bundles
+MC-Annotate (Major lab, own terms) and RemovePseudoknots (RNAstructure) alongside Apache-licensed Commons CLI and EJML.
 
 Recompute everything after STAR3D from the published files (minutes):
 ```bash
@@ -45,8 +47,14 @@ Recompute everything after STAR3D from the published files (minutes):
 .venv/bin/python scripts/step4/s46_statistics.py step2_r8
 .venv/bin/python scripts/step5/build_step5.py step2_r8
 .venv/bin/python scripts/step5/build_app.py step2_r8
-.venv/bin/python scripts/step5/s52_basepair_preservation.py step2_r8
-.venv/bin/python scripts/step5/s53_candidate_corrections.py step2_r8
+.venv/bin/python scripts/step5/s52_basepair_preservation.py step2_r8      # superseded, kept for provenance
+.venv/bin/python scripts/step5/s53_candidate_corrections.py step2_r8      # superseded, kept for provenance
+.venv/bin/python scripts/step6/s61_origin_reconciliation.py
+.venv/bin/python scripts/step6/s62_fr3d_annotate.py        # reuses fr3d/ when present; else downloads mmCIF and runs FR3D
+.venv/bin/python scripts/step6/s63_interactions_regions.py
+.venv/bin/python scripts/step6/s64_correction_case.py
+.venv/bin/python scripts/step6/s65_figures.py
+.venv/bin/python scripts/step6/s66_claims.py
 .venv/bin/python -m pytest -q tests
 ```
 
@@ -66,5 +74,6 @@ exact copies used, so a rerun against them reproduces the published numbers; a r
 differ and should be compared with `docs/results.json`.
 
 ## Tests
-`pytest tests` (29 tests) covers the Step 1 parser, Step 2 matching/origin/taxonomy rules and the Step 4 comparison
-logic, including mutation tests of known edge cases. The taxonomy test needs `inputs/` (section 2 or `setup.sh`).
+`pytest tests` (35 tests) covers the Step 1 parser, Step 2 matching/origin/taxonomy rules, the Step 4 comparison
+logic and the Step 6 rules (class orientation, endpoint states, canonicality, region tiers), including mutation tests
+of known edge cases. The taxonomy test needs `inputs/` (section 2 or `setup.sh`).

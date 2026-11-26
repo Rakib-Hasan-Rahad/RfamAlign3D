@@ -1,4 +1,6 @@
-"""Step 5 / part 2: cohort-wide base-pair preservation under each alignment (Rfam seed vs STAR3D).
+"""SUPERSEDED by scripts/step6 (audit A3-A4): kept for provenance; headline numbers now come from step 6.
+
+Step 5 / part 2: cohort-wide base-pair preservation under each alignment (Rfam seed vs STAR3D).
 
   python scripts/step5/s52_basepair_preservation.py <cohort> [--reps 2000] [--seed 20261125]
 

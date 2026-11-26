@@ -86,3 +86,22 @@ Step 5. Each A-side disagreement region with its distance and interaction eviden
 - `outputs/05_results/step2_r8/basepair_preservation.json`: preservation overall, at disagreements, and by interaction type.
 - `outputs/05_results/step2_r8/candidate_corrections.json`: verdict counts.
 - `docs/results.json`: every number quoted in the README and paper, generated from the files above.
+
+## Step 6 (`outputs/06_audit/step2_r8/`)
+- `origin_check_reconciliation.tsv`: one row per origin check (sequence × species) ever cached: `check_id`, species,
+  families, length, query sha256, `in_current_queue`, `open_at_R7`, `state_at_R7`, `reevaluated_R8`, `route`,
+  `ncbi_outcome_now`, `local_exact_outcome`, `supporting_records`, `independence_basis`, chains (all / in cohort),
+  decisions at R7 and R8, `disposition`.
+- `interactions_long.tsv.gz`: one row per source base pair × direction × annotator: pair, family, `direction`
+  (A->B, B->A), `annotator` (MC-Annotate, FR3D), `u1`, `u2`, `source_class`, identities `n1` `n2`, `type`, outcome
+  categories of both nucleotides, `disagreement`, `dp_only`, and per method (`rfam_`, `star3d_`): `state`, `target`,
+  `target_class`, `any`, `class`, `class_ident`.
+- `interaction_preservation_by_family.tsv`: summaries by annotator, direction, scope (`whole`, `disagreement`,
+  `dp_only`), type and family (plus `ALL`, `ALL_excl_tRNA_5S`, `ALL_excl_R8_new`): counts, coverage, rates for the
+  three definitions, intention-to-treat rates and, for pooled rows, both bootstrap intervals.
+- `region_support_audit.tsv`: one row per disagreement region: length, structure context, s53 verdict, C1′ medians,
+  per annotator (`mca_`, `fr3d_`) source pairs, eligibility, preserved counts and gains, `interaction_tier`
+  (primary) and `audit_tier` (with the withdrawn distance veto, for comparison).
+- `correction_case/`: original and proposed RF00001 Stockholm files and diffs, `patch_check.json` (integrity, moves,
+  SS_cons check), `interaction_column_support.tsv` (per FR3D pair: columns before/after, supporting rows).
+- `claim_evidence.tsv`: claim, value, denominator, definition, source file, verification status, note.

@@ -1,4 +1,7 @@
-"""Step 5 / part 3: which disagreement regions does the structural evidence resolve, and in whose favour?
+"""SUPERSEDED by scripts/step6 (audit A5): verdicts withdrawn because unmapped Rfam endpoints counted as STAR3D
+gains and a distance measured in STAR3D's frame could veto interaction evidence. Kept for provenance.
+
+Step 5 / part 3: which disagreement regions does the structural evidence resolve, and in whose favour?
 
   python scripts/step5/s53_candidate_corrections.py <cohort>
 

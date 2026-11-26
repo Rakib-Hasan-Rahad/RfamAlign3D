@@ -1,0 +1,318 @@
+{
+ "regions": 1155,
+ "interaction_tiers": {
+  "no_interaction_difference": 271,
+  "unassessable": 295,
+  "STAR3D_weak_single_annotator": 79,
+  "Rfam_weak_single_annotator": 52,
+  "STAR3D_moderate": 144,
+  "Rfam_strong": 55,
+  "STAR3D_strong": 74,
+  "Rfam_moderate": 153,
+  "tied": 29,
+  "mixed_annotators_disagree": 3
+ },
+ "interaction_tiers_by_family": {
+  "RF00001": {
+   "no_interaction_difference": 120,
+   "unassessable": 64,
+   "STAR3D_weak_single_annotator": 27,
+   "Rfam_weak_single_annotator": 19,
+   "STAR3D_moderate": 75,
+   "Rfam_strong": 42,
+   "STAR3D_strong": 60,
+   "Rfam_moderate": 36,
+   "tied": 5
+  },
+  "RF00002": {
+   "no_interaction_difference": 6,
+   "Rfam_moderate": 2,
+   "Rfam_strong": 1,
+   "unassessable": 19,
+   "STAR3D_weak_single_annotator": 1,
+   "STAR3D_moderate": 1,
+   "STAR3D_strong": 3
+  },
+  "RF00005": {
+   "unassessable": 202,
+   "no_interaction_difference": 128,
+   "Rfam_moderate": 110,
+   "tied": 24,
+   "Rfam_weak_single_annotator": 29,
+   "STAR3D_moderate": 62,
+   "STAR3D_weak_single_annotator": 49,
+   "Rfam_strong": 10,
+   "STAR3D_strong": 5,
+   "mixed_annotators_disagree": 2
+  },
+  "RF00026": {
+   "STAR3D_strong": 1
+  },
+  "RF00169": {
+   "mixed_annotators_disagree": 1,
+   "Rfam_weak_single_annotator": 1
+  },
+  "RF00177": {
+   "STAR3D_moderate": 4,
+   "unassessable": 1,
+   "Rfam_weak_single_annotator": 2,
+   "no_interaction_difference": 6
+  },
+  "RF00522": {
+   "STAR3D_weak_single_annotator": 1,
+   "STAR3D_strong": 1
+  },
+  "RF01852": {
+   "no_interaction_difference": 1
+  },
+  "RF03087": {
+   "unassessable": 9,
+   "Rfam_moderate": 5,
+   "no_interaction_difference": 10,
+   "STAR3D_strong": 4,
+   "Rfam_strong": 2,
+   "STAR3D_moderate": 2,
+   "Rfam_weak_single_annotator": 1,
+   "STAR3D_weak_single_annotator": 1
+  }
+ },
+ "interaction_tier_vs_distance": {
+  "Rfam_moderate": {
+   "Rfam": 55,
+   "STAR3D": 81,
+   "neutral": 17
+  },
+  "Rfam_strong": {
+   "STAR3D": 34,
+   "neutral": 20,
+   "Rfam": 1
+  },
+  "Rfam_weak_single_annotator": {
+   "STAR3D": 33,
+   "Rfam": 12,
+   "neutral": 7
+  },
+  "STAR3D_moderate": {
+   "STAR3D": 99,
+   "neutral": 21,
+   "Rfam": 24
+  },
+  "STAR3D_strong": {
+   "STAR3D": 69,
+   "Rfam": 2,
+   "neutral": 3
+  },
+  "STAR3D_weak_single_annotator": {
+   "STAR3D": 51,
+   "Rfam": 19,
+   "neutral": 9
+  },
+  "mixed_annotators_disagree": {
+   "Rfam": 2,
+   "STAR3D": 1
+  },
+  "no_interaction_difference": {
+   "STAR3D": 189,
+   "neutral": 46,
+   "Rfam": 36
+  },
+  "tied": {
+   "STAR3D": 24,
+   "neutral": 3,
+   "Rfam": 2
+  },
+  "unassessable": {
+   "STAR3D": 198,
+   "neutral": 51,
+   "Rfam": 46
+  }
+ },
+ "tiers_with_distance_veto": {
+  "insufficient_no_interaction_difference": 271,
+  "unassessable": 295,
+  "STAR3D_supported_weak_single_annotator": 60,
+  "mixed_distance_conflicts": 193,
+  "STAR3D_supported_moderate": 120,
+  "STAR3D_supported_strong": 72,
+  "Rfam_supported_moderate": 72,
+  "tied": 29,
+  "Rfam_supported_strong": 21,
+  "Rfam_supported_weak_single_annotator": 19,
+  "mixed_annotators_disagree": 3
+ },
+ "old_verdicts": {
+  "distance_only_STAR3D": 428,
+  "conflicting": 211,
+  "unresolved": 92,
+  "supports_STAR3D": 221,
+  "supports_Rfam": 111,
+  "distance_only_Rfam": 92
+ },
+ "old_vs_tier": {
+  "conflicting": {
+   "mixed_distance_conflicts": 177,
+   "insufficient_no_interaction_difference": 14,
+   "Rfam_supported_weak_single_annotator": 1,
+   "unassessable": 16,
+   "mixed_annotators_disagree": 2,
+   "STAR3D_supported_moderate": 1
+  },
+  "distance_only_Rfam": {
+   "unassessable": 45,
+   "insufficient_no_interaction_difference": 35,
+   "Rfam_supported_weak_single_annotator": 10,
+   "tied": 2
+  },
+  "distance_only_STAR3D": {
+   "insufficient_no_interaction_difference": 166,
+   "unassessable": 181,
+   "STAR3D_supported_weak_single_annotator": 31,
+   "tied": 23,
+   "mixed_distance_conflicts": 16,
+   "STAR3D_supported_moderate": 11
+  },
+  "supports_Rfam": {
+   "Rfam_supported_moderate": 72,
+   "Rfam_supported_strong": 21,
+   "Rfam_supported_weak_single_annotator": 5,
+   "unassessable": 6,
+   "tied": 2,
+   "STAR3D_supported_moderate": 1,
+   "insufficient_no_interaction_difference": 4
+  },
+  "supports_STAR3D": {
+   "STAR3D_supported_moderate": 107,
+   "unassessable": 3,
+   "STAR3D_supported_weak_single_annotator": 26,
+   "STAR3D_supported_strong": 72,
+   "insufficient_no_interaction_difference": 11,
+   "tied": 1,
+   "mixed_annotators_disagree": 1
+  },
+  "unresolved": {
+   "unassessable": 44,
+   "insufficient_no_interaction_difference": 41,
+   "tied": 1,
+   "Rfam_supported_weak_single_annotator": 3,
+   "STAR3D_supported_weak_single_annotator": 3
+  }
+ },
+ "old_supports_star3d_by_mca_gain": {
+  "2": 46,
+  "0": 18,
+  "1": 115,
+  "3": 30,
+  "4": 4,
+  "5": 8
+ },
+ "length_by_tier": {
+  "Rfam_supported_moderate": 3.85,
+  "Rfam_supported_strong": 6.9,
+  "Rfam_supported_weak_single_annotator": 5.11,
+  "STAR3D_supported_moderate": 6.33,
+  "STAR3D_supported_strong": 5.61,
+  "STAR3D_supported_weak_single_annotator": 6.32,
+  "insufficient_no_interaction_difference": 2.93,
+  "mixed_annotators_disagree": 13.33,
+  "mixed_distance_conflicts": 5.08,
+  "tied": 7.69,
+  "unassessable": 1.96
+ },
+ "strong_star3d_regions": [
+  "RF00001__rf00001_1yhq_9d_4_120__vs__rf00001_6zj3_LuOu_1_119:A:region_003",
+  "RF00001__rf00001_1yhq_9d_4_120__vs__rf00001_7pzy_3d_1_121:A:region_004",
+  "RF00001__rf00001_1yhq_9d_4_120__vs__rf00001_8hku_Au5dSu_6_120:A:region_002",
+  "RF00001__rf00001_1yhq_9d_4_120__vs__rf00001_9j1m_Bu_2_114:A:region_005",
+  "RF00001__rf00001_1yhq_9d_4_120__vs__rf00001_9n5t_Bu_3_116:A:region_005",
+  "RF00001__rf00001_4v8p_Bu3d_5_114__vs__rf00001_5xxb_3d_1_122:A:region_001",
+  "RF00001__rf00001_4v8p_Bu3d_5_114__vs__rf00001_6hma_Bu_1_115:A:region_004",
+  "RF00001__rf00001_5ngm_AuBu_1_115__vs__rf00001_9qt5_2d_1_117:A:region_001",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_6lqm_5d_1_119:A:region_001",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_6xu8_Au7d_1_119:A:region_002",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_6zj3_LuOu_1_119:A:region_001",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_7kgb_Bu_2_114:A:region_004",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_7oyc_7d1d_1_119:A:region_001",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_7pzy_3d_1_121:A:region_003",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_7qiw_5d_1_119:A:region_001",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_7s0s_il_3_116:A:region_004",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_8eug_9d_51_169:A:region_001",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_8fmw_AuBu_2_111:A:region_003",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_8hku_Au5dSu_6_120:A:region_003",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_9bh5_Au7d_1_119:A:region_001",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_9bup_AuBu_1_119:A:region_001",
+  "RF00001__rf00001_6hma_Bu_1_115__vs__rf00001_6tpq_Vu_5_120:A:region_001",
+  "RF00001__rf00001_6hma_Bu_1_115__vs__rf00001_6xu8_Au7d_1_119:A:region_004",
+  "RF00001__rf00001_6hma_Bu_1_115__vs__rf00001_6zj3_LuOu_1_119:A:region_004",
+  "RF00001__rf00001_6tnn_Vu_1_116__vs__rf00001_9qt5_2d_1_117:A:region_001",
+  "RF00001__rf00001_6tpq_Vu_5_120__vs__rf00001_7kgb_Bu_2_114:A:region_003",
+  "RF00001__rf00001_6tpq_Vu_5_120__vs__rf00001_7s0s_il_3_116:A:region_003",
+  "RF00001__rf00001_6tpq_Vu_5_120__vs__rf00001_8hku_Au5dSu_6_120:A:region_002",
+  "RF00001__rf00001_6xu8_Au7d_1_119__vs__rf00001_7kgb_Bu_2_114:A:region_006",
+  "RF00001__rf00001_6xu8_Au7d_1_119__vs__rf00001_8fr8_Bu_3_116:A:region_002",
+  "RF00001__rf00001_6xu8_Au7d_1_119__vs__rf00001_8fr8_Bu_3_116:A:region_005",
+  "RF00001__rf00001_6zj3_LuOu_1_119__vs__rf00001_7pzy_3d_1_121:A:region_002",
+  "RF00001__rf00001_7asm_Bu_1_115__vs__rf00001_7oyc_7d1d_1_119:A:region_004",
+  "RF00001__rf00001_7asm_Bu_1_115__vs__rf00001_7pzy_3d_1_121:A:region_003",
+  "RF00001__rf00001_7asm_Bu_1_115__vs__rf00001_8fle_Lu4d_1_119:A:region_004",
+  "RF00001__rf00001_7asm_Bu_1_115__vs__rf00001_9axt_Bu3d_7_125:A:region_002",
+  "RF00001__rf00001_7asm_Bu_1_115__vs__rf00001_9b1y_Uu_3_116:A:region_001",
+  "RF00001__rf00001_7asm_Bu_1_115__vs__rf00001_9b1y_Uu_3_116:A:region_002",
+  "RF00001__rf00001_7asm_Bu_1_115__vs__rf00001_9cai_Au7d_1_119:A:region_002",
+  "RF00001__rf00001_7asm_Bu_1_115__vs__rf00001_9j1m_Bu_2_114:A:region_002",
+  "RF00001__rf00001_7asm_Bu_1_115__vs__rf00001_9j1m_Bu_2_114:A:region_003",
+  "RF00001__rf00001_7kgb_Bu_2_114__vs__rf00001_8fmw_AuBu_2_111:A:region_002",
+  "RF00001__rf00001_7kgb_Bu_2_114__vs__rf00001_8hku_Au5dSu_6_120:A:region_003",
+  "RF00001__rf00001_7kgb_Bu_2_114__vs__rf00001_9qt5_2d_1_117:A:region_002",
+  "RF00001__rf00001_7s0s_il_3_116__vs__rf00001_9qt5_2d_1_117:A:region_001",
+  "RF00001__rf00001_8fmw_AuBu_2_111__vs__rf00001_8fr8_Bu_3_116:A:region_003",
+  "RF00001__rf00001_8fmw_AuBu_2_111__vs__rf00001_8hku_Au5dSu_6_120:A:region_002",
+  "RF00001__rf00001_8fmw_AuBu_2_111__vs__rf00001_9axt_Bu3d_7_125:A:region_003",
+  "RF00001__rf00001_8fmw_AuBu_2_111__vs__rf00001_9bh5_Au7d_1_119:A:region_003",
+  "RF00001__rf00001_8fmw_AuBu_2_111__vs__rf00001_9bup_AuBu_1_119:A:region_003",
+  "RF00001__rf00001_8fmw_AuBu_2_111__vs__rf00001_9qt5_2d_1_117:A:region_001",
+  "RF00001__rf00001_8hku_Au5dSu_6_120__vs__rf00001_9axt_Bu3d_7_125:A:region_003",
+  "RF00001__rf00001_8hku_Au5dSu_6_120__vs__rf00001_9bh5_Au7d_1_119:A:region_002",
+  "RF00001__rf00001_8hku_Au5dSu_6_120__vs__rf00001_9bup_AuBu_1_119:A:region_002",
+  "RF00001__rf00001_8hku_Au5dSu_6_120__vs__rf00001_9qt5_2d_1_117:A:region_002",
+  "RF00001__rf00001_9axu_3d_7_125__vs__rf00001_9g6j_3d_1_121:A:region_002",
+  "RF00001__rf00001_9buq_AuBu_1_119__vs__rf00001_9g6j_3d_1_121:A:region_002",
+  "RF00001__rf00001_9j1m_Bu_2_114__vs__rf00001_9n5t_Bu_3_116:A:region_001",
+  "RF00002__rf00002_6qzp_Lu8d_2_154__vs__rf00002_6xu8_Au8d_1_123:A:region_001",
+  "RF00002__rf00002_6xu8_Au8d_1_123__vs__rf00002_6zj3_LuAu_1_163:A:region_002",
+  "RF00002__rf00002_6xu8_Au8d_1_123__vs__rf00002_9bh5_Au8d_2_151:A:region_001",
+  "RF00005__rf00005_6pom_Bu_1_72__vs__rf00005_6q9a_7d_1_73:A:region_001",
+  "RF00005__rf00005_6pom_Bu_1_72__vs__rf00005_9hlz_tl_1_73:A:region_003",
+  "RF00005__rf00005_6q9a_7d_1_73__vs__rf00005_8z1g_Tu_1_66:A:region_001",
+  "RF00005__rf00005_8buu_Vu_1_74__vs__rf00005_9hcg_Bu_1_68:A:region_002",
+  "RF00005__rf00005_8g7p_wl_1_73__vs__rf00005_9hcg_Bu_1_68:A:region_001",
+  "RF00026__rf00026_6id1_Fu_1_107__vs__rf00026_9l5r_6d_1_101:A:region_001",
+  "RF00522__rf00522_6vuh_Au_1_33__vs__rf00522_7rex_Au_1_34:A:region_002",
+  "RF03087__rf03087_9j3t_Au_1_580__vs__rf03087_9j6y_Au_1_550:A:region_010",
+  "RF03087__rf03087_9j3t_Au_1_580__vs__rf03087_9j6y_Au_1_550:A:region_011",
+  "RF03087__rf03087_9j3t_Au_1_580__vs__rf03087_9j6y_Au_1_550:A:region_012",
+  "RF03087__rf03087_9j3t_Au_1_580__vs__rf03087_9j6y_Au_1_550:A:region_026"
+ ],
+ "strong_rfam_regions": [
+  "RF00001__rf00001_1yhq_9d_4_120__vs__rf00001_9qt5_2d_1_117:A:region_003",
+  "RF00001__rf00001_4v8p_Bu3d_5_114__vs__rf00001_6hma_Bu_1_115:A:region_005",
+  "RF00001__rf00001_4v8p_Bu3d_5_114__vs__rf00001_6tpq_Vu_5_120:A:region_002",
+  "RF00001__rf00001_4v8p_Bu3d_5_114__vs__rf00001_9qt5_2d_1_117:A:region_002",
+  "RF00001__rf00001_5xxb_3d_1_122__vs__rf00001_7pzy_3d_1_121:A:region_001",
+  "RF00001__rf00001_6lqm_5d_1_119__vs__rf00001_9qt5_2d_1_117:A:region_002",
+  "RF00001__rf00001_6s0x_Bu_1_115__vs__rf00001_9buq_AuBu_1_119:A:region_006",
+  "RF00001__rf00001_6tnn_Vu_1_116__vs__rf00001_9bup_AuBu_1_119:A:region_004",
+  "RF00001__rf00001_7asm_Bu_1_115__vs__rf00001_7qiw_5d_1_119:A:region_004",
+  "RF00001__rf00001_7asm_Bu_1_115__vs__rf00001_9cai_Au7d_1_119:A:region_004",
+  "RF00001__rf00001_7kgb_Bu_2_114__vs__rf00001_8hku_Au5dSu_6_120:A:region_004",
+  "RF00001__rf00001_7oyc_7d1d_1_119__vs__rf00001_9qt5_2d_1_117:A:region_002",
+  "RF00001__rf00001_7qiw_5d_1_119__vs__rf00001_9qt5_2d_1_117:A:region_002",
+  "RF00001__rf00001_8hku_Au5dSu_6_120__vs__rf00001_8vpk_Bu_3_116:A:region_006",
+  "RF00001__rf00001_8hku_Au5dSu_6_120__vs__rf00001_9qt5_2d_1_117:A:region_003",
+  "RF00001__rf00001_9bh5_Au7d_1_119__vs__rf00001_9qt5_2d_1_117:A:region_002",
+  "RF00001__rf00001_9bup_AuBu_1_119__vs__rf00001_9qt5_2d_1_117:A:region_002",
+  "RF00002__rf00002_3j7o_8d_2_154__vs__rf00002_4v8m_BuCu_1_169:A:region_003",
+  "RF00005__rf00005_7ot5_zl_1_82__vs__rf00005_8rqk_Uu_1_72:A:region_004",
+  "RF00005__rf00005_8asw_Xu_1_73__vs__rf00005_8buu_Vu_1_74:A:region_002",
+  "RF00005__rf00005_8rqk_Uu_1_72__vs__rf00005_9hcg_Bu_1_68:A:region_003"
+ ]
+}
