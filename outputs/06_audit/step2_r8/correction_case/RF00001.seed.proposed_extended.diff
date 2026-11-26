@@ -1,0 +1,7 @@
+--- RF00001.seed.original.sto
++++ RF00001.seed.proposed_extended.sto
+@@ -77,2 +77,2 @@
+-X75601.1/91-203          --UACGGC-GG-C-C-AC-AGC----GG-C-A-G-G---GA----------A-AC-G----------C--CCG----G-UC----CCAUUC------CGA-ACCCG-GA-AGCUAA-G-----------------CCUGCCA-G-C--G---CC--GAUGA----UACUGCC----CCUCCGG-G-U-----GGA---A--AAGUA----GG-A-CA-CC--G-CCGAAC
+-X55251.1/3-116           --UACGGC-GG-UCC-AU-AGC----GG-C-A-G-G---GA----------A-AC-G----------C--CCG----G-UC----CCAUCC------CGA-ACCCG-GA-AGCUAA-G-----------------CCUGCCA-G-C--G---CC--GAUGA----UACUACCC---AUCCGGG-U-------GGA---A--AAGUA----GG-A-CA-CC--G-CCGAAC
++X75601.1/91-203          --UACGGC-GG-C-C-AC-AGC----GG-C-A-G-G---GA----------A-AC-G----------C--CCG----G-UC----CCAUUC------CGA-ACCCG-GA-AGCUAA-G-----------------CCUGCCA-G-C--G---CC--GAUG----AUACUGCCC--CUC------C-GGGUG-GAA---A--AGUAG----GA-C--A-CC--G-CCGAAC
++X55251.1/3-116           --UACGGC-GG-UCC-AU-AGC----GG-C-A-G-G---GA----------A-AC-G----------C--CCG----G-UC----CCAUCC------CGA-ACCCG-GA-AGCUAA-G-----------------CCUGCCA-G-C--G---CC--GAUG----AUACUACCC--AUC------C-GGGUG-GAA---A--AGUAG----GA-C--A-CC--G-CCGAAC

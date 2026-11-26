@@ -1,6 +1,6 @@
 """One-command check that the published results are intact and that the headline numbers follow from the data.
 
-  python scripts/verify.py [--cohort step2_final]
+  python scripts/verify.py [--cohort step2_r8]
 
 Needs only the Python standard library and the files in this repository (release archives are checked when
 they have been unpacked; otherwise those checks are reported as SKIPPED, never as passed).
@@ -9,7 +9,8 @@ they have been unpacked; otherwise those checks are reported as SKIPPED, never a
    - Step 2 snapshot (structures, pairs, crosswalk, staged STAR3D inputs)   snapshot_manifest.tsv
    - STAR3D returns (raw alignments, superpositions, preprocessing)          RETURN.sha256   [release archive]
    - Verification archive (exact local search evidence, STAR3D outputs)      COLLECT.sha256  [release archive]
-2. Recount: the headline counts are recomputed independently from residue_comparisons.tsv.gz and
+2. Recount: the headline counts are recomputed independently from residue_comparisons.tsv.gz,
+   interactions_long.tsv.gz (step 6) and
    pair_scores.tsv and compared with the published overall_metric.json and docs/results.json.
 Exit status 0 only if every executed check passes.
 """
@@ -113,6 +114,30 @@ def main():
                f"{len(got)} headline values match")
     else:
         report("Recount: docs/results.json", None, "file not present")
+
+    # ---- step 6: interaction preservation at disagreements, recounted from the per-interaction table
+    long = os.path.join(ROOT, "outputs", "06_audit", c, "interactions_long.tsv.gz")
+    if os.path.exists(long) and os.path.exists(exp_path) and "step6" in json.load(open(exp_path)):
+        exp6 = json.load(open(exp_path))["step6"]["headline"]
+        wc, gu = {"AU", "UA", "GC", "CG"}, {"GU", "UG"}
+        cnt = collections.defaultdict(lambda: [0, 0, 0])
+        for r in tsv(long):
+            if (r["annotator"], r["direction"], r["disagreement"]) != ("MC-Annotate", "A->B", "yes") or not r["source_class"]:
+                continue
+            if r["rfam_state"] != "mapped" or r["star3d_state"] != "mapped":
+                continue
+            ids = r["n1"] + r["n2"]
+            t = ("canonical_WC" if ids in wc else "GU_wobble" if ids in gu else "noncanonical") \
+                if r["source_class"] == "cWW" else "noncanonical"
+            for tt in (t, "noncanonical_non_cWW") if (t == "noncanonical" and r["source_class"] != "cWW") else (t,):
+                x = cnt[tt]; x[0] += 1; x[1] += r["rfam_class"] == "yes"; x[2] += r["star3d_class"] == "yes"
+        got = {t: tuple(v) for t, v in cnt.items()}
+        want = {t: (v["common_eligible"], v["rfam_class"], v["star3d_class"]) for t, v in exp6.items()}
+        bad = {t: (got.get(t), want[t]) for t in want if got.get(t) != want[t]}
+        report("Recount: step 6 interaction preservation equals docs/results.json", not bad,
+               str(bad) if bad else "; ".join(f"{t} Rfam {w[1]}/{w[0]}, STAR3D {w[2]}/{w[0]}" for t, w in want.items()))
+    else:
+        report("Recount: step 6", None, "outputs/06_audit not present")
     ran = [ok for _, ok in RESULTS if ok is not None]
     print(f"\n{sum(ran)}/{len(ran)} executed checks passed; {sum(ok is None for _, ok in RESULTS)} skipped")
     sys.exit(0 if all(ran) else 1)

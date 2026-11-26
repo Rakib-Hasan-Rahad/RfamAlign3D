@@ -63,3 +63,16 @@ Full text: `outputs/02_structure_preparation/step2_policy.yaml`. Key points:
 - Resolution, experimental method and revision of each entry (`structures.tsv`).
 - Backbone completeness flags (`ready_with_coverage_flags`).
 - Pair sequence identity over shared columns (descriptive only).
+
+## Audit revisions (2026-11-25, step 6)
+An audit of the evidence behind the manuscript claims (`outputs/06_audit/step2_r8/claim_evidence.tsv`). No input,
+snapshot, STAR3D run or earlier output was changed; step 6 adds analyses and replaces two earlier claims.
+
+| ID | What | Why | Effect |
+|---|---|---|---|
+| A1 | Origin checks reconciled key by key (236 ever cached, 234 current) | "All checks resolved" meant "all searches finished" | 103 exact independent support, 85 not found, 36 flank differs, 10 unknown residues; 121 without a whole-chain match are not used. Cohort chains: 72 genome assembly, 38 longer record, 28 only an older record |
+| A2 | R8 megablast wording | "Finds the same hits" overstated it | Every 100%-identical full-length hit of a query ≥28 nt contains megablast's seed; every hit re-confirmed by exact string search; hitlists (50) saturated for 3 of 5 queries |
+| A3 | FR3D added as independent annotator | STAR3D's loop score uses the MC-Annotate pairs that s52 evaluated | Direction of all main contrasts replicated with FR3D |
+| A4 | Preservation measured on the common eligible set, three definitions, by family, with a sequence-level bootstrap | Pair resampling ignores that sequences recur in up to 18 pairs | The pooled noncanonical difference (CI 8.7–20.2 by pairs) spans zero by sequences (−4.2 to 32.2; non-cWW −7.8 to 36.7). Effect is family specific: 5S rRNA favours STAR3D, tRNA favours Rfam |
+| A5 | Region verdicts of s53 withdrawn; interaction-only tiers from two annotators | s53 counted unmapped Rfam endpoints as STAR3D gains and vetoed with a distance measured in STAR3D's frame | 221/111 replaced by 218/208 (strong 74/55) |
+| A6 | Row-level correction candidate RF00001 (mycobacterial helix IV) with Stockholm patch | Pairwise regions cannot justify a seed edit | Candidate for curator review; conflicting SS_cons evidence documented |
