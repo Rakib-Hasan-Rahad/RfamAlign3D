@@ -43,6 +43,8 @@ headline ones from the raw tables.
 ```bash
 python3 scripts/verify.py        # checksums + independent recount; standard library only
 ```
+**Interactive browser:** <https://rakib-hasan-rahad.github.io/RfamAlign3D/> (all 570 pairs, 3D superpositions, the structural evidence page and the SQLite database; deployed from the v1.1.0 release archive by [`.github/workflows/pages.yml`](.github/workflows/pages.yml)).
+
 See [`docs/REPRODUCE.md`](docs/REPRODUCE.md) for the release archives, the interactive browser and full reruns.
 
 ## Repository map

@@ -14,7 +14,7 @@ unpack them (section 2); a skipped check is never counted as passed.
 ## 2. Add the large files (release archives)
 Download the archives and unpack them in the repository root. `browser_and_database.tar.gz` comes from release
 v1.1.0 (rebuilt with the step 6 evidence); the other four are unchanged and come from release v1.0.0. Each release
-lists the sha256 of its archives in `SHA256SUMS.txt`.
+lists the sha256 of its archives in `SHA256SUMS.txt`. The browser is also online at <https://rakib-hasan-rahad.github.io/RfamAlign3D/>; that copy is published from the same v1.1.0 archive after its checksum is verified (`.github/workflows/pages.yml`, run manually; update `TAG` and `SHA256` there when a new browser archive is released).
 
 | Archive | Contents | Unpacks to |
 |---|---|---|
