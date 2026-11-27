@@ -1,0 +1,38 @@
+# Publishes the results browser (outputs/05_results/step2_r8/app) to GitHub Pages.
+# The site is not stored in git: it is unpacked from the release archive after its checksum is verified.
+# When the site is rebuilt and attached to a new release, update TAG and SHA256 below.
+name: Publish results browser
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+env:
+  TAG: v1.1.0
+  ASSET: browser_and_database.tar.gz
+  SHA256: 4cad4f1b15418fef19c9a85a709a11619b9a9574b1865cf0103c236d688a971c
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Download and verify the release archive
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release download "$TAG" -R "$GITHUB_REPOSITORY" -p "$ASSET"
+          echo "$SHA256  $ASSET" | sha256sum -c -
+          tar xzf "$ASSET"
+          test -f outputs/05_results/step2_r8/app/index.html
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: outputs/05_results/step2_r8/app
+      - id: deployment
+        uses: actions/deploy-pages@v4
